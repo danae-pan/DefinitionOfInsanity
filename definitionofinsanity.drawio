@@ -1,0 +1,389 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="Q3VQb4S-_8fdAXDKGeZv">
+    <mxGraphModel dx="2002" dy="1271" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#ffd5ea, #121212)" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-2" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-5">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-3" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="yiXP6C04M_0TplFRjZ_L-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Your mother calls you, suddenly someone knocks on the door" vertex="1">
+          <mxGeometry height="60" width="380" x="160" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-23" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-28">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="593" y="640" />
+              <mxPoint x="760" y="640" />
+            </Array>
+            <mxPoint x="780" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Mother complains because of sever pain" vertex="1">
+          <mxGeometry height="60" width="230" x="420" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-8" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-9" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Herbalist invites you to his pharmacy/lab to give you some herbs" vertex="1">
+          <mxGeometry height="60" width="180" x="130" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Open" vertex="1">
+          <mxGeometry height="30" width="60" x="260" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Check on your mother" vertex="1">
+          <mxGeometry height="30" width="80" x="450" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Return to your mother" vertex="1">
+          <mxGeometry height="30" width="90" x="270" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Go with the herbalist" vertex="1">
+          <mxGeometry height="30" width="90" x="80" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-14" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="yiXP6C04M_0TplFRjZ_L-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Take the herbs and go home" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Mother Dies (end of first day)" vertex="1">
+          <mxGeometry height="60" width="120" x="30" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Mother is dead (end of first day)" vertex="1">
+          <mxGeometry height="60" width="120" x="280" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-19" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
+          <mxGeometry height="80" width="380" x="30" y="860" as="geometry">
+            <mxRectangle height="40" width="50" x="190" y="530" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-18" parent="yiXP6C04M_0TplFRjZ_L-19" style="text;whiteSpace=wrap;html=1;" value="Note: Mother died because she took the herb that doctor placed on his lab that&lt;br&gt; caused side effects interacting with previous medication" vertex="1">
+          <mxGeometry height="50" width="350" x="10" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Mother dies (end of first day)" vertex="1">
+          <mxGeometry height="60" width="120" x="420" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-25" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="478" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-26" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Try the formula" vertex="1">
+          <mxGeometry height="30" width="60" x="480" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-27" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Don&#39;t try the formula yet" vertex="1">
+          <mxGeometry height="30" width="80" x="600" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Mother dies (end of first day)" vertex="1">
+          <mxGeometry height="60" width="120" x="700" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-29" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
+          <mxGeometry height="80" width="380" x="460" y="860" as="geometry">
+            <mxRectangle height="40" width="50" x="190" y="530" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-30" parent="yiXP6C04M_0TplFRjZ_L-29" style="text;whiteSpace=wrap;html=1;" value="Note: With formula, mother died because the doctor gave the herb that&lt;br&gt;&lt;div&gt; caused side effects interacting with previous medication&lt;/div&gt;&lt;div&gt;Without the formula, the mother had a ...? and dies&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="350" x="10" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;Day One&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="330" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Day Two&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="1230" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-34" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="yiXP6C04M_0TplFRjZ_L-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1395" y="417" />
+              <mxPoint x="1250" y="417" />
+              <mxPoint x="1250" y="439" />
+            </Array>
+            <mxPoint x="1395" y="320" as="sourcePoint" />
+            <mxPoint x="1249.6799999999998" y="439.9200000000003" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-35" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-51">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1440" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-46" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-48">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-33" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Wakes up. His mother alive, understand that he needs to try something new" vertex="1">
+          <mxGeometry height="60" width="250" x="1135" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Go to the herbalist" vertex="1">
+          <mxGeometry height="30" width="60" x="1325" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-38" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Try a different herb" vertex="1">
+          <mxGeometry height="30" width="80" x="1340" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-41" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1135" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-42" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.703;exitY=1.01;exitDx=0;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1275" y="521" />
+              <mxPoint x="1275" y="570" />
+              <mxPoint x="1335" y="570" />
+            </Array>
+            <mxPoint x="1290" y="520" as="sourcePoint" />
+            <mxPoint x="1335" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-39" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: See available herbs&lt;br&gt;Herbalist instructs to take the first after eating and the second without" vertex="1">
+          <mxGeometry height="80" width="140" x="1175" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Take the first" vertex="1">
+          <mxGeometry height="30" width="60" x="1135" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-44" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Take the second" vertex="1">
+          <mxGeometry height="30" width="60" x="1285" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-68" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="yiXP6C04M_0TplFRjZ_L-73">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1055" y="690" as="sourcePoint" />
+            <mxPoint x="995" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-69" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-74">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1115" y="690" as="sourcePoint" />
+            <mxPoint x="1175" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Start the preparation&lt;br&gt;Your pet becomes noisy" vertex="1">
+          <mxGeometry height="60" width="120" x="1025" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-104" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-51">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1045" y="370" />
+              <mxPoint x="1240" y="370" />
+              <mxPoint x="1240" y="320" />
+            </Array>
+            <mxPoint x="980" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-105" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1170" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Run some tests&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="1015" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-49" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Check on your mother" vertex="1">
+          <mxGeometry height="30" width="80" x="1110" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-52" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-54">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1455" y="450" />
+              <mxPoint x="1555" y="450" />
+            </Array>
+            <mxPoint x="1605" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Study in the lab for possible formulas&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="1365" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Use the ones you have" vertex="1">
+          <mxGeometry height="30" width="80" x="1465" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-59" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-64">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1445" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-63" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-54" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-65">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1635" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-54" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Make a formula&amp;nbsp;&lt;br&gt;Your pet becomes noisy" vertex="1">
+          <mxGeometry height="60" width="120" x="1495" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-56" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
+          <mxGeometry height="80" width="140" x="1495" y="290" as="geometry">
+            <mxRectangle height="40" width="50" x="190" y="530" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-57" parent="yiXP6C04M_0TplFRjZ_L-56" style="text;whiteSpace=wrap;html=1;" value="Note: Options on which herb to use" vertex="1">
+          <mxGeometry height="50" width="140" x="10" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-61" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Feed the pet" vertex="1">
+          <mxGeometry height="30" width="60" x="1455" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-62" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Give formula to mum" vertex="1">
+          <mxGeometry height="30" width="60" x="1595" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-64" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Your mum dies (end of second day)" vertex="1">
+          <mxGeometry height="60" width="120" x="1425" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-65" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Your mum dies (end of second day)" vertex="1">
+          <mxGeometry height="60" width="120" x="1565" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-71" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Feed the pet" vertex="1">
+          <mxGeometry height="30" width="60" x="990" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-72" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Keep working on the formula" vertex="1">
+          <mxGeometry height="30" width="80" x="1115" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-75" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="yiXP6C04M_0TplFRjZ_L-82">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="895" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-78" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-73" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-83">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1095" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-73" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Pet is quiet, you finish the formula" vertex="1">
+          <mxGeometry height="60" width="120" x="935" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-74" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Pet becomes angry, destroys the formula&lt;br&gt;Too late, your mother dies (end of second day)" vertex="1">
+          <mxGeometry height="90" width="120" x="1115" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Give formula to mum" vertex="1">
+          <mxGeometry height="30" width="60" x="895" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-81" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Make dinner for you and mum" vertex="1">
+          <mxGeometry height="30" width="60" x="1035" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-82" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Wrong formula, your mum dies (end of second day)" vertex="1">
+          <mxGeometry height="60" width="120" x="870" y="955" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-83" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Too late, your mother dies (end of second day)" vertex="1">
+          <mxGeometry height="60" width="120" x="1035" y="1000" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-87" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-91">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1285" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-89" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-92">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1364.97" y="690.0000000000002" as="sourcePoint" />
+            <mxPoint x="1404.97" y="840" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-86" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;Event: Start the preparation&lt;/div&gt;&lt;div&gt;Your mother calls for you&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="1275" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-88" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Go to her" vertex="1">
+          <mxGeometry height="30" width="60" x="1245" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-90" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Keep working" vertex="1">
+          <mxGeometry height="30" width="60" x="1365" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-93" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-97">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1254.8695652173915" y="1020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-94" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-91" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-100">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1315" y="990" />
+            </Array>
+            <mxPoint x="1435" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-91" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Your mother is in pain, she asks for food" vertex="1">
+          <mxGeometry height="60" width="120" x="1225" y="900" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-103" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-99">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1415" y="920" />
+              <mxPoint x="1605" y="920" />
+              <mxPoint x="1605" y="1070" />
+            </Array>
+            <mxPoint x="1535" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-92" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Finish the formula, give it to your mother" vertex="1">
+          <mxGeometry height="60" width="120" x="1355" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-95" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Give her" vertex="1">
+          <mxGeometry height="30" width="60" x="1185" y="970" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-96" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Don&#39;t" vertex="1">
+          <mxGeometry height="30" width="60" x="1305" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-98" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-99">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395" y="1059.826086956522" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-97" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Finish the formula, give it to your mum" vertex="1">
+          <mxGeometry height="60" width="120" x="1235" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-99" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: She dies (end of second day)" vertex="1">
+          <mxGeometry height="60" width="120" x="1435" y="1040" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-101" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-99">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-100" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Finish the formula, give it to your mum" vertex="1">
+          <mxGeometry height="60" width="120" x="1435" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-106" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Go to your lab" vertex="1">
+          <mxGeometry height="30" width="60" x="980" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-107" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Go to herbalist" vertex="1">
+          <mxGeometry height="30" width="60" x="1110" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-109" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="yiXP6C04M_0TplFRjZ_L-115">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-110" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-108" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="yiXP6C04M_0TplFRjZ_L-116">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-108" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Wakes up&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="300" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-111" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Make breakfast" vertex="1">
+          <mxGeometry height="30" width="60" x="260" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-114" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Check on your mother" vertex="1">
+          <mxGeometry height="30" width="100" x="400" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-115" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="150" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-116" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="60" width="120" x="460" y="220" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
