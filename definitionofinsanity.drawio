@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="Q3VQb4S-_8fdAXDKGeZv">
-    <mxGraphModel dx="1030" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#ffd5ea, #121212)" math="0" shadow="0">
+    <mxGraphModel dx="1851" dy="1163" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#ffd5ea, #121212)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -324,14 +324,13 @@
         <mxCell id="yiXP6C04M_0TplFRjZ_L-91" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Your mother is in pain, she asks for food" vertex="1">
           <mxGeometry height="60" width="120" x="1225" y="900" as="geometry" />
         </mxCell>
-        <mxCell id="yiXP6C04M_0TplFRjZ_L-103" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-99">
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-103" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-92" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="mo4EuZUuSwb8GyNfA-2u-9">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1415" y="920" />
               <mxPoint x="1605" y="920" />
-              <mxPoint x="1605" y="1070" />
             </Array>
-            <mxPoint x="1535" y="930" as="targetPoint" />
+            <mxPoint x="1620" y="1150" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="yiXP6C04M_0TplFRjZ_L-92" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Finish the formula, give it to your mother" vertex="1">
@@ -349,13 +348,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="yiXP6C04M_0TplFRjZ_L-97" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Finish the formula, give it to your mum" vertex="1">
-          <mxGeometry height="60" width="120" x="1235" y="1210" as="geometry" />
+          <mxGeometry height="60" width="120" x="1190" y="1100" as="geometry" />
         </mxCell>
-        <mxCell id="yiXP6C04M_0TplFRjZ_L-99" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: She dies (end of second day)" vertex="1">
-          <mxGeometry height="60" width="120" x="1435" y="1040" as="geometry" />
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-99" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: She dies from the formula not working (end of second day)" vertex="1">
+          <mxGeometry height="60" width="120" x="1355" y="1100" as="geometry" />
         </mxCell>
-        <mxCell id="yiXP6C04M_0TplFRjZ_L-101" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="yiXP6C04M_0TplFRjZ_L-99">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-101" edge="1" parent="1" source="yiXP6C04M_0TplFRjZ_L-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="mo4EuZUuSwb8GyNfA-2u-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1540" y="1150" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="yiXP6C04M_0TplFRjZ_L-100" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Finish the formula, give it to your mum" vertex="1">
           <mxGeometry height="60" width="120" x="1435" y="960" as="geometry" />
@@ -680,6 +681,144 @@
         </mxCell>
         <mxCell id="Nh9FhK7kC04nvyDtTZDy-6" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: Helvetica; font-size: 12px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: center; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; background-color: rgb(236, 236, 236); text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial; float: none; display: inline !important;&quot;&gt;check_formula = true&lt;/span&gt;" vertex="1">
           <mxGeometry height="40" width="150" x="865" y="1160" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-3" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="mo4EuZUuSwb8GyNfA-2u-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-5" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mo4EuZUuSwb8GyNfA-2u-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2280" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-44" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="mo4EuZUuSwb8GyNfA-2u-45">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Wakes up. His mother alive, understand that he needs to try something new" vertex="1">
+          <mxGeometry height="60" width="210" x="1995" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;b&gt;Day 3&lt;/b&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="2070" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Go to herbalist" vertex="1">
+          <mxGeometry height="30" width="60" x="1900" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Make dinner" vertex="1">
+          <mxGeometry height="30" width="60" x="2200" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-10" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1880" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-12" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1960" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-7" parent="1" style="whiteSpace=wrap;html=1;" value="Event: See available herbs&lt;br&gt;Herbalist instructs to take the first after eating and the second without" vertex="1">
+          <mxGeometry height="90" width="160" x="1840" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Event: Cant give her the medicine, she dies" vertex="1">
+          <mxGeometry height="60" width="120" x="1520" y="1150" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-17" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="mo4EuZUuSwb8GyNfA-2u-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Cook dinner" vertex="1">
+          <mxGeometry height="60" width="120" x="2240" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Take the second" vertex="1">
+          <mxGeometry height="30" width="60" x="1970" y="315" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Take the first" vertex="1">
+          <mxGeometry height="30" width="60" x="1810" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-19" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2170" y="485" />
+              <mxPoint x="2120" y="485" />
+            </Array>
+            <mxPoint x="2120" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-20" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mo4EuZUuSwb8GyNfA-2u-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2290" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-18" parent="1" style="whiteSpace=wrap;html=1;" value="Go to herbalist he has only the second you might find the first at the river" vertex="1">
+          <mxGeometry height="60" width="120" x="2140" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="get it" vertex="1">
+          <mxGeometry height="30" width="60" x="2090" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-23" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="go to river" vertex="1">
+          <mxGeometry height="30" width="60" x="2260" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-26" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="mo4EuZUuSwb8GyNfA-2u-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-27" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" target="mo4EuZUuSwb8GyNfA-2u-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-24" parent="1" style="whiteSpace=wrap;html=1;" value="Go home make the formula with the second" vertex="1">
+          <mxGeometry height="60" width="120" x="2060" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-33" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mo4EuZUuSwb8GyNfA-2u-38">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2340" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-34" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mo4EuZUuSwb8GyNfA-2u-39">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2470" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-25" parent="1" style="whiteSpace=wrap;html=1;" value="take the first herb" vertex="1">
+          <mxGeometry height="60" width="120" x="2330" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="eat" vertex="1">
+          <mxGeometry height="30" width="60" x="1990" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-29" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="dont" vertex="1">
+          <mxGeometry height="30" width="60" x="2150" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-30" parent="1" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="event: you warm the food the house began to smell food she tries to come the kitchen she collapses she dies" vertex="1">
+          <mxGeometry height="75" width="140" x="1930" y="697.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-31" parent="1" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="event: give the formula, she dies&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="2125" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-32" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="insanity: true" vertex="1">
+          <mxGeometry height="30" width="60" x="2155" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-35" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="eat" vertex="1">
+          <mxGeometry height="30" width="60" x="2310" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-36" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="dont" vertex="1">
+          <mxGeometry height="30" width="60" x="2430" y="605" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-38" parent="1" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="event: you warm the food the house began to smell food she tries to come the kitchen she collapses she dies" vertex="1">
+          <mxGeometry height="75" width="140" x="2220" y="857.5" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-39" parent="1" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="event: give the formula, she dies&amp;nbsp;" vertex="1">
+          <mxGeometry height="60" width="120" x="2390" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-40" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="insanity: true" vertex="1">
+          <mxGeometry height="30" width="60" x="2420" y="940" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="insanity: true" vertex="1">
+          <mxGeometry height="30" width="60" x="2230" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-46" edge="1" parent="1" source="mo4EuZUuSwb8GyNfA-2u-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="mo4EuZUuSwb8GyNfA-2u-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-45" parent="1" style="whiteSpace=wrap;html=1;" value="&lt;div&gt;Do research&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="2040" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="mo4EuZUuSwb8GyNfA-2u-47" parent="1" style="whiteSpace=wrap;html=1;" value="go to river take the ingredients" vertex="1">
+          <mxGeometry height="60" width="120" x="1770" y="500" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
