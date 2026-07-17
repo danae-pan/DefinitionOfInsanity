@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="Q3VQb4S-_8fdAXDKGeZv">
-    <mxGraphModel dx="922" dy="776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#ffd5ea, #121212)" math="0" shadow="0">
+    <mxGraphModel dx="732" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#ffd5ea, #121212)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -380,7 +380,7 @@
         <mxCell id="yiXP6C04M_0TplFRjZ_L-108" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Event: Wakes up&amp;nbsp;" vertex="1">
           <mxGeometry height="60" width="120" x="300" y="90" as="geometry" />
         </mxCell>
-        <mxCell id="yiXP6C04M_0TplFRjZ_L-111" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Make breakfast for you and mother" vertex="1">
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-111" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Make breakfast&amp;nbsp;" vertex="1">
           <mxGeometry height="30" width="110" x="210" y="150" as="geometry" />
         </mxCell>
         <mxCell id="yiXP6C04M_0TplFRjZ_L-114" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Check on your mother" vertex="1">
