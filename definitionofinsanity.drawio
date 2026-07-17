@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="Q3VQb4S-_8fdAXDKGeZv">
-    <mxGraphModel dx="732" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#ffd5ea, #121212)" math="0" shadow="0">
+    <mxGraphModel dx="1030" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#ffd5ea, #121212)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -591,8 +591,8 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="730" y="760" />
-              <mxPoint x="600" y="760" />
-              <mxPoint x="600" y="735" />
+              <mxPoint x="620" y="760" />
+              <mxPoint x="620" y="735" />
             </Array>
             <mxPoint x="770" y="890" as="targetPoint" />
           </mxGeometry>
@@ -830,6 +830,9 @@
         </mxCell>
         <mxCell id="mo4EuZUuSwb8GyNfA-2u-47" parent="1" style="whiteSpace=wrap;html=1;" value="go to river take the ingredients" vertex="1">
           <mxGeometry height="60" width="120" x="1770" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="NQ3UvKIj422rHsLh9peD-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="stock on Panax but no time to prepare new formula" vertex="1">
+          <mxGeometry height="30" width="140" x="405" y="880" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
