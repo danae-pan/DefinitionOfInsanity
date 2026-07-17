@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="Q3VQb4S-_8fdAXDKGeZv">
-    <mxGraphModel dx="1500" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#ffd5ea, #121212)" math="0" shadow="0">
+    <mxGraphModel dx="922" dy="776" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#ffd5ea, #121212)" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -70,7 +70,7 @@
         <mxCell id="yiXP6C04M_0TplFRjZ_L-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" value="Event: Mother Dies (end of first day)" vertex="1">
           <mxGeometry height="60" width="120" x="30" y="1410" as="geometry" />
         </mxCell>
-        <mxCell id="yiXP6C04M_0TplFRjZ_L-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Event: Mother is dead (end of first day)" vertex="1">
+        <mxCell id="yiXP6C04M_0TplFRjZ_L-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" value="Event: Mother is dead from&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;brain hemorrhage&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(end of first day)&lt;/span&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="220" y="1315" as="geometry" />
         </mxCell>
         <mxCell id="yiXP6C04M_0TplFRjZ_L-19" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
