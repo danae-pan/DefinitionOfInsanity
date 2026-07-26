@@ -185,8 +185,4 @@ label ch01_dysphagia_ending:
 
         "I will do better."
 
-    $ ch01_loop_count += 1
-
-    call ch01_reset_attempt_state
-
     jump ch01_new_loop

@@ -150,10 +150,10 @@ label ch01_brain_hemorrahage_ending:
 
         if not ch01_wake_happened:
 
-            $ ch01_wake_happened == True
+            $ ch01_wake_happened = True
 
     else :
-        
+
         "If I get another chance..." 
 
         "I will not repeat this." 
@@ -168,4 +168,12 @@ label ch01_brain_hemorrahage_ending:
 
         "I will do better."
 
-    return
+    call ch01_pass_to_chapter_2
+
+    if ch01_pass_to_chapter_2 :
+
+        jump ch02_start
+
+    else :
+
+        jump ch01_new_loop

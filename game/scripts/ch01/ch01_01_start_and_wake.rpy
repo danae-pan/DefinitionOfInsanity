@@ -16,15 +16,16 @@ label ch01_new_loop:
 label ch01_reset_attempt_state:
 
     # Reset choices/actions from the previous attempt.
-    $ ch01_breakfast_made == False
-    $ ch01_bread_added == False
-    $ ch01_mother_checked == False
-    $ ch01_cat_in_lab == False
-    $ ch01_formula_finished == False
-    $ ch01_met_herb_in_door == False
-    $ ch01_met_herb_in_hospital == False
-    $ ch01_went_to_shop == False
-    $ ch01_cat_broke_formula == False
+    $ ch01_breakfast_made = False
+    $ ch01_bread_added = False
+    $ ch01_mother_checked = False
+    $ ch01_cat_in_lab = False
+    $ ch01_formula_finished = False
+    $ ch01_met_herb_in_door = False
+    $ ch01_met_herb_in_hospital = False
+    $ ch01_went_to_shop = False
+    $ ch01_cat_broke_formula = False
+    $ ch01_prepared_formula = False
 
     return
 
@@ -46,7 +47,7 @@ label ch01_wake_up:
 
         "Make breakfast":
             
-            $ ch01_breakfast_made == True
+            $ ch01_breakfast_made = True
 
             "I should make breakfast."
             
@@ -54,7 +55,7 @@ label ch01_wake_up:
 
         "Check on your mother":
 
-            $ ch01_mother_checked == True
+            $ ch01_mother_checked = True
             
             jump ch01_check_mother
 

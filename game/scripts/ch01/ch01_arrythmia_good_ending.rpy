@@ -1,4 +1,4 @@
-label ch01_arrythmia_ending_opened_door:
+label ch01_arrythmia_good_ending:
 
     "I glance back toward Mother's room."
 

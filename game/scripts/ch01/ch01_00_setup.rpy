@@ -35,3 +35,4 @@ default ch01_met_herb_in_door = False
 default ch01_met_herb_in_hospital = False
 default ch01_went_to_shop = False
 default ch01_cat_broke_formula = False
+default ch01_prepared_formula = False

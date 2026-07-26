@@ -176,6 +176,8 @@ label ch01_study_prepare_formula:
 
     "I read each page one more time." 
 
+    $ ch01_prepared_formula = True
+
 label ch01_cat_becomes_noisy:
 
     doctor "Come on, little one."
@@ -259,6 +261,8 @@ label ch01_cat_breaks_formula:
     "I have to check on the apothecary what herbs i have remaining."
 
     "Or instead i could go to the hospital and restore all my herbs."
+
+    $ ch01_prepared_formula = False
 
     if not ch01_kept_cat_in_lab_once:
 

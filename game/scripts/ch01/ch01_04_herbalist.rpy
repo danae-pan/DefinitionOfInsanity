@@ -161,7 +161,7 @@ label ch01_herbalists_invitation:
 
     menu: 
         "Go with the herbalist":
-            jump ch01_arrythmia_ending_opened_door
+            jump ch01_arrythmia_good_ending
 
         "Return to your mother":
             jump ch01_brain_hemorrahage_ending
