@@ -201,3 +201,14 @@ label ch01_arrythmia_ending_opened_door:
         "I have to tell someone."
 
         "Wake"
+
+
+    call ch01_pass_to_chapter_2
+
+    if ch01_pass_to_chapter_2 :
+
+        jump ch02_start
+
+    else :
+
+        jump ch01_new_loop

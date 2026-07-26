@@ -16,9 +16,15 @@ label ch01_new_loop:
 label ch01_reset_attempt_state:
 
     # Reset choices/actions from the previous attempt.
-    $ ch01_bread_added = False
-    $ ch01_mother_checked = False
-    $ ch01_cat_in_lab = False
+    default ch01_breakfast_made = False
+    default ch01_bread_added = False
+    default ch01_mother_checked = False
+    default ch01_cat_in_lab = False
+    default ch01_formula_finished = False
+    default ch01_met_herb_in_door = False
+    default ch01_met_herb_in_hospital = False
+    default ch01_went_to_shop = False
+    default ch01_cat_broke_formula = False
 
     return
 
@@ -95,6 +101,18 @@ label ch01_loop_wakeup:
     
     "All comes back…"
 
+    call ch01_remember_previus_deaths
+
+    "I have so much to do… i cannot hide any more.."
+
+    "She is in the room… I could go see her.. "
+
+    "My stomach hurts... I probably didn't eat yesterday."
+    
+    return
+
+label ch01_remember_previus_deaths:
+
     if ch01_wake_happened:
 
         "The otsuya…"
@@ -123,10 +141,4 @@ label ch01_loop_wakeup:
 
         "It was too late…"
 
-    "I have so much to do… i cannot hide any more.."
-
-    "She is in the room… I could go see her.. "
-
-    "My stomach hurts... I probably didn't eat yesterday."
-    
     return

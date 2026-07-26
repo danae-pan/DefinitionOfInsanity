@@ -1,6 +1,7 @@
 image bg ch01 bedroom = im.Scale("images/backgrounds/background_bedroom.jpg", 1920, 1080)
 
 default ch01_loop_count = 0
+default ch01_chapter1_with_one_try = False
 
 default ch01_kept_cat_in_lab_once = False
 default ch01_went_to_hospital = False
@@ -22,6 +23,7 @@ default ch01_knows_polygala = False
 
 default ch01_met_herbalist = False # Future chapter flags
 default ch01_check_formula = False # Future chapter flags
+default ch01_jump_to_chapter_2 = False
 
 # choices/actions from the previous attempt that will reset in every ending
 default ch01_breakfast_made = False
