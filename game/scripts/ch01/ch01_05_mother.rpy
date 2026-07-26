@@ -100,5 +100,8 @@ label ch01_answer_mothers_call:
 
         "Try the formula":
 
+            jump ch01_arrythmia_mixed_ending
+
         "Dont try the formula":
-            
+
+            jump ch01_comma_ending
