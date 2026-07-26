@@ -12,6 +12,12 @@ label ch01_arrythmia_ending_opened_door:
 
     else:
 
+        "Herbalist said the last time he has some herbs that might help."
+
+    if ch01_went_to_shop:
+
+        "Herbalist have herbs that will help me develop a better formula."
+
     doctor "Alright." 
 
     doctor "I'll come with you." 
