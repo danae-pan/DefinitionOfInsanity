@@ -261,7 +261,7 @@ screen quick_menu():
 init python:
     config.overlay_screens.append("quick_menu")
 
-default quick_menu = True
+default quick_menu = False
 
 style quick_menu is hbox
 style quick_button is default
@@ -292,45 +292,46 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
-
-        spacing gui.navigation_spacing
+        if CurrentScreenName() == "main_menu": 
+            xpos 1546
+            ypos 243
+            spacing 20
+        else:
+            xpos gui.navigation_xpos
+            yalign 0.5
+            spacing gui.navigation_spacing
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            textbutton _("START") action Start()
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("HISTORY") action ShowMenu("history")
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("SAVE") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        textbutton _("LOAD") action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        textbutton _("OPTIONS") action ShowMenu("options")
 
         if _in_replay:
 
-            textbutton _("End Replay") action EndReplay(confirm=True)
+            textbutton _("END REPLAY") action EndReplay(confirm=True)
 
         elif not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("MAIN MENU") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        textbutton _("DICTIONARY") action ShowMenu("dictionary")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
-
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
+        textbutton _("ABOUT") action ShowMenu("about")
 
         if renpy.variant("pc"):
 
             ## The quit button is banned on iOS and unnecessary on Android and
             ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+            textbutton _("QUIT") action Quit(confirm=not main_menu)
 
 
 style navigation_button is gui_button
@@ -342,7 +343,9 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
-
+    spacing gui.navigation_button_text_spacing
+    drop_shadow (0, 4)
+    drop_shadow_color "#000000"
 
 ## Main Menu screen ############################################################
 ##
@@ -385,7 +388,10 @@ style main_menu_version is main_menu_text
 
 style main_menu_frame:
     xsize 420
-    yfill True
+    ysize 720
+    xalign 1.013
+    yalign 0
+    yoffset 205
 
     background "gui/overlay/main_menu.png"
 
@@ -421,13 +427,14 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
     if main_menu:
         add gui.main_menu_background
-    else:
-        add gui.game_menu_background
+    # else:
+    #     add gui.game_menu_background
 
     frame:
         style "game_menu_outer_frame"
 
         hbox:
+            spacing 30
 
             ## Reserve space for the navigation section.
             frame:
@@ -475,7 +482,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
 
     use navigation
 
-    textbutton _("Return"):
+    textbutton _("RETURN"):
         style "return_button"
 
         action Return()
@@ -486,6 +493,7 @@ screen game_menu(title, scroll=None, yinitial=0.0, spacing=0):
         key "game_menu" action ShowMenu("main_menu")
 
 
+
 style game_menu_outer_frame is empty
 style game_menu_navigation_frame is empty
 style game_menu_content_frame is empty
@@ -494,7 +502,7 @@ style game_menu_side is gui_side
 style game_menu_scrollbar is gui_vscrollbar
 
 style game_menu_label is gui_label
-style game_menu_label_text is gui_label_text
+style game_menu_label_text is navigation_button_text
 
 style return_button is navigation_button
 style return_button_text is navigation_button_text
@@ -527,9 +535,7 @@ style game_menu_label:
     xpos 75
     ysize 180
 
-style game_menu_label_text:
-    size 75
-    color gui.accent_color
+style game_menu_label_text is navigation_button_text:
     yalign 0.5
 
 style return_button:
@@ -552,7 +558,7 @@ screen about():
     ## This use statement includes the game_menu screen inside this one. The
     ## vbox child is then included inside the viewport inside the game_menu
     ## screen.
-    use game_menu(_("About"), scroll="viewport"):
+    use game_menu(_("ABOUT"), scroll="viewport"):
 
         style_prefix "about"
 
@@ -566,6 +572,16 @@ screen about():
                 text "[gui.about!t]\n"
 
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+
+
+screen dictionary():
+
+    tag menu
+
+    use game_menu(_("DICTIONARY"), scroll="viewport"):
+
+        vbox:
+            null height 0
 
 
 style about_label is gui_label
@@ -589,19 +605,19 @@ screen save():
 
     tag menu
 
-    use file_slots(_("Save"))
+    use file_slots(_("SAVE"))
 
 
 screen load():
 
     tag menu
 
-    use file_slots(_("Load"))
+    use file_slots(_("LOAD"))
 
 
 screen file_slots(title):
 
-    default page_name_value = FilePageNameInputValue(pattern=_("Page {}"), auto=_("Automatic saves"), quick=_("Quick saves"))
+    default page_name_value = FilePageNameInputValue(pattern=_("PAGE {}"), auto=_("AUTOMATIC SAVES"), quick=_("QUICK SAVES"))
 
     use game_menu(title):
 
@@ -681,19 +697,19 @@ screen file_slots(title):
 
                 if config.has_sync:
                     if CurrentScreenName() == "save":
-                        textbutton _("Upload Sync"):
+                        textbutton _("UPLOAD SYNC"):
                             action UploadSync()
                             xalign 0.5
                     else:
-                        textbutton _("Download Sync"):
+                        textbutton _("DOWNLOAD SYNC"):
                             action DownloadSync()
                             xalign 0.5
 
 
 style page_label is gui_label
-style page_label_text is gui_label_text
+style page_label_text is navigation_button_text
 style page_button is gui_button
-style page_button_text is gui_button_text
+style page_button_text is navigation_button_text
 
 style slot_button is gui_button
 style slot_button_text is gui_button_text
@@ -705,16 +721,12 @@ style page_label:
     ypadding 5
     xalign 0.5
 
-style page_label_text:
+style page_label_text is navigation_button_text:
     textalign 0.5
     layout "subtitle"
-    hover_color gui.hover_color
 
 style page_button:
     properties gui.button_properties("page_button")
-
-style page_button_text:
-    properties gui.text_properties("page_button")
 
 style slot_button:
     properties gui.button_properties("slot_button")
@@ -730,11 +742,141 @@ style slot_button_text:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#preferences
 
+screen options():
+
+    tag menu 
+
+    default tab = "preferences"
+    default device = "keyboard"
+
+    use game_menu(_("OPTIONS"), scroll="viewport"):
+
+        vbox:
+            
+            hbox:
+                spacing 30 
+
+                textbutton _("Preferences"):
+                    style "options_tab_button"
+                    text_style "options_tab_button_text"
+                    action SetScreenVariable("tab", "preferences")
+                
+                textbutton _("Help"):
+                    style "options_tab_button"
+                    text_style "options_tab_button_text"
+                    action SetScreenVariable("tab", "help")
+
+            if tab == "preferences":
+                vbox:
+                    hbox:
+                        box_wrap True
+
+                        if renpy.variant("pc") or renpy.variant("web"):
+
+                            vbox:
+                                style_prefix "radio"
+                                label _("Display")
+                                textbutton _("Window") action Preference("display", "window")
+                                textbutton _("Fullscreen") action Preference("display", "fullscreen")
+
+                        vbox:
+                            style_prefix "check"
+                            label _("Skip")
+                            textbutton _("Unseen Text") action Preference("skip", "toggle")
+                            textbutton _("After Choices") action Preference("after choices", "toggle")
+                            textbutton _("Transitions") action InvertSelected(Preference("transitions", "toggle"))
+                    
+                    null height (4 * gui.pref_spacing)
+
+                    hbox:
+                        style_prefix "slider"
+                        box_wrap True
+
+                        vbox:
+
+                            label _("Text Speed")
+
+                            bar value Preference("text speed")
+
+                            label _("Auto-Forward Time")
+
+                            bar value Preference("auto-forward time")
+
+                        vbox:
+
+                            if config.has_music:
+                                label _("Music Volume")
+
+                                hbox:
+                                    bar value Preference("music volume")
+
+                            if config.has_sound:
+
+                                label _("Sound Volume")
+
+                                hbox:
+                                    bar value Preference("sound volume")
+
+                                    if config.sample_sound:
+                                        textbutton _("Test") action Play("sound", config.sample_sound)
+
+
+                            if config.has_voice:
+                                label _("Voice Volume")
+
+                                hbox:
+                                    bar value Preference("voice volume")
+
+                                    if config.sample_voice:
+                                        textbutton _("Test") action Play("voice", config.sample_voice)
+
+                            if config.has_music or config.has_sound or config.has_voice:
+                                null height gui.pref_spacing
+
+                                textbutton _("Mute All"):
+                                    action Preference("all mute", "toggle")
+                                    style "mute_all_button"
+
+            elif tab == "help":
+                style_prefix "help"
+                
+                vbox:
+                    spacing 23
+
+                    hbox:
+                        spacing 22
+
+                        textbutton _("Keyboard"):
+                            style "options_tab_button"
+                            text_style "options_tab_button_text"
+                            selected device == "keyboard"
+                            action SetScreenVariable("device", "keyboard")
+                        
+                        textbutton _("Mouse"):
+                            style "options_tab_button"
+                            text_style "options_tab_button_text"
+                            selected device == "mouse"
+                            action SetScreenVariable("device", "mouse")
+                        
+                        if GamepadExists():
+                            textbutton _("Gamepad"):
+                                style "options_tab_button"
+                                text_style "options_tab_button_text"
+                                selected device == "gamepad"
+                                action SetScreenVariable("device", "gamepad")
+
+                    if device == "keyboard":
+                        use keyboard_help
+                    elif device == "mouse":
+                        use mouse_help
+                    elif device == "gamepad":
+                        use gamepad_help
+
 screen preferences():
 
     tag menu
 
-    use game_menu(_("Preferences"), scroll="viewport"):
+    use game_menu(_("OPTIONS"), scroll="viewport"):
 
         vbox:
 
@@ -984,7 +1126,7 @@ screen help():
 
     default device = "keyboard"
 
-    use game_menu(_("Help"), scroll="viewport"):
+    use game_menu(_("HELP"), scroll="viewport"):
 
         style_prefix "help"
 
@@ -1117,20 +1259,35 @@ style help_label_text is gui_label_text
 style help_text is gui_text
 
 style help_button:
-    properties gui.button_properties("help_button")
-    xmargin 12
+    background None
+    xpadding 6
+    ypadding 2
+    xmargin 6
 
 style help_button_text:
-    properties gui.text_properties("help_button")
+    font "fonts/Schoolbell-Regular.ttf"
+    size 40
+    color "#D8CC9E"
+    hover_color "#E7D9A8"
+    selected_color "#E7D9A8"
+    drop_shadow (0, 2)
+    drop_shadow_color "#000000CC"
 
 style help_label:
     xsize 375
     right_padding 30
 
 style help_label_text:
-    size gui.text_size
+    font "fonts/Schoolbell-Regular.ttf"
+    size 40
+    color "#CBBF9B"
     xalign 1.0
     textalign 1.0
+
+style help_text:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 38
+    color "#4A3B2A"
 
 
 
@@ -1201,6 +1358,55 @@ style confirm_button:
 style confirm_button_text:
     properties gui.text_properties("confirm_button")
 
+style options_tab_button is gui_button
+style options_tab_button_text is gui_button_text
+
+style options_tab_button:
+    background None
+    xpadding 6
+    ypadding 2
+    xmargin 6
+
+style options_tab_button_text:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 40
+    color "#5A4833"
+    hover_color "#E7D9A8"
+    selected_color "#E7D9A8"
+    drop_shadow (0, 2)
+    drop_shadow_color "#000000CC"
+
+style pref_label_text:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 44
+    color "#3A2D20"
+
+style radio_button_text:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 38
+    color "#5A4833"
+    hover_color "#1F1710"
+    selected_color "#1F1710"
+
+style check_button_text:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 38
+    color "#5A4833"
+    hover_color "#1F1710"
+    selected_color "#1F1710"
+
+style slider_button_text:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 34
+    color "#5A4833"
+    hover_color "#1F1710"
+
+style mute_all_button_text:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 36
+    color "#CBBF9B"
+    hover_color "#1F1710"
+    selected_color "#1F1710"
 
 ## Skip indicator screen #######################################################
 ##

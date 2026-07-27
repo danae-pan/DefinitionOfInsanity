@@ -1,4 +1,4 @@
-image bg ch01 bedroom = im.Scale("images/backgrounds/background_bedroom.jpg", 1920, 1080)
+image bg ch01 lab = im.Scale("images/backgrounds/lab_background.png", 1920, 1080)
 
 default ch01_loop_count = 0
 default ch01_chapter1_with_one_try = False

@@ -1,6 +1,6 @@
 label ch01_start:
 
-    scene bg ch01 bedroom
+    scene bg ch01 lab
     with fade
 
     jump ch01_wake_up
