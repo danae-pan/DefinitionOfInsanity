@@ -223,10 +223,11 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
-        for i in items:
+        for idx,i in enumerate(items):
             $ choice_key = i.caption
 
             textbutton i.caption:
+                at choice_slide_in(idx)
                 selected choice_key in seen_choices
                 action [ Function(remember_choice, choice_key), i.action ]
 
@@ -253,6 +254,11 @@ style choice_button_text is default:
     hover_size 42
     # outlines [ (1, "#AE9572", 0, 0) ]
 
+transform choice_slide_in(i):
+    alpha 0.0
+    xoffset 220
+    pause i * 0.10
+    easeout 0.35 alpha 1.0 xoffset 0
 
 ## Quick Menu screen ###########################################################
 ##

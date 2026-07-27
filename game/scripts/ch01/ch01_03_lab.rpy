@@ -108,7 +108,7 @@ label ch01_study_prepare_formula:
 
         $ ch01_knows_licorice = True
 
-    if knows_arrythmia : 
+    if ch01_knows_arrythmia : 
 
         "I have strong indications that this can cause arrythmia to mother…"
 
