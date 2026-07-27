@@ -213,13 +213,22 @@ style input:
 ## and action fields.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#choice
+default seen_choices = set()
+
+init python:
+    def remember_choice(key):
+        seen_choices.add(key)
 
 screen choice(items):
     style_prefix "choice"
 
     vbox:
         for i in items:
-            textbutton i.caption action i.action
+            $ choice_key = i.caption
+
+            textbutton i.caption:
+                selected choice_key in seen_choices
+                action [ Function(remember_choice, choice_key), i.action ]
 
 
 style choice_vbox is vbox
@@ -235,9 +244,14 @@ style choice_vbox:
 
 style choice_button is default:
     properties gui.button_properties("choice_button")
+    selected_background Frame("gui/button/choice_selected_idle_background.png", gui.choice_button_borders, tile=gui.choice_button_tile)
+    selected_hover_background Frame("gui/button/choice_selected_idle_background.png", gui.choice_button_borders, tile=gui.choice_button_tile)
 
 style choice_button_text is default:
     properties gui.text_properties("choice_button")
+    spacing 0
+    hover_size 42
+    # outlines [ (1, "#AE9572", 0, 0) ]
 
 
 ## Quick Menu screen ###########################################################
