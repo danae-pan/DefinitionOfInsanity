@@ -101,6 +101,9 @@ define gui.game_menu_background = "gui/game_menu.png"
 ## These variables control how dialogue is displayed on the screen one line at a
 ## time.
 
+define gui.textbox_bg_narration = "gui/textbox.png"
+define gui.textbox_bg_dialogue = "gui/textbox_dialogue.png"
+
 ## The height of the textbox containing dialogue.
 define gui.textbox_height = 278
 

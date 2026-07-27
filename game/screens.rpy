@@ -99,6 +99,15 @@ screen say(who, what):
 
     window:
         id "window"
+        yoffset -20
+
+        # Narration/thoughts (no speaker name) use textbox.
+        if who is None:
+            background Image(gui.textbox_bg_narration, xalign=0.5, yalign=1.0)
+        # Spoken dialogue (has speaker) uses the dialogue textbox.
+        else:
+            background Image(gui.textbox_bg_dialogue, xalign=0.5, yalign=1.0)
+
 
         if who is not None:
 
@@ -143,6 +152,7 @@ style namebox:
     xsize gui.namebox_width
     ypos gui.name_ypos
     ysize gui.namebox_height
+    yoffset -20
 
     background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
@@ -157,7 +167,7 @@ style say_dialogue:
 
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
-    ypos gui.dialogue_ypos
+    ypos gui.dialogue_ypos -8
 
     adjust_spacing False
 
@@ -349,6 +359,7 @@ style navigation_button:
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    layout "nobreak"
     size 48
     kerning 1.92
     spacing gui.navigation_button_text_spacing
