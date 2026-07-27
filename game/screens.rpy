@@ -659,7 +659,7 @@ screen file_slots(title):
 
             ## This ensures the input will get the enter event before any of the
             ## buttons do.
-            order_reverse True
+            # order_reverse True
 
             ## The page name, which can be edited by clicking on a button.
             button:
