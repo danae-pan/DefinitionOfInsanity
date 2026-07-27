@@ -311,7 +311,9 @@ screen navigation():
 
             textbutton _("SAVE") action ShowMenu("save")
 
-        textbutton _("LOAD") action ShowMenu("load")
+        textbutton _("LOAD"): 
+            action ShowMenu("load")
+            selected (CurrentScreenName() == "load")
 
         textbutton _("OPTIONS") action ShowMenu("options")
 
@@ -340,12 +342,33 @@ style navigation_button_text is gui_button_text
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
+    background None
+    hover_background None
+    selected_background None
+    insensitive_background None
 
 style navigation_button_text:
     properties gui.text_properties("navigation_button")
+    size 48
+    kerning 1.92
     spacing gui.navigation_button_text_spacing
+
     drop_shadow (0, 4)
-    drop_shadow_color "#000000"
+    drop_shadow_color "#402814"
+
+    hover_size 50
+    hover_drop_shadow (0, 4.08)
+    hover_drop_shadow_color "#402814"
+
+    selected_drop_shadow (0, 4)
+    selected_drop_shadow_color "#000000"
+
+    # outlines [ (2, "#FFFFFF80", 0, 0) ]
+    # hover_outlines [ (4, "#FFFFFF80", 0, 0) ]
+    selected_outlines [ ]
+
+    
+
 
 ## Main Menu screen ############################################################
 ##

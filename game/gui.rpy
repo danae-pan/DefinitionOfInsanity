@@ -288,8 +288,8 @@ define gui.navigation_button_text_font = "fonts/GrechenFuemen-Regular.ttf"
 define gui.navigation_button_text_size = 48
 define gui.navigation_button_text_idle_color = "#DAD18F"
 define gui.navigation_button_text_hover_color = "#DAD18F"
-define gui.navigation_button_text_selected_color = "#DAD18F"
-define gui.navigation_button_text_insensitive_color = "#DAD18F"
+define gui.navigation_button_text_selected_color ="#402814"
+define gui.navigation_button_text_insensitive_color = "#8C8262"
 define gui.navigation_button_text_spacing = 2
 
 ## Frames ######################################################################
