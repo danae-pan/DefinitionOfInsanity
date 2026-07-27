@@ -46,7 +46,7 @@ label ch01_brain_hemorrahage_ending:
 
     "I immediately check her condition." 
 
-    if ch01_loop_count == 0:
+    if not ch01_brain_hemorrahage_happend:
 
         "Then I notice something." 
 
@@ -62,7 +62,7 @@ label ch01_brain_hemorrahage_ending:
 
         "She tried to get it herself." 
 
-        "While I was speaking with [Herbalist]..." 
+        "While I was speaking with Herbalist..." 
 
         "She tried to stand." 
 
@@ -76,47 +76,25 @@ label ch01_brain_hemorrahage_ending:
 
     else :
 
-        "Its the same situation..."
-
-        "The broken glass...."
-
-        "The empty bottle..."
+        "Its the same scene in front of me... The broken glass.... The empty bottle..."
 
     "But the damage was already done." 
 
     "I place my hands on her." 
 
-    "My training takes over." 
+    "My training takes over. I check every possible sign. I search for any chance. Any way to help her." 
 
-    "I check every possible sign." 
+    "But deep down... I already know." 
 
-    "I search for any chance." 
-
-    "Any way to help her." 
-
-    "But deep down..." 
-
-    "I already know." 
-
-    "The fall caused severe damage." 
-
-    "A brain hemorrhage." 
+    "The fall caused severe damage. A brain hemorrhage." 
 
     if ch01_brain_hemorrahage_happend:
 
         "Exactly like last time..."
 
-    "The hours pass slowly." 
+    "The hours pass slowly. I stay beside her. I try everything I can." 
 
-    "I stay beside her." 
-
-    "I try everything I can." 
-
-    "But her condition continues to worsen." 
-
-    "Until finally..." 
-
-    "..." 
+    "But her condition continues to worsen. Until finally..." 
 
     "She is gone." 
 
@@ -124,27 +102,15 @@ label ch01_brain_hemorrahage_ending:
 
     if not ch01_met_herb_in_door:
 
-        "I came back." 
-
-        "I answered her call." 
-
-        "I was here." 
-
-        "Yet..." 
+        "I came back. I answered her call. I was here. Yet..." 
 
         doctor "I still couldn't save you."
 
     if ch01_loop_count == 0:
     
-        "Eventually, reality returns." 
+        "Eventually, reality returns. There are things that need to be done." 
 
-        "There are things that need to be done." 
-
-        "I have to report her death." 
-
-        "I have to prepare her body." 
-
-        "I have to tell someone."
+        " I have to report her death. I have to prepare her body. I have to tell someone." 
 
         "Wake"
 
@@ -168,9 +134,13 @@ label ch01_brain_hemorrahage_ending:
 
         "I will do better."
 
+    if not ch01_brain_hemorrahage_happend:
+
+        $ ch01_brain_hemorrahage_happend = True
+
     call ch01_pass_to_chapter_2
 
-    if ch01_pass_to_chapter_2 :
+    if ch01_jump_to_chapter_2 :
 
         jump ch02_start
 

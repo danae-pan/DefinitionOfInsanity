@@ -1,4 +1,7 @@
+image bg ch01 kitchen = im.Scale("images/backgrounds/kitchen_background.png", 1920, 1080)
+image bg ch01 mother = im.Scale("images/backgrounds/mother_background.png", 1920, 1080)
 image bg ch01 lab = im.Scale("images/backgrounds/lab_background.png", 1920, 1080)
+image bg ch01 herbshop = im.Scale("images/backgrounds/herbshop_background.png", 1920, 1080)
 
 default ch01_loop_count = 0
 default ch01_chapter1_with_one_try = False

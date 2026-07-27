@@ -169,7 +169,7 @@ label ch01_arrythmia_mixed_ending:
 
     call ch01_pass_to_chapter_2
 
-    if ch01_pass_to_chapter_2 :
+    if ch01_jump_to_chapter_2 :
 
         jump ch02_start
 

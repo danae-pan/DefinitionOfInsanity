@@ -2,7 +2,9 @@
 # Choices
 #   Add bread 
 #   Don't add bread
-label ch01_make_breakfast:
+label ch01_make_breakfast :
+
+    scene bg ch01 kitchen
 
     if ch01_loop_count == 0 :
 
@@ -12,15 +14,13 @@ label ch01_make_breakfast:
     
         if not ch01_mother_checked :
 
-            "My stomach is hurting so much.." 
-
-            "Maybe some soup will help me…"
+            "My stomach is hurting so much... Maybe some soup will help me..."
         
         else :
 
             "A soup would help Mother feel better." 
         
-        "Wait.. have i done this before already?"
+        "Wait... have I done this before already?"
 
         "I’m probably confused from the luck of sleep…" 
 
@@ -28,9 +28,7 @@ label ch01_make_breakfast:
 
         if not ch01_mother_checked :
 
-            "My stomach is hurting so much.." 
-
-            "Maybe some soup will help me…"      
+            "My stomach is hurting so much... Maybe some soup will help me..."      
 
         else :
 
@@ -44,9 +42,7 @@ label ch01_make_breakfast:
 
     "Who would have thought something like this could happen because of one of our most common foods?" 
 
-    "There's some bread in the cupboard." 
-
-    "Maybe I should add it to the soup."
+    "There's some bread in the cupboard. Maybe I should add it to the soup." 
     
     if ch01_knows_dysphagia:
 
@@ -54,9 +50,7 @@ label ch01_make_breakfast:
 
         if ch01_mother_checked:
 
-            "I have to be carefull"
-
-            "I cannot make the same mistakes again"
+            "I have to be carefull. I cannot make the same mistakes again."
 
     menu:
 
@@ -74,35 +68,33 @@ label ch01_make_breakfast:
 
 label ch01_eat_breakfast:
 
+    scene bg ch01 mother
+
     if ch01_loop_count == 0:
 
-        doctor "Mother…?" 
+        if not ch01_mother_checked :
 
-        "She's still asleep." 
+            doctor "Mother…?" 
 
-        "She looks exhausted today as well." 
+            "She's still asleep. She looks exhausted today as well."
 
-        "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
+            "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
 
-        mother "Good morning…"
+            mother "Good morning…"
 
-        "I turn to see her trying to smile at me."
+            "I turn to see her trying to smile at me. This illness is slowly stealing her strength…"
 
-        "This illness is slowly stealing her strength…"
+            doctor "Good morning, Mother" 
 
-        doctor "Good morning, Mother" 
+            doctor "How are you feeling today?"
 
-        doctor "How are you feeling today?"
+            mother "Better…"
 
-        mother "Better…"
+            "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back."
 
-        "She tries to reach for my hand, but her arm trembles."
+            doctor "Let me run my tests first."
 
-        "I gently take her hand in mine and smile back"
-
-        doctor "Let me run my tests first."
-
-        doctor  "Alright… everthing seems stable."
+            doctor  "Alright… everthing seems stable."
 
         doctor "Come on."
 
@@ -124,11 +116,9 @@ label ch01_eat_breakfast:
 
             doctor "Mother…?" 
 
-            "She's still asleep."
-
             doctor "Mother!"
 
-            "Son…?"
+            mother "Son…?"
 
             "She's alive… i cannot believe it… is this real?"
 
@@ -147,6 +137,8 @@ label ch01_eat_breakfast:
         "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
 
         doctor "Good morning, Mother" 
+
+        mother "Good morning..."
 
         doctor "How are you feeling today?"
 

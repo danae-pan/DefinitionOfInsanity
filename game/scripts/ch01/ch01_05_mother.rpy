@@ -105,3 +105,129 @@ label ch01_answer_mothers_call:
         "Dont try the formula":
 
             jump ch01_comma_ending
+
+
+label ch01_check_mother :
+
+    
+
+    if ch01_loop_count == 0 :
+
+        scene bg ch01 mother
+
+        doctor "Mother…?" 
+
+        "She's still asleep. She looks exhausted today as well."
+
+        "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
+
+        mother "Good morning…"
+
+        "I turn to see her trying to smile at me. This illness is slowly stealing her strength…"
+
+        doctor "Good morning, Mother" 
+
+        doctor "How are you feeling today?"
+
+        mother "Better…"
+
+        "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back."
+
+        doctor "Let me run my tests first."
+
+        doctor  "Alright… everthing seems stable."
+
+        "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
+
+        "But maybe i should make us some breakfast first."
+
+    elif ch01_loop_count == 1 :
+
+        "I should go visit her now…"
+
+        scene bg ch01 mother
+
+        "Wait… This looks strange…"
+
+        if ch01_wake_happened :
+            
+            "Why is she in these clothes? I dressed her yesterday… im sure.. for the wake"
+        
+        "Im going by her side… im taching her hand… Its warm… She is alive…?"
+
+        doctor "Mother…?"
+
+        doctor "Mother!"
+
+        mother "Son…?"
+
+        "She's alive… i cannot believe it… is this real?"
+
+        "Am I getting another chance?"
+
+        "I have to calm down i should not upset her… I have to act normal"
+
+        mother "Good morning…"
+
+        doctor "Good morning, Mother"
+
+        doctor "How are you feeling today?"
+
+        mother "Better…"
+
+        "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back"
+
+        doctor "Let me run my tests first."
+
+        "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
+
+        "But maybe i should make us some breakfast first."
+    
+    else :
+
+        "I should go visit her now…"
+        
+        scene bg ch01 mother
+
+        "I rush by her side"
+
+        "I rush by her side"
+
+        "Again"
+
+        "I have to calm down i should not upset her… I have to act normal"
+
+        "Again"
+
+        "She looks exhausted today as well."
+
+        "I should open the windows."
+
+        mother "Good morning…"
+
+        "I turn to see her trying to smile at me."
+
+        doctor "Good morning, Mother"
+
+        doctor "How are you feeling today?"
+
+        mother "Better…"
+
+        "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back"
+
+        doctor "Let me run my tests first."
+
+        "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
+
+        "But maybe i should make us some breakfast first."
+    
+    $ ch01_mother_checked = True
+
+    menu :
+        "Make breakfast":
+
+            jump ch01_make_breakfast
+
+        "Go to your lab":
+
+            call ch01_study_prepare_formula

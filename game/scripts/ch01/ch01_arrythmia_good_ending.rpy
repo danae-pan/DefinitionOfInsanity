@@ -1,4 +1,4 @@
-label ch01_arrythmia_good_ending:
+label ch01_arrythmia_good_ending :
 
     "I glance back toward Mother's room."
 
@@ -43,6 +43,8 @@ label ch01_arrythmia_good_ending:
     "I quietly commit every word to memory."  
 
     "We arrive at Herbalist's shop." 
+
+    scene bg ch01 herbshop
 
     "Shelves packed with dried herbs, roots, and flowers surround us." 
 
@@ -176,7 +178,7 @@ label ch01_arrythmia_good_ending:
 
         doctor "How could I make such a mistake?" 
 
-        $ ch01_brain_hemorrahage_happend = True
+        $ ch01_knows_arrythmia = True
 
         "How am I supposed to live after this?"
 
@@ -208,10 +210,11 @@ label ch01_arrythmia_good_ending:
 
         "Wake"
 
+    $ ch01_check_formula = True
 
     call ch01_pass_to_chapter_2
 
-    if ch01_pass_to_chapter_2 :
+    if ch01_jump_to_chapter_2 :
 
         jump ch02_start
 

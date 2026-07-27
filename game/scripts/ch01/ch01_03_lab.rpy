@@ -1,3 +1,33 @@
+label ch01_straight_to_lab :
+
+    call ch01_study_prepare_formula
+
+    "A sudden noise breaks the silence."
+
+    "I look up." 
+
+    "Mother's cat is jumping from chair to chair." 
+
+    "She's chasing a fly that somehow found its way into the laboratory." 
+
+    doctor "Easy there, little one..." 
+
+    "Maybe I should let her outside."
+
+    menu :
+
+        "Let your cat outside":
+
+            "I gently carry the cat outside before returning to the laboratory."
+
+            "Today I need my full concentration. I can't afford any distractions."
+
+            jump ch01_mother_calls_knock_on_door
+        
+        "Keep your cat in the lab":
+
+            jump ch01_keep_cat_in_lab_mother_calls
+
 # Event You and your mother eat You head to your lab
 # Choices
 #   Lab choice (about the cat)
@@ -39,6 +69,8 @@ label ch01_eat_then_lab:
     "After we finished eating..."
 
     doctor "I'll leave you to rest now, Mother. Call me if you need anything, alright? I'll be in the laboratory."
+
+    scene bg ch01 lab
 
     "I enter the laboratory."
 
@@ -122,7 +154,7 @@ label ch01_study_prepare_formula:
 
     if not ch01_knows_schisandra :
 
-        $ ch01_knows_schisandra = true
+        $ ch01_knows_schisandra = True
 
     "I don't have enough left." 
 
@@ -158,7 +190,7 @@ label ch01_study_prepare_formula:
 
     "I pour the finished formula into a small glass vial." 
 
-    if loop_count >= 1:
+    if ch01_loop_count >= 1:
 
         "I did everything exactly as the last time." 
 
@@ -177,6 +209,8 @@ label ch01_study_prepare_formula:
     "I read each page one more time." 
 
     $ ch01_prepared_formula = True
+
+    jump ch01_mother_calls_knock_on_door
 
 label ch01_cat_becomes_noisy:
 
@@ -289,7 +323,7 @@ label ch01_mother_calls_knock_on_door:
 
     # audio *Knock... Knock...* 
 
-    "..." 
+    "*Knock... Knock...*" 
     
     if not ch01_met_herb_in_door:
 
@@ -308,3 +342,85 @@ label ch01_mother_calls_knock_on_door:
         "Answer your mother call":
 
             jump ch01_answer_mothers_call
+
+label ch01_keep_cat_in_lab_mother_calls :
+
+    doctor "Come on, little one."
+
+    "I candle her and she purrs back to me."
+
+    "I let her wonder in the room , check things out."
+
+    mother "Yosuke..." 
+
+    "I hear Mother's weak voice calling from her room." 
+
+    "I should check on her."
+
+    "But i have so much work…"
+
+    menu :
+
+        "Continue studying":
+
+            "I'm doing one last check and Ι'll go check on her."
+
+            jump ch01_mother_calls_knock_on_door
+
+        "Go to her":
+
+            jump ch01_check_mother_cat_in_lab
+
+label ch01_check_mother_cat_in_lab :
+
+    "I set my notes aside."
+
+    "Mother sounded weaker this time."
+
+    "I can't ignore her."
+
+    "I leave the laboratory and walk to her room."
+
+    "She is sitting up in bed."
+
+    "Even breathing seems to tire her."
+
+    mother "Yosuke..."
+
+    "I kneel beside her."
+
+    doctor "How are you feeling?"
+
+    mother "...Hungry."
+
+    "She hasn't eaten much since breakfast."
+
+    "The illness has taken what little strength she had."
+
+    "I glance toward the laboratory."
+
+    "The formula is still untested."
+
+    "Every minute I spend away from my research delays my work."
+
+    "But every minute I stay in the laboratory..."
+
+    "...Mother suffers alone."
+
+    "I have to choose."
+
+    menu :
+
+        "Give her food":
+
+            "I started preaparing food when some noise form the lab distracted me."
+
+            jump ch01_cat_breaks_formula
+
+        "Return to study":
+
+            "I will go back to the lab."
+
+            "When i check that the formula is ready i can give it to her with some food."
+
+            jump ch01_mother_calls_knock_on_door

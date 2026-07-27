@@ -1,6 +1,6 @@
 label ch01_start:
 
-    scene bg ch01 lab
+    scene black 
     with fade
 
     jump ch01_wake_up
@@ -41,7 +41,7 @@ label ch01_wake_up:
         
     else:
 
-        call ch01_loop_wakeup  
+        call ch01_loop_wakeup
         
     menu:
 
@@ -61,11 +61,9 @@ label ch01_wake_up:
 
 label ch01_first_wakeup:
 
-    "A new day begins..."
+    "A new day begins... Once again, reality hits me."
 
-    "Once again, reality hits me."
-
-    "Mother is suffering from an illness for which no cure has yet been found."
+    "Mother is suffering from an illness for which no cure has yet been found." 
 
     "I came back to help her survive, and the only way I can do that is by finding the cure myself."
 
@@ -89,15 +87,11 @@ label ch01_loop_wakeup:
 
         "All my life i wished this day will never come…"
 
-        "My body feels heavy." 
-
-        "My mind feels even heavier."
+        "My body feels heavy. My mind feels even heavier." 
 
         "Mother is gone."
 
     else: 
-
-        "I open my eyes."
 
         "I feel so confused… momories are coming though my head"
     
@@ -113,34 +107,22 @@ label ch01_loop_wakeup:
     
     return
 
-label ch01_remember_previus_deaths:
+label ch01_remember_previus_deaths :
 
     if ch01_wake_happened:
 
-        "The otsuya…"
-
-        "The neighbors…"
+        "The otsuya… The neighbors..."
         
     elif ch01_brain_hemorrahage_happend:
 
-        "The broken glass in the floor…"
-
-        "Mother fell off her bed.."
+        "The broken glass in the floor... Mother fell off her bed..."
     
     elif ch01_knows_arrythmia:
 
-        "I gave her the formula…"
-
-        "Licorice root…"
-
-        "It caused her arrythmia…"
+        "I gave her the formula... Licorice root... It caused her arrythmia..."
 
     else: 
 
-        "I didn't gave her the formula…"
-
-        "The illness killed her…"
-
-        "It was too late…"
+        "I didn't gave her the formula... The illness killed her... It was too late..."
 
     return

@@ -3,29 +3,21 @@ label ch01_dysphagia_ending:
 
     doctor "Alright... let's start with the soup." 
 
-    "I carefully begin feeding her."
-
-    "After the soup, I pick up the bread" 
+    "I carefully begin feeding her. After the soup, I pick up the bread."
 
     doctor "Here, Mother." 
 
-    "One bite..." 
-
-    "Two bites..."
+    "One bite... Two bites..." 
 
     "She stops." 
 
-    "At first, I think she is just tired."
-
-    "But something feels wrong." 
+    "At first, I think she is just tired... But something feels wrong."
 
     mother "..." 
 
     doctor "Mother?"
 
-    "She tries to breathe."
-
-    "She starts choking." 
+    "She tries to breathe... She starts choking."
 
     doctor "What is happening?" 
 
@@ -35,15 +27,9 @@ label ch01_dysphagia_ending:
 
     doctor "Stay with me, Mother..." 
 
-    "I know what to do." 
+    "I know what to do. I have studied this illness countless times." 
 
-    "I have studied this illness countless times." 
-
-    "So why are my hands shaking?"
-
-    "I try everything I can." 
-
-    "But nothing is enough."
+    "So why are my hands shaking? I try everything I can. But nothing is enough."
 
     "The room becomes silent. It is already too late."
 
@@ -55,11 +41,7 @@ label ch01_dysphagia_ending:
 
         "I hold Mother's hand, but she no longer responds." 
 
-        "I wait." 
-
-        "Maybe..." 
-
-        "Maybe she will open her eyes." 
+        "I wait. Maybe... Maybe she will open her eyes..." 
 
         "..." 
 
@@ -75,39 +57,21 @@ label ch01_dysphagia_ending:
 
         "How am I supposed to live after this?"
 
-        "I know the truth." 
+        "I know the truth. I am a doctor. I know what death looks like." 
 
-        "I am a doctor." 
-
-        "I know what death looks like." 
-
-        "Yet I cannot accept it." 
-
-        "I close her eyes gently." 
+        "Yet I cannot accept it. I close her eyes gently." 
 
         doctor "I'm sorry, Mother..." 
 
-        "I should have noticed." 
+        "I should have noticed... I should have remembered..." 
 
-        "I should have remembered." 
-
-        "I spent years studying this illness..." 
-
-        "And still, I failed you." 
-
-        "The house feels different now." 
-
-        "Too quiet." 
+        "I spent years studying this illness... And still, I failed you." 
 
         "Eventually, reality returns." 
 
-        "There are things that need to be done." 
+        "There are things that need to be done. I have to report her death." 
 
-        "I have to report her death." 
-
-        "I have to prepare her body." 
-
-        "I have to tell someone."
+        "I have to prepare her body. I have to tell someone." 
 
         "Wake"
 
@@ -115,31 +79,17 @@ label ch01_dysphagia_ending:
 
     elif ch01_loop_count == 1:
 
-        "I hold Mother's hand." 
+        "I hold Mother's hand. Her warmth slowly fades." 
 
-        "Her warmth slowly fades." 
-
-        "I close my eyes." 
-
-        "Not again..." 
-
-        "I can't let this happen again."
+        "I close my eyes. Not again... I can't let this happen again." 
 
         if ch01_knows_dysphagia:
 
             "The memory burns into my mind." 
 
-            "The bread." 
+            "The bread. The choking. The moment I failed." 
 
-            "The choking." 
-
-            "The moment I failed." 
-
-            "I know what went wrong." 
-
-            "I should have remembered." 
-
-            "I should have seen it." 
+            "I know what went wrong. I should have remembered. I should have seen it." 
 
         else:
 
@@ -147,33 +97,19 @@ label ch01_dysphagia_ending:
 
             $ ch01_knows_dysphagia = True
 
-        "I have to try again." 
-
-        "I have to save her." 
+        "I have to try again... I have to save her..." 
 
         "I gently place her hand back on the bed." 
 
-        "The house is quiet." 
+        "But I am not finished. I return to my laboratory." 
 
-        "But I am not finished." 
+        scene bg ch01 lab
 
-        "I return to my laboratory."
+        "I open my notes. My hands are shaking. I write down everything." 
 
-        "I open my notes." 
+        "The mistake. The symptoms. The things I overlooked." 
 
-        "My hands are shaking." 
-
-        "I write down everything." 
-
-        "The mistake." 
-
-        "The symptoms." 
-
-        "The things I overlooked." 
-
-        "If I get another chance..." 
-
-        "I will not repeat this." 
+        "If I get another chance... I will not repeat this." 
 
         "I will save her."
 
@@ -181,8 +117,6 @@ label ch01_dysphagia_ending:
 
         "I close my eyes." 
 
-        "Tomorrow..." 
-
-        "I will do better."
+        "Tomorrow... I will do better." 
 
     jump ch01_new_loop
