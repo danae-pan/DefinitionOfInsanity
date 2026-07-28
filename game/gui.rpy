@@ -337,7 +337,7 @@ define gui.slider_tile = False
 ## Horizontal borders.
 define gui.bar_borders = Borders(6, 6, 6, 6)
 define gui.scrollbar_borders = Borders(6, 6, 6, 6)
-define gui.slider_borders = Borders(6, 6, 6, 6)
+define gui.slider_borders = Borders(12, 6, 12, 6)
 
 ## Vertical borders.
 define gui.vbar_borders = Borders(6, 6, 6, 6)
