@@ -76,7 +76,7 @@ label ch01_eat_breakfast:
 
         if not ch01_mother_checked :
 
-            show doctor default at left onlayer portraits
+            show git  default at left onlayer portraits
 
             doctor "Mother…?" 
 
