@@ -42,6 +42,8 @@ define build.name = "InsanityGameJam"
 
 define config.developer = True
 
+init python:
+    renpy.add_layer("portraits", above="screens")
 ## Sounds and music ############################################################
 
 ## These three variables control, among other things, which mixers are shown

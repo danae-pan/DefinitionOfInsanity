@@ -76,11 +76,11 @@ label ch01_eat_breakfast:
 
         if not ch01_mother_checked :
 
-            show doctor default at left
+            show doctor default at left onlayer portraits
 
             doctor "Mother…?" 
 
-            hide doctor default
+            hide doctor default onlayer portraits
 
             "She's still asleep. She looks exhausted today as well."
 

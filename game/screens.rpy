@@ -64,6 +64,8 @@ style slider:
     ysize gui.slider_size
     base_bar Frame("gui/slider/horizontal_[prefix_]bar.png", gui.slider_borders, tile=gui.slider_tile)
     thumb "gui/slider/horizontal_[prefix_]thumb.png"
+    thumb_offset 15
+    thumb_align 0.5
 
 style vslider:
     xsize gui.slider_size
