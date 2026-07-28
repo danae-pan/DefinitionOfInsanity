@@ -120,7 +120,7 @@ label ch01_eat_then_lab:
 
         "Keep your cat in the lab":
 
-            $ ch01_cat_in_lab
+            $ ch01_cat_in_lab = True
 
             jump ch01_formula_cat_noisy
 
@@ -140,7 +140,7 @@ label ch01_study_prepare_formula:
 
         $ ch01_knows_licorice = True
 
-    if ch01_knows_arrythmia : 
+    if ch01_knows_arrhythmia : 
 
         "I have strong indications that this can cause arrythmia to mother…"
 
@@ -170,7 +170,7 @@ label ch01_study_prepare_formula:
 
     if not ch01_knows_polygala:
         
-        $ ch01_knows_polygala
+        $ ch01_knows_polygala = True
 
     doctor "If Licorice Root can reduce the inflammation..."
 
@@ -196,7 +196,7 @@ label ch01_study_prepare_formula:
 
     if ch01_cat_in_lab:
 
-        "I should be carefull with the formula, the cat is inside the lab."
+        "I should be careful with the formula, the cat is inside the lab."
 
     "I set it aside and reach for my notebook." 
 
@@ -210,13 +210,15 @@ label ch01_study_prepare_formula:
 
     $ ch01_prepared_formula = True
 
-    jump ch01_mother_calls_knock_on_door
+    return
+
+    # jump ch01_mother_calls_knock_on_door
 
 label ch01_cat_becomes_noisy:
 
     doctor "Come on, little one."
 
-    "I candle her and she purrs back to me."
+    "I cradle her and she purrs back to me."
 
     "I let her wonder in the room , check things out."
 
@@ -264,7 +266,7 @@ label ch01_cat_breaks_formula:
 
     "I look my notes one more time."
 
-    "Suddenly she appears up in my desc!"
+    "Suddenly she appears up in my desk!"
 
     if ch01_kept_cat_in_lab_once:
 
@@ -272,7 +274,7 @@ label ch01_cat_breaks_formula:
 
     doctor "No! Get out of here!"
 
-    "But its took late… She tries to leave form the desc but things get in her way."
+    "But it's took late… She tries to leave form the desc but things get in her way."
 
     "Bottles start breaking."
 
@@ -288,11 +290,11 @@ label ch01_cat_breaks_formula:
 
         "How could i make this mistake again?"
 
-    "I turn to find the cat but see is nowhere to be found."
+    "I turn to find the cat but she is nowhere to be found."
 
     "I have to make the formula again."
 
-    "I have to check on the apothecary what herbs i have remaining."
+    "I have to check what herbs I have at the apothecary."
 
     "Or instead i could go to the hospital and restore all my herbs."
 
@@ -331,7 +333,7 @@ label ch01_mother_calls_knock_on_door:
 
     else: 
 
-        "Maybe its the herbalist again."
+        "Maybe it's the herbalist again."
 
     menu:
 
@@ -413,7 +415,7 @@ label ch01_check_mother_cat_in_lab :
 
         "Give her food":
 
-            "I started preaparing food when some noise form the lab distracted me."
+            "I started preparing food when some noise from the lab distracted me."
 
             jump ch01_cat_breaks_formula
 

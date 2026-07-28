@@ -22,7 +22,7 @@ label ch01_make_breakfast :
         
         "Wait... have I done this before already?"
 
-        "I’m probably confused from the luck of sleep…" 
+        "I’m probably confused from the lack of sleep…" 
 
     else:
 
@@ -50,7 +50,9 @@ label ch01_make_breakfast :
 
         if ch01_mother_checked:
 
-            "I have to be carefull. I cannot make the same mistakes again."
+            "I have to be careful. I cannot make the same mistakes again."
+
+    $ ch01_breakfast_made = True
 
     menu:
 
@@ -164,7 +166,7 @@ label ch01_eat_breakfast:
 
             "I rush by her side"
 
-            "See is alive."
+            "She is alive."
 
             "Again"
 

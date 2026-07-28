@@ -46,16 +46,12 @@ label ch01_wake_up:
     menu:
 
         "Make breakfast":
-            
-            $ ch01_breakfast_made = True
 
             "I should make breakfast."
             
             jump ch01_make_breakfast
 
         "Check on your mother":
-
-            $ ch01_mother_checked = True
             
             jump ch01_check_mother
 
@@ -93,11 +89,11 @@ label ch01_loop_wakeup:
 
     else: 
 
-        "I feel so confused… momories are coming though my head"
+        "I feel so confused… memories are coming though my head"
     
     "All comes back…"
 
-    call ch01_remember_previus_deaths
+    call ch01_remember_previous_deaths
 
     "I have so much to do… i cannot hide any more.."
 
@@ -107,22 +103,22 @@ label ch01_loop_wakeup:
     
     return
 
-label ch01_remember_previus_deaths :
+label ch01_remember_previous_deaths:
 
     if ch01_wake_happened:
 
         "The otsuya… The neighbors..."
         
-    elif ch01_brain_hemorrahage_happend:
+    if ch01_brain_hemorrhage_happened:
 
         "The broken glass in the floor... Mother fell off her bed..."
     
-    elif ch01_knows_arrythmia:
+    if ch01_knows_arrhythmia:
 
         "I gave her the formula... Licorice root... It caused her arrythmia..."
 
-    else: 
+    if not ch01_check_formula:
 
-        "I didn't gave her the formula... The illness killed her... It was too late..."
+        "I didn't give her the formula... The illness killed her... It was too late..."
 
     return

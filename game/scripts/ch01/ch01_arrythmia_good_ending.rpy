@@ -44,7 +44,7 @@ label ch01_arrythmia_good_ending :
 
     "We arrive at Herbalist's shop." 
 
-    scene bg ch01 herbshop
+    scene bg ch01 herbstore
 
     "Shelves packed with dried herbs, roots, and flowers surround us." 
 
@@ -178,7 +178,7 @@ label ch01_arrythmia_good_ending :
 
         doctor "How could I make such a mistake?" 
 
-        $ ch01_knows_arrythmia = True
+        $ ch01_knows_arrhythmia = True
 
         "How am I supposed to live after this?"
 

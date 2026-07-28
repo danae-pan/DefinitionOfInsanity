@@ -155,7 +155,7 @@ label ch01_herbalists_invitation:
 
     herbalist "Unfortunatelly i dont carry these kinds of herbs with me but you can come with me in my shop. im heading there now. You will be back in an hour"
 
-    if ch01_brain_hemorrahage_happend:
+    if ch01_brain_hemorrhage_happened:
 
         "Last time I didn't go with the herbalist my mother died from brain hemorrhage and there was nothing i could do… Maybe i should go with him."
 

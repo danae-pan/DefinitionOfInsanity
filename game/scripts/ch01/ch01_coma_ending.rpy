@@ -1,4 +1,4 @@
-label ch01_comma_ending :
+label ch01_coma_ending :
 
     "I bring the formula to the room." 
 
@@ -38,9 +38,9 @@ label ch01_comma_ending :
 
     "I slowly place the formula back." 
 
-    d "I'm sorry, Mother..." 
+    doctor "I'm sorry, Mother..." 
 
-    d "I can't." 
+    doctor "I can't." 
 
     "For now, I choose not to give it to her." 
 
@@ -66,7 +66,7 @@ label ch01_comma_ending :
 
     "She stops responding." 
 
-    d "Mother?" 
+    doctor "Mother?" 
 
     "I check her condition." 
 
@@ -111,4 +111,7 @@ label ch01_comma_ending :
     "One question remains." 
 
     "What if the formula could have saved her?"
-    return
+
+    $ ch01_knows_coma = True
+
+    jump ch01_new_loop

@@ -52,7 +52,7 @@ label ch01_answer_mothers_call:
 
     else: 
 
-        "I should go prepare it quicly."
+        "I should go prepare it quickly."
 
     "But it has never been tested." 
 
@@ -94,7 +94,7 @@ label ch01_answer_mothers_call:
 
     if ch01_check_formula :
 
-        "Last time i gave it to her she died..."
+        "Last time I gave it to her she died..."
     
     menu:
 
@@ -104,12 +104,10 @@ label ch01_answer_mothers_call:
 
         "Dont try the formula":
 
-            jump ch01_comma_ending
+            jump ch01_coma_ending
 
 
 label ch01_check_mother :
-
-    
 
     if ch01_loop_count == 0 :
 
@@ -139,7 +137,7 @@ label ch01_check_mother :
 
         "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
 
-        "But maybe i should make us some breakfast first."
+        "But maybe I should make us some breakfast first."
 
     elif ch01_loop_count == 1 :
 
@@ -165,7 +163,7 @@ label ch01_check_mother :
 
         "Am I getting another chance?"
 
-        "I have to calm down i should not upset her… I have to act normal"
+        "I have to calm down I should not upset her… I have to act normal"
 
         mother "Good morning…"
 
@@ -181,15 +179,13 @@ label ch01_check_mother :
 
         "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
 
-        "But maybe i should make us some breakfast first."
+        "But maybe I should make us some breakfast first."
     
     else :
 
         "I should go visit her now…"
         
         scene bg ch01 mother
-
-        "I rush by her side"
 
         "I rush by her side"
 
@@ -219,7 +215,7 @@ label ch01_check_mother :
 
         "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
 
-        "But maybe i should make us some breakfast first."
+        "But maybe I should make us some breakfast first."
     
     $ ch01_mother_checked = True
 

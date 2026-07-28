@@ -99,7 +99,7 @@ label ch01_arrythmia_mixed_ending:
 
     "The formula triggered a fatal arrhythmia." 
 
-    $ ch01_knows_arrythmia = True
+    $ ch01_knows_arrhythmia = True
 
     "I do everything I can." 
 

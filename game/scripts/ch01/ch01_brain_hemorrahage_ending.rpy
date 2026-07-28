@@ -26,7 +26,7 @@ label ch01_brain_hemorrahage_ending:
 
     "There is no answer." 
 
-    if ch01_brain_hemorrahage_happend :
+    if ch01_brain_hemorrhage_happened :
 
         "Oh no... Is this happening again?"
 
@@ -46,7 +46,7 @@ label ch01_brain_hemorrahage_ending:
 
     "I immediately check her condition." 
 
-    if not ch01_brain_hemorrahage_happend:
+    if not ch01_brain_hemorrhage_happened:
 
         "Then I notice something." 
 
@@ -88,7 +88,7 @@ label ch01_brain_hemorrahage_ending:
 
     "The fall caused severe damage. A brain hemorrhage." 
 
-    if ch01_brain_hemorrahage_happend:
+    if ch01_brain_hemorrhage_happened:
 
         "Exactly like last time..."
 
@@ -134,9 +134,9 @@ label ch01_brain_hemorrahage_ending:
 
         "I will do better."
 
-    if not ch01_brain_hemorrahage_happend:
+    if not ch01_brain_hemorrhage_happened:
 
-        $ ch01_brain_hemorrahage_happend = True
+        $ ch01_brain_hemorrhage_happened = True
 
     call ch01_pass_to_chapter_2
 

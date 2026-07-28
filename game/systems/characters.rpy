@@ -1,3 +1,3 @@
-define doctor = Character("Doc")
+define doctor = Character("Dr. Yosuke")
 define mother = Character("Mother")
 define herbalist = Character("Herbalist")

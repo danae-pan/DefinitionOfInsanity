@@ -384,14 +384,14 @@ style navigation_button_text:
     kerning 1.92
     spacing gui.navigation_button_text_spacing
 
-    drop_shadow (0, 4)
+    drop_shadow (0, 2)
     drop_shadow_color "#402814"
 
     hover_size 50
-    hover_drop_shadow (0, 4.08)
+    hover_drop_shadow (0, 2)
     hover_drop_shadow_color "#402814"
 
-    selected_drop_shadow (0, 4)
+    selected_drop_shadow (0, 2)
     selected_drop_shadow_color "#000000"
 
     # outlines [ (2, "#FFFFFF80", 0, 0) ]
@@ -644,6 +644,10 @@ style about_text is gui_text
 
 style about_label_text:
     size gui.label_text_size
+    color "#DAD18F"
+
+style about_text: 
+    color "#402814"
 
 
 ## Load and Save screens #######################################################
