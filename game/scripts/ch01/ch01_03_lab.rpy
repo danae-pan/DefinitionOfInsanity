@@ -88,21 +88,15 @@ label ch01_eat_then_lab:
 
     "My notes for the formula are still waiting for me."
 
-    "Then I see her."
+    "Then I see her. Mother's cat quietly sneaks into the room and starts exploring."
 
-    "Mother's cat quietly sneaks into the room and starts exploring."
-
-    "Should I let her stay? It would be nice to have some company."
-
-    "I spend so many hours here alone now."
+    "Should I let her stay? It would be nice to have some company. I spend so many hours here alone now."
 
     "But maybe I should take her outside. I can't let anything distract me from my research."
 
     if ch01_kept_cat_in_lab_once:
 
-        "Last time i kept her inside see broke the formula."
-
-        "I should not risk it again."
+        "Last time i kept her inside see broke the formula. I should not risk it again."
 
     menu:
 
@@ -126,9 +120,7 @@ label ch01_eat_then_lab:
 
 label ch01_study_prepare_formula:
 
-    "I take my seat and spread my notes across the desk."
-
-    "My eyes wander over the herbs laid out before me."
+    "I take my seat and spread my notes across the desk. My eyes wander over the herbs laid out before me."
 
     doctor "Licorice Root..."
 
@@ -142,25 +134,9 @@ label ch01_study_prepare_formula:
 
     if ch01_knows_arrhythmia : 
 
-        "I have strong indications that this can cause arrythmia to mother…"
-
-        "But i have nothing else to try…"
+        "I have strong indications that this can cause arrythmia to mother... But i have nothing else to try..."
 
     "My gaze shifts to another jar."
-
-    doctor "Schisandra chinensis..."
-
-    "Major tonic, it is also considered an adaptogonen."
-
-    if not ch01_knows_schisandra :
-
-        $ ch01_knows_schisandra = True
-
-    "I don't have enough left." 
-
-    "It wouldn't be enough to prepare a proper dose."
-
-    "My eyes settle on one last herb."
 
     doctor "Polygala tenuifolia."
 

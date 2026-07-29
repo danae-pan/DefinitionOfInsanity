@@ -1,31 +1,49 @@
 # Event Your mother chokes during swallowing (dysphagia), she dies (end of fist chapter)
 label ch01_dysphagia_ending:
 
+    show doctor default at left onlayer portraits
+
     doctor "Alright... let's start with the soup." 
+
+    hide doctor default onlayer portraits
 
     "I carefully begin feeding her. After the soup, I pick up the bread."
 
+    show doctor default at left onlayer portraits
+    
     doctor "Here, Mother." 
 
-    "One bite... Two bites..." 
+    hide doctor default onlayer portraits
 
-    "She stops." 
+    "One bite... Two bites... She stops." 
 
     "At first, I think she is just tired... But something feels wrong."
 
     mother "..." 
 
+    show doctor default at left onlayer portraits
+
     doctor "Mother?"
 
+    hide doctor default onlayer portraits
+
     "She tries to breathe... She starts choking."
+
+    show doctor default at left onlayer portraits
 
     doctor "What is happening?" 
 
     doctor "How did this happen?" 
 
+    hide doctor default onlayer portraits
+
     "I quickly try to help her but the situation only gets worse." 
 
+    show doctor default at left onlayer portraits
+
     doctor "Stay with me, Mother..." 
+
+    hide doctor default onlayer portraits
 
     "I know what to do. I have studied this illness countless times." 
 
@@ -35,7 +53,11 @@ label ch01_dysphagia_ending:
 
     "Her final breath leaves her body in my arms." 
 
+    show doctor default at left onlayer portraits
+
     doctor "No..." 
+
+    hide doctor default onlayer portraits
 
     if ch01_loop_count == 0:
 
