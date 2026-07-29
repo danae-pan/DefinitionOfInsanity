@@ -117,8 +117,8 @@ label ch01_remember_previous_deaths:
 
         "I gave her the formula... Licorice root... It caused her arrythmia..."
 
-    if not ch01_check_formula:
+    if ch01_knows_coma :
 
-        "I didn't give her the formula... The illness killed her... It was too late..."
+        "I didn't gave her the formula... She died from coma..."
 
     return

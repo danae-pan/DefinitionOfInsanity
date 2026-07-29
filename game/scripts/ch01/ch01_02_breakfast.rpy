@@ -76,7 +76,7 @@ label ch01_eat_breakfast:
 
         if not ch01_mother_checked :
 
-            show git  default at left onlayer portraits
+            show doctor default at left onlayer portraits
 
             doctor "Mother…?" 
 
@@ -90,21 +90,31 @@ label ch01_eat_breakfast:
 
             "I turn to see her trying to smile at me. This illness is slowly stealing her strength…"
 
+            show doctor default at left onlayer portraits
+            
             doctor "Good morning, Mother" 
 
             doctor "How are you feeling today?"
+
+            hide doctor default onlayer portraits
 
             mother "Better…"
 
             "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back."
 
+            show doctor default at left onlayer portraits
+
             doctor "Let me run my tests first."
 
             doctor  "Alright… everthing seems stable."
 
+        show doctor default at left onlayer portraits
+        
         doctor "Come on."
 
         doctor " I made you miso soup. Your favorite."
+
+        hide doctor default onlayer portraits
 
     elif ch01_loop_count == 1:
 
@@ -120,9 +130,13 @@ label ch01_eat_breakfast:
 
             "Im going by her side… im taching her hand… Its warm… She is alive…?"
 
+            show doctor default at left onlayer portraits
+
             doctor "Mother…?" 
 
             doctor "Mother!"
+
+            hide doctor default onlayer portraits
 
             mother "Son…?"
 
@@ -140,19 +154,29 @@ label ch01_eat_breakfast:
         
         "She looks exhausted today as well." 
 
-        "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
+        "I should leave the soup on the bedside table and open the windows. The room needs some fresh air."
+
+        show doctor default at left onlayer portraits 
 
         doctor "Good morning, Mother" 
 
+        hide doctor default onlayer portraits
+
         mother "Good morning..."
 
+        show doctor default at left onlayer portraits 
+
         doctor "How are you feeling today?"
+
+        hide doctor default onlayer portraits
 
         mother "Better…"
 
         "She tries to reach for my hand, but her arm trembles."
 
         "I gently take her hand in mine and smile back"
+
+        show doctor default at left onlayer portraits
 
         doctor "Let me run my tests first."
 
@@ -161,6 +185,8 @@ label ch01_eat_breakfast:
         doctor "Come on."
 
         doctor " I made you miso soup. Your favorite."
+
+        hide doctor default onlayer portraits
 
     else: 
 
@@ -182,15 +208,21 @@ label ch01_eat_breakfast:
 
         "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
 
+        show doctor default at left onlayer portraits
+
         doctor "Good morning, Mother" 
 
         doctor "How are you feeling today?"
+
+        hide doctor default onlayer portraits
 
         mother "Better…"
 
         "She tries to reach for my hand, but her arm trembles."
 
         "I gently take her hand in mine and smile back"
+
+        show doctor default at left onlayer portraits
 
         doctor "Let me run my tests first."
 
@@ -199,6 +231,8 @@ label ch01_eat_breakfast:
         doctor "Come on."
 
         doctor " I made you miso soup. Your favorite."
+
+        hide doctor default onlayer portraits
 
     if ch01_bread_added:
 

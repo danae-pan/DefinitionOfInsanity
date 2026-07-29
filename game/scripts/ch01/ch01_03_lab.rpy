@@ -36,40 +36,72 @@ label ch01_eat_then_lab:
 
     "He helps her with her food while eating his own meal."
 
-    doctor "You know, your cat has been doing some strange things these past few days."
+    menu :
 
-    "She looks up at me."
+        "Say story about cat" :
 
-    doctor "Yesterday I caught her sitting in front of the mirror for almost ten minutes."
+            show doctor default at left onlayer portraits
 
-    doctor "She was just staring at herself like she had discovered another cat living in the house."
+            doctor "You know, your cat has been doing some strange things these past few days."
 
-    "Her eyes immediately brighten."
+            hide doctor default onlayer portraits
 
-    mother "...Curious..."
+            "She looks up at me."
 
-    doctor "Yeah." 
+            show doctor default at left onlayer portraits
 
-    doctor "That's exactly what I thought."
+            doctor "Yesterday I caught her sitting in front of the mirror for almost ten minutes."
 
-    doctor "Also... I checked the flowers in the garden this morning."
+            doctor "She was just staring at herself like she had discovered another cat living in the house."
 
-    "She looks up at me."
+            hide doctor default onlayer portraits
+            
+            "Her eyes immediately brighten."
 
-    doctor "The ajisai you thought was dying... "
+            mother "...Curious..."
 
-    doctor "There are new leaves coming out." 
+            show doctor default at left onlayer portraits
 
-    "A tear forms in the corner of her eye." 
+            doctor "Yeah. That's exactly what I thought." 
 
-    mother "...Really?"
+            hide doctor default onlayer portraits
 
-    doctor "Yeah. Looks like it wasn't ready to give up just yet."
+        "Say story about garden" :
+            
+            show doctor default at left onlayer portraits
+
+            doctor "Also... I checked the flowers in the garden this morning."
+
+            hide doctor default onlayer portraits
+
+            "She looks up at me."
+
+            show doctor default at left onlayer portraits
+
+            doctor "The ajisai you thought was dying... "
+
+            doctor "There are new leaves coming out." 
+
+            hide doctor default onlayer portraits
+
+            "A tear forms in the corner of her eye." 
+
+            mother "...Really?"
+
+            show doctor default at left onlayer portraits
+
+            doctor "Yeah. Looks like it wasn't ready to give up just yet."
+
+            hide doctor default onlayer portraits
 
     "After we finished eating..."
 
+    show doctor default at left onlayer portraits
+
     doctor "I'll leave you to rest now, Mother. Call me if you need anything, alright? I'll be in the laboratory."
 
+    hide doctor default onlayer portraits
+    
     scene bg ch01 lab
 
     "I enter the laboratory."
@@ -102,7 +134,11 @@ label ch01_eat_then_lab:
 
         "Let your cat outside":
 
+            show doctor default at left onlayer portraits
+
             doctor "Come on, little one."
+
+            hide doctor default onlayer portraits
 
             "I gently carry the cat outside before returning to the laboratory."
 
@@ -122,11 +158,19 @@ label ch01_study_prepare_formula:
 
     "I take my seat and spread my notes across the desk. My eyes wander over the herbs laid out before me."
 
+    show doctor default at left onlayer portraits
+
     doctor "Licorice Root..."
+
+    hide doctor default onlayer portraits
 
     "I still have enough for a full dose."
 
+    show doctor default at left onlayer portraits
+
     doctor "Its anti-inflammatory and soothing properties could help ease Mother's symptoms."
+
+    hide doctor default onlayer portraits
 
     if not ch01_knows_licorice:
 
@@ -138,9 +182,15 @@ label ch01_study_prepare_formula:
 
     "My gaze shifts to another jar."
 
+    show doctor default at left onlayer portraits
+
     doctor "Polygala tenuifolia."
 
+    hide doctor default onlayer portraits
+
     "I have almost enough."
+
+    show doctor default at left onlayer portraits
 
     doctor "Some studies suggest it has neuroprotective effects."
 
@@ -152,9 +202,11 @@ label ch01_study_prepare_formula:
 
     doctor "...then perhaps Polygala can help protect the nervous system." 
 
-    "..."
+    doctor "..."
 
     doctor "It's worth trying."
+
+    hide doctor default onlayer portraits
 
     "I carefully weigh each ingredient." 
 
@@ -176,9 +228,13 @@ label ch01_study_prepare_formula:
 
     "I set it aside and reach for my notebook." 
 
+    show doctor default at left onlayer portraits
+
     doctor "Now..." 
 
     doctor "Let's make sure I didn't overlook anything." 
+
+    hide doctor default onlayer portraits
 
     "I compare every measurement with my notes." 
 
@@ -289,7 +345,6 @@ label ch01_cat_breaks_formula:
         "Go to the hospital to restore your herbs":
 
             jump ch01_go_to_hospital
-
 
 label ch01_mother_calls_knock_on_door:
 

@@ -69,7 +69,11 @@ label ch01_dysphagia_ending:
 
         "But she doesn't." 
 
+        show doctor default at left onlayer portraits
+
         doctor "How could I make such a mistake?" 
+
+        hide doctor default onlayer portraits
 
         "I had read it before... Dysphagia was a symptom of this illness." 
 
@@ -83,7 +87,11 @@ label ch01_dysphagia_ending:
 
         "Yet I cannot accept it. I close her eyes gently." 
 
+        show doctor default at left onlayer portraits
+
         doctor "I'm sorry, Mother..." 
+
+        hide doctor default onlayer portraits
 
         "I should have noticed... I should have remembered..." 
 
