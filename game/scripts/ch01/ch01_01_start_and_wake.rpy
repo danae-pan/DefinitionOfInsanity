@@ -25,7 +25,7 @@ label ch01_reset_attempt_state:
     $ ch01_formula_finished = False
     $ ch01_met_herb_in_door = False
     $ ch01_met_herb_in_hospital = False
-    $ ch01_went_to_shop = False
+    $ herbalist_visited = False
     $ ch01_cat_broke_formula = False
     $ ch01_prepared_formula = False
 

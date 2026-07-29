@@ -84,9 +84,15 @@ label ch01_check_mother :
 
     if ch01_loop_count == 0 :
 
-        scene bg ch01 mother
+        scene bg ch01 mother with fade
+
+        "I enter her room."
+
+        show doctor default at left onlayer portraits
 
         doctor "Mother…?" 
+
+        hide doctor default onlayer portraits
 
         "She's still asleep. She looks exhausted today as well."
 
@@ -96,17 +102,25 @@ label ch01_check_mother :
 
         "I turn to see her trying to smile at me. This illness is slowly stealing her strength…"
 
+        show doctor default at left onlayer portraits
+
         doctor "Good morning, Mother" 
 
         doctor "How are you feeling today?"
+
+        hide doctor default onlayer portraits
 
         mother "Better…"
 
         "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back."
 
+        show doctor default at left onlayer portraits
+
         doctor "Let me run my tests first."
 
         doctor  "Alright… everthing seems stable."
+
+        show doctor default at left onlayer portraits
 
         "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
 
@@ -116,7 +130,7 @@ label ch01_check_mother :
 
         "I should go visit her now…"
 
-        scene bg ch01 mother
+        scene bg ch01 mother with fade
 
         "Wait… This looks strange…"
 
@@ -126,9 +140,13 @@ label ch01_check_mother :
         
         "Im going by her side… im taching her hand… Its warm… She is alive…?"
 
+        show doctor default at left onlayer portraits
+
         doctor "Mother…?"
 
         doctor "Mother!"
+
+        hide doctor default onlayer portraits
 
         mother "Son…?"
 
@@ -140,15 +158,23 @@ label ch01_check_mother :
 
         mother "Good morning…"
 
+        show doctor default at left onlayer portraits
+
         doctor "Good morning, Mother"
 
         doctor "How are you feeling today?"
+
+        hide doctor default onlayer portraits
 
         mother "Better…"
 
         "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back"
 
+        show doctor default at left onlayer portraits
+
         doctor "Let me run my tests first."
+
+        hide doctor default onlayer portraits
 
         "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
 
@@ -158,15 +184,11 @@ label ch01_check_mother :
 
         "I should go visit her now…"
         
-        scene bg ch01 mother
+        scene bg ch01 mother with fade
 
-        "I rush by her side"
+        "I rush by her side... She is alive.. Again"
 
-        "Again"
-
-        "I have to calm down i should not upset her… I have to act normal"
-
-        "Again"
+        "I have to calm down i should not upset her… I have to act normal."
 
         "She looks exhausted today as well."
 
@@ -176,15 +198,23 @@ label ch01_check_mother :
 
         "I turn to see her trying to smile at me."
 
+        show doctor default at left onlayer portraits
+
         doctor "Good morning, Mother"
 
         doctor "How are you feeling today?"
+
+        hide doctor default onlayer portraits
 
         mother "Better…"
 
         "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back"
 
+        show doctor default at left onlayer portraits
+
         doctor "Let me run my tests first."
+
+        hide doctor default onlayer portraits
 
         "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
 
@@ -195,8 +225,20 @@ label ch01_check_mother :
     menu :
         "Make breakfast":
 
+            show doctor default at left onlayer portraits
+
+            doctor "Im going to make us some breakfast. I'll be back soon."
+
+            hide doctor default onlayer portraits
+
             jump ch01_make_breakfast
 
         "Go to your lab":
 
-            call ch01_study_prepare_formula
+            show doctor default at left onlayer portraits
+
+            doctor "I'm going to my laboratory. Call me if you need anything."
+
+            hide doctor default onlayer portraits
+
+            jump ch01_straight_to_lab

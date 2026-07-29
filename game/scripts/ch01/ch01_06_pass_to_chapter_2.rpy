@@ -1,10 +1,10 @@
 label ch01_pass_to_chapter_2:
 
-    if ch01_met_herbalist and ch01_check_formula :
+    if met_herbalist and ch01_check_formula :
 
         if ch01_loop_count == 0:
 
-            $ ch01_chapter1_with_one_try = True
+            $ chapter_1_with_one_try = True
 
         $ ch01_jump_to_chapter_2 = True
 
