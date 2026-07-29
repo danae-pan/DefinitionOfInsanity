@@ -1,6 +1,8 @@
+image bg lab = "images/backgrounds/lab_background.png"
+
 label ch01_start:
 
-    scene black 
+    scene bg lab
     with fade
 
     jump ch01_wake_up

@@ -1572,6 +1572,7 @@ screen nvl(dialogue, items=None):
 
     window:
         style "nvl_window"
+        background None
 
         has vbox:
             spacing gui.nvl_spacing
@@ -1653,22 +1654,27 @@ style nvl_label:
     textalign gui.nvl_name_xalign
 
 style nvl_dialogue:
-    xpos gui.nvl_text_xpos
-    xanchor gui.nvl_text_xalign
-    ypos gui.nvl_text_ypos
-    xsize gui.nvl_text_width
-    min_width gui.nvl_text_width
-    textalign gui.nvl_text_xalign
-    layout ("subtitle" if gui.nvl_text_xalign else "tex")
+    xpos 170
+    xanchor 0.0
+    ypos 90
+    size 52
+    xsize 1500
+    min_width 1500
+
+    textalign 0.0
+    layout "tex"
 
 style nvl_thought:
-    xpos gui.nvl_thought_xpos
-    xanchor gui.nvl_thought_xalign
-    ypos gui.nvl_thought_ypos
-    xsize gui.nvl_thought_width
-    min_width gui.nvl_thought_width
-    textalign gui.nvl_thought_xalign
-    layout ("subtitle" if gui.nvl_text_xalign else "tex")
+    xpos 170
+    xanchor 0.0
+    ypos 90
+
+    xsize 1500
+    min_width 1500
+
+    textalign 0.0
+    line_spacing -5
+    layout "tex"
 
 style nvl_button:
     properties gui.button_properties("nvl_button")

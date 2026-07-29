@@ -10,4 +10,4 @@ define e = Character("Eileen")
 
 label start:
 
-    jump ch01_start
+    jump prologue
