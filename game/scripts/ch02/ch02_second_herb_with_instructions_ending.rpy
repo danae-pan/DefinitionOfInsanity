@@ -170,4 +170,6 @@ label ch02_second_herb_with_instructions_ending:
 
     "..he falls asleep."
 
+    $ ch02_second_herb_with_instructions = True
+
     jump ch02_start
