@@ -44,7 +44,7 @@ label ch01_make_breakfast :
 
     "There's some bread in the cupboard. Maybe I should add it to the soup." 
     
-    if ch01_knows_dysphagia:
+    if knows_dysphagia:
 
         "This is what caused dysphagia to mother..."
 

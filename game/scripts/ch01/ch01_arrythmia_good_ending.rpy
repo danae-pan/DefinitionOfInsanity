@@ -4,7 +4,7 @@ label ch01_arrythmia_good_ending :
 
     "She called for me..." 
 
-    if not ch01_met_herbalist:
+    if not met_herbalist:
 
         "But if Mr. Herbalist really has herbs the hospital doesn't..."
 
@@ -14,7 +14,7 @@ label ch01_arrythmia_good_ending :
 
         "Herbalist said the last time he has some herbs that might help."
 
-    if ch01_went_to_shop:
+    if herbalist_visited:
 
         "Herbalist have herbs that will help me develop a better formula."
 
@@ -88,6 +88,8 @@ label ch01_arrythmia_good_ending :
 
     herbalist "I hope you can help your mother Yosuke. Be safe walking home." 
 
+    $ took_herbs = True
+    
     "I finally return home." 
 
     "The house is quiet." 

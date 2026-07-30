@@ -4,13 +4,13 @@ label ch01_meet_herbalist_on_door:
 
     "It won't take long." 
 
-    if not ch01_met_herbalist:
+    if not met_herbalist:
 
         "It's probably one of the neighbors checking on Mother."
 
     "I open the door." 
 
-    if not ch01_met_herbalist:
+    if not met_herbalist:
 
         "A man wearing a green kimono smiles at me." 
     
@@ -37,7 +37,7 @@ label ch01_meet_herbalist_on_door:
     
     $ ch01_met_herb_in_door = True
 
-    $ ch01_met_herbalist = True
+    $ met_herbalist = True
     
     jump ch01_herbalists_invitation
 
@@ -123,7 +123,7 @@ label ch01_go_to_hospital:
 
     $ ch01_met_herb_in_hospital = True
 
-    $ ch01_met_herbalist = True
+    $ met_herbalist = True
 
 label ch01_herbalists_invitation:
     

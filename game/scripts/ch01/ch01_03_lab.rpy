@@ -1,18 +1,26 @@
 label ch01_straight_to_lab :
 
+    scene bg ch01 lab with fade
+
     call ch01_study_prepare_formula
 
     "A sudden noise breaks the silence."
 
-    "I look up." 
-
-    "Mother's cat is jumping from chair to chair." 
+    "I look up and I see mother's cat is jumping from chair to chair." 
 
     "She's chasing a fly that somehow found its way into the laboratory." 
 
+    show doctor default at left onlayer portraits
+
     doctor "Easy there, little one..." 
 
+    hide doctor default onlayer portraits
+
     "Maybe I should let her outside."
+
+    if kept_cat_in_lab_once :
+
+        "Last time i let her stay in the back she broke the formula..."
 
     menu :
 
@@ -126,7 +134,7 @@ label ch01_eat_then_lab:
 
     "But maybe I should take her outside. I can't let anything distract me from my research."
 
-    if ch01_kept_cat_in_lab_once:
+    if kept_cat_in_lab_once:
 
         "Last time i kept her inside see broke the formula. I should not risk it again."
 
@@ -264,7 +272,7 @@ label ch01_cat_becomes_noisy:
 
     "She's chasing a fly that somehow found its way into the laboratory." 
 
-    if ch01_kept_cat_in_lab_once:
+    if kept_cat_in_lab_once:
 
         "I have seen this before... if I let her stay inside she maybe break the formula again."
 
@@ -300,7 +308,7 @@ label ch01_cat_breaks_formula:
 
     "Suddenly she appears up in my desk!"
 
-    if ch01_kept_cat_in_lab_once:
+    if kept_cat_in_lab_once:
 
         "Its happening again!"
 
@@ -318,7 +326,7 @@ label ch01_cat_breaks_formula:
 
     "This can't be happening!"
 
-    if ch01_kept_cat_in_lab_once:
+    if kept_cat_in_lab_once:
 
         "How could i make this mistake again?"
 
@@ -332,9 +340,9 @@ label ch01_cat_breaks_formula:
 
     $ ch01_prepared_formula = False
 
-    if not ch01_kept_cat_in_lab_once:
+    if not kept_cat_in_lab_once:
 
-        $ ch01_kept_cat_in_lab_once = True
+        $ kept_cat_in_lab_once = True
 
     menu:
 
@@ -378,7 +386,11 @@ label ch01_mother_calls_knock_on_door:
 
 label ch01_keep_cat_in_lab_mother_calls :
 
+    show doctor default at left onlayer portraits
+
     doctor "Come on, little one."
+
+    hide doctor default onlayer portraits
 
     "I candle her and she purrs back to me."
 
@@ -386,11 +398,15 @@ label ch01_keep_cat_in_lab_mother_calls :
 
     mother "Yosuke..." 
 
+    $ ch01_mother_called = True
+
     "I hear Mother's weak voice calling from her room." 
 
     "I should check on her."
 
     "But i have so much work…"
+
+    $ ch01_cat_in_lab = True
 
     menu :
 

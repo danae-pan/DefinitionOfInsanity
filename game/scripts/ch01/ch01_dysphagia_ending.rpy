@@ -77,7 +77,7 @@ label ch01_dysphagia_ending:
 
         "I had read it before... Dysphagia was a symptom of this illness." 
 
-        $ ch01_knows_dysphagia = True
+        $ knows_dysphagia = True
 
         "I knew this. So why did I forget?" 
 
@@ -113,7 +113,7 @@ label ch01_dysphagia_ending:
 
         "I close my eyes. Not again... I can't let this happen again." 
 
-        if ch01_knows_dysphagia:
+        if knows_dysphagia:
 
             "The memory burns into my mind." 
 
@@ -125,7 +125,7 @@ label ch01_dysphagia_ending:
 
             "I had read it before... Dysphagia was a symptom of this illness." 
 
-            $ ch01_knows_dysphagia = True
+            $ knows_dysphagia = True
 
         "I have to try again... I have to save her..." 
 
