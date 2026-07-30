@@ -8,49 +8,61 @@ label ch01_make_breakfast :
 
     if ch01_loop_count == 0 :
 
-        "A soup would help Mother feel better." 
+        "He steps into the kitchen."
+
+        doctor "A soup should help Mother feel better."
     
     elif ch01_loop_count == 1:
+
+        "He steps into the kitchen."
     
         if not ch01_mother_checked :
-
-            "My stomach is hurting so much... Maybe some soup will help me..."
+            
+            doctor "My stomach is hurting so much..."
+            
+            doctor "Maybe a bowl of soup will help."
         
         else :
 
-            "A soup would help Mother feel better." 
+            doctor "A soup should help Mother feel better."
         
-        "Wait... have I done this before already?"
+        doctor "Wait... have I done this before already?"
 
-        "I’m probably confused from the lack of sleep…" 
+        doctor "I’m probably confused from the lack of sleep…" 
 
     else:
 
+        "He steps into the kitchen."
+
         if not ch01_mother_checked :
 
-            "My stomach is hurting so much... Maybe some soup will help me..."      
+            doctor "My stomach is hurting so much..."
+            
+            doctor "Maybe a bowl of soup will help."
 
         else :
 
-            "A soup would help Mother feel better." 
+            doctor "A soup should help Mother feel better."
 
-        "This is happening again… im doing the same things again and again… but i have one more chance.."
+        doctor "This is happening again… im doing the same things again and again… but i have one more chance.."
 
-    "Ever since the contamination in the fish was discovered, our food options have become limited." 
+    "Ever since contaminated fish entered the food supply, everyday meals have become much more difficult."
 
-    "We have to be careful about what we include in our diet."
+    "He has learned to question every ingredient before putting it on the table."
 
-    "Who would have thought something like this could happen because of one of our most common foods?" 
+    doctor "Who would've imagined that one of our most common foods could become so dangerous?"
 
-    "There's some bread in the cupboard. Maybe I should add it to the soup." 
-    
+    "He notices a loaf of bread sitting inside the cupboard."
+
     if knows_dysphagia:
 
-        "This is what caused dysphagia to mother..."
+        "A memory flashes through his mind."
+
+        doctor "The bread... This is what caused dysphagia to mother..."
 
         if ch01_mother_checked:
 
-            "I have to be careful. I cannot make the same mistakes again."
+            doctor "I have to be careful. I cannot make the same mistakes again."
 
     $ ch01_breakfast_made = True
 
@@ -58,7 +70,7 @@ label ch01_make_breakfast :
 
         "Add bread":
 
-            "Alright, breakfast ready."
+            doctor "Alright, breakfast ready."
             
             $ ch01_bread_added = True
 
@@ -82,13 +94,13 @@ label ch01_eat_breakfast:
 
             hide doctor default onlayer portraits
 
-            "She's still asleep. She looks exhausted today as well."
+            "She is still asleep, her face worn with exhaustion."
 
-            "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
+            "He quietly places the soup on the bedside table and opens the window, letting fresh air fill the room."
 
             mother "Good morning…"
 
-            "I turn to see her trying to smile at me. This illness is slowly stealing her strength…"
+            "She turns toward him with a faint smile. The illness has stolen so much of her strength."
 
             show doctor default at left onlayer portraits
             
@@ -100,7 +112,7 @@ label ch01_eat_breakfast:
 
             mother "Better…"
 
-            "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back."
+            "She reaches for his hand, but her arm trembles. He gently takes her hand and smiles reassuringly."
 
             show doctor default at left onlayer portraits
 
@@ -110,7 +122,7 @@ label ch01_eat_breakfast:
 
         show doctor default at left onlayer portraits
         
-        doctor "Come on."
+        doctor "Here."
 
         doctor " I made you miso soup. Your favorite."
 
@@ -118,17 +130,21 @@ label ch01_eat_breakfast:
 
     elif ch01_loop_count == 1:
 
-        "I should go visit her now…"
+        doctor "I should go visit her now…"
 
         if not ch01_mother_checked:
 
-            "Wait… This looks strange…"
+            "As he enters the room, something feels wrong."
 
             if ch01_wake_happened:
 
-                "Why is she in these clothes? I dressed her yesterday… im sure.. for the wake"
+                doctor "Why is she in these clothes? I dressed her yesterday… im sure.. for the wake"
 
-            "Im going by her side… im taching her hand… Its warm… She is alive…?"
+            "He rushes to her bedside and gently takes her hand."
+
+            "It's warm."
+
+            doctor "She's alive...?"
 
             show doctor default at left onlayer portraits
 
@@ -140,21 +156,23 @@ label ch01_eat_breakfast:
 
             mother "Son…?"
 
-            "She's alive… i cannot believe it… is this real?"
+            "Relief crashes over him."
 
-            "Am I getting another chance?"
+            doctor "This... this can't be happening."
 
-            "I have to calm down i should not upset her… I have to act normal"
+            doctor "Did I really get another chance?"
 
-            "I have to bring her breakfast."
+            doctor "Calm down. Don't let her notice. Just act normal."
         
         else: 
 
-            "I have to calm down i should not upset her… I have to act normal"
-        
-        "She looks exhausted today as well." 
+            doctor "Stay calm."
 
-        "I should leave the soup on the bedside table and open the windows. The room needs some fresh air."
+            doctor "She can't know."  
+
+        "She looks just as exhausted as he remembers."
+
+        "He places the soup beside her bed and opens the window."
 
         show doctor default at left onlayer portraits 
 
@@ -172,9 +190,9 @@ label ch01_eat_breakfast:
 
         mother "Better…"
 
-        "She tries to reach for my hand, but her arm trembles."
+        "She reaches for his hand, but it trembles."
 
-        "I gently take her hand in mine and smile back"
+        "He gently holds it between his own."
 
         show doctor default at left onlayer portraits
 
@@ -182,7 +200,7 @@ label ch01_eat_breakfast:
 
         doctor  "Alright… everthing seems stable."
 
-        doctor "Come on."
+        doctor "Here."
 
         doctor " I made you miso soup. Your favorite."
 
@@ -190,23 +208,25 @@ label ch01_eat_breakfast:
 
     else: 
 
-        "I should go visit her now…"
+        doctor "I should go visit her now…"
 
         if not ch01_mother_checked:
 
-            "I rush by her side"
+            "He rushes to her bedside."
 
-            "She is alive."
+            "She's alive."
 
-            "Again"
+            doctor "Again..."
 
-        "I have to calm down i should not upset her… I have to act normal"
+        doctor "Stay calm."
 
-        "Again"
+        doctor "Don't let her notice."
 
-        "She looks exhausted today as well." 
+        doctor "I've done this before."
 
-        "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
+        "She looks just as exhausted as every other time."
+
+        "He places the soup beside her bed and opens the window."
 
         show doctor default at left onlayer portraits
 
@@ -218,9 +238,9 @@ label ch01_eat_breakfast:
 
         mother "Better…"
 
-        "She tries to reach for my hand, but her arm trembles."
+        "She reaches for his hand, her arm trembling."
 
-        "I gently take her hand in mine and smile back"
+        "He gently holds it and smiles."
 
         show doctor default at left onlayer portraits
 
@@ -228,7 +248,7 @@ label ch01_eat_breakfast:
 
         doctor  "Alright… everthing seems stable."
 
-        doctor "Come on."
+        doctor "Here."
 
         doctor " I made you miso soup. Your favorite."
 
