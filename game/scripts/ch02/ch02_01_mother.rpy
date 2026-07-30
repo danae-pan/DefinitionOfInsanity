@@ -64,3 +64,99 @@ label ch02_check_mother :
 label ch02_go_to_mother :
 
     return 
+
+label ch02_mother_calls_for_food :
+
+    "The doctor takes another look at the decoction before setting the wooden spoon aside."
+
+    doctor "It can wait a few minutes.."
+
+    doctor "..at least that is what I hope."
+
+    "He leaves the laboratory and makes his way upstairs."
+
+    "His mother is awake, though only barely."
+
+    "She turns her head as he enters the room."
+
+    "A faint smile appears on her face."
+
+    "He kneels beside the bed."
+
+    show doctor default at left onlayer portraits
+
+    doctor "I'm here."
+
+    hide doctor default onlayer portraits
+
+    "She reaches for his hand."
+
+    "Her fingers tremble."
+
+    mother "I..."
+
+    "She pauses, struggling to swallow."
+
+    mother "...I'm so hungry."
+
+    "The doctor gently supports her shoulders."
+
+    show doctor default at left onlayer portraits
+
+    doctor "I know."
+
+    hide doctor default onlayer portraits
+
+    "She closes her eyes tightly."
+
+    mother "My throat..."
+
+    mother "It hurts..."
+
+    mother "Everything hurts."
+
+    "He watches as she tries to swallow again."
+
+    "Even that small movement seems painful."
+
+    "Her lips are dry."
+
+    "The disease is making it harder and harder for her to swallow."
+
+    "She has barely eaten."
+
+    "Barely drunk anything."
+
+    "His thoughts return to the herbalist."
+
+    doctor "The second herb should not be taken after eating."
+
+    if ch02_second_herb_with_instructions:
+
+        doctor "However, last time I did follow the instructions and still.."
+
+        doctor "..I failed."
+
+    "He looks at his mother."
+
+    doctor "If I feed her now, the medicine may not work."
+
+    doctor "But if I don't…she'll only grow weaker."
+
+    "She squeezes his hand ever so slightly."
+
+    mother "...please..."
+
+    "He lowers his head."
+
+    menu :
+
+        "Prepare her food":
+
+            jump ch02_second_herb_without_instructions_ending
+
+        "Don't":
+
+            jump ch02_second_herb_with_instructions_ending
+
+    return
