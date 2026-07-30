@@ -6,7 +6,7 @@ label ch02_second_herb_without_instructions_ending:
 
     "He leaves the room and makes his way downstairs, heading first to the laboratory."
 
-    "The unfinished decoction is still warm."
+    "The unfinished {a=glossary:decoction_entry}decoction{/a} is still warm."
 
     doctor "Thankfully, it still needs a bit of time to be ready."
 

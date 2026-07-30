@@ -18,9 +18,9 @@ label ch02_feed_the_cat :
 
     "He fills a second bowl with some water."
 
-    doctor "Time to go back to the lab and continue working on the formula."
+    doctor "Time to go back to the lab and continue working on the {a=glossary:formula_entry}formula{/a}."
 
-    "He keeps on stirring the decoction."
+    "He keeps on stirring the {a=glossary:decoction_entry}decoction{/a}."
 
     doctor "The formula is finally ready."
 

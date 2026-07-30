@@ -218,7 +218,7 @@ label ch02_go_to_herbalist :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "This one is Dong quai, a restorative tonic."
+    herbalist "This one is {a=glossary:junka_root_entry}Junka Root{/a}, a restorative tonic."
 
     herbalist "It promotes blood circulation and helps strengthen the body."
 
@@ -230,7 +230,7 @@ label ch02_go_to_herbalist :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "This is Ganoderma lucidum, it focuses on supporting the body's vitality."
+    herbalist "This is {a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}, it focuses on supporting the body's vitality."
 
     herbalist "It can be taken without food."
     
@@ -238,7 +238,7 @@ label ch02_go_to_herbalist :
 
     "The doctor studies both herbs in silence."
 
-    doctor "I know now, Licorice root only makes things worse."
+    doctor "I know now, {a=glossary:nagomi_root_entry}Nagomi Root{/a} only makes things worse."
 
     if ch02_first_herb_with_instructions:
 
@@ -316,7 +316,7 @@ label ch02_go_to_herbalist :
 
         doctor "This might prove to be a good alternative for the second phase."
 
-        doctor "After my failed attempt with Panax Ginseng, I should proceed more cautiously."
+        doctor "After my failed attempt with {a=glossary:taeru_root_entry}Taeru Root{/a}, I should proceed more cautiously."
 
     "He closes his eyes for a moment."
 

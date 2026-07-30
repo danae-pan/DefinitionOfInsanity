@@ -20,7 +20,7 @@ label ch02_take_the_first :
 
     show doctor default at left onlayer portraits
 
-    doctor "I will take Dong quai."
+    doctor "I will take {a=glossary:junka_root_entry}Junka Root{/a}."
 
     doctor "Thank you Mr. Herbalist."
 
@@ -38,11 +38,11 @@ label ch02_take_the_first :
 
     scene bg ch01 lab with fade
 
-    "The doctor returns home, walks into his laboratory and spreads several worn medical journals and Kampō manuscripts across the desk."
+    "The doctor returns home, walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampō{/a}  manuscripts across the desk."
 
     if ch02_use_panax :
 
-        doctor "Along with my research I know one more thing... Licorice root is too dangerous. "
+        doctor "Along with my research I know one more thing... {a=glossary:nagomi_root_entry}Nagomi Root{/a} is too dangerous. "
 
         doctor "I will not make the same mistake again."
 
@@ -50,7 +50,7 @@ label ch02_take_the_first :
 
         doctor "I have done my research and I already used two herbs that led to Mother’s death."
 
-        doctor "Licorice root and Panax Ginseg."
+        doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a} and Panax Ginseg."
 
         doctor "I will not make the same mistakes again."
 
@@ -76,13 +76,13 @@ label ch02_take_the_first :
 
     doctor "I must remember that."
 
-    "He carefully places the Dong quai into the mortar before turning back to his notes."
+    "He carefully places the Junka Root into the mortar before turning back to his notes."
 
     doctor "Now... the second phase."
 
     "He reaches for a small wooden box tucked away on the upper shelf."
 
-    "Inside lies the last of his Polygala tenuifolia."
+    "Inside lies the last of his {a=glossary:hogo_root_entry}Hogo Root{/a}."
 
     "He carefully examines the remaining dried roots."
 
@@ -92,13 +92,13 @@ label ch02_take_the_first :
 
     "He opens one of his Kampō manuscripts and rereads a passage he had marked days before."
 
-    doctor "Some physicians believe Polygala calms the mind and supports the nervous system."
+    doctor "Some physicians believe Hogo Root calms the mind and supports the nervous system."
 
     doctor "If healthy neurons can compensate for those that have been damaged."
 
     doctor "Perhaps this will encourage that process."
 
-    "He places the Polygala into the mortar beside the Dong quai."
+    "He places the Hogo Root into the mortar beside the Junka Root."
 
     "The pestle moves slowly in circles, reducing the dried herbs to a fine powder."
 
@@ -108,7 +108,7 @@ label ch02_take_the_first :
 
     "The laboratory fills with the aroma of the herbs."
 
-    "He gently stirs the decoction, carefully observing its colour and consistency."
+    "He gently stirs the {a=glossary:decoction_entry}decoction{/a}, carefully observing its colour and consistency."
 
     doctor "The extraction isn't complete yet."
 
@@ -196,7 +196,7 @@ label ch02_take_the_second :
 
     show doctor default at left onlayer portraits
 
-    doctor "I will take Ganoderma lucidum."
+    doctor "I will take {a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}."
 
     doctor "Thank you Mr. Herbalist."
 
@@ -218,7 +218,7 @@ label ch02_take_the_second :
 
     if ch02_use_panax :
 
-        doctor "Along with my research I know one more thing... Licorice root is too dangerous."
+        doctor "Along with my research I know one more thing... Nagomi Root is too dangerous."
 
         doctor "I will not make the same mistake again."
 
@@ -226,21 +226,21 @@ label ch02_take_the_second :
 
         doctor "I have done my research and I already used two herbs that led to Mother’s death."
 
-        doctor "Licorice root and Panax Ginseg."
+        doctor "Nagomi Root and Panax Ginseg."
 
         doctor "I will not make the same mistakes again."
 
     if ch02_first_herb_without_instructions :
 
-        doctor "Last time, I took Dong Quai from the herbalist and used it for the first phase of the treatment."
+        doctor "Last time, I took Junka Root from the herbalist and used it for the first phase of the treatment."
 
         doctor "Now, it's time to focus on the second phase."
 
-        doctor "I only hope Ganoderma lucidum will prove effective."
+        doctor "I only hope Tsuyomi Cap will prove effective."
 
     "He unties the herbalist's pouch and gently pours the dried herb into his hand."
 
-    doctor "Ganoderma..."
+    doctor "Tsuyomu..."
 
     doctor "It is believed to strengthen the immune system and support recovery."
 
@@ -250,13 +250,13 @@ label ch02_take_the_second :
 
     doctor "..there is little hope of restoring the nervous system."
 
-    "Then, his eyes settle on the container with Schisandra chinensis."
+    "Then, his eyes settle on the container with Ryoku Berry."
 
-    doctor "Schisandra... it strengthens the body and may improve its resilience. "
+    doctor "Ryoku Berry... it strengthens the body and may improve its resilience. "
 
     doctor "I only have a small amount left, but it should be enough."
 
-    "With his decision made, he places the Ganoderma and Schisandra into the mortar."
+    "With his decision made, he places the Tsuyomi Cap and Ryoku Berry into the mortar."
 
     "He slowly mixes the dried herbs, reducing them to a fine powder."
 
@@ -292,7 +292,7 @@ label ch02_take_the_second :
 
     "Interrupting the preparation now could alter the concentration."
 
-    "He would have to begin again and he knows that Schisandra chinensis might not be enough."
+    "He would have to begin again and he knows that {a=glossary:ryoku_berry_entry}Ryoku Berry{/a} might not be enough."
 
     "A second call reaches him."
 

@@ -38,13 +38,13 @@ label ch02_go_to_hospital :
 
             doctor "Wait a minute!"
 
-            doctor "There is a glass bottle of dry Ginseng Panax."
+            doctor "There is a glass bottle of dry {a=glossary:taeru_root_entry}Taeru Root{/a}."
 
-            doctor "I could use this for phase two, replacing Polygala tenuifolia that I only have in a small amount."
+            doctor "I could use this for phase two, replacing {a=glossary:hogo_root_entry}Hogo Root{/a} that I only have in a small amount."
 
         else:
 
-            doctor "The glass bottle of dry Ginseng Panax is still there."
+            doctor "The glass bottle of dry {a=glossary:taeru_root_entry}Taeru Root{/a} is still there."
 
     else :
 
@@ -52,7 +52,7 @@ label ch02_go_to_hospital :
 
         $ ch02_second_visit_hospital = True 
 
-        doctor "Ginseng Panax is still there but I already know, I can’t use this one."
+        doctor "{a=glossary:taeru_root_entry}Taeru Root{/a} is still there but I already know, I can’t use this one."
 
         doctor "I won’t make the same mistake again."
 
@@ -60,17 +60,17 @@ label ch02_go_to_hospital :
 
         jump ch02_go_to_herbalist
 
-    "The doctor grabs the bottle and quickly heads home to prepare the formula."
+    "The doctor grabs the bottle and quickly heads home to prepare the {a=glossary:formula_entry}formula{/a}."
 
     scene bg ch01 lab with fade 
 
     "He walks into his laboratory and spreads several worn medical journals and Kampō manuscripts across the desk."
 
-    "Yesterday taught me one thing... Licorice root seems too dangerous. "
+    "Yesterday taught me one thing... {a=glossary:nagomi_root_entry}Nagomi Root{/a} seems too dangerous. "
 
-    "His eyes settle on the container with Schisandra chinensis."
+    "His eyes settle on the container with {a=glossary:ryoku_berry_entry}Ryoku Berry{/a}."
 
-    doctor "Schisandra can replace Licorise for the first phase."
+    doctor "Ryoku Berry can replace Nagomi Root for the first phase."
 
     doctor "It strengthens the body and may improve its resilience. "
 
@@ -78,7 +78,7 @@ label ch02_go_to_hospital :
 
     doctor "Now for the second phase..."
 
-    "He pulls the small bottle of dried Panax Ginseng root from his coat pocket, which he had obtained from the hospital."
+    "He pulls the small bottle of dried Taeru Root from his coat pocket, which he had obtained from the hospital."
 
     doctor "It is known to restore strength and reduce fatigue... perhaps it can stimulate the healthy neurons to compensate for the damaged ones."
 
@@ -92,7 +92,7 @@ label ch02_go_to_hospital :
 
     "He begins grinding the dried roots with a mortar and pestle until they become a fine powder. "
 
-    "Slowly, he combines the measured ingredients inside a ceramic bowl, adding hot water drop by drop until the mixture forms a dark herbal decoction."
+    "Slowly, he combines the measured ingredients inside a ceramic bowl, adding hot water drop by drop until the mixture forms a dark herbal {a=glossary:decoction_entry}decoction{/a}."
 
     doctor "Every measurement has to be exact."
 

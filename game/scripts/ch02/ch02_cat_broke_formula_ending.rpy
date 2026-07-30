@@ -8,7 +8,7 @@ label ch02_cat_broke_formula_ending :
 
     doctor "No..."
 
-    doctor "Every minute I spend away from the formula is another minute Mother has to wait."
+    doctor "Every minute I spend away from the {a=glossary:formula_entry}formula{/a} is another minute Mother has to wait."
 
     "He gently nudges the cat aside with his foot."
 
@@ -18,7 +18,7 @@ label ch02_cat_broke_formula_ending :
 
     "The doctor turns back to the workbench."
 
-    "The decoction is reaching the final stage."
+    "The {a=glossary:decoction_entry}decoction{/a} is reaching the final stage."
 
     doctor "Just a little longer..."
 
@@ -78,11 +78,11 @@ label ch02_cat_broke_formula_ending :
 
     "He slowly looks toward the shelf."
 
-    "The wooden box that once held the last of the Polygala tenuifolia sits open."
+    "The wooden box that once held the last of the {a=glossary:hogo_root_entry}Hogo Root{/a} sits open."
 
     "Empty."
 
-    "The pouch of Dong quai from the herbalist is empty as well."
+    "The pouch of {a=glossary:junka_root_entry}Junka Root{/a} from the herbalist is empty as well."
 
     "There is nothing left."
 

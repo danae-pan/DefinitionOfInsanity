@@ -170,6 +170,11 @@ style say_label:
 style say_dialogue:
     properties gui.text_properties("dialogue")
 
+    hyperlink_functions (
+    glossary_link_style,
+    glossary_link_clicked,
+    glossary_link_focus
+    )
     xpos gui.dialogue_xpos
     xsize gui.dialogue_width
     ypos gui.dialogue_ypos -8

@@ -23,7 +23,7 @@ label ch02_intro:
 
         doctor "No time for this, I should prepare the death certificate and go to the municipality."
         
-        doctor "But first, I should prepare my mother for the wake."
+        doctor "But first, I should prepare my mother for the {a=glossary:wake_entry}wake{/a}."
 
         "He heads to his mother’s room and for his surprise, find her alive."
 
@@ -43,7 +43,7 @@ label ch02_intro:
 
         "His mother might still be alive."
 
-    "He is thinking he should run some tests to check whether everything is okey but maybe he shouldn’t lose time on this and instantly try a different herb and prepare a formula."
+    "He is thinking he should run some tests to check whether everything is okey but maybe he shouldn’t lose time on this and instantly try a different herb and prepare a {a=glossary:wake_entry}wake{/a}."
 
     menu :
 

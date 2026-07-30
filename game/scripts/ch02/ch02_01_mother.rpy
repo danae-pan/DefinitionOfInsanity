@@ -30,9 +30,9 @@ label ch02_check_mother :
 
         else :
 
-            doctor "Or maybe I should head to the hospital, I remember Panax Ginseng was in stock."
+            doctor "Or maybe I should head to the hospital, I remember {a=glossary:taeru_root_entry}Taeru Root{/a} was in stock."
 
-            doctor "I could use this for phase two, replacing Polygala tenuifolia that I only have in a small amount."
+            doctor "I could use this for phase two, replacing {a=glossary:hogo_root_entry}Hogo Root{/a} that I only have in a small amount."
 
         doctor "If there was more time, I would check on some patients too.."
 
@@ -42,7 +42,7 @@ label ch02_check_mother :
 
         doctor "No use going to the hospital anymore. "
 
-        doctor "I already know what is in stock and using Panax Ginseg proved to be fatal at the end."
+        doctor "I already know what is in stock and using {a=glossary:taeru_root_entry}Taeru Root{/a} proved to be fatal at the end."
 
         doctor "But what if something changed?"
 
@@ -67,7 +67,7 @@ label ch02_go_to_mother :
 
 label ch02_mother_calls_for_food :
 
-    "The doctor takes another look at the decoction before setting the wooden spoon aside."
+    "The doctor takes another look at the {a=glossary:decoction_entry}decoction{/a} before setting the wooden spoon aside."
 
     doctor "It can wait a few minutes.."
 

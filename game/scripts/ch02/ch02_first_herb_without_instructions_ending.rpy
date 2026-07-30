@@ -1,4 +1,4 @@
-label ch02_first_herb_without_instructions_ending
+label ch02_first_herb_without_instructions_ending:
 
     "The doctor grips the medicine bottle tightly."
 
@@ -64,7 +64,7 @@ label ch02_first_herb_without_instructions_ending
 
         doctor "Not again…"
 
-        "He recalls that dysphagia caused her to choke while eating bread before."
+        "He recalls that {a=glossary:dysphagia_entry}dysphagia{/a} caused her to choke while eating bread before."
 
         "Fear starts to fill up."
 
