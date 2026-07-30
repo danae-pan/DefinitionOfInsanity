@@ -24,3 +24,6 @@
 /dialogue.tab
 /dialogue.txt
 /strings.json
+
+#plugin files
+/game/renpy_encyclopaedia-*.dist-info/

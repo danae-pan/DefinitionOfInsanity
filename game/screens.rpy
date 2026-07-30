@@ -19,6 +19,8 @@ style input:
 
 style hyperlink_text:
     properties gui.text_properties("hyperlink", accent=True)
+    color "#801C1C"
+    hover_color "#402814"
     hover_underline True
 
 style gui_text:
@@ -161,6 +163,7 @@ style namebox:
 
 style say_label:
     properties gui.text_properties("name", accent=True)
+    color "#801C1C"
     xalign gui.name_xalign
     yalign 0.5
 
@@ -1664,6 +1667,12 @@ style nvl_dialogue:
     textalign 0.0
     layout "tex"
 
+    hyperlink_functions (
+        glossary_link_style,
+        glossary_link_clicked,
+        glossary_link_focus
+    )
+
 style nvl_thought:
     xpos 170
     xanchor 0.0
@@ -1675,6 +1684,12 @@ style nvl_thought:
     textalign 0.0
     line_spacing -5
     layout "tex"
+
+    hyperlink_functions (
+        glossary_link_style,
+        glossary_link_clicked,
+        glossary_link_focus
+    )
 
 style nvl_button:
     properties gui.button_properties("nvl_button")
@@ -1777,7 +1792,30 @@ define bubble.expand_area = {
     "thought" : (0, 0, 0, 0),
 }
 
+screen glossary_tooltip(entry):
 
+    zorder 300
+
+    frame:
+        xalign 0.5
+        yalign 0.82
+
+        xmaximum 850
+        padding (40, 30)
+
+        background Frame("gui/frame.png", 30, 30)
+
+        vbox:
+            spacing 12
+
+            text entry.name:
+                size 40
+                color "#E7D9A8"
+
+            text entry.text:
+                size 30
+                color "#E7D9A8"
+                xmaximum 760
 
 ################################################################################
 ## Mobile Variants

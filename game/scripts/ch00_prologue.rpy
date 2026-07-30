@@ -7,6 +7,7 @@ label prologue:
 
     $ old_text_cps = preferences.text_cps
     $ preferences.text_cps = 14
+    $ matsushita_entry.locked = False
     window hide
 
     scene bg game_main
@@ -17,7 +18,7 @@ label prologue:
 
     narrator_nvl """
 1956
-Matsushita
+{a=glossary:matsushita_entry}Matsushita{/a}
 {vspace=35}
 For many years, a mysterious illness had plagued the quiet coastal town of Matsushita.{w=1.2}
 {vspace=35}

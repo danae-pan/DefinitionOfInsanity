@@ -87,6 +87,7 @@ define gui.title_text_size = 75
 
 ## Content/UI text colors
 define gui.interface_text_color = "#DCD2B1"
+#DAD18F (this is the correct color)
 define gui.idle_color = "#DCD2B1"
 define gui.hover_color = "#FFF1B8"
 define gui.selected_color = "#FFF1B8"
