@@ -1,10 +1,15 @@
 label ch01_answer_mothers_call:
 
-    if not ch01_met_herb_in_door:
+    if ch01_knock_knock :
+        if not ch01_met_herb_in_door:
 
-        "I ignore the sound. Mother called for me." 
+            "I ignore the sound. Mother called for me." 
 
-    "Nothing else matters right now. I rush toward her room." 
+        "Nothing else matters right now. I rush toward her room." 
+
+    else :
+
+        "I enter the house and I hear my mother calling for me."
     
     scene bg ch01 mother 
     with fade
@@ -43,7 +48,17 @@ label ch01_answer_mothers_call:
 
         "I should go prepare it quickly."
 
-    "But it has never been tested. I don't know the side effects." 
+        scene bg ch01 lab with fade
+
+        "I enter the laboratory and I see the mess the cat has caused..."
+
+        "I'm starting preparing the formula again... Step by step as i did before..."
+
+        "Soon everything is ready. I should head back to mother."
+
+        "I take a look at the bottle one last time before I leave the lab."
+
+    "It has never been tested. I don't know the side effects." 
 
     "I don't know if it will help her... Or if it will make everything worse." 
 

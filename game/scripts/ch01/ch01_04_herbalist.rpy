@@ -73,22 +73,6 @@ label ch01_go_to_hospital:
 
     doctor "Good." 
 
-    "My eyes drift to another jar." 
-
-    doctor "Panax ginseng..." 
-
-    "Traditionally used to treat weakness and fatigue." 
-
-    "The supply is almost gone." 
-
-    "If I take it..." 
-
-    "There may not be enough left for the hospital's patients." 
-
-    "..." 
-
-    "I leave it where it is." 
-
     "I gather the herbs I need and leave the storage room."  
 
     "As I step into the hallway, I notice an elderly man sitting quietly on a wooden bench." 
@@ -124,6 +108,16 @@ label ch01_go_to_hospital:
     $ ch01_met_herb_in_hospital = True
 
     $ met_herbalist = True
+
+    menu :
+
+        "Stay and chat":
+
+            jump ch01_runs_late_at_hospital_comma_ending
+
+        "Return home and make the formula":
+
+            jump ch01_answer_mothers_call
 
 label ch01_herbalists_invitation:
     

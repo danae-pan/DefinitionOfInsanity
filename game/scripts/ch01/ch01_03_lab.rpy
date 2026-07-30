@@ -365,6 +365,8 @@ label ch01_mother_calls_knock_on_door:
     # audio *Knock... Knock...* 
 
     "*Knock... Knock...*" 
+
+    $ ch01_knock_knock = True
     
     if not ch01_met_herb_in_door:
 
@@ -468,8 +470,8 @@ label ch01_check_mother_cat_in_lab :
 
         "Return to study":
 
-            "I will go back to the lab."
+            scene bg ch01 lab with fade
 
-            "When i check that the formula is ready i can give it to her with some food."
+            "I return to my lab to study some more about the formula i made..."
 
             jump ch01_mother_calls_knock_on_door
