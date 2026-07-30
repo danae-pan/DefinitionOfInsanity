@@ -89,6 +89,8 @@ label ch01_arrythmia_good_ending :
     herbalist "I hope you can help your mother Yosuke. Be safe walking home." 
 
     $ took_herbs = True
+
+    scene bg ch01 lab with fade
     
     "I finally return home." 
 
@@ -103,6 +105,8 @@ label ch01_arrythmia_good_ending :
     "There is no answer." 
 
     "I hurry toward her room."  
+
+    scene bg ch01 mother with fade
 
     "She's lying in bed." 
 

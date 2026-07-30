@@ -59,68 +59,80 @@ label ch01_wake_up:
 
 label ch01_first_wakeup:
 
-    "A new day begins... Once again, reality hits me."
+    "A new day begins... and Dr Yosuke wakes up."
 
-    "Mother is suffering from an illness for which no cure has yet been found." 
+    doctor "Once again reality hits me."
 
-    "I came back to help her survive, and the only way I can do that is by finding the cure myself."
+    "His mother is suffering from a mysterious illness, one for which medicine has yet to discover a cure."
 
-    "Years of study and scientific experimentation have led me to several possible treatments that could save her, but I still don't know which one is the right one."
+    doctor "I came back to help her survive, and the only way I can do that is by finding the cure myself."
 
-    "I have to keep testing formulas."
+    "Years of study and countless experiments have brought him closer to several possible treatments."
 
-    "My stomach hurts... I probably didn't eat yesterday."
+    doctor "One of these formulas has to work."
 
-    "I don't even notice how the hours pass anymore, caught between endless experiments and taking care of Mother."
+    doctor "I just have to keep testing."
 
-    "Maybe I should check if she's awake first."
+    "A sharp pain twists his stomach."
+
+    doctor "I probably didn't eat yesterday..."
+
+    "The days have begun to blur together. Endless hours spent moving between the laboratory and his mother's bedside have made him lose all sense of time."
+
+    doctor "I should see if Mother is awake."
 
     return
 
 label ch01_loop_wakeup:
 
-    "I open my eyes."
+    "He slowly opens his eyes."
 
     if ch01_loop_count == 1:
 
-        "All my life i wished this day will never come…"
+        "For his entire life, he wished this day would never come."
 
-        "My body feels heavy. My mind feels even heavier." 
+        "His body feels heavy. His mind feels even heavier."
 
-        "Mother is gone."
+        "His mother is dead."
 
     else: 
 
-        "I feel so confused… memories are coming though my head"
+        "He wakes in confusion."
+
+        "Fragments of memories rush through his mind."
     
-    "All comes back…"
+    "Then everything comes back to him."
 
     call ch01_remember_previous_deaths
 
-    "I have so much to do… i cannot hide any more.."
+    doctor "There's no time to dwell on it."
 
-    "She is in the room… I could go see her.. "
+    doctor "I have too much to do."
 
-    "My stomach hurts... I probably didn't eat yesterday."
-    
+    doctor "She is in the room… I could go see her.. "
+
+    "A dull pain twists his stomach."
+
+    doctor "I probably didn't eat yesterday."
+
     return
 
 label ch01_remember_previous_deaths:
 
     if ch01_wake_happened:
 
-        "The otsuya… The neighbors..."
+        doctor "The otsuya… The neighbors..."
         
     if ch01_brain_hemorrhage_happened:
 
-        "The broken glass in the floor... Mother fell off her bed..."
+        doctor "The broken glass in the floor... Mother fell off her bed..."
     
     if ch01_knows_arrhythmia:
 
-        "I gave her the formula... Licorice root... It caused her arrythmia..."
+        doctor "I gave her the formula... Licorice root... It caused her arrythmia..."
 
     if ch01_knows_coma :
 
-        "I didn't gave her the formula... She died from coma..."
+        doctor "I didn't gave her the formula... She died from coma..."
 
     return
