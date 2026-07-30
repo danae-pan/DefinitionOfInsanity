@@ -1,6 +1,6 @@
 label ch02_go_to_herbalist :
 
-    if ch02_second_visit_hospital == True
+    if ch02_second_visit_hospital == True:
 
         "The doctors leaves the hospital in a rush and heads to the herbalist’s shop."
 
@@ -330,7 +330,7 @@ label ch02_go_to_herbalist :
 
         "Take the first":
 
-            jump ch02_take_the first
+            jump ch02_take_the_first
         
         "Take the second":
 
