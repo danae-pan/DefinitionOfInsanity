@@ -6,9 +6,9 @@ label ch01_straight_to_lab :
 
     "A sudden noise breaks the silence."
 
-    "I look up and I see mother's cat is jumping from chair to chair." 
+    "He looks up to see Mother's cat leaping from chair to chair."
 
-    "She's chasing a fly that somehow found its way into the laboratory." 
+    "Completely absorbed in chasing a fly that somehow found its way inside, she pays no attention to the equipment around her."
 
     show doctor default at left onlayer portraits
 
@@ -16,19 +16,19 @@ label ch01_straight_to_lab :
 
     hide doctor default onlayer portraits
 
-    "Maybe I should let her outside."
+    doctor "Maybe I should let her outside."
 
     if kept_cat_in_lab_once :
 
-        "Last time i let her stay in the back she broke the formula..."
+        doctor "Last time i let her stay in the back she broke the formula..."
 
     menu :
 
         "Let your cat outside":
 
-            "I gently carry the cat outside before returning to the laboratory."
+            "He gently picks up the cat and carries her outside."
 
-            "Today I need my full concentration. I can't afford any distractions."
+            doctor "Today I need my full concentration. I can't afford any distractions."
 
             jump ch01_mother_calls_knock_on_door
         
@@ -54,7 +54,7 @@ label ch01_eat_then_lab:
 
             hide doctor default onlayer portraits
 
-            "She looks up at me."
+            "She looks up at him , trying to smile."
 
             show doctor default at left onlayer portraits
 
@@ -64,7 +64,7 @@ label ch01_eat_then_lab:
 
             hide doctor default onlayer portraits
             
-            "Her eyes immediately brighten."
+            "Her expression immediately brightens."
 
             mother "...Curious..."
 
@@ -78,11 +78,11 @@ label ch01_eat_then_lab:
             
             show doctor default at left onlayer portraits
 
-            doctor "Also... I checked the flowers in the garden this morning."
+            doctor "I checked the flowers in the garden this morning."
 
             hide doctor default onlayer portraits
 
-            "She looks up at me."
+            "She looks up at him."
 
             show doctor default at left onlayer portraits
 
@@ -102,7 +102,7 @@ label ch01_eat_then_lab:
 
             hide doctor default onlayer portraits
 
-    "After we finished eating..."
+    "After they finished eating..."
 
     show doctor default at left onlayer portraits
 
@@ -112,31 +112,43 @@ label ch01_eat_then_lab:
     
     scene bg ch01 lab
 
-    "I enter the laboratory."
+    "He returns to the laboratory."
 
     if ch01_loop_count == 0:
 
-        "All the ingredients I brought from the hospital are here. Everything I need to continue working from home."
+        "All the ingredients he brought from the hospital are still there."
+
+        "Everything he needs to continue his research from home."
 
     else:
 
-        "All the ingredients are still here."
+        "The ingredients are still exactly where he left them."
 
-        "Nothing is used."
+        "Nothing has been used."
 
-        "I guess… I should try again."
+        doctor "I guess… I should try again."
 
-    "My notes for the formula are still waiting for me."
+    "His notes are waiting on the desk."
 
-    "Then I see her. Mother's cat quietly sneaks into the room and starts exploring."
+    "Then he notices movement in the corner of the room."
 
-    "Should I let her stay? It would be nice to have some company. I spend so many hours here alone now."
+    doctor "Should I let her stay?"
 
-    "But maybe I should take her outside. I can't let anything distract me from my research."
+    doctor "It would be nice to have some company..."
+
+    "He looks around the empty laboratory."
+
+    "The silence has become his only companion."
+
+    doctor "But I can't let anything interfere with my research."
+
+    doctor "Not this time."
 
     if kept_cat_in_lab_once:
 
-        "Last time i kept her inside see broke the formula. I should not risk it again."
+        "Another memory returns."
+
+        doctor "Last time i kept her inside see broke the formula. I should not risk it again."
 
     menu:
 
@@ -148,9 +160,9 @@ label ch01_eat_then_lab:
 
             hide doctor default onlayer portraits
 
-            "I gently carry the cat outside before returning to the laboratory."
+            "He gently picks up the cat and carries her outside."
 
-            "Today I need my full concentration. I can't afford any distractions."
+            doctor "Today I need my full concentration. I can't afford any distractions."
             
             call ch01_study_prepare_formula
 
@@ -164,7 +176,9 @@ label ch01_eat_then_lab:
 
 label ch01_study_prepare_formula:
 
-    "I take my seat and spread my notes across the desk. My eyes wander over the herbs laid out before me."
+    "He sits at the desk and spreads his notes across the table."
+
+    "His eyes move between the old research papers and the herbs carefully arranged in front of him."
 
     show doctor default at left onlayer portraits
 
@@ -172,7 +186,9 @@ label ch01_study_prepare_formula:
 
     hide doctor default onlayer portraits
 
-    "I still have enough for a full dose."
+    "He picks up the jar and examines the remaining amount."
+
+    doctor "Enough for one full dose."
 
     show doctor default at left onlayer portraits
 
@@ -186,9 +202,11 @@ label ch01_study_prepare_formula:
 
     if ch01_knows_arrhythmia : 
 
-        "I have strong indications that this can cause arrythmia to mother... But i have nothing else to try..."
+        "A memory interrupts his thoughts."
 
-    "My gaze shifts to another jar."
+        doctor "I have strong indications that this can cause arrythmia to mother... But i have nothing else to try..."
+
+    "His attention shifts to another jar."
 
     show doctor default at left onlayer portraits
 
@@ -196,7 +214,9 @@ label ch01_study_prepare_formula:
 
     hide doctor default onlayer portraits
 
-    "I have almost enough."
+    "He checks the remaining supply."
+
+    doctor "Almost enough."
 
     show doctor default at left onlayer portraits
 
@@ -216,25 +236,29 @@ label ch01_study_prepare_formula:
 
     hide doctor default onlayer portraits
 
-    "I carefully weigh each ingredient." 
+    "He carefully measures every ingredient."
 
-    "I grind the herbs into a fine powder." 
+    "Every movement is precise."
 
-    "I slowly add them to the solution." 
+    "The herbs are ground into a fine powder before being slowly mixed into the solution."
 
-    "The mixture changes color as the herbs dissolve." 
+    "The color of the formula changes as the ingredients dissolve."
 
-    "I pour the finished formula into a small glass vial." 
+    "Finally, he pours the finished mixture into a small glass vial."
 
     if ch01_loop_count >= 1:
 
-        "I did everything exactly as the last time." 
+        "His hands stop for a moment."
+
+        doctor "I did everything exactly as the last time." 
 
     if ch01_cat_in_lab:
 
-        "I should be careful with the formula, the cat is inside the lab."
+        "He notices movement nearby."
 
-    "I set it aside and reach for my notebook." 
+        doctor "I should be careful with the formula, the cat is inside the lab."
+
+    "He places the vial safely aside and reaches for his notebook."
 
     show doctor default at left onlayer portraits
 
@@ -244,9 +268,9 @@ label ch01_study_prepare_formula:
 
     hide doctor default onlayer portraits
 
-    "I compare every measurement with my notes." 
+    "He compares every measurement with his notes." 
 
-    "I read each page one more time." 
+    "He reads through every page again." 
 
     $ ch01_prepared_formula = True
 
@@ -256,41 +280,55 @@ label ch01_study_prepare_formula:
 
 label ch01_cat_becomes_noisy:
 
+    show doctor default at left onlayer portraits
+
     doctor "Come on, little one."
 
-    "I cradle her and she purrs back to me."
+    hide doctor default onlayer portraits
 
-    "I let her wonder in the room , check things out."
+    "He gently picks up the cat."
+
+    "She relaxes in his arms, purring softly."
+
+    "For a moment, the laboratory feels less lonely."
+
+    "He lets her walk around the room, exploring every corner."
 
     call ch01_study_prepare_formula
             
     "A sudden noise breaks the silence."
 
-    "I look up." 
+    "He looks up."
 
-    "Mother's cat is jumping from chair to chair." 
+    "Mother's cat is jumping from chair to chair."
 
     "She's chasing a fly that somehow found its way into the laboratory." 
 
     if kept_cat_in_lab_once:
 
-        "I have seen this before... if I let her stay inside she maybe break the formula again."
+        "A familiar memory returns."
 
-        "Should I risk it?"
+        doctor "I have seen this before... if I let her stay inside she maybe break the formula again."
+
+        doctor "Do I risk it?"
 
     else:
+
+        show doctor default at left onlayer portraits
         
         doctor "Easy there, little one..." 
 
-        "Maybe I should let her outside."
+        hide doctor default onlayer portraits
+
+        doctor "Maybe I should let her outside."
 
     menu:
 
         "Let your cat outside":
 
-            "I gently carry the cat outside before returning to the laboratory."
+            "He gently picks up the cat and carries her outside."
 
-            "Today I need my full concentration. I can't afford any distractions."
+            doctor "Today I need my full concentration. I can't afford any distractions."
 
             jump ch01_mother_calls_knock_on_door
 
