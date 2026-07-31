@@ -56,7 +56,7 @@ label ch02_used_panax_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor ""...I did this.""
+    doctor "\"...I did this.\""
 
     hide doctor default onlayer portraits
 
@@ -66,9 +66,9 @@ label ch02_used_panax_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor ""No...""
+    doctor "\"No...\""
 
-    doctor ""The reports mentioned changes in blood pressure, but they were supposed to be uncommon...""
+    doctor "\"The reports mentioned changes in blood pressure, but they were supposed to be uncommon...\""
 
     hide doctor default onlayer portraits
 
@@ -76,9 +76,9 @@ label ch02_used_panax_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor ""...I knew there was a risk.""
+    doctor "\"...I knew there was a risk.\""
 
-    doctor ""...and I took it anyway.""
+    doctor "\"...and I took it anyway.\""
 
     hide doctor default onlayer portraits
 
@@ -86,7 +86,7 @@ label ch02_used_panax_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor ""I made a mistake.""
+    doctor "\"I made a mistake.\""
 
     hide doctor default onlayer portraits
 
@@ -94,9 +94,8 @@ label ch02_used_panax_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor ""No...""
-
-    doctor ""...I need to understand what I failed to see.""
+    doctor "\"No...\""
+    doctor "\"...I need to understand what I failed to see.\""
 
     hide doctor default onlayer portraits
 
@@ -120,7 +119,7 @@ label ch02_used_panax_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor ""If I can not save mother...""
+    doctor "\"If I can not save mother...\""
 
     hide doctor default onlayer portraits
 
@@ -128,7 +127,7 @@ label ch02_used_panax_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor ""...perhaps I can still save you.""
+    doctor "\"...perhaps I can still save you.\""
 
     hide doctor default onlayer portraits
 
@@ -142,7 +141,7 @@ label ch02_used_panax_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor ""Please...""
+    doctor "\"Please...\""
 
     hide doctor default onlayer portraits
 

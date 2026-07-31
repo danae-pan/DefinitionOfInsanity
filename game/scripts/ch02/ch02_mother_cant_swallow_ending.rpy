@@ -8,7 +8,7 @@ label ch02_mother_cant_swallow_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor ""Almost there.""
+    doctor "\"Almost there.\""
 
     hide doctor default onlayer portraits
 
@@ -18,7 +18,7 @@ label ch02_mother_cant_swallow_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor ""Finally.""
+    doctor "\"Finally.\""
 
     hide doctor default onlayer portraits
 
@@ -26,13 +26,7 @@ label ch02_mother_cant_swallow_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor ""Mother...""
-
-    hide doctor default onlayer portraits
-
-    "No answer."
-
-    "He pushes open the bedroom door."
+    doctor "\"Mother...\""
 
     "His mother lies motionless."
 
@@ -56,13 +50,7 @@ label ch02_mother_cant_swallow_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor ""Mother...""
-
-    doctor ""I've brought the medicine.""
-
-    hide doctor default onlayer portraits
-
-    "He raises the bottle to her lips."
+    doctor "\"Mother...\""
 
     "The liquid trickles down her chin."
 
@@ -72,7 +60,7 @@ label ch02_mother_cant_swallow_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor ""...No.""
+    doctor "\"...No.\""
 
     hide doctor default onlayer portraits
 
@@ -96,7 +84,7 @@ label ch02_mother_cant_swallow_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor ""Mother!""
+    doctor "\"Mother!\""
 
     hide doctor default onlayer portraits
 
@@ -110,9 +98,9 @@ label ch02_mother_cant_swallow_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor ""You were calling for me.""
+    doctor "\"You were calling for me.\""
 
-    doctor ""And I never came.""
+    doctor "\"And I never came.\""
 
     hide doctor default onlayer portraits
 

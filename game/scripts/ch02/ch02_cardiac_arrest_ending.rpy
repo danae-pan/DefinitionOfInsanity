@@ -11,9 +11,7 @@ label ch02_cardiac_arrest_ending:
     "A loud crash echoes from upstairs."
 
     show doctor default at left onlayer portraits
-
-        doctor ""...Mother?""
-
+    doctor "\"...Mother?\""
     hide doctor default onlayer portraits
 
     "He sprints toward her room."
@@ -27,9 +25,7 @@ label ch02_cardiac_arrest_ending:
     "Foam gathers at the corner of her mouth."
 
     show doctor default at left onlayer portraits
-
-        doctor "“Mother! Stay with me!“"
-
+    doctor "\"Mother! Stay with me!\""
     hide doctor default onlayer portraits
 
     "He kneels beside her, trying desperately to hold her still."
@@ -65,9 +61,7 @@ label ch02_cardiac_arrest_ending:
     "Even its presence fills him with guilt."
 
     show doctor default at left onlayer portraits
-
-        doctor "“I should have been with her...“"
-
+    doctor "\"I should have been with her...\""
     hide doctor default onlayer portraits
 
     doctor "But maybe, just maybe, the day repeats itself again."
@@ -81,9 +75,7 @@ label ch02_cardiac_arrest_ending:
     "He grabs his coat, heading to the hospital."
 
     show doctor default at left onlayer portraits
-
-        doctor "“If I stay here... I'll lose my mind.“"
-
+    doctor "\"If I stay here... I'll lose my mind.\""
     hide doctor default onlayer portraits
 
     "The hospital is as busy as ever."
@@ -131,12 +123,8 @@ label ch02_cardiac_arrest_ending:
     "A faint smile crosses his face, disappearing almost as quickly as it came."
 
     show doctor default at left onlayer portraits
-
-        doctor "“At least...“"
-
-        doctor "“...I'm not completely alone.“"
-
+    doctor "\"At least...\""
+    doctor "\"...I'm not completely alone.\""
     hide doctor default onlayer portraits
 
-
-    return 
+    jump ch02_start
