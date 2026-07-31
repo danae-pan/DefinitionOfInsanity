@@ -190,9 +190,9 @@ label ch01_study_prepare_formula:
 
     "He picks up the jar and examines the remaining amount."
 
-    doctor "\"Enough for one full dose.\""
-
     show doctor default at left onlayer portraits
+
+    doctor "\"Enough for one full dose.\""
 
     $ anti_inflammatory_entry.locked = False
 
@@ -222,9 +222,9 @@ label ch01_study_prepare_formula:
 
     "He checks the remaining supply."
 
-    doctor "\"Almost enough.\""
-
     show doctor default at left onlayer portraits
+
+    doctor "\"Almost enough.\""
 
     doctor "Some studies suggest it has neuroprotective effects."
 
@@ -233,6 +233,8 @@ label ch01_study_prepare_formula:
         $ ch01_knows_polygala = True
 
     doctor "If Nagomi Root can reduce the inflammation..."
+
+    $ nervous_system_entry.locked = False
 
     doctor "...then perhaps Hogo Root can help protect the {a=glossary:nervous_system_entry}nervous system{/a}."
 
