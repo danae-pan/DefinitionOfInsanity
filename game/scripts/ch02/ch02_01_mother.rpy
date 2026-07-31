@@ -6,7 +6,7 @@ label ch02_check_mother :
     
     show doctor default at left onlayer portraits
 
-    doctor "Mother, how are you feeling today?"
+    doctor "\"Mother, how are you feeling today?\""
 
     hide doctor default onlayer portraits
 

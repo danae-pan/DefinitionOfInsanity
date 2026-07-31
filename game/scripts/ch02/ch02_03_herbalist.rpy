@@ -48,21 +48,33 @@ label ch02_go_to_herbalist :
 
     show doctor default at left onlayer portraits
 
-    doctor "Hello? Is anyone here?"
+    doctor "\"Hello? Is anyone here?\""
 
     hide doctor default onlayer portraits
 
     "A voice calls from the back of the shop."
 
-    herbalist "Just a moment! I'll be right there!"
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"Just a moment! I'll be right there!\""
+
+    hide herbalist default onlayer portraits
 
     "After a few seconds, the herbalist appears, struggling to balance several glass jars and wooden boxes in his arms."
 
-    herbalist "Oh! Good morning!"
+    show herbalist default at left onlayer portraits
+    
+    herbalist "\"Oh! Good morning!\""
+
+    hide herbalist default onlayer portraits
 
     "He carefully places everything on the counter before smiling warmly."
 
-    herbalist "What can I do for you today?"
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"What can I do for you today?\""
+
+    hide herbalist default onlayer portraits
 
     "The doctor hesitates."
 
@@ -76,17 +88,17 @@ label ch02_go_to_herbalist :
 
     show doctor default at left onlayer portraits
 
-    doctor "Good morning. I'm Dr. (Name)."
+    doctor "\"Good morning. I'm Mr. Herbalist.\""
 
     # TODO : If the doctor knows where the herb place is then he has already met the herbalist
 
-    doctor "My mother has fallen ill after eating contaminated fish. Some colleagues at the hospital mentioned that you have herbal remedies that may help."
+    doctor "\"My mother has fallen ill after eating contaminated fish. Some colleagues at the hospital mentioned that you have herbal remedies that may help.\""
 
     hide doctor default onlayer portraits
 
     show herbalist default at left onlayer portraits
 
-    herbalist "Ah, yes... yes, of course."
+    herbalist "\"Ah, yes... yes, of course.\""
 
     hide herbalist default onlayer portraits
 
@@ -94,21 +106,21 @@ label ch02_go_to_herbalist :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "Now where did I put them..."
+    herbalist "\"Now where did I put them...\""
 
-    herbalist "Forgive the mess."
+    herbalist "\"Forgive the mess.\""
 
-    herbalist "Ever since all these people started getting sick, I barely have enough time to organize the shop before another customer arrives."
+    herbalist "\"Ever since all these people started getting sick, I barely have enough time to organize the shop before another customer arrives.\""
 
     hide herbalist default onlayer portraits
 
     show herbalist default at left onlayer portraits
 
-    herbalist "Now where did I put them..."
+    herbalist "\"Now where did I put them...\""
 
-    herbalist "Forgive the mess."
+    herbalist "\"Forgive the mess.\""
 
-    herbalist "Ever since all these people started getting sick, I barely have enough time to organize the shop before another customer arrives."
+    herbalist "\"Ever since all these people started getting sick, I barely have enough time to organize the shop before another customer arrives.\""
 
     hide herbalist default onlayer portraits
 
@@ -116,9 +128,9 @@ label ch02_go_to_herbalist :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "While I'm looking..."
+    herbalist "\"While I'm looking...\""
 
-    herbalist "How is your mother doing?"
+    herbalist "\"How is your mother doing?\""
 
     hide herbalist default onlayer portraits
 
@@ -126,53 +138,53 @@ label ch02_go_to_herbalist :
 
     show doctor default at left onlayer portraits
 
-    doctor "Not well."
+    doctor "\"Not well.\""
 
-    doctor "She was exposed for many years."
+    doctor "\"She was exposed for many years.\""
 
-    doctor "I managed to ease some of her symptoms whenever I came home from the city..."
+    doctor "\"I managed to ease some of her symptoms whenever I came home from the city...\""
 
-    doctor "...but that was before anyone knew contaminated fish was the cause."
+    doctor "\"...but that was before anyone knew contaminated fish was the cause.\""
 
-    doctor "If I had known earlier..."
+    doctor "\"If I had known earlier...\""
 
-    doctor "...I could have changed her diet."
+    doctor "\"...I could have changed her diet.\""
 
-    doctor "...Maybe things would have been different."
-
-    hide doctor default onlayer portraits
-
-    show herbalist default at left onlayer portraits
-
-    herbalist "I've heard about you."
-
-    herbalist "You left for the city around 1930 to study medicine, didn't you?"
-
-    hide herbalist default onlayer portraits
-
-    show doctor default at left onlayer portraits
-
-    doctor "Yes."
+    doctor "\"...Maybe things would have been different.\""
 
     hide doctor default onlayer portraits
 
     show herbalist default at left onlayer portraits
 
-    herbalist "Then perhaps fate was kinder to you than you realize."
+    herbalist "\"I've heard about you.\""
 
-    herbalist "You weren't here to eat the poisoned fish."
-
-    herbalist "Now you've returned with the knowledge to help those who remained."
+    herbalist "\"You left for the city around 1930 to study medicine, didn't you?\""
 
     hide herbalist default onlayer portraits
 
     show doctor default at left onlayer portraits
 
-    doctor "Perhaps..."
+    doctor "\"Yes.\""
 
-    doctor "But knowledge means very little when you cannot save your own family."
+    hide doctor default onlayer portraits
 
-    doctor "My mother is all I have."
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"Then perhaps fate was kinder to you than you realize.\""
+
+    herbalist "\"You weren't here to eat the poisoned fish.\""
+
+    herbalist "\"Now you've returned with the knowledge to help those who remained.\""
+
+    hide herbalist default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"Perhaps...\""
+
+    doctor "\"But knowledge means very little when you cannot save your own family.\""
+
+    doctor "\"My mother is all I have.\""
 
     hide doctor default onlayer portraits
 
@@ -180,9 +192,9 @@ label ch02_go_to_herbalist :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "You cannot ask more of yourself than to do everything within your power."
+    herbalist "\"You cannot ask more of yourself than to do everything within your power.\""
 
-    herbalist "Remember that."
+    herbalist "\"Remember that.\""
 
     hide herbalist default onlayer portraits
 
@@ -190,9 +202,9 @@ label ch02_go_to_herbalist :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "Ah!"
+    herbalist "\"Ah!\""
 
-    herbalist "Here they are."
+    herbalist "\"Here they are.\""
 
     hide herbalist default onlayer portraits
 
@@ -200,17 +212,17 @@ label ch02_go_to_herbalist :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "Unfortunately, my stock is running low."
+    herbalist "\"Unfortunately, my stock is running low.\""
 
-    herbalist "I can only spare enough of one of these for now."
+    herbalist "\"I can only spare enough of one of these for now.\""
 
     hide herbalist default onlayer portraits
 
     show doctor default at left onlayer portraits
 
-    doctor "That's alright."
+    doctor "\"That's alright.\""
 
-    doctor "Could you tell me, what are their properties?"
+    doctor "\"Could you tell me, what are their properties?\""
 
     hide doctor default onlayer portraits
 
@@ -218,11 +230,11 @@ label ch02_go_to_herbalist :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "This one is {a=glossary:junka_root_entry}Junka Root{/a}, a restorative tonic."
+    herbalist "\"This one is {a=glossary:junka_root_entry}Junka Root{/a}, a restorative tonic.\""
 
-    herbalist "It promotes blood circulation and helps strengthen the body."
+    herbalist "\"It promotes blood circulation and helps strengthen the body.\""
 
-    herbalist "But it must be taken after eating."
+    herbalist "\"But it must be taken after eating.\""
 
     hide herbalist default onlayer portraits
 
@@ -230,9 +242,9 @@ label ch02_go_to_herbalist :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "This is {a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}, it focuses on supporting the body's vitality."
+    herbalist "\"This is {a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}, it focuses on supporting the body's vitality.\""
 
-    herbalist "It can be taken without food."
+    herbalist "\"It can be taken without food.\""
     
     hide herbalist default onlayer portraits
 
@@ -268,37 +280,37 @@ label ch02_go_to_herbalist :
 
             show doctor default at left onlayer portraits
 
-            doctor "Mr. Herbalist?"
+            doctor "\"Mr. Herbalist?\""
 
             hide doctor default onlayer portraits
 
             show herbalist default at left onlayer portraits
 
-            herbalist "Yes, doctor. Do you have any questions?"
+            herbalist "\", doctor. Do you have any questions?\""
 
             hide herbalist default onlayer portraits
 
             show doctor default at left onlayer portraits
 
-            doctor "Yes, actually…"
+            doctor "\"Yes, actually...\""
 
-            doctor "I was wondering, is eating necessary?"
+            doctor "\"I was wondering, is eating necessary?\""
 
-            doctor "Or it can be also taken without?"
+            doctor "\"Or it can be also taken without?\""
 
-            doctor "Any risks I should know?"
+            doctor "\"Any risks I should know?\""
 
             hide doctor default onlayer portraits
 
             show herbalist default at left onlayer portraits
 
-            herbalist "To be honest, I only know that eating is advised."
+            herbalist "\"To be honest, I only know that eating is advised.\""
 
-            herbalist "Otherwise, it may upset the stomach."
+            herbalist "\"Otherwise, it may upset the stomach.\""
 
-            herbalist "I haven’t done much research on this specific herb, so I am not fully aware of other risks."
+            herbalist "\"I haven’t done much research on this specific herb, so I am not fully aware of other risks.\""
 
-            herbalist "You can try without it, but if you ask my opinion you should follow the instructions."
+            herbalist "\"You can try without it, but if you ask my opinion you should follow the instructions.\""
 
             hide herbalist default onlayer portraits
 
