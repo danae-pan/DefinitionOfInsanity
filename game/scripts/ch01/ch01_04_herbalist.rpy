@@ -1,12 +1,20 @@
 label ch01_meet_herbalist_on_door:
 
+    show doctor default at left onlayer portraits
+
     doctor "I should answer the door first."
 
     doctor "It won't take long."
 
+    hide doctor default onlayer portraits
+
     if not met_herbalist:
 
-        "It's probably one of the neighbors checking on Mother."
+        show doctor default at left onlayer portraits
+
+        doctor "It's probably one of the neighbors checking on Mother."
+
+        hide doctor default onlayer portraits
 
     "He opens the door." 
 
@@ -15,25 +23,46 @@ label ch01_meet_herbalist_on_door:
         "A man wearing a green kimono smiles at him." 
     
     else:
-        "Its the herbalist."
+        show doctor default at left onlayer portraits
+
+        doctor "Its the herbalist."
 
         doctor "He doesnt know we have met before."
 
         doctor "I have to be careful talking to him."
+
+        hide doctor default onlayer portraits
         
     "The scent of dried leaves and flowers fills the air." 
 
+    show herbalist default at left onlayer portraits
+
     herbalist "\"Goodmorning! You must be Dr. Yosuke.\""
 
-    doctor "Goodmorning…"
+    hide herbalist default onlayer portraits
 
-    doctor "Excuse me sher who are you?" 
+    show doctor default at left onlayer portraits
+
+    doctor "\"Goodmorning…\""
+
+    doctor "\"Excuse me sir, who are you?\"" 
+
+    hide doctor default onlayer portraits
+
+    show herbalist default at left onlayer portraits
 
     herbalist "\"My name is Kazuki.\"" 
 
     herbalist "\"I'm the herbalist from the next village. My shop is the first one you see in the central square.\""
 
+    hide herbalist default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
     doctor "\"Oh nice to meet you Mr. Kazuki. What brings you to our home?\""
+
+    hide doctor default onlayer portraits
+
     $ ch01_met_herb_in_door = True
 
     $ met_herbalist = True
@@ -43,6 +72,8 @@ label ch01_meet_herbalist_on_door:
 label ch01_go_to_hospital:
 
     "He looks over the herbs remaining in his laboratory."
+
+    show doctor default at left onlayer portraits
 
     doctor "My supplies are not enough."
 
@@ -54,6 +85,8 @@ label ch01_go_to_hospital:
 
     doctor "If I leave now, I should be back before she needs me." 
 
+    hide doctor default onlayer portraits
+
     "He grabs his bag and heads for the hospital."  
 
     "The halls are unusually quiet." 
@@ -64,13 +97,17 @@ label ch01_go_to_hospital:
 
     "He scans the shelves." 
 
-    doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a}..." 
+    show doctor default at left onlayer portraits
 
-    doctor "Still enough left." 
+    doctor "\"{a=glossary:nagomi_root_entry}Nagomi Root{/a}...\"" 
 
-    doctor "{a=glossary:hogo_root_entry}Hogo Root{/a}..."
+    doctor "\"Still enough left.\"" 
 
-    doctor "Good." 
+    doctor "\"{a=glossary:hogo_root_entry}Hogo Root{/a}...\""
+
+    doctor "\"Good.\"" 
+
+    hide doctor default onlayer portraits
 
     "He gathers the herbs he needs and leaves the storage room."  
 
@@ -78,11 +115,21 @@ label ch01_go_to_hospital:
 
     "The man smiles as Yosuke approaches."
 
+    show herbalist default at left onlayer portraits
+
     herbalist "\"You must be Dr. Yosuke.\"" 
 
-    doctor "Yes..." 
+    hide herbalist default onlayer portraits
 
-    doctor "Have we met before?" 
+    show doctor default at left onlayer portraits
+
+    doctor "\"Yes...\"" 
+
+    doctor "\"Have we met before?\"" 
+
+    hide doctor default onlayer portraits
+
+    show herbalist default at left onlayer portraits
 
     herbalist "\"Not yet.\"" 
 
@@ -90,17 +137,27 @@ label ch01_go_to_hospital:
 
     herbalist "\"I'm the herbalist from the neighboring village. My shop is the first one you see in the central square.\"" 
 
+    hide herbalist default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
     doctor "\"It's a pleasure to meet you.\"" 
+
+    hide doctor default onlayer portraits
 
     "Unlike Yosuke's medical training, the herbalist's knowledge comes from generations of experience."
 
     "It is practical wisdom, passed down from one healer to the next."
+
+    show doctor default at left onlayer portraits
 
     doctor "I'd like to hear more." 
 
     doctor "But Mother is waiting for me at home." 
 
     doctor "I shouldn't stay away for too long."
+
+    hide doctor default onlayer portraits
 
     $ ch01_met_herb_in_hospital = True
 
@@ -117,6 +174,8 @@ label ch01_go_to_hospital:
             jump ch01_answer_mothers_call
 
 label ch01_herbalists_invitation:
+
+    show herbalist default at left onlayer portraits
     
     herbalist "\"I was making a delivery to Mrs. Sato.\""
 
@@ -124,7 +183,15 @@ label ch01_herbalists_invitation:
 
     herbalist "\"Word travels quickly in a village this small.\""
 
+    hide herbalist default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
     doctor "\"I suppose it does.\""
+
+    hide doctor default onlayer portraits
+
+    show herbalist default at left onlayer portraits
 
     herbalist "\"I know you're looking for a cure.\"" 
 
@@ -140,13 +207,27 @@ label ch01_herbalists_invitation:
 
     herbalist "\"Perhaps you'll find them useful.\""
 
+    hide herbalist default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
     doctor "\"What’s very nice of you. Yes i will be interested to see what you have. Do you have them with you?\""
+
+    hide doctor default onlayer portraits
+
+    show herbalist default at left onlayer portraits
 
     herbalist "\"Unfortunatelly i dont carry these kinds of herbs with me but you can come with me in my shop. im heading there now. You will be back in an hour\""
 
+    hide herbalist default onlayer portraits
+
     if ch01_brain_hemorrhage_happened:
 
+        show doctor default at left onlayer portraits
+
         doctor "Last time I didn't go with the herbalist my mother died from {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a} and there was nothing i could do… Maybe i should go with him."
+
+        hide doctor default onlayer portraits
 
     menu: 
         "Go with the herbalist":

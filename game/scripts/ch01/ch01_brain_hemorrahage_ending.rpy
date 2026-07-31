@@ -2,7 +2,9 @@ label ch01_brain_hemorrahage_ending:
 
     "He hesitates after hearing Kazuki's offer." 
 
-    octor "The herbs in Kazuki's shop could be exactly what I need."
+    show doctor default at left onlayer portraits
+
+    doctor "The herbs in Kazuki's shop could be exactly what I need."
 
     doctor "Ingredients the hospital cannot provide..."
 
@@ -16,20 +18,31 @@ label ch01_brain_hemorrahage_ending:
 
     doctor "\"I'll visit your shop another time.\""
 
+    hide doctor default onlayer portraits
+
     "He quickly returns inside."
 
     "He opens the door."
 
+    show doctor default at left onlayer portraits
+
     doctor "\"Mother?\""
+
+    hide doctor default onlayer portraits
 
     "..." 
 
     "There is no answer." 
 
-    if ch01_brain_hemorrhage_happened :
+    if ch01_brain_hemorrhage_happened:
+
+        show doctor default at left onlayer portraits
 
         doctor "\"Oh no...\""
+
         doctor "\"Is this happening again?\""
+
+        hide doctor default onlayer portraits
 
     "Her breathing is uneven."
 
@@ -37,7 +50,11 @@ label ch01_brain_hemorrahage_ending:
 
     "She looks exhausted."
 
+    show doctor default at left onlayer portraits
+
     doctor "\"Mother...\""
+
+    hide doctor default onlayer portraits
 
     "He immediately checks her condition."
 
@@ -53,6 +70,8 @@ label ch01_brain_hemorrahage_ending:
 
         "..."
 
+        show doctor default at left onlayer portraits
+
         doctor "She needed water."
 
         doctor "She tried to get it herself."
@@ -67,7 +86,11 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "Unable to call for help, she forced herself back into bed."
 
-    else :
+        hide doctor default onlayer portraits
+
+    else:
+
+        show doctor default at left onlayer portraits
 
         doctor "It's the same scene as before..."
 
@@ -75,11 +98,15 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "The empty bottle..."
 
+        hide doctor default onlayer portraits
+
     "He places his hands on her."
 
     "His medical training takes over."
 
     "He checks every possible sign, searching for any chance to help her."
+
+    show doctor default at left onlayer portraits
 
     doctor "But deep down..."
 
@@ -91,9 +118,15 @@ label ch01_brain_hemorrahage_ending:
 
     doctor "A {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}."
 
+    hide doctor default onlayer portraits
+
     if ch01_brain_hemorrhage_happened:
 
+        show doctor default at left onlayer portraits
+
         doctor "\"Exactly like last time...\""
+
+        hide doctor default onlayer portraits
 
     "The hours pass slowly."
 
@@ -109,6 +142,8 @@ label ch01_brain_hemorrahage_ending:
 
     if not ch01_met_herb_in_door:
 
+        show doctor default at left onlayer portraits
+
         doctor "I came back."
 
         doctor "I answered her call."
@@ -119,17 +154,23 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "\"I still couldn't save you.\""
 
+        hide doctor default onlayer portraits
+
     if ch01_loop_count == 0:
     
         "Eventually, reality begins to settle in."
 
         "There are things that must be done."
 
+        show doctor default at left onlayer portraits
+
         doctor "I have to report her death."
 
         doctor "I have to prepare her body."
 
         doctor "I have to tell someone."
+
+        hide doctor default onlayer portraits
 
         $ wake_entry.locked = False
 
@@ -141,19 +182,27 @@ label ch01_brain_hemorrahage_ending:
 
     else :
 
+        show doctor default at left onlayer portraits
+
         doctor "If I get another chance..."
 
         doctor "I won't repeat this."
 
         doctor "I will save her."
 
+        hide doctor default onlayer portraits
+
         scene black
 
         "He closes his eyes."
 
+        show doctor default at left onlayer portraits
+
         doctor "\"Tomorrow...\""
 
         doctor "\"I'll do better.\""
+
+        hide doctor default onlayer portraits
 
     if not ch01_brain_hemorrhage_happened:
 

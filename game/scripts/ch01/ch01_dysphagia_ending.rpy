@@ -23,9 +23,13 @@ label ch01_dysphagia_ending:
 
     "She suddenly stops."
 
+    show doctor default at left onlayer portraits
+
     doctor "At first, I thought she's only tired..."
 
     doctor "But something feels wrong."
+
+    hide doctor default onlayer portraits
 
     mother "\"...\""
 
@@ -53,13 +57,13 @@ label ch01_dysphagia_ending:
 
     doctor "\"Stay with me, Mother...\"" 
 
-    hide doctor default onlayer portraits
-
     doctor "I know what to do."
     
     doctor "I have studied this illness countless times." 
 
     doctor "So why are my hands shaking?"
+
+    hide doctor default onlayer portraits
     
     "He tries everything he can."
     
@@ -79,9 +83,13 @@ label ch01_dysphagia_ending:
 
         "He holds Mother's hand, but she no longer responds." 
 
+        show doctor default at left onlayer portraits
+
         doctor "Maybe..."
 
         doctor "Maybe she'll open her eyes..."
+
+        hide doctor default onlayer portraits
 
         "..."
 
@@ -90,8 +98,6 @@ label ch01_dysphagia_ending:
         show doctor default at left onlayer portraits
 
         doctor "\"How could I make such a mistake?\""
-
-        hide doctor default onlayer portraits
 
         doctor "I've read about this before..."
 
@@ -112,6 +118,8 @@ label ch01_dysphagia_ending:
 
         doctor "I know what death looks like."
 
+        hide doctor default onlayer portraits
+
         "Yet he cannot accept it."
 
         "He gently closes her eyes." 
@@ -119,8 +127,6 @@ label ch01_dysphagia_ending:
         show doctor default at left onlayer portraits
 
         doctor "\"I'm sorry, Mother...\"" 
-
-        hide doctor default onlayer portraits
 
         doctor "I should have noticed..."
 
@@ -130,15 +136,21 @@ label ch01_dysphagia_ending:
 
         doctor "And still, I failed you."
 
+        hide doctor default onlayer portraits
+
         "Eventually, reality begins to settle in."
 
         "There are things that must be done."
+
+        show doctor default at left onlayer portraits
 
         doctor "I have to report her death."
 
         doctor "I have to prepare her body."
 
         doctor "I have to tell someone."
+
+        hide doctor default onlayer portraits
 
         $ wake_entry.locked = False
 
@@ -149,6 +161,8 @@ label ch01_dysphagia_ending:
     elif ch01_loop_count == 1:
 
         "He holds Mother's hand as her warmth slowly fades."
+
+        show doctor default at left onlayer portraits
 
         doctor "Not again..."
 
@@ -172,7 +186,7 @@ label ch01_dysphagia_ending:
 
         else:
 
-            "I had read it before..."
+            doctor "I had read it before..."
 
             $ dysphagia_entry.locked = False
             $ knows_dysphagia = True
@@ -183,9 +197,15 @@ label ch01_dysphagia_ending:
 
         doctor "I have to save her."
 
+        hide doctor default onlayer portraits
+
         "He gently places her hand back on the bed."
 
+        show doctor default at left onlayer portraits
+
         doctor "But I'm not finished."
+
+        hide doctor default onlayer portraits
 
         "He returns to his laboratory."
 
@@ -201,18 +221,26 @@ label ch01_dysphagia_ending:
 
         "The things he overlooked."
 
+        show doctor default at left onlayer portraits
+
         doctor "If I get another chance..."
 
         doctor "I won't repeat this."
 
         doctor "I will save her."
 
+        hide doctor default onlayer portraits
+
         scene black
 
         "He closes his eyes."
 
+        show doctor default at left onlayer portraits
+
         doctor "\"Tomorrow...\""
 
         doctor "\"I'll do better.\""
+
+        hide doctor default onlayer portraits
 
     jump ch01_new_loop

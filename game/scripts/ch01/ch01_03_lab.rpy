@@ -314,9 +314,13 @@ label ch01_cat_becomes_noisy:
 
         "A familiar memory returns."
 
+        show doctor default at left onlayer portraits
+
         doctor "I have seen this before... if I let her stay inside she maybe break the formula again."
 
         doctor "Do I risk it?"
+
+        hide doctor default onlayer portraits
 
     else:
 
@@ -324,9 +328,9 @@ label ch01_cat_becomes_noisy:
         
         doctor "Easy there, little one..." 
 
-        hide doctor default onlayer portraits
-
         doctor "Maybe I should let her outside."
+
+        hide doctor default onlayer portraits
 
     menu:
 
@@ -334,7 +338,11 @@ label ch01_cat_becomes_noisy:
 
             "He gently picks up the cat and carries her outside."
 
+            show  doctor default at left onlayer portraits
+
             doctor "Today I need my full concentration. I can't afford any distractions."
+
+            hide doctor default onlayer portraits
 
             jump ch01_mother_calls_knock_on_door
 
@@ -344,9 +352,13 @@ label ch01_cat_becomes_noisy:
 
 label ch01_cat_breaks_formula:
 
+    show doctor default at left onlayer portraits
+
     doctor "Try to be quiet, little one. I don't want to escort you outside."
 
     doctor "Today I need my full concentration. I can't afford any distractions."
+
+    hide doctor default onlayer portraits
 
     "He looks over his notes one more time."
 
@@ -356,31 +368,51 @@ label ch01_cat_breaks_formula:
 
         "Its happening again!"
 
-    doctor "No! Get out of here!"
+    show doctor default at left onlayer portraits
+
+    doctor "\"No! Get out of here!\""
+
+    hide doctor default onlayer portraits
 
     "But it's took late… She tries to leave form the desc but things get in her way."
 
     "Bottles start breaking."
 
-    doctor "Not this one!"
+    show doctor default at left onlayer portraits
+
+    doctor "\"Not this one!\""
+
+    hide doctor default onlayer portraits
 
     "The doctor tries to catch the formula but it falls in the ground and breaks."
 
-    doctor "No No No."
+    show doctor default at left onlayer portraits
 
-    doctor "This can't be happening!"
+    doctor "\"No No No.\""
+
+    doctor "\"This can't be happening!\""
+
+    hide doctor default onlayer portraits
 
     if kept_cat_in_lab_once:
 
+        show doctor default at left onlayer portraits
+
         doctor "How could i make this mistake again?"
 
+        hide doctor default onlayer portraits
+
     "He turns to find the cat, but she is nowhere to be found."
+
+    show doctor default at left onlayer portraits
 
     doctor "I have to make the formula again."
 
     doctor "I have to check what herbs I have at the apothecary."
 
     doctor "Or I could go to the hospital and replenish my herbs."
+
+    hide doctor default onlayer portraits
 
     $ ch01_prepared_formula = False
 
@@ -400,11 +432,15 @@ label ch01_cat_breaks_formula:
 
 label ch01_mother_calls_knock_on_door:
 
-    mother "Yosuke..." 
+    mother "\"Yosuke...\""
 
     "He hears Mother's weak voice calling from her room."
 
+    show doctor default at left onlayer portraits
+
     doctor "I should check on her."
+
+    hide doctor default onlayer portraits
 
     # audio *Knock... Knock...* 
 
@@ -414,11 +450,19 @@ label ch01_mother_calls_knock_on_door:
     
     if not ch01_met_herb_in_door:
 
-        "Someone is at the front door."
+        show doctor default at left onlayer portraits
+
+        doctor "Someone is at the front door."
+
+        hide doctor default onlayer portraits
 
     else: 
 
-        "Maybe it's the herbalist again."
+        show doctor default at left onlayer portraits
+
+        doctor "Maybe it's the herbalist again."
+
+        hide doctor default onlayer portraits
 
     menu:
 
@@ -434,7 +478,7 @@ label ch01_keep_cat_in_lab_mother_calls :
 
     show doctor default at left onlayer portraits
 
-    doctor "Come on, little one."
+    doctor "\"Come on, little one.\""
 
     hide doctor default onlayer portraits
 
@@ -442,15 +486,19 @@ label ch01_keep_cat_in_lab_mother_calls :
 
     "He lets her wander around the room..."
 
-    mother "Yosuke..." 
+    mother "\"Yosuke...\""
 
     $ ch01_mother_called = True
 
     "He hears Mother's weak voice calling from her room."
 
+    show doctor default at left onlayer portraits
+
     doctor "I should check on her."
 
     doctor "But i have so much work…"
+
+    hide doctor default onlayer portraits
 
     $ ch01_cat_in_lab = True
 
@@ -458,7 +506,11 @@ label ch01_keep_cat_in_lab_mother_calls :
 
         "Continue studying":
 
+            show doctor default at left onlayer portraits
+
             doctor "I'll do one last check, then I'll go to her."
+
+            hide doctor default onlayer portraits
 
             jump ch01_mother_calls_knock_on_door
 
@@ -470,9 +522,13 @@ label ch01_check_mother_cat_in_lab :
 
     "He sets his notes aside."
 
+    show doctor default at left onlayer portraits
+
     doctor "Mother sounded weaker this time."
 
     doctor "I can't ignore her."
+
+    hide doctor default onlayer portraits
 
     "He leaves the laboratory and walks to her room."
 
@@ -480,13 +536,17 @@ label ch01_check_mother_cat_in_lab :
 
     "Even breathing seems to tire her."
 
-    mother "Yosuke..."
+    mother "\"Yosuke...\""
 
     "He kneels beside her."
 
-    doctor "How are you feeling?"
+    show doctor default at left onlayer portraits
 
-    mother "...Hungry."
+    doctor "\"How are you feeling?\""
+
+    hide doctor default onlayer portraits
+
+    mother "\"...Hungry.\""
 
     "She hasn't eaten much since breakfast."
 
@@ -496,13 +556,17 @@ label ch01_check_mother_cat_in_lab :
 
     "The formula is still untested."
 
+    show doctor default at left onlayer portraits
+
     doctor "Every minute I spend away from my research delays my work."
 
     doctor "But every minute I stay in the laboratory..."
 
     doctor "...Mother suffers alone."
 
-    doctor "I have to choose."
+    doctor "\"I have to choose.\""
+
+    hide doctor default onlayer portraits
 
     menu :
 

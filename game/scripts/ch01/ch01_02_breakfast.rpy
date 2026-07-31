@@ -155,6 +155,8 @@ label ch01_eat_breakfast:
 
             doctor "\"Alright... Everything seems stable.\""
 
+            hide doctor default onlayer portraits
+
         show doctor default at left onlayer portraits
         
         doctor "\"Here.\""
@@ -165,7 +167,11 @@ label ch01_eat_breakfast:
 
     elif ch01_loop_count == 1:
 
+        show doctor default at left onlayer portraits
+
         doctor "I should go visit her now…"
+
+        hide doctor default onlayer portraits
 
         if not ch01_mother_checked:
 
@@ -173,17 +179,21 @@ label ch01_eat_breakfast:
 
             if ch01_wake_happened:
 
+                show doctor default at left onlayer portraits
+
                 doctor "Why is she in these clothes? I dressed her yesterday… im sure.. for the wake"
+
+                hide doctor default onlayer portraits
 
             "He rushes to her bedside and gently takes her hand."
 
             "It's warm."
 
+            show doctor default at left onlayer portraits
+
             doctor "She's alive...?"
 
             doctor "\"She's alive...?\""
-
-            show doctor default at left onlayer portraits
 
             doctor "\"Mother...?\""
 
@@ -195,17 +205,25 @@ label ch01_eat_breakfast:
 
             "Relief crashes over him."
 
+            show doctor default at left onlayer portraits
+
             doctor "This... this can't be happening."
 
             doctor "Did I really get another chance?"
 
             doctor "Calm down. Don't let her notice. Just act normal."
+
+            hide doctor default onlayer portraits
         
         else: 
+
+            show doctor default at left onlayer portraits
 
             doctor "Stay calm."
 
             doctor "She can't know."  
+
+            hide doctor default onlayer portraits
 
         "She looks just as exhausted as he remembers."
 
@@ -218,6 +236,7 @@ label ch01_eat_breakfast:
         hide doctor default onlayer portraits
 
         mother "\"Good morning...\""
+
         show doctor default at left onlayer portraits 
 
         doctor "\"How are you feeling today?\""
@@ -244,6 +263,8 @@ label ch01_eat_breakfast:
 
     else: 
 
+        show doctor default at left onlayer portraits
+
         doctor "I should go visit her now…"
 
         if not ch01_mother_checked:
@@ -252,13 +273,19 @@ label ch01_eat_breakfast:
 
             "She's alive."
 
+            show doctor default at left onlayer portraits
+
             doctor "Again..."
+
+            hide doctor default onlayer portraits
 
         doctor "Stay calm."
 
         doctor "Don't let her notice."
 
         doctor "I've done this before."
+
+        hide doctor default onlayer portraits
 
         "She looks just as exhausted as every other time."
 

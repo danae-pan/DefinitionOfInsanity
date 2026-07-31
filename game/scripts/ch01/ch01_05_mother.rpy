@@ -3,9 +3,17 @@ label ch01_answer_mothers_call:
     if ch01_knock_knock :
         if not ch01_met_herb_in_door:
 
+            show doctor default at left onlayer portraits
+
             doctor "I should ignore the sound. Mother called for me." 
 
+            hide doctor default onlayer portraits
+
+        show doctor default at left onlayer portraits
+
         doctor "Nothing else matters right now."
+
+        hide doctor default onlayer portraits
 
         "He rushes toward her room."
 
@@ -40,6 +48,8 @@ label ch01_answer_mothers_call:
 
     mother "\"Something… to help me?\"" 
 
+    show doctor default at left onlayer portraits
+
     doctor "The formula..." 
 
     if ch01_prepared_formula :
@@ -50,6 +60,8 @@ label ch01_answer_mothers_call:
 
         doctor "I should go prepare it quickly."
 
+        hide doctor default onlayer portraits
+
         scene bg ch01 lab with fade
 
         "He enters the laboratory and sees the mess the cat has caused."
@@ -57,6 +69,8 @@ label ch01_answer_mothers_call:
         "He begins preparing the formula again, repeating each step as carefully as before."
 
         "Before long, the new mixture is ready."
+
+        show doctor default at left onlayer portraits
 
         doctor "I should return to Mother."
 
@@ -66,13 +80,19 @@ label ch01_answer_mothers_call:
 
     doctor "I don't know if it will help her... Or if it will make everything worse." 
 
-    doctor "As a doctor... I know what I should do. An untested treatment could harm her."  
+    doctor "As a doctor... I know what I should do. An untested treatment could harm her." 
+
+    hide doctor default onlayer portraits 
 
     "He looks at his mother."
 
     "She is suffering."
 
-    doctor"I cannot just stand here and watch." 
+    show doctor default at left onlayer portraits
+
+    doctor "I cannot just stand here and watch." 
+
+    hide doctor default onlayer portraits
 
     mother "\"Yosuke...\""
 
@@ -82,17 +102,29 @@ label ch01_answer_mothers_call:
 
     "He closes his eyes."
 
+    show doctor default at left onlayer portraits
+
     doctor "The {a=glossary:formula_entry}formula{/a} could save her."
 
     doctor "Or it could take away the little time she has left."
 
+    hide doctor default onlayer portraits
+
     "His hands tighten."
+
+    show doctor default at left onlayer portraits
 
     doctor "I have to decide."
 
+    hide doctor default onlayer portraits
+
     if ch01_check_formula :
 
+        show doctor default at left onlayer portraits
+
         doctor "Last time I gave it to her she died..."
+
+        hide doctor default onlayer portraits
     
     menu:
 
@@ -125,9 +157,9 @@ label ch01_check_mother :
 
         doctor "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
 
-        mother "\"Good morning…\""
-
         hide doctor default onlayer portraits
+
+        mother "\"Good morning…\""
 
         "He turns to see her trying to smile at him."
         
@@ -139,9 +171,9 @@ label ch01_check_mother :
 
         doctor "\"How are you feeling today?\""
 
-        mother "\"Better…\""
-
         hide doctor default onlayer portraits
+
+        mother "\"Better…\""
         
         "She tries to reach for his hand, but her arm trembles."
         
@@ -159,26 +191,41 @@ label ch01_check_mother :
 
         doctor "But perhaps I should make us some breakfast first."
 
+        hide doctor default onlayer portraits
+
     elif ch01_loop_count == 1 :
+
+        show doctor default at left onlayer portraits
 
         doctor "I should go visit her now…"
 
+        hide doctor default onlayer portraits
+
         scene bg ch01 mother with fade
+
+        show doctor default at left onlayer portraits
 
         doctor "Wait… This looks strange…"
 
+        hide doctor default onlayer portraits
+
         if ch01_wake_happened :
+
+            show doctor default at left onlayer portraits
             
             doctor "Why is she in these clothes?"
+
             doctor "I dressed her for the waek yesterday… I'm sure of it."
+
+            hide doctor default onlayer portraits
         
         "He approaches her bedside and touches her hand."
 
         "It is warm."
 
-        doctor "She's alive...?"
-
         show doctor default at left onlayer portraits
+
+        doctor "She's alive...?"
 
         doctor "\"Mother...?\""
 
@@ -187,6 +234,8 @@ label ch01_check_mother :
         hide doctor default onlayer portraits
 
         mother "\"Son…?\""
+
+        show doctor default at left onlayer portraits
 
         doctor "She's alive..."
 
@@ -201,6 +250,8 @@ label ch01_check_mother :
         doctor "I shouldn't upset her."
 
         doctor "I have to act normally."
+
+        hide doctor default onlayer portraits
 
         mother "\"Good morning…\""
 
@@ -224,23 +275,29 @@ label ch01_check_mother :
 
         doctor "\"Alright... Everything seems stable.\""
 
-        hide doctor default onlayer portraits
-
         doctor "She's stable, but that doesn't mean she's alright."
 
         doctor "I need to find a solution soon."
 
         doctor "But perhaps I should make us some breakfast first."
+
+        hide doctor default onlayer portraits
     
     else :
 
+        show doctor default at left onlayer portraits
+
         doctor "I should go visit her now…"
+
+        hide doctor default onlayer portraits
         
         scene bg ch01 mother with fade
 
         "He rushes to her bedside."
 
         "She is alive."
+
+        show doctor default at left onlayer portraits
 
         doctor "Again..."
 
@@ -250,9 +307,15 @@ label ch01_check_mother :
 
         doctor "I have to act normally."
 
+        hide doctor default onlayer portraits
+
         "She looks as exhausted as she did during every previous attempt."
 
+        show doctor default at left onlayer portraits
+
         doctor "I should open the windows."
+
+        hide doctor default onlayer portraits
 
         mother "\"Good morning...\""
 
@@ -278,13 +341,13 @@ label ch01_check_mother :
 
         doctor "\"Alright... Everything seems stable.\""
 
-        hide doctor default onlayer portraits
-
         doctor "She's stable, but that doesn't mean she's alright."
 
         doctor "I need to find a solution soon."
 
         doctor "But perhaps I should make us some breakfast first."
+
+        hide doctor default onlayer portraits
     
     $ ch01_mother_checked = True
 
