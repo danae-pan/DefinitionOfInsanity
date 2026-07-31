@@ -2,6 +2,8 @@ label ch02_cardiac_arrest_ending:
 
     doctor "Just a few minutes."
 
+    scene bg ch01 kitchen with fade
+
     "He heads to the kitchen, fills a small bowl with food and kneels beside the cat."
 
     "She eagerly begins eating while he gently strokes her back."
@@ -15,6 +17,8 @@ label ch02_cardiac_arrest_ending:
     hide doctor default onlayer portraits
 
     "He sprints toward her room."
+
+    scene bg ch01 mother with fade
 
     "The bedroom door is half open."
 
@@ -77,6 +81,8 @@ label ch02_cardiac_arrest_ending:
     show doctor default at left onlayer portraits
     doctor "\"If I stay here... I'll lose my mind.\""
     hide doctor default onlayer portraits
+
+    scene bg ch01 hospital with fade
 
     "The hospital is as busy as ever."
 

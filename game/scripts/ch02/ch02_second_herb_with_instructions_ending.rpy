@@ -4,11 +4,11 @@ label ch02_second_herb_with_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "I know you need to eat mother"
+    doctor "\"I know you need to eat mother\""
 
-    doctor "But the herbalist was very clear."
+    doctor "\"But the herbalist was very clear.\""
 
-    doctor "This medicine must not be taken after eating."
+    doctor "\"This medicine must not be taken after eating.\""
 
     hide doctor default onlayer portraits
 
@@ -24,9 +24,13 @@ label ch02_second_herb_with_instructions_ending:
 
     "He carefully wets her lips with a damp cloth."
     
-    doctor "Just a little longer."
+    show doctor default at left onlayer portraits
+    
+    doctor "\"Just a little longer.\""
 
-    doctor "I'll finish the medicine first."
+    doctor "\"I'll finish the medicine first.\""
+
+    hide doctor default onlayer portraits
 
     "He slowly stands."
 
@@ -36,7 +40,7 @@ label ch02_second_herb_with_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "...Forgive me."
+    doctor "\"...Forgive me.\""
 
     hide doctor default onlayer portraits
 
@@ -46,7 +50,11 @@ label ch02_second_herb_with_instructions_ending:
 
     "Every few moments he glances toward the staircase."
 
-    doctor "Almost there.."
+    show doctor default at left onlayer portraits
+
+    doctor "\"Almost there..\""
+
+    hide doctor default onlayer portraits
 
     "He filters the herbs through a fine cloth before pouring the finished medicine into a bottle."
 
@@ -56,7 +64,7 @@ label ch02_second_herb_with_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother..."
+    doctor "\"Mother...\""
 
     hide doctor default onlayer portraits
 
@@ -76,9 +84,9 @@ label ch02_second_herb_with_instructions_ending:
     
     show doctor default at left onlayer portraits
 
-    doctor "I've finished it."
+    doctor "\"I've finished it.\""
 
-    doctor "You can drink now."
+    doctor "\"You can drink now.\""
 
     hide doctor default onlayer portraits
 
@@ -90,7 +98,7 @@ label ch02_second_herb_with_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "...No."
+    doctor "\"...No.\""
 
     hide doctor default onlayer portraits
 
@@ -108,7 +116,7 @@ label ch02_second_herb_with_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother!"
+    doctor "\"Mother!\""
 
     hide doctor default onlayer portraits
 
