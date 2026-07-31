@@ -85,7 +85,7 @@ label ch02_mother_calls_for_food :
 
     show doctor default at left onlayer portraits
 
-    doctor "I'm here."
+    doctor "\"I'm here.\""
 
     hide doctor default onlayer portraits
 
@@ -93,27 +93,27 @@ label ch02_mother_calls_for_food :
 
     "Her fingers tremble."
 
-    mother "I..."
+    mother "\"I...\""
 
     "She pauses, struggling to swallow."
 
-    mother "...I'm so hungry."
+    mother "\"...I'm so hungry.\""
 
     "The doctor gently supports her shoulders."
 
     show doctor default at left onlayer portraits
 
-    doctor "I know."
+    doctor "\"I know.\""
 
     hide doctor default onlayer portraits
 
     "She closes her eyes tightly."
 
-    mother "My throat..."
+    mother "\"My throat...\""
 
-    mother "It hurts..."
+    mother "\"It hurts...\""
 
-    mother "Everything hurts."
+    mother "\"Everything hurts.\""
 
     "He watches as she tries to swallow again."
 
@@ -129,7 +129,11 @@ label ch02_mother_calls_for_food :
 
     "His thoughts return to the herbalist."
 
+    show doctor default at left onlayer portraits
+
     doctor "The second herb should not be taken after eating."
+
+    hide doctor default onlayer portraits
 
     if ch02_second_herb_with_instructions:
 
@@ -145,7 +149,7 @@ label ch02_mother_calls_for_food :
 
     "She squeezes his hand ever so slightly."
 
-    mother "...please..."
+    mother "\"...please...\""
 
     "He lowers his head."
 
