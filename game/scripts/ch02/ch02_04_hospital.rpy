@@ -36,7 +36,10 @@ label ch02_go_to_hospital :
 
             doctor "Nothing from the herbs are suitable for what I need.."
 
-            doctor "Wait a minute!"
+
+            show doctor default at left onlayer portraits
+            doctor "\"Wait a minute!\""
+            hide doctor default onlayer portraits
 
             doctor "There is a glass bottle of dry {a=glossary:taeru_root_entry}Taeru Root{/a}."
 
@@ -122,7 +125,7 @@ label ch02_go_to_hospital :
 
         show doctor default at left onlayer portraits
 
-        doctor "I know you are sick..."
+        doctor "\"I know you are sick...\""
 
         hide doctor default onlayer portraits
 
@@ -130,31 +133,43 @@ label ch02_go_to_hospital :
 
         show doctor default at left onlayer portraits
 
-        doctor "You made a mess before."
+        doctor "\"You made a mess before.\""
 
-        doctor "I should not let you inside the lab anymore."
+        
 
         hide doctor default onlayer portraits
+
+        doctor "I should not let you inside the lab anymore."
 
     if ch02_hungry_pet :
 
         show doctor default at left onlayer portraits
 
-        doctor "And last I lose time feeding you.."
+        doctor "\"And last I lose time feeding you..\""
 
-        doctor "I should be careful with my choices."
+        
 
         hide doctor default onlayer portraits
 
+        doctor "I should be careful with my choices."
+
     "He sighs."
 
-    doctor "Mother needs this medicine..."
+    show doctor default at left onlayer portraits
+
+    doctor "\"Mother needs this medicine...\""
+
+    hide doctor default onlayer portraits
 
     "The cat meows once more."
 
-    doctor "...but if I leave you like this..."
+    show doctor default at left onlayer portraits
 
-    doctor "...you'll only keep crying."
+    doctor "\...but if I leave you like this...\""
+
+    doctor "\"...you'll only keep crying.\""
+
+    hide doctor default onlayer portraits
 
     "He remains frozen between the workbench and the hungry animal at his feet."
 
