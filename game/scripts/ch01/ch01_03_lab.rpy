@@ -12,7 +12,7 @@ label ch01_straight_to_lab :
 
     show doctor default at left onlayer portraits
 
-    doctor "Easy there, little one..." 
+    doctor "\"Easy there, little one...\"" 
 
     hide doctor default onlayer portraits
 
@@ -20,7 +20,7 @@ label ch01_straight_to_lab :
 
     if kept_cat_in_lab_once :
 
-        doctor "Last time i let her stay in the back she broke the formula..."
+        doctor "Last time i let her stay in the back she broke the {a=glossary:formula_entry}formula{/a}..."
 
     menu :
 
@@ -50,7 +50,7 @@ label ch01_eat_then_lab:
 
             show doctor default at left onlayer portraits
 
-            doctor "You know, your cat has been doing some strange things these past few days."
+            doctor "\"You know, your cat has been doing some strange things these past few days.\""
 
             hide doctor default onlayer portraits
 
@@ -58,19 +58,19 @@ label ch01_eat_then_lab:
 
             show doctor default at left onlayer portraits
 
-            doctor "Yesterday I caught her sitting in front of the mirror for almost ten minutes."
+            doctor "\"Yesterday I caught her sitting in front of the mirror for almost ten minutes.\""
 
-            doctor "She was just staring at herself like she had discovered another cat living in the house."
+            doctor "\"She was just staring at herself like she had discovered another cat living in the house.\""
 
             hide doctor default onlayer portraits
             
             "Her expression immediately brightens."
 
-            mother "...Curious..."
+            mother "\"...Curious...\""
 
             show doctor default at left onlayer portraits
 
-            doctor "Yeah. That's exactly what I thought." 
+            doctor "\"Yeah. That's exactly what I thought.\""
 
             hide doctor default onlayer portraits
 
@@ -78,7 +78,7 @@ label ch01_eat_then_lab:
             
             show doctor default at left onlayer portraits
 
-            doctor "I checked the flowers in the garden this morning."
+            doctor "\"I checked the flowers in the garden this morning.\""
 
             hide doctor default onlayer portraits
 
@@ -86,19 +86,19 @@ label ch01_eat_then_lab:
 
             show doctor default at left onlayer portraits
 
-            doctor "The ajisai you thought was dying... "
+            doctor "\"The ajisai you thought was dying... \""
 
-            doctor "There are new leaves coming out." 
+            doctor "\"There are new leaves coming out.\"" 
 
             hide doctor default onlayer portraits
 
             "A tear forms in the corner of her eye." 
 
-            mother "...Really?"
+            mother "\"...Really?\""
 
             show doctor default at left onlayer portraits
 
-            doctor "Yeah. Looks like it wasn't ready to give up just yet."
+            doctor "\"Yeah. Looks like it wasn't ready to give up just yet.\""
 
             hide doctor default onlayer portraits
 
@@ -106,7 +106,7 @@ label ch01_eat_then_lab:
 
     show doctor default at left onlayer portraits
 
-    doctor "I'll leave you to rest now, Mother. Call me if you need anything, alright? I'll be in the laboratory."
+    doctor "\"I'll leave you to rest now, Mother. Call me if you need anything, alright? I'll be in the laboratory.\""
 
     hide doctor default onlayer portraits
     
@@ -156,7 +156,7 @@ label ch01_eat_then_lab:
 
             show doctor default at left onlayer portraits
 
-            doctor "Come on, little one."
+            doctor "\"Come on, little one.\""
 
             hide doctor default onlayer portraits
 
@@ -182,17 +182,21 @@ label ch01_study_prepare_formula:
 
     show doctor default at left onlayer portraits
 
-    doctor "Licorice Root..."
+    $ nagomi_root_entry.locked = False
+
+    doctor "\"{a=glossary:nagomi_root_entry}Nagomi Root{/a}...\""
 
     hide doctor default onlayer portraits
 
     "He picks up the jar and examines the remaining amount."
 
-    doctor "Enough for one full dose."
+    doctor "\"Enough for one full dose.\""
 
     show doctor default at left onlayer portraits
 
-    doctor "Its anti-inflammatory and soothing properties could help ease Mother's symptoms."
+    $ anti_inflammatory_entry.locked = False
+
+    doctor "Its {a=glossary:anti_inflammatory_entry}anti-inflammatory{/a} and soothing properties could help ease Mother's symptoms."
 
     hide doctor default onlayer portraits
 
@@ -204,19 +208,21 @@ label ch01_study_prepare_formula:
 
         "A memory interrupts his thoughts."
 
-        doctor "I have strong indications that this can cause arrythmia to mother... But i have nothing else to try..."
+        doctor "I have strong indications that this can cause {a=glossary:arrhythmia_entry}arrhythmia{/a} to mother... But i have nothing else to try..."
 
     "His attention shifts to another jar."
 
     show doctor default at left onlayer portraits
 
-    doctor "Polygala tenuifolia."
+    $ hogo_root_entry.locked = False
+
+    doctor "\"{a=glossary:hogo_root_entry}Hogo Root{/a}.\""
 
     hide doctor default onlayer portraits
 
     "He checks the remaining supply."
 
-    doctor "Almost enough."
+    doctor "\"Almost enough.\""
 
     show doctor default at left onlayer portraits
 
@@ -226,9 +232,9 @@ label ch01_study_prepare_formula:
         
         $ ch01_knows_polygala = True
 
-    doctor "If Licorice Root can reduce the inflammation..."
+    doctor "If Nagomi Root can reduce the inflammation..."
 
-    doctor "...then perhaps Polygala can help protect the nervous system." 
+    doctor "...then perhaps Hogo Root can help protect the {a=glossary:nervous_system_entry}nervous system{/a}."
 
     doctor "..."
 
@@ -242,7 +248,7 @@ label ch01_study_prepare_formula:
 
     "The herbs are ground into a fine powder before being slowly mixed into the solution."
 
-    "The color of the formula changes as the ingredients dissolve."
+    "The color of the {a=glossary:formula_entry}formula{/a} changes as the ingredients dissolve."
 
     "Finally, he pours the finished mixture into a small glass vial."
 
@@ -262,9 +268,9 @@ label ch01_study_prepare_formula:
 
     show doctor default at left onlayer portraits
 
-    doctor "Now..." 
+    doctor "\"Now...\"" 
 
-    doctor "Let's make sure I didn't overlook anything." 
+    doctor "\"Let's make sure I didn't overlook anything.\"" 
 
     hide doctor default onlayer portraits
 
@@ -338,13 +344,13 @@ label ch01_cat_becomes_noisy:
 
 label ch01_cat_breaks_formula:
 
-    doctor "Try to be quiet little one, i dont want to escord you outside."
+    doctor "Try to be quiet, little one. I don't want to escort you outside."
 
-    "Today I need my full concentration. I can't afford any distractions."
+    doctor "Today I need my full concentration. I can't afford any distractions."
 
-    "I look my notes one more time."
+    "He looks over his notes one more time."
 
-    "Suddenly she appears up in my desk!"
+    "Suddenly, the cat jumps onto his desk!"
 
     if kept_cat_in_lab_once:
 
@@ -358,23 +364,23 @@ label ch01_cat_breaks_formula:
 
     doctor "Not this one!"
 
-    "I try to catch the formula but it falls in the ground and breaks."
+    "The doctor tries to catch the formula but it falls in the ground and breaks."
 
-    "No No No."
+    doctor "No No No."
 
-    "This can't be happening!"
+    doctor "This can't be happening!"
 
     if kept_cat_in_lab_once:
 
-        "How could i make this mistake again?"
+        doctor "How could i make this mistake again?"
 
-    "I turn to find the cat but she is nowhere to be found."
+    "He turns to find the cat, but she is nowhere to be found."
 
-    "I have to make the formula again."
+    doctor "I have to make the formula again."
 
-    "I have to check what herbs I have at the apothecary."
+    doctor "I have to check what herbs I have at the apothecary."
 
-    "Or instead i could go to the hospital and restore all my herbs."
+    doctor "Or I could go to the hospital and replenish my herbs."
 
     $ ch01_prepared_formula = False
 
@@ -396,9 +402,9 @@ label ch01_mother_calls_knock_on_door:
 
     mother "Yosuke..." 
 
-    "I hear Mother's weak voice calling from her room." 
+    "He hears Mother's weak voice calling from her room."
 
-    "I should check on her." 
+    doctor "I should check on her."
 
     # audio *Knock... Knock...* 
 
@@ -432,19 +438,19 @@ label ch01_keep_cat_in_lab_mother_calls :
 
     hide doctor default onlayer portraits
 
-    "I candle her and she purrs back to me."
+    "He cradles her in his arms, and she purrs softly."
 
-    "I let her wonder in the room , check things out."
+    "He lets her wander around the room..."
 
     mother "Yosuke..." 
 
     $ ch01_mother_called = True
 
-    "I hear Mother's weak voice calling from her room." 
+    "He hears Mother's weak voice calling from her room."
 
-    "I should check on her."
+    doctor "I should check on her."
 
-    "But i have so much work…"
+    doctor "But i have so much work…"
 
     $ ch01_cat_in_lab = True
 
@@ -452,7 +458,7 @@ label ch01_keep_cat_in_lab_mother_calls :
 
         "Continue studying":
 
-            "I'm doing one last check and Ι'll go check on her."
+            doctor "I'll do one last check, then I'll go to her."
 
             jump ch01_mother_calls_knock_on_door
 
@@ -462,13 +468,13 @@ label ch01_keep_cat_in_lab_mother_calls :
 
 label ch01_check_mother_cat_in_lab :
 
-    "I set my notes aside."
+    "He sets his notes aside."
 
-    "Mother sounded weaker this time."
+    doctor "Mother sounded weaker this time."
 
-    "I can't ignore her."
+    doctor "I can't ignore her."
 
-    "I leave the laboratory and walk to her room."
+    "He leaves the laboratory and walks to her room."
 
     "She is sitting up in bed."
 
@@ -476,7 +482,7 @@ label ch01_check_mother_cat_in_lab :
 
     mother "Yosuke..."
 
-    "I kneel beside her."
+    "He kneels beside her."
 
     doctor "How are you feeling?"
 
@@ -486,23 +492,23 @@ label ch01_check_mother_cat_in_lab :
 
     "The illness has taken what little strength she had."
 
-    "I glance toward the laboratory."
+    "He glances toward the laboratory."
 
     "The formula is still untested."
 
-    "Every minute I spend away from my research delays my work."
+    doctor "Every minute I spend away from my research delays my work."
 
-    "But every minute I stay in the laboratory..."
+    doctor "But every minute I stay in the laboratory..."
 
-    "...Mother suffers alone."
+    doctor "...Mother suffers alone."
 
-    "I have to choose."
+    doctor "I have to choose."
 
     menu :
 
         "Give her food":
 
-            "I started preparing food when some noise from the lab distracted me."
+            "He started preparing food when some noise from the lab distracted him."
 
             jump ch01_cat_breaks_formula
 
@@ -510,6 +516,6 @@ label ch01_check_mother_cat_in_lab :
 
             scene bg ch01 lab with fade
 
-            "I return to my lab to study some more about the formula i made..."
+            "He returns to his lab to study some more about the formula he made..."
 
             jump ch01_mother_calls_knock_on_door

@@ -3,86 +3,96 @@ label ch01_answer_mothers_call:
     if ch01_knock_knock :
         if not ch01_met_herb_in_door:
 
-            "I ignore the sound. Mother called for me." 
+            doctor "I should ignore the sound. Mother called for me." 
 
-        "Nothing else matters right now. I rush toward her room." 
+        doctor "Nothing else matters right now."
+
+        "He rushes toward her room."
 
     else :
 
-        "I enter the house and I hear my mother calling for me."
+        "He enters the house and hears his mother calling for him."
     
     scene bg ch01 mother 
     with fade
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother?" 
+    doctor "\"Mother?\"" 
 
     hide doctor default onlayer portraits
 
-    "I open the door." 
+    "He opens the door." 
 
     "She is struggling to breathe. Her condition has worsened." 
 
-    "I can see the pain in her eyes. More than before." 
+    "The pain in her eyes is more intense than before." 
 
-    "I quickly move to her side." 
+    "He quickly moves to her side." 
 
-    mother "Yosuke..." 
+    mother "\"Yosuke...\"" 
 
-    "She reaches for my hand. I hold it gently." 
+    "She reaches for his hand. He holds it gently." 
 
-    mother "Did you... find something?" 
+    mother "\"Did you... find something?\"" 
 
-    "Her voice is weak. She already knows I have been searching." 
+    "Her voice is weak. She already knows he has been searching." 
 
-    mother "Something… to help me?" 
+    mother "\"Something… to help me?\"" 
 
-    "I freeze. The formula..." 
+    doctor "The formula..." 
 
     if ch01_prepared_formula :
 
-        "It's ready. It is waiting in the laboratory." 
+        doctor "It's ready. It is waiting in the laboratory." 
 
     else: 
 
-        "I should go prepare it quickly."
+        doctor "I should go prepare it quickly."
 
         scene bg ch01 lab with fade
 
-        "I enter the laboratory and I see the mess the cat has caused..."
+        "He enters the laboratory and sees the mess the cat has caused."
 
-        "I'm starting preparing the formula again... Step by step as i did before..."
+        "He begins preparing the formula again, repeating each step as carefully as before."
 
-        "Soon everything is ready. I should head back to mother."
+        "Before long, the new mixture is ready."
 
-        "I take a look at the bottle one last time before I leave the lab."
+        doctor "I should return to Mother."
 
-    "It has never been tested. I don't know the side effects." 
+        "He takes a look at the bottle one last time before he leaves the lab."
 
-    "I don't know if it will help her... Or if it will make everything worse." 
+    doctor "It has never been tested. I don't know the side effects." 
 
-    "As a doctor... I know what I should do. An untested treatment could harm her."  
+    doctor "I don't know if it will help her... Or if it will make everything worse." 
 
-    "But... I look at Mother. She is suffering." 
+    doctor "As a doctor... I know what I should do. An untested treatment could harm her."  
 
-    "I cannot just stand here and watch." 
+    "He looks at his mother."
 
-    mother "Yosuke..." 
+    "She is suffering."
 
-    "Her grip weakens." 
+    doctor"I cannot just stand here and watch." 
 
-    mother "Please..." 
+    mother "\"Yosuke...\""
 
-    "I close my eyes. The formula could save her. Or it could take away the little time she has left." 
+    "Her grip weakens."
 
-    "My hands tighten." 
+    mother "\"Please...\""
 
-    "I have to decide."   
+    "He closes his eyes."
+
+    doctor "The {a=glossary:formula_entry}formula{/a} could save her."
+
+    doctor "Or it could take away the little time she has left."
+
+    "His hands tighten."
+
+    doctor "I have to decide."
 
     if ch01_check_formula :
 
-        "Last time I gave it to her she died..."
+        doctor "Last time I gave it to her she died..."
     
     menu:
 
@@ -101,139 +111,180 @@ label ch01_check_mother :
 
         scene bg ch01 mother with fade
 
-        "I enter her room."
+        "He enters her room."
 
         show doctor default at left onlayer portraits
 
-        doctor "Mother…?" 
+        doctor "\"Mother…?\"" 
 
         hide doctor default onlayer portraits
 
-        "She's still asleep. She looks exhausted today as well."
-
-        "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
-
-        mother "Good morning…"
-
-        "I turn to see her trying to smile at me. This illness is slowly stealing her strength…"
+        "She's still asleep. She looks exhausted."
 
         show doctor default at left onlayer portraits
 
-        doctor "Good morning, Mother" 
+        doctor "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
 
-        doctor "How are you feeling today?"
+        mother "\"Good morning…\""
 
         hide doctor default onlayer portraits
 
-        mother "Better…"
-
-        "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back."
-
-        show doctor default at left onlayer portraits
-
-        doctor "Let me run my tests first."
-
-        doctor  "Alright… everthing seems stable."
+        "He turns to see her trying to smile at him."
+        
+        "This illness is slowly stealing her strength."
 
         show doctor default at left onlayer portraits
 
-        "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
+        doctor "\"Good morning, Mother\"" 
 
-        "But maybe I should make us some breakfast first."
+        doctor "\"How are you feeling today?\""
+
+        mother "\"Better…\""
+
+        hide doctor default onlayer portraits
+        
+        "She tries to reach for his hand, but her arm trembles."
+        
+        "He gently takes her hand in his and smile back."
+
+        show doctor default at left onlayer portraits
+
+        doctor "\"Let me run my tests first.\""
+
+        doctor  "\"Alright… everything seems stable.\""
+
+        doctor "She is stable, but that doesn’t mean that she is alright."
+        
+        doctor "I need to find a solution soon."
+
+        doctor "But perhaps I should make us some breakfast first."
 
     elif ch01_loop_count == 1 :
 
-        "I should go visit her now…"
+        doctor "I should go visit her now…"
 
         scene bg ch01 mother with fade
 
-        "Wait… This looks strange…"
+        doctor "Wait… This looks strange…"
 
         if ch01_wake_happened :
             
-            "Why is she in these clothes? I dressed her yesterday… im sure.. for the wake"
+            doctor "Why is she in these clothes?"
+            doctor "I dressed her for the waek yesterday… I'm sure of it."
         
-        "Im going by her side… im taching her hand… Its warm… She is alive…?"
+        "He approaches her bedside and touches her hand."
+
+        "It is warm."
+
+        doctor "She's alive...?"
 
         show doctor default at left onlayer portraits
 
-        doctor "Mother…?"
+        doctor "\"Mother...?\""
 
-        doctor "Mother!"
+        doctor "\"Mother!\""
 
         hide doctor default onlayer portraits
 
-        mother "Son…?"
+        mother "\"Son…?\""
 
-        "She's alive… i cannot believe it… is this real?"
+        doctor "She's alive..."
 
-        "Am I getting another chance?"
+        doctor "I can't believe it."
 
-        "I have to calm down I should not upset her… I have to act normal"
+        doctor "Is this real?"
 
-        mother "Good morning…"
+        doctor "Am I getting another chance?"
+
+        doctor "I have to calm down."
+
+        doctor "I shouldn't upset her."
+
+        doctor "I have to act normally."
+
+        mother "\"Good morning…\""
 
         show doctor default at left onlayer portraits
 
-        doctor "Good morning, Mother"
+        doctor "\"Good morning, Mother\""
 
-        doctor "How are you feeling today?"
+        doctor "\"How are you feeling today?\""
 
         hide doctor default onlayer portraits
 
-        mother "Better…"
+        mother "\"Better…\""
 
-        "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back"
+        "She tries to reach for my hand, but her arm trembles."
+        
+        "He gently takes her hand in his and smile back"
 
         show doctor default at left onlayer portraits
 
-        doctor "Let me run my tests first."
+        doctor "\"Let me run my tests first.\""
+
+        doctor "\"Alright... Everything seems stable.\""
 
         hide doctor default onlayer portraits
 
-        "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
+        doctor "She's stable, but that doesn't mean she's alright."
 
-        "But maybe I should make us some breakfast first."
+        doctor "I need to find a solution soon."
+
+        doctor "But perhaps I should make us some breakfast first."
     
     else :
 
-        "I should go visit her now…"
+        doctor "I should go visit her now…"
         
         scene bg ch01 mother with fade
 
-        "I rush by her side... She is alive.. Again"
+        "He rushes to her bedside."
 
-        "I have to calm down i should not upset her… I have to act normal."
+        "She is alive."
 
-        "She looks exhausted today as well."
+        doctor "Again..."
 
-        "I should open the windows."
+        doctor "I have to calm down."
 
-        mother "Good morning…"
+        doctor "I shouldn't upset her."
 
-        "I turn to see her trying to smile at me."
+        doctor "I have to act normally."
 
-        show doctor default at left onlayer portraits
+        "She looks as exhausted as she did during every previous attempt."
 
-        doctor "Good morning, Mother"
+        doctor "I should open the windows."
 
-        doctor "How are you feeling today?"
+        mother "\"Good morning...\""
 
-        hide doctor default onlayer portraits
-
-        mother "Better…"
-
-        "She tries to reach for my hand, but her arm trembles. I gently take her hand in mine and smile back"
+        "He turns and sees her trying to smile at him."
 
         show doctor default at left onlayer portraits
 
-        doctor "Let me run my tests first."
+        doctor "\"Good morning, Mother.\""
+
+        doctor "\"How are you feeling today?\""
 
         hide doctor default onlayer portraits
 
-        "She is stable but that doesn’t mean that she is okay. I should find a solution soon."
+        mother "\"Better...\""
 
-        "But maybe I should make us some breakfast first."
+        "She tries to reach for his hand, but her arm trembles."
+
+        "He gently takes her hand in his and smiles back."
+
+        show doctor default at left onlayer portraits
+
+        doctor "\"Let me run my tests first.\""
+
+        doctor "\"Alright... Everything seems stable.\""
+
+        hide doctor default onlayer portraits
+
+        doctor "She's stable, but that doesn't mean she's alright."
+
+        doctor "I need to find a solution soon."
+
+        doctor "But perhaps I should make us some breakfast first."
     
     $ ch01_mother_checked = True
 
@@ -242,7 +293,7 @@ label ch01_check_mother :
 
             show doctor default at left onlayer portraits
 
-            doctor "Im going to make us some breakfast. I'll be back soon."
+            doctor "\"I'm going to make us some breakfast. I'll be back soon.\""
 
             hide doctor default onlayer portraits
 
@@ -252,7 +303,7 @@ label ch01_check_mother :
 
             show doctor default at left onlayer portraits
 
-            doctor "I'm going to my laboratory. Call me if you need anything."
+            doctor "\"I'm going to my laboratory. Call me if you need anything.\""
 
             hide doctor default onlayer portraits
 

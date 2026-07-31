@@ -1,96 +1,122 @@
 label ch01_runs_late_at_hospital_comma_ending:
 
-    "Herbalist may have some usefull info about the illeness and the herbs that may herlp. I should stay and talk to him"
+    doctor "The herbalist may have useful information about the illness and the herbs that could help."
 
-    doctor "Please herbalist tell me what you have noticed all these years in your patients?"
+    doctor "I should stay and speak with him."
 
-    herbalist "I've never seen anyone cured." 
+    doctor "\"Please, Kazuki. What have you noticed over the years while treating your patients?\""
 
-    herbalist "But I've seen this illness many times." 
+    herbalist "\"I've never seen anyone cured.\""
 
-    herbalist "It always begins differently..." 
+    herbalist "\"But I've seen this illness many times.\""
 
-    herbalist "Eventually, their muscles grow too weak to support them." 
+    herbalist "\"It always begins differently...\""
 
-    herbalist "Many also lose the ability to swallow safely."  
+    herbalist "\"Eventually, their muscles become too weak to support them.\""
 
-    herbalist "Food and even water can become dangerous." 
+    herbalist "\"Many also lose the ability to swallow safely.\""
 
-    herbalist "Later... they begin losing their balance." 
+    herbalist "\"Food, and even water, can become dangerous.\""
 
-    "I quietly commit every word to memory." 
+    herbalist "\"Later... they begin losing their balance.\""
 
-    "We talk some more...but the time has passed, I should go back to mother."
+    "He quietly commits every word to memory."
 
-    doctor "I will definately come by your shop as soon as i can."
+    "They continue talking for a while longer."
 
-    doctor "I have to go now. Have a good day Mr Herbalist."
+    doctor "I've already been gone too long."
 
-    herbalist "I hope i see you again soon Dr Yosuke. Good day to you too."
+    doctor "I should return to Mother."
 
-    "I quicly head home."
+    doctor "\"I'll definitely visit your shop as soon as I can.\""
 
-    "As soon as i enter in the house I notice the silence."
+    doctor "\"I have to go now. Have a good day, Kazuki.\""
 
-    "I rush to mothers room."
+    herbalist "\"I hope I see you again soon, Dr. Yosuke.\""
+
+    herbalist "\"Good day to you as well.\""
+
+    "He quickly heads home."
+
+    "As soon as he enters the house, he notices the silence."
+
+    doctor "No..."
+
+    "He rushes to Mother's room."
 
     scene bg ch01 mother with fade
 
-    "I see her in bed exhausted."
+    "She lies in bed, completely exhausted."
 
-    "I believe its too late for her now..."
+    doctor "I think I'm already too late..."
 
-    "I monitor her condition. I do everything I can to make her comfortable." 
+    "He monitors her condition and does everything he can to keep her comfortable."
 
-    "But the illness does not stop. Her body becomes weaker." 
+    "But the illness does not stop."
 
-    "Hours pass. Until... She stops responding." 
+    "Her body grows weaker."
+
+    "Hours pass."
+
+    "Then she stops responding."
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother?" 
+    doctor "\"Mother?\""
 
     hide doctor default onlayer portraits
 
-    "I check her condition." 
+    "He checks her condition."
 
-    "She is still alive. But she doesn't wake up. Her body has entered a coma." 
+    "She is still alive, but she does not wake."
 
-    "I stay beside her, waiting. Maybe she will open her eyes." 
+    $ coma_entry.locked = False
 
-    if ch01_loop_count == 0 :
+    "Her body has entered a {a=glossary:coma_entry}coma{/a}."
 
-        "Maybe tomorrow she will wake up." 
-
-        "Maybe..." 
-
-    "But deep down, I know. There is nothing more I can do." 
-
-    "Hours later..." 
-
-    "Her breathing becomes weaker. I hold her hand until the very end." 
-
-    "She passes away peacefully beside me..." 
-
-    if ch01_loop_count >= 1 :
-
-        "I lost her again..."
-
-    "What if the formula could have saved her?"
-
-    if ch01_loop_count >= 1 :
-
-        "I should not let the cat in the laboratory any more."
+    "He remains beside her, waiting for her to open her eyes." 
 
     if ch01_loop_count == 0 :
 
-        "Eventually, reality returns." 
+        doctor "Maybe tomorrow she will wake up." 
 
-        "There are things that need to be done. I have to report her death." 
+        doctor "\"Maybe...\"" 
 
-        "I have to prepare her body. I have to tell someone." 
+    doctor "But deep down, I know."
 
-        "Wake"
+    doctor "There is nothing more I can do."
+
+    "Hours later, her breathing becomes weaker."
+
+    "He holds her hand until the very end."
+
+    "She passes away peacefully beside him."
+
+    if ch01_loop_count >= 1 :
+
+        doctor "I lost her again..."
+
+    doctor "What if the formula could have saved her?"
+
+    if ch01_loop_count >= 1 :
+
+        doctor "I should not let the cat in the laboratory any more."
+
+    if ch01_loop_count == 0 :
+
+        "Eventually, reality begins to settle in."
+
+        "There are things that must be done."
+
+        doctor "I have to report her death."
+
+        doctor "I have to prepare her body."
+
+        doctor "I have to tell someone."
+
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
         $ ch01_wake_happened = True
 
@@ -98,35 +124,51 @@ label ch01_runs_late_at_hospital_comma_ending:
 
         if ch01_knows_coma :
 
-            "The memory burns into my mind." 
+            doctor "The memory burns into my mind."
 
-            "If i don't give her the formula she dies in coma..." 
+            doctor "If I don't give her the formula, she falls into a {a=glossary:coma_entry}coma{/a} and dies..." 
 
         else:
 
-            "I had read it before... This illness can end with comma."
+            doctor "I've read about this before..."
 
-        "I have to try again... I have to save her..." 
+            doctor "This illness can end in a {a=glossary:coma_entry}coma{/a}."
 
-        "I gently place her hand back on the bed." 
+        doctor "I have to try again."
 
-        "But I am not finished. I return to my laboratory." 
+        doctor "I have to save her."
+
+        "He gently places her hand back on the bed."
+
+        doctor "But I'm not finished."
+
+        "He returns to his laboratory."
 
         scene bg ch01 lab
 
-        "I open my notes. My hands are shaking. I write down everything." 
+        "He opens his notes."
 
-        "The mistake. The symptoms. The things I overlooked." 
+        "His hands are shaking as he writes down everything."
 
-        "If I get another chance... I will not repeat this." 
+        "The mistake."
 
-        "I will save her."
+        "The symptoms."
 
-        scene black 
+        "The things he overlooked."
 
-        "I close my eyes." 
+        doctor "If I get another chance..."
 
-        "Tomorrow... I will do better." 
+        doctor "I won't repeat this."
+
+        doctor "I will save her."
+
+        scene black
+
+        "He closes his eyes."
+
+        doctor "\"Tomorrow...\""
+
+        doctor "\"I'll do better.\""
 
     if not ch01_knows_coma :
 

@@ -1,88 +1,123 @@
 label ch01_coma_ending :
 
-    "I bring the formula to the room. I look at it in my hands." 
+    "He brings the formula into Mother's room. He looks at it in his hands." 
 
     if ch01_check_formula:
 
-        "This formula has been proven dangerous before."
+        doctor "This formula has been proven dangerous before."
 
     else:
 
-        "The answer I have been searching for... It could be right in front of me." 
+        doctor "The answer I have been searching for..."
+        doctor "It could be right in front of me." 
 
-    "But it has never been tested. I know the risks. If something goes wrong..."  
+    doctor "But it has never been tested."
 
-    "If the formula harms her... Then I will be the reason she suffers even more." 
+    doctor "I know the risks."
 
-    "Even if the formula could help her... Even if it could be the cure..." 
+    doctor "If something goes wrong..."
 
-    "I cannot risk losing her because of something I created. I slowly place the formula back." 
+    doctor "If the formula harms her, then I'll be the reason she suffers even more."
+
+    doctor "Even if it could help her..."
+
+    doctor "Even if it could be the cure..."
+
+    doctor "I can't risk losing her because of something I created."
+
+    "He slowly lowers the {a=glossary:formula_entry}formula{/a} and sets it aside."
 
     show doctor default at left onlayer portraits
 
-    doctor "I'm sorry, Mother..." 
+    doctor "\"I'm sorry, Mother...\""
 
-    doctor "I can't." 
+    doctor "\"I can't.\""
 
     hide doctor default onlayer portraits
 
     if not ch01_knows_coma :
 
-        "For now, I choose not to give it to her. I stay beside her." 
+        "He chooses not to give her the formula and remains beside her."
 
     else :
 
-        "I choose not to give her the formula once again..."
+        "He chooses not to give her the formula and remains beside her."
 
-    "I monitor her condition. I do everything I can to make her comfortable." 
+    "He monitors her condition and does everything he can to keep her comfortable."
 
-    "But the illness does not stop. Her body becomes weaker." 
+    "But the illness does not stop."
 
-    "Hours pass. Until... She stops responding." 
+    "Her body grows weaker."
+
+    "Hours pass."
+
+    "Then she stops responding."
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother?" 
+    doctor "\"Mother?\"" 
 
     hide doctor default onlayer portraits
 
-    "I check her condition." 
+    "He checks her condition."
 
-    "She is still alive. But she doesn't wake up. Her body has entered a coma." 
+    "She is still alive, but she does not wake."
 
-    "I stay beside her, waiting. Maybe she will open her eyes." 
+    $ coma_entry.locked = False
 
-    if ch01_loop_count == 0 :
+    "Her body has entered a {a=glossary:coma_entry}coma{/a}."
 
-        "Maybe tomorrow she will wake up." 
+    "He remains beside her, waiting for her to open her eyes."
 
-        "Maybe..." 
+    if ch01_loop_count == 0:
 
-    "But deep down, I know. There is nothing more I can do." 
+        doctor "Maybe she'll wake up tomorrow."
 
-    "Hours later..." 
+        doctor "Maybe..."
 
-    "Her breathing becomes weaker. I hold her hand until the very end." 
+    doctor "But deep down, I know."
 
-    "She passes away peacefully beside me..." 
+    doctor "There is nothing more I can do."
+
+    "Hours later, her breathing becomes weaker."
+
+    "He holds her hand until the very end."
+
+    "She passes away peacefully beside him."doctor "But deep down, I know."
+
+    doctor "There is nothing more I can do."
+
+    "Hours later, her breathing becomes weaker."
+
+    "He holds her hand until the very end."
+
+    "She passes away peacefully beside him."
 
     if ch01_loop_count >= 1 :
 
-        "I lost her again..."
+        doctor "I lost her again..."
 
-    "I made the safest choice. But... One question remains." 
+    doctor doctor "I made the safest choice."
 
-    "What if the formula could have saved her?"
+    doctor "But one question remains..."
+
+    doctor "What if the formula could have saved her?"
 
     if ch01_loop_count == 0 :
 
-        "Eventually, reality returns." 
+        "Eventually, reality begins to settle in." 
 
-        "There are things that need to be done. I have to report her death." 
+        "There are things that must be done."
+        
+        octor "I have to report her death."
 
-        "I have to prepare her body. I have to tell someone." 
+        doctor "I have to prepare her body."
 
-        "Wake"
+        doctor "I have to tell someone."
+
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
         $ ch01_wake_happened = True
 
@@ -90,35 +125,51 @@ label ch01_coma_ending :
 
         if ch01_knows_coma :
 
-            "The memory burns into my mind." 
+            doctor "The memory burns into my mind."
 
-            "If i don't give her the formula she dies in coma..." 
+            doctor "If I don't give her the formula, she falls into a coma and dies..."
 
         else:
 
-            "I had read it before... This illness can end with comma."
+            doctor "I've read about this before."
 
-        "I have to try again... I have to save her..." 
+            doctor "This illness can end in a coma."
 
-        "I gently place her hand back on the bed." 
+        doctor "I have to try again."
 
-        "But I am not finished. I return to my laboratory." 
+        doctor "I have to save her."
+
+        "He gently places her hand back on the bed."
+
+        doctor "But I'm not finished."
+
+        "He returns to his laboratory."
 
         scene bg ch01 lab
 
-        "I open my notes. My hands are shaking. I write down everything." 
+        "He opens his notes."
 
-        "The mistake. The symptoms. The things I overlooked." 
+        "His hands are shaking as he writes down everything."
 
-        "If I get another chance... I will not repeat this." 
+        "The mistake."
 
-        "I will save her."
+        "The symptoms."
+
+        "The things he overlooked."
+
+        doctor "If I get another chance..."
+
+        doctor "I won't repeat this."
+
+        doctor "I will save her."
 
         scene black 
 
-        "I close my eyes." 
+        "He closes his eyes."
 
-        "Tomorrow... I will do better." 
+        doctor "\"Tomorrow...\""
+
+        doctor "\"I'll do better.\""
 
     if not ch01_knows_coma :
 

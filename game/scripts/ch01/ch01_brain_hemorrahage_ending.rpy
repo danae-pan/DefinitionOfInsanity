@@ -1,26 +1,26 @@
 label ch01_brain_hemorrahage_ending:
 
-    "I hesitate after hearing Herbalist's offer." 
+    "He hesitates after hearing Kazuki's offer." 
 
-    "The herbs in his shop could be exactly what I need." 
+    octor "The herbs in Kazuki's shop could be exactly what I need."
 
-    "Ingredients that the hospital cannot provide..." 
+    doctor "Ingredients the hospital cannot provide..."
 
-    "But Mother called for me." 
+    doctor "But Mother called for me."
 
-    "No matter how important my research is..." 
+    doctor "No matter how important my research is..."
 
-    "I cannot ignore her." 
+    doctor "I can't ignore her."
 
-    doctor "Thank you, Herbalist." 
+    doctor "\"Thank you, Kazuki.\""
 
-    doctor "I will visit your shop another time." 
+    doctor "\"I'll visit your shop another time.\""
 
-    "I quickly return inside."  
+    "He quickly returns inside."
 
-    "I open the door." 
+    "He opens the door."
 
-    doctor "Mother?" 
+    doctor "\"Mother?\""
 
     "..." 
 
@@ -28,91 +28,112 @@ label ch01_brain_hemorrahage_ending:
 
     if ch01_brain_hemorrhage_happened :
 
-        "Oh no... Is this happening again?"
-
-    "My heart begins to race." 
-
-    "I rush toward her." 
-
-    "She is lying in bed." 
+        doctor "\"Oh no...\""
+        doctor "\"Is this happening again?\""
 
     "Her breathing is uneven."
 
-    "Her face is pale." 
+    "Her face is pale."
 
-    "She looks exhausted." 
+    "She looks exhausted."
 
-    doctor "Mother..." 
+    doctor "\"Mother...\""
 
-    "I immediately check her condition." 
+    "He immediately checks her condition."
 
     if not ch01_brain_hemorrhage_happened:
 
-        "Then I notice something." 
+        "Then he notices something."
 
-        "A broken glass lies on the floor." 
+        "A broken glass lies on the floor."
 
-        "Water has spilled across the room." 
+        "Water has spilled across the room."
 
-        "The bottle beside her bed is empty." 
+        "The bottle beside her bed is empty."
 
-        "..." 
+        "..."
 
-        "She needed water." 
+        doctor "She needed water."
 
-        "She tried to get it herself." 
+        doctor "She tried to get it herself."
 
-        "While I was speaking with Herbalist..." 
+        doctor "While I was speaking with Kazuki..."
 
-        "She tried to stand." 
+        doctor "She tried to stand."
 
-        "Her weakened body couldn't support her." 
+        doctor "Her weakened body couldn't support her."
 
-        "She fell." 
+        doctor "She fell."
 
-        "Unable to call for help..." 
-
-        "She forced herself back to bed." 
+        doctor "Unable to call for help, she forced herself back into bed."
 
     else :
 
-        "Its the same scene in front of me... The broken glass.... The empty bottle..."
+        doctor "It's the same scene as before..."
 
-    "But the damage was already done." 
+        doctor "The broken glass..."
 
-    "I place my hands on her." 
+        doctor "The empty bottle..."
 
-    "My training takes over. I check every possible sign. I search for any chance. Any way to help her." 
+    "He places his hands on her."
 
-    "But deep down... I already know." 
+    "His medical training takes over."
 
-    "The fall caused severe damage. A brain hemorrhage." 
+    "He checks every possible sign, searching for any chance to help her."
+
+    doctor "But deep down..."
+
+    doctor "I already know."
+
+    $ brain_hemorrhage_entry.locked = False
+
+    doctor "The fall caused severe damage."
+
+    doctor "A {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}."
 
     if ch01_brain_hemorrhage_happened:
 
-        "Exactly like last time..."
+        doctor "\"Exactly like last time...\""
 
-    "The hours pass slowly. I stay beside her. I try everything I can." 
+    "The hours pass slowly."
 
-    "But her condition continues to worsen. Until finally..." 
+    "He remains beside her and tries everything he can."
 
-    "She is gone." 
+    "But her condition continues to worsen."
 
-    "I hold Mother's hand."
+    "Until finally..."
+
+    "She is gone."
+
+    "He holds Mother's hand."
 
     if not ch01_met_herb_in_door:
 
-        "I came back. I answered her call. I was here. Yet..." 
+        doctor "I came back."
 
-        doctor "I still couldn't save you."
+        doctor "I answered her call."
+
+        doctor "I was here."
+
+        doctor "And yet..."
+
+        doctor "\"I still couldn't save you.\""
 
     if ch01_loop_count == 0:
     
-        "Eventually, reality returns. There are things that need to be done." 
+        "Eventually, reality begins to settle in."
 
-        " I have to report her death. I have to prepare her body. I have to tell someone." 
+        "There are things that must be done."
 
-        "Wake"
+        doctor "I have to report her death."
+
+        doctor "I have to prepare her body."
+
+        doctor "I have to tell someone."
+
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
         if not ch01_wake_happened:
 
@@ -120,19 +141,19 @@ label ch01_brain_hemorrahage_ending:
 
     else :
 
-        "If I get another chance..." 
+        doctor "If I get another chance..."
 
-        "I will not repeat this." 
+        doctor "I won't repeat this."
 
-        "I will save her."
+        doctor "I will save her."
 
-        scene black 
+        scene black
 
-        "I close my eyes." 
+        "He closes his eyes."
 
-        "Tomorrow..." 
+        doctor "\"Tomorrow...\""
 
-        "I will do better."
+        doctor "\"I'll do better.\""
 
     if not ch01_brain_hemorrhage_happened:
 

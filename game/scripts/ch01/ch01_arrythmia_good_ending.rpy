@@ -1,110 +1,112 @@
 label ch01_arrythmia_good_ending :
 
-    "I glance back toward Mother's room."
+    "He glances back toward Mother's room."
 
-    "She called for me..." 
+    doctor "She called for me..." 
 
     if not met_herbalist:
 
-        "But if Mr. Herbalist really has herbs the hospital doesn't..."
+        doctor "But if Kazuki really has herbs the hospital doesn't..."
 
-        "They could help me develop a better treatment." 
+        doctor "They could help me develop a better treatment."
 
     else:
 
-        "Herbalist said the last time he has some herbs that might help."
+        doctor "Kazuki said he has herbs that might help."
 
     if herbalist_visited:
 
-        "Herbalist have herbs that will help me develop a better formula."
+        doctor "Kazuki has herbs that could help me develop a better formula."
 
-    doctor "Alright." 
+    doctor "\"Alright.\""
 
-    doctor "I'll come with you." 
+    doctor "\"I'll come with you.\""
 
     "The neighboring village is about a thirty-minute walk away." 
 
-    "As we walk, Herbalist tells me about the people he has treated over the years." 
+    "As they walk, Kazuki tells Yosuke about the people he has treated over the years." 
 
-    herbalist "I've never seen anyone cured." 
+    herbalist "\"I've never seen anyone cured.\"" 
 
-    herbalist "But I've seen this illness many times." 
+    herbalist "\"But I've seen this illness many times.\"" 
 
-    herbalist "It always begins differently..." 
+    herbalist "\"It always begins differently...\"" 
 
-    herbalist "Eventually, their muscles grow too weak to support them." 
+    herbalist "\"Eventually, their muscles grow too weak to support them.\"" 
 
-    herbalist "Many also lose the ability to swallow safely."  
+    herbalist "\"Many also lose the ability to swallow safely.\""  
 
-    herbalist "Food and even water can become dangerous." 
+    herbalist "\"Food and even water can become dangerous.\"" 
 
-    herbalist "Later... they begin losing their balance." 
+    herbalist "\"Later... they begin losing their balance.\"" 
 
-    "I quietly commit every word to memory."  
+    "Yosuke quietly commits every word to memory."
 
-    "We arrive at Herbalist's shop." 
+    "They eventually arrive at Kazuki's shop."
 
     scene bg ch01 herbstore
 
-    "Shelves packed with dried herbs, roots, and flowers surround us." 
+    "Shelves packed with dried herbs, roots, and flowers surround them." 
 
     "The air is filled with earthy, unfamiliar scents." 
 
-    herbalist "These may interest you." 
+    herbalist "\"These may interest you.\"" 
 
-    "I examine the herbs carefully." 
+    "Yosuke examines the herbs carefully." 
 
-    "One catches my eye." 
+    "One catches his attention." 
 
-    doctor "Dong quai..." 
+    $ junka_root_entry.locked = False
+
+    doctor "\"{a=glossary:junka_root_entry}Junka Root{/a}...\""
 
     "Traditionally used to improve blood circulation." 
 
-    "Another sits beside it." 
+    "Another remedy sits beside it."
 
-    doctor "Ganoderma lucidum..." 
+    $ tsuyomi_cap_entry.locked = False
 
-    "Reishi." 
+    doctor "\"{a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}...\""
 
-    "Believed to strengthen the body's resilience." 
+    "It is traditionally believed to strengthen the body's resilience."
 
-    "I can only afford one." 
+    doctor "I can only afford one."
 
     menu:
 
         "Dong quai":
 
-            "I'll take the Dong quai..."
+            doctor "\"I'll take the Junka Root...\""
 
         "Ganoderma lucidum":
 
-            "I'll take the Ganoderma lucidum..."
+            doctor "\"I'll take the Tsuyomi Cap...\""
 
     if ch01_cat_broke_formula:
 
-        "I also want some Licorice root and Polygala tenuifolia."
+         doctor "\"I would also like some {a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:hogo_root_entry}Hogo Root{/a}.\""
 
-    doctor "Thank you Herbalist. Till we meet again" 
+    doctor "\"Thank you, Kazuki. Until we meet again.\""
 
-    herbalist "I hope you can help your mother Yosuke. Be safe walking home." 
+    herbalist "\"I hope you can help your mother, Yosuke. Be careful on your way home.\""
 
     $ took_herbs = True
 
     scene bg ch01 lab with fade
     
-    "I finally return home." 
+    "Yosuke finally returns home."
 
-    "The house is quiet." 
+    "The house is quiet."
 
-    "I set the herbs down." 
+    "He sets the herbs down."
 
-    doctor "Mother?" 
+    doctor "\"Mother?\""
 
-    "..." 
+    "..."
 
     "There is no answer." 
 
-    "I hurry toward her room."  
+    "He hurries toward her room."  
 
     scene bg ch01 mother with fade
 
@@ -112,71 +114,73 @@ label ch01_arrythmia_good_ending :
 
     "The empty vial rests on the bedside table." 
 
-    "My heart sinks." 
+    "His heart sinks." 
 
-    doctor "Mother..." 
+    doctor "\"Mother...\"" 
 
     "She slowly opens her eyes." 
 
     "Her breathing is shallow." 
 
-    "I grab her wrist." 
+    "He grab her wrist." 
 
-    "My hands are already searching for a pulse." 
+    "His hands are already searching for a pulse." 
 
-    "It's irregular..." 
+    doctor "\"It's irregular...\"" 
 
-    "My eyes dart to the empty vial." 
+    "His eyes dart to the empty vial." 
 
-    "The formula..." 
+    doctor "\"The formula...\"" 
 
-    "No..." 
+    doctor "\"No...\"" 
 
-    "It contained Licorice Root." 
+    doctor "It contained {a=glossary:nagomi_root_entry}Nagomi Root{/a}."
 
-    "An experimental dose..." 
+    doctor "An experimental dose..."
 
-    "It was never meant to be taken." 
+    doctor "It was never meant to be taken without supervision."
 
-    doctor "Mother, stay with me." 
+    doctor "\"Mother, stay with me.\""
 
-    "I search my notes." 
+    "He desperately searches through his notes."
 
-    "There has to be something..." 
+    doctor "There has to be something..."
 
-    "There has to be..." 
+    doctor "There has to be..."
 
-    "..." 
+    "..."
 
-    "Nothing." 
+    doctor "Nothing."
 
-    "Her heartbeat becomes weaker." 
+    "Her heartbeat becomes weaker."
 
-    "Weaker..." 
-
-    "..." 
-
-    "It stops." 
-
-    doctor "Mother..." 
-
-    "I remain frozen beside her." 
+    "Weaker..."
 
     "..." 
 
-    doctor "The arrhythmia..." 
+    "Then it stops." 
 
-    doctor "I did this."
+    doctor "\"Mother...\""
+
+    "He remain frozen beside her." 
+
+    "..." 
+
+    $ arrhythmia_entry.locked = False
+
+    doctor "The {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
+
+    doctor "\"I did this.\""
 
     if ch01_loop_count == 0:
 
-        "I hold Mother's hand, but she no longer responds." 
+        "He holds Mother's hand, but she no longer responds." 
 
-        "I wait." 
+        "He waits." 
 
-        "Maybe..." 
+        doctor "\"Maybe...\"" 
 
-        "Maybe she will open her eyes." 
+        doctor "\"Maybe she will open her eyes.\"" 
 
         "..." 
 
@@ -186,17 +190,17 @@ label ch01_arrythmia_good_ending :
 
         $ ch01_knows_arrhythmia = True
 
-        "How am I supposed to live after this?"
+        doctor "How am I supposed to live after this?"
 
-        "I know the truth." 
+        doctor "I know the truth." 
 
-        "I am a doctor." 
+        doctor "I am a doctor." 
 
-        "I know what death looks like." 
+        doctor "I know what death looks like." 
 
-        "Yet I cannot accept it." 
+        doctor "Yet I cannot accept it." 
 
-        "I close her eyes gently." 
+        doctor "I close her eyes gently." 
 
         doctor "I'm sorry, Mother..." 
 
@@ -208,13 +212,15 @@ label ch01_arrythmia_good_ending :
 
         "There are things that need to be done." 
 
-        "I have to report her death." 
+        doctor "I have to report her death." 
 
-        "I have to prepare her body." 
+        doctor "I have to prepare her body." 
 
-        "I have to tell someone."
+        doctor "I have to tell someone."
 
-        "Wake"
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
     $ ch01_check_formula = True
 

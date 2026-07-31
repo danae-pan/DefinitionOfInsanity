@@ -8,6 +8,9 @@ label prologue:
     $ old_text_cps = preferences.text_cps
     $ preferences.text_cps = 14
     $ matsushita_entry.locked = False
+    $ nervous_system_entry.locked = False
+    $ social_stigma_entry.locked = False
+    $ poisoning_entry.locked = False
     window hide
 
     scene bg game_main
@@ -24,7 +27,7 @@ For many years, a mysterious illness had plagued the quiet coastal town of Matsu
 {vspace=35}
 It began with subtle symptoms: numbness in the hands and feet, loss of sensation, and difficulty maintaining balance.{w=1.2}
 {vspace=30}
-As the illness progressed, it slowly destroyed the nervous system, leaving its victims unable to control their bodies.{w=1.2}
+As the illness progressed, it slowly destroyed the {a=glossary:nervous_system_entry}nervous system{/a}, leaving its victims unable to control their bodies.{w=1.2}
 {vspace=30}
 In its final stages, it could lead to paralysis, coma... or even complete mental deterioration.{w=1.2}
 {vspace=30}
@@ -36,7 +39,7 @@ Fear spread throughout the town."""
 
 Believing the illness to be contagious, many residents avoided those who had fallen ill. {w=1.2}
 {vspace=30}
-Families became isolated, and the disease carried a heavy social stigma.{w=1.2}
+Families became isolated, and the disease carried a heavy {a=glossary:social_stigma_entry}social stigma{/a}.{w=1.2}
 {vspace=30}
 Among the victims was Dr. Yosuke's mother.{w=1.2}
 {vspace=30}
@@ -51,7 +54,7 @@ Whenever he was able, he returned home to care for his mother, doing everything 
     narrator_nvl """
 Years later, researchers finally uncovered an important clue.
 {vspace=30}
-The illness was linked to the consumption of contaminated fish.{w=1.2}
+"The illness was linked to {a=glossary:poisoning_entry}poisoning{/a} caused by consuming contaminated fish.{w=1.2}"
 {vspace=30}
 Without hesitation, Yosuke returned to Matsushita for good. {w=1.2}
 {vspace=30}
