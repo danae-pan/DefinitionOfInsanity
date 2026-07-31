@@ -1,40 +1,68 @@
 label ch01_meet_herbalist_on_door:
 
-    "I should answer the door first." 
+    show doctor default at left onlayer portraits
 
-    "It won't take long." 
+    doctor "I should answer the door first."
 
-    if not met_herbalist:
+    doctor "It won't take long."
 
-        "It's probably one of the neighbors checking on Mother."
-
-    "I open the door." 
+    hide doctor default onlayer portraits
 
     if not met_herbalist:
 
-        "A man wearing a green kimono smiles at me." 
+        show doctor default at left onlayer portraits
+
+        doctor "It's probably one of the neighbors checking on Mother."
+
+        hide doctor default onlayer portraits
+
+    "He opens the door." 
+
+    if not met_herbalist:
+
+        "A man wearing a green kimono smiles at him." 
     
     else:
-        "Its the herbalist."
+        show doctor default at left onlayer portraits
 
-        "He doesnt know we have met before."
+        doctor "Its the herbalist."
 
-        "I have to be carefull talking to him"
+        doctor "He doesnt know we have met before."
+
+        doctor "I have to be careful talking to him."
+
+        hide doctor default onlayer portraits
         
     "The scent of dried leaves and flowers fills the air." 
 
-    herbalist "Goodmorning! You must be Dr. Yosuke." 
+    show herbalist default at left onlayer portraits
 
-    doctor "Goodmorning…"
+    herbalist "\"Goodmorning! You must be Dr. Yosuke.\""
 
-    doctor "Excuse me sher who are you?" 
+    hide herbalist default onlayer portraits
 
-    herbalist "My name is Herbalist." 
+    show doctor default at left onlayer portraits
 
-    herbalist "I'm the herbalist from the next village. My shop is the first one you see in the central square."
+    doctor "\"Goodmorning…\""
 
-    doctor "Oh nice to meet you Mr Herbalist. What brings you to our home?"
-    
+    doctor "\"Excuse me sir, who are you?\"" 
+
+    hide doctor default onlayer portraits
+
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"My name is Kazuki.\"" 
+
+    herbalist "\"I'm the herbalist from the next village. My shop is the first one you see in the central square.\""
+
+    hide herbalist default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"Oh nice to meet you Mr. Kazuki. What brings you to our home?\""
+
+    hide doctor default onlayer portraits
+
     $ ch01_met_herb_in_door = True
 
     $ met_herbalist = True
@@ -43,67 +71,93 @@ label ch01_meet_herbalist_on_door:
 
 label ch01_go_to_hospital:
 
-    "I look over the herbs remaining in my laboratory."
+    "He looks over the herbs remaining in his laboratory."
 
-    "My supplies are not enough."
+    show doctor default at left onlayer portraits
 
-    "If I'm going to make the formula again, I'll need to restock." 
+    doctor "My supplies are not enough."
 
-    "Mother is resting." 
+    doctor "If I'm going to make the formula again, I'll need to restock." 
 
-    "The hospital is only ten minutes away." 
+    doctor "Mother is resting." 
 
-    "If I leave now, I should be back before she needs me." 
+    doctor "The hospital is only ten minutes away." 
 
-    "I grab my bag and head for the hospital."  
+    doctor "If I leave now, I should be back before she needs me." 
+
+    hide doctor default onlayer portraits
+
+    "He grabs his bag and heads for the hospital."  
 
     "The halls are unusually quiet." 
 
     "The doctors and nurses are taking advantage of the rare moment of peace." 
 
-    "I make my way to the medical storage room."  
+    "He makes his way to the medical storage room."  
 
-    "I scan the shelves." 
+    "He scans the shelves." 
 
-    doctor "Licorice Root..." 
+    show doctor default at left onlayer portraits
 
-    doctor "Still enough left." 
+    doctor "\"{a=glossary:nagomi_root_entry}Nagomi Root{/a}...\"" 
 
-    doctor "Polygala tenuifolia..." 
+    doctor "\"Still enough left.\"" 
 
-    doctor "Good." 
+    doctor "\"{a=glossary:hogo_root_entry}Hogo Root{/a}...\""
 
-    "I gather the herbs I need and leave the storage room."  
+    doctor "\"Good.\"" 
 
-    "As I step into the hallway, I notice an elderly man sitting quietly on a wooden bench." 
+    hide doctor default onlayer portraits
 
-    "He smiles as I approach." 
+    "He gathers the herbs he needs and leaves the storage room."  
 
-    herbalist "You must be Dr. Yosuke." 
+    "As he steps into the hallway, he notices an elderly man sitting quietly on a wooden bench." 
 
-    doctor "Yes..." 
+    "The man smiles as Yosuke approaches."
 
-    doctor "Have we met before?" 
+    show herbalist default at left onlayer portraits
 
-    herbalist "Not yet." 
+    herbalist "\"You must be Dr. Yosuke.\"" 
 
-    herbalist "My name is Herbalist."
+    hide herbalist default onlayer portraits
 
-    herbalist "I'm the herbalist from the neighboring village. My shop is the first one you see in the central square." 
+    show doctor default at left onlayer portraits
 
-    doctor "It's a pleasure to meet you." 
+    doctor "\"Yes...\"" 
 
-    "His experience is different from mine." 
+    doctor "\"Have we met before?\"" 
 
-    "Practical." 
+    hide doctor default onlayer portraits
 
-    "Generations of knowledge instead of textbooks." 
+    show herbalist default at left onlayer portraits
 
-    "I'd like to hear more." 
+    herbalist "\"Not yet.\"" 
 
-    "But Mother is waiting for me at home." 
+    herbalist "\"My name is Kazuki.\""
 
-    "I shouldn't stay away for too long."
+    herbalist "\"I'm the herbalist from the neighboring village. My shop is the first one you see in the central square.\"" 
+
+    hide herbalist default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"It's a pleasure to meet you.\"" 
+
+    hide doctor default onlayer portraits
+
+    "Unlike Yosuke's medical training, the herbalist's knowledge comes from generations of experience."
+
+    "It is practical wisdom, passed down from one healer to the next."
+
+    show doctor default at left onlayer portraits
+
+    doctor "I'd like to hear more." 
+
+    doctor "But Mother is waiting for me at home." 
+
+    doctor "I shouldn't stay away for too long."
+
+    hide doctor default onlayer portraits
 
     $ ch01_met_herb_in_hospital = True
 
@@ -120,38 +174,60 @@ label ch01_go_to_hospital:
             jump ch01_answer_mothers_call
 
 label ch01_herbalists_invitation:
+
+    show herbalist default at left onlayer portraits
     
-    herbalist "I was making a delivery to Mrs. Sato."
+    herbalist "\"I was making a delivery to Mrs. Sato.\""
 
-    herbalist "She mentioned your mother's condition." 
+    herbalist "\"She mentioned your mother's condition.\"" 
 
-    herbalist "Word travels quickly in a village this small."
+    herbalist "\"Word travels quickly in a village this small.\""
 
-    doctor "I suppose it does."
+    hide herbalist default onlayer portraits
 
-    herbalist "I know you're looking for a cure." 
+    show doctor default at left onlayer portraits
 
-    herbalist "Unfortunately..." 
+    doctor "\"I suppose it does.\""
 
-    herbalist "I don't have one." 
+    hide doctor default onlayer portraits
 
-    doctor "..." 
+    show herbalist default at left onlayer portraits
 
-    herbalist "But I might have something that could make her days a little easier."
+    herbalist "\"I know you're looking for a cure.\"" 
 
-    herbalist "I have a few herbs that physicians rarely bother with." 
+    herbalist "\"Unfortunately...\"" 
 
-    herbalist "Some have been passed down through generations." 
+    herbalist "\"I don't have one.\"" 
 
-    herbalist "Perhaps you'll find them useful."
+    herbalist "\"But I might have something that could make her days a little easier.\""
 
-    doctor "What’s very nice of you. Yes i will be interested to see what you have. Do you have them with you?"
+    herbalist "\"I have a few herbs that physicians rarely bother with.\"" 
 
-    herbalist "Unfortunatelly i dont carry these kinds of herbs with me but you can come with me in my shop. im heading there now. You will be back in an hour"
+    herbalist "\"Some have been passed down through generations.\"" 
+
+    herbalist "\"Perhaps you'll find them useful.\""
+
+    hide herbalist default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"What’s very nice of you. Yes i will be interested to see what you have. Do you have them with you?\""
+
+    hide doctor default onlayer portraits
+
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"Unfortunatelly i dont carry these kinds of herbs with me but you can come with me in my shop. im heading there now. You will be back in an hour\""
+
+    hide herbalist default onlayer portraits
 
     if ch01_brain_hemorrhage_happened:
 
-        "Last time I didn't go with the herbalist my mother died from brain hemorrhage and there was nothing i could do… Maybe i should go with him."
+        show doctor default at left onlayer portraits
+
+        doctor "Last time I didn't go with the herbalist my mother died from {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a} and there was nothing i could do… Maybe i should go with him."
+
+        hide doctor default onlayer portraits
 
     menu: 
         "Go with the herbalist":

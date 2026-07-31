@@ -10,19 +10,28 @@ label ch01_make_breakfast :
 
         "He steps into the kitchen."
 
+        show doctor default at left onlayer portraits
+
         doctor "A soup should help Mother feel better."
+
+        hide doctor default onlayer portraits
     
     elif ch01_loop_count == 1:
 
         "He steps into the kitchen."
     
         if not ch01_mother_checked :
+
+            show doctor default at left onlayer portraits
             
             doctor "My stomach is hurting so much..."
             
             doctor "Maybe a bowl of soup will help."
+
         
         else :
+
+            show doctor default at left onlayer portraits
 
             doctor "A soup should help Mother feel better."
         
@@ -30,11 +39,15 @@ label ch01_make_breakfast :
 
         doctor "I’m probably confused from the lack of sleep…" 
 
+        hide doctor default onlayer portraits
+
     else:
 
         "He steps into the kitchen."
 
         if not ch01_mother_checked :
+
+            show doctor default at left onlayer portraits
 
             doctor "My stomach is hurting so much..."
             
@@ -42,35 +55,57 @@ label ch01_make_breakfast :
 
         else :
 
+            show doctor default at left onlayer portraits
+
             doctor "A soup should help Mother feel better."
 
         doctor "This is happening again… im doing the same things again and again… but i have one more chance.."
+
+        hide doctor default onlayer portraits
 
     "Ever since contaminated fish entered the food supply, everyday meals have become much more difficult."
 
     "He has learned to question every ingredient before putting it on the table."
 
+    show doctor default at left onlayer portraits
+    
     doctor "Who would've imagined that one of our most common foods could become so dangerous?"
 
+    hide doctor default onlayer portraits
+    
     "He notices a loaf of bread sitting inside the cupboard."
 
     if knows_dysphagia:
 
         "A memory flashes through his mind."
 
-        doctor "The bread... This is what caused dysphagia to mother..."
+        $ dysphagia_entry.locked = False
+
+        show doctor default at left onlayer portraits
+
+        doctor "The bread... Mother choked on it because of her {a=glossary:dysphagia_entry}dysphagia{/a}..."
+
+        hide doctor default onlayer portraits
 
         if ch01_mother_checked:
 
+            show doctor default at left onlayer portraits
+
             doctor "I have to be careful. I cannot make the same mistakes again."
+
+            hide doctor default onlayer portraits
 
     $ ch01_breakfast_made = True
 
     menu:
 
         "Add bread":
+            
+            show doctor default at left onlayer portraits
+            
+            doctor "\"Alright, breakfast is ready.\""
 
-            doctor "Alright, breakfast ready."
+            hide doctor default onlayer portraits
             
             $ ch01_bread_added = True
 
@@ -90,7 +125,7 @@ label ch01_eat_breakfast:
 
             show doctor default at left onlayer portraits
 
-            doctor "Mother…?" 
+            doctor "\"Mother...?\""
 
             hide doctor default onlayer portraits
 
@@ -98,39 +133,45 @@ label ch01_eat_breakfast:
 
             "He quietly places the soup on the bedside table and opens the window, letting fresh air fill the room."
 
-            mother "Good morning…"
+            mother "\"Good morning...\""
 
             "She turns toward him with a faint smile. The illness has stolen so much of her strength."
 
             show doctor default at left onlayer portraits
             
-            doctor "Good morning, Mother" 
+            doctor "\"Good morning, Mother.\""
 
-            doctor "How are you feeling today?"
+            doctor "\"How are you feeling today?\""
 
             hide doctor default onlayer portraits
 
-            mother "Better…"
+            mother "\"Better...\""
 
             "She reaches for his hand, but her arm trembles. He gently takes her hand and smiles reassuringly."
 
             show doctor default at left onlayer portraits
 
-            doctor "Let me run my tests first."
+            doctor "\"Let me run my tests first.\""
 
-            doctor  "Alright… everthing seems stable."
+            doctor "\"Alright... Everything seems stable.\""
+
+            hide doctor default onlayer portraits
 
         show doctor default at left onlayer portraits
         
-        doctor "Here."
+        doctor "\"Here.\""
 
-        doctor " I made you miso soup. Your favorite."
+        doctor "\"I made you miso soup. Your favorite.\""
 
         hide doctor default onlayer portraits
 
     elif ch01_loop_count == 1:
 
+        show doctor default at left onlayer portraits
+
         doctor "I should go visit her now…"
+
+        hide doctor default onlayer portraits
 
         if not ch01_mother_checked:
 
@@ -138,37 +179,51 @@ label ch01_eat_breakfast:
 
             if ch01_wake_happened:
 
+                show doctor default at left onlayer portraits
+
                 doctor "Why is she in these clothes? I dressed her yesterday… im sure.. for the wake"
+
+                hide doctor default onlayer portraits
 
             "He rushes to her bedside and gently takes her hand."
 
             "It's warm."
 
-            doctor "She's alive...?"
-
             show doctor default at left onlayer portraits
 
-            doctor "Mother…?" 
+            doctor "She's alive...?"
 
-            doctor "Mother!"
+            doctor "\"She's alive...?\""
+
+            doctor "\"Mother...?\""
+
+            doctor "\"Mother!\""
 
             hide doctor default onlayer portraits
 
-            mother "Son…?"
+            mother "\"Son...?\""
 
             "Relief crashes over him."
+
+            show doctor default at left onlayer portraits
 
             doctor "This... this can't be happening."
 
             doctor "Did I really get another chance?"
 
             doctor "Calm down. Don't let her notice. Just act normal."
+
+            hide doctor default onlayer portraits
         
         else: 
+
+            show doctor default at left onlayer portraits
 
             doctor "Stay calm."
 
             doctor "She can't know."  
+
+            hide doctor default onlayer portraits
 
         "She looks just as exhausted as he remembers."
 
@@ -176,19 +231,19 @@ label ch01_eat_breakfast:
 
         show doctor default at left onlayer portraits 
 
-        doctor "Good morning, Mother" 
+        doctor "\"Good morning, Mother.\""
 
         hide doctor default onlayer portraits
 
-        mother "Good morning..."
+        mother "\"Good morning...\""
 
         show doctor default at left onlayer portraits 
 
-        doctor "How are you feeling today?"
+        doctor "\"How are you feeling today?\""
 
         hide doctor default onlayer portraits
 
-        mother "Better…"
+        mother "\"Better...\""
 
         "She reaches for his hand, but it trembles."
 
@@ -196,17 +251,19 @@ label ch01_eat_breakfast:
 
         show doctor default at left onlayer portraits
 
-        doctor "Let me run my tests first."
+        doctor "\"Let me run my tests first.\""
 
-        doctor  "Alright… everthing seems stable."
+        doctor  "\"Alright... Everything seems stable.\""
 
-        doctor "Here."
+        doctor "\"Here.\""
 
-        doctor " I made you miso soup. Your favorite."
+        doctor "\"I made you miso soup. Your favorite.\""
 
         hide doctor default onlayer portraits
 
     else: 
+
+        show doctor default at left onlayer portraits
 
         doctor "I should go visit her now…"
 
@@ -216,7 +273,11 @@ label ch01_eat_breakfast:
 
             "She's alive."
 
+            show doctor default at left onlayer portraits
+
             doctor "Again..."
+
+            hide doctor default onlayer portraits
 
         doctor "Stay calm."
 
@@ -224,19 +285,21 @@ label ch01_eat_breakfast:
 
         doctor "I've done this before."
 
+        hide doctor default onlayer portraits
+
         "She looks just as exhausted as every other time."
 
         "He places the soup beside her bed and opens the window."
 
         show doctor default at left onlayer portraits
 
-        doctor "Good morning, Mother" 
+        doctor "\"Good morning, Mother.\""
 
-        doctor "How are you feeling today?"
+        doctor "\"How are you feeling today?\""
 
         hide doctor default onlayer portraits
 
-        mother "Better…"
+        mother "\"Better...\""
 
         "She reaches for his hand, her arm trembling."
 
@@ -244,13 +307,13 @@ label ch01_eat_breakfast:
 
         show doctor default at left onlayer portraits
 
-        doctor "Let me run my tests first."
+        doctor "\"Let me run my tests first.\""
 
-        doctor  "Alright… everthing seems stable."
+        doctor  "\"Alright... Everything seems stable.\""
 
-        doctor "Here."
+        doctor "\"Here.\""
 
-        doctor " I made you miso soup. Your favorite."
+        doctor "\"I made you miso soup. Your favorite.\""
 
         hide doctor default onlayer portraits
 

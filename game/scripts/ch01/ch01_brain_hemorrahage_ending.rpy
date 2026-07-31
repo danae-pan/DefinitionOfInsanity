@@ -1,118 +1,180 @@
 label ch01_brain_hemorrahage_ending:
 
-    "I hesitate after hearing Herbalist's offer." 
+    "He hesitates after hearing Kazuki's offer." 
 
-    "The herbs in his shop could be exactly what I need." 
+    show doctor default at left onlayer portraits
 
-    "Ingredients that the hospital cannot provide..." 
+    doctor "The herbs in Kazuki's shop could be exactly what I need."
 
-    "But Mother called for me." 
+    doctor "Ingredients the hospital cannot provide..."
 
-    "No matter how important my research is..." 
+    doctor "But Mother called for me."
 
-    "I cannot ignore her." 
+    doctor "No matter how important my research is..."
 
-    doctor "Thank you, Herbalist." 
+    doctor "I can't ignore her."
 
-    doctor "I will visit your shop another time." 
+    doctor "\"Thank you, Kazuki.\""
 
-    "I quickly return inside."  
+    doctor "\"I'll visit your shop another time.\""
 
-    "I open the door." 
+    hide doctor default onlayer portraits
 
-    doctor "Mother?" 
+    "He quickly returns inside."
+
+    "He opens the door."
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"Mother?\""
+
+    hide doctor default onlayer portraits
 
     "..." 
 
     "There is no answer." 
 
-    if ch01_brain_hemorrhage_happened :
+    if ch01_brain_hemorrhage_happened:
 
-        "Oh no... Is this happening again?"
+        show doctor default at left onlayer portraits
 
-    "My heart begins to race." 
+        doctor "\"Oh no...\""
 
-    "I rush toward her." 
+        doctor "\"Is this happening again?\""
 
-    "She is lying in bed." 
+        hide doctor default onlayer portraits
 
     "Her breathing is uneven."
 
-    "Her face is pale." 
+    "Her face is pale."
 
-    "She looks exhausted." 
+    "She looks exhausted."
 
-    doctor "Mother..." 
+    show doctor default at left onlayer portraits
 
-    "I immediately check her condition." 
+    doctor "\"Mother...\""
+
+    hide doctor default onlayer portraits
+
+    "He immediately checks her condition."
 
     if not ch01_brain_hemorrhage_happened:
 
-        "Then I notice something." 
+        "Then he notices something."
 
-        "A broken glass lies on the floor." 
+        "A broken glass lies on the floor."
 
-        "Water has spilled across the room." 
+        "Water has spilled across the room."
 
-        "The bottle beside her bed is empty." 
+        "The bottle beside her bed is empty."
 
-        "..." 
+        "..."
 
-        "She needed water." 
+        show doctor default at left onlayer portraits
 
-        "She tried to get it herself." 
+        doctor "She needed water."
 
-        "While I was speaking with Herbalist..." 
+        doctor "She tried to get it herself."
 
-        "She tried to stand." 
+        doctor "While I was speaking with Kazuki..."
 
-        "Her weakened body couldn't support her." 
+        doctor "She tried to stand."
 
-        "She fell." 
+        doctor "Her weakened body couldn't support her."
 
-        "Unable to call for help..." 
+        doctor "She fell."
 
-        "She forced herself back to bed." 
+        doctor "Unable to call for help, she forced herself back into bed."
 
-    else :
+        hide doctor default onlayer portraits
 
-        "Its the same scene in front of me... The broken glass.... The empty bottle..."
+    else:
 
-    "But the damage was already done." 
+        show doctor default at left onlayer portraits
 
-    "I place my hands on her." 
+        doctor "It's the same scene as before..."
 
-    "My training takes over. I check every possible sign. I search for any chance. Any way to help her." 
+        doctor "The broken glass..."
 
-    "But deep down... I already know." 
+        doctor "The empty bottle..."
 
-    "The fall caused severe damage. A brain hemorrhage." 
+        hide doctor default onlayer portraits
+
+    "He places his hands on her."
+
+    "His medical training takes over."
+
+    "He checks every possible sign, searching for any chance to help her."
+
+    show doctor default at left onlayer portraits
+
+    doctor "But deep down..."
+
+    doctor "I already know."
+
+    $ brain_hemorrhage_entry.locked = False
+
+    doctor "The fall caused severe damage."
+
+    doctor "A {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}."
+
+    hide doctor default onlayer portraits
 
     if ch01_brain_hemorrhage_happened:
 
-        "Exactly like last time..."
+        show doctor default at left onlayer portraits
 
-    "The hours pass slowly. I stay beside her. I try everything I can." 
+        doctor "\"Exactly like last time...\""
 
-    "But her condition continues to worsen. Until finally..." 
+        hide doctor default onlayer portraits
 
-    "She is gone." 
+    "The hours pass slowly."
 
-    "I hold Mother's hand."
+    "He remains beside her and tries everything he can."
+
+    "But her condition continues to worsen."
+
+    "Until finally..."
+
+    "She is gone."
+
+    "He holds Mother's hand."
 
     if not ch01_met_herb_in_door:
 
-        "I came back. I answered her call. I was here. Yet..." 
+        show doctor default at left onlayer portraits
 
-        doctor "I still couldn't save you."
+        doctor "I came back."
+
+        doctor "I answered her call."
+
+        doctor "I was here."
+
+        doctor "And yet..."
+
+        doctor "\"I still couldn't save you.\""
+
+        hide doctor default onlayer portraits
 
     if ch01_loop_count == 0:
     
-        "Eventually, reality returns. There are things that need to be done." 
+        "Eventually, reality begins to settle in."
 
-        " I have to report her death. I have to prepare her body. I have to tell someone." 
+        "There are things that must be done."
 
-        "Wake"
+        show doctor default at left onlayer portraits
+
+        doctor "I have to report her death."
+
+        doctor "I have to prepare her body."
+
+        doctor "I have to tell someone."
+
+        hide doctor default onlayer portraits
+
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
         if not ch01_wake_happened:
 
@@ -120,19 +182,27 @@ label ch01_brain_hemorrahage_ending:
 
     else :
 
-        "If I get another chance..." 
+        show doctor default at left onlayer portraits
 
-        "I will not repeat this." 
+        doctor "If I get another chance..."
 
-        "I will save her."
+        doctor "I won't repeat this."
 
-        scene black 
+        doctor "I will save her."
 
-        "I close my eyes." 
+        hide doctor default onlayer portraits
 
-        "Tomorrow..." 
+        scene black
 
-        "I will do better."
+        "He closes his eyes."
+
+        show doctor default at left onlayer portraits
+
+        doctor "\"Tomorrow...\""
+
+        doctor "\"I'll do better.\""
+
+        hide doctor default onlayer portraits
 
     if not ch01_brain_hemorrhage_happened:
 

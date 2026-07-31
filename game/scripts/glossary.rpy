@@ -55,8 +55,10 @@ init python:
         name="Matsushita",
         subject="Places",
         text=enc_utils.text_block("""\
-            Matsushita is a quiet coastal town whose economy depends heavily
-            on fishing and Matsushita Bay.
+            Matsushita is a fictional coastal town whose economy depends heavily
+            on fishing and Matsushita Bay. Its story and the illness affecting its
+            residents are inspired by the real events surrounding Minamata disease
+            in Japan.
         """),
         locked=True
     )
@@ -221,6 +223,104 @@ init python:
             A medicinal root believed to soothe inflammation and promote
             overall balance. This fictional herb is based on Licorice Root,
             a plant traditionally used in East Asian medicine.
+        """),
+        locked=True
+    )
+    # --------------------------------------------------
+    # Medical Terms
+    # --------------------------------------------------
+
+    poisoning_entry = EncEntry(
+        parent=glossary,
+        name="Poisoning",
+        subject="Medical Terms",
+        text=enc_utils.text_block("""\
+            A condition caused by exposure to a harmful substance that damages
+            the body. Minamata disease, which inspired the illness in this story,
+            was caused by methylmercury poisoning from contaminated seafood.
+        """),
+        locked=True
+    )
+
+    nervous_system_entry = EncEntry(
+        parent=glossary,
+        name="Nervous System",
+        subject="Medical Terms",
+        text=enc_utils.text_block("""\
+            The network of the brain, spinal cord, and nerves that allows the
+            body to move, feel sensations, and communicate between different
+            parts of the body. Damage to the nervous system can affect
+            movement, coordination, speech, sensation, and many other bodily
+            functions.
+        """),
+        locked=True
+    )
+
+
+    anti_inflammatory_entry = EncEntry(
+        parent=glossary,
+        name="Anti-inflammatory",
+        subject="Medical Terms",
+        text=enc_utils.text_block("""\
+            A substance that helps reduce inflammation, the body's natural
+            response to injury or disease. Reducing inflammation may help
+            relieve pain, swelling, and tissue damage.
+        """),
+        locked=True
+    )
+
+    brain_hemorrhage_entry = EncEntry(
+    parent=glossary,
+    name="Brain Hemorrhage",
+    subject="Medical Terms",
+    text=enc_utils.text_block("""\
+        Bleeding within or around the brain caused by a ruptured blood
+        vessel. It is a medical emergency that can damage brain tissue and
+        may lead to permanent disability or death if not treated promptly.
+    """),
+    locked=True
+    )
+
+    arrhythmia_entry = EncEntry(
+    parent=glossary,
+    name="Arrhythmia",
+    subject="Medical Terms",
+    text=enc_utils.text_block("""\
+        An abnormal heartbeat caused by changes in the heart's normal rhythm.
+        The heart may beat too quickly, too slowly, or irregularly. Depending
+        on the type and severity, an arrhythmia can cause dizziness, fainting,
+        or become life-threatening.
+    """),
+    locked=True
+    )
+
+    coma_entry = EncEntry(
+    parent=glossary,
+    name="Coma",
+    subject="Medical Terms",
+    text=enc_utils.text_block("""\
+        A prolonged state of unconsciousness in which a person cannot be
+        awakened or respond to their surroundings. In severe neurological
+        illnesses, a coma may occur as the brain can no longer function
+        normally.
+    """),
+    locked=True
+    )
+
+
+    # --------------------------------------------------
+    # General Terms
+    # --------------------------------------------------
+
+    social_stigma_entry = EncEntry(
+        parent=glossary,
+        name="Social Stigma",
+        subject="General Terms",
+        text=enc_utils.text_block("""\
+            Negative attitudes or prejudice directed toward people because
+            of a particular condition or circumstance. During the real
+            Minamata disease outbreak, many patients and their families faced
+            discrimination because others feared the illness was contagious.
         """),
         locked=True
     )

@@ -49,7 +49,7 @@ label ch01_wake_up:
 
         "Make breakfast":
 
-            "I should make breakfast."
+            "He decides to prepare breakfast."
             
             jump ch01_make_breakfast
 
@@ -61,25 +61,47 @@ label ch01_first_wakeup:
 
     "A new day begins... and Dr Yosuke wakes up."
 
+    show doctor default at left onlayer portraits
+
     doctor "Once again reality hits me."
+
+    hide doctor default onlayer portraits
 
     "His mother is suffering from a mysterious illness, one for which medicine has yet to discover a cure."
 
+    show doctor default at left onlayer portraits
+
     doctor "I came back to help her survive, and the only way I can do that is by finding the cure myself."
+
+    hide doctor default onlayer portraits
 
     "Years of study and countless experiments have brought him closer to several possible treatments."
 
-    doctor "One of these formulas has to work."
+    $ formula_entry.locked = False
+
+    show doctor default at left onlayer portraits
+    
+    doctor "One of these {a=glossary:formula_entry}formulas{/a} has to work."
 
     doctor "I just have to keep testing."
 
+    hide doctor default onlayer portraits
+
     "A sharp pain twists his stomach."
+
+    show doctor default at left onlayer portraits
 
     doctor "I probably didn't eat yesterday..."
 
+    hide doctor default onlayer portraits
+
     "The days have begun to blur together. Endless hours spent moving between the laboratory and his mother's bedside have made him lose all sense of time."
 
+    show doctor default at left onlayer portraits
+
     doctor "I should see if Mother is awake."
+
+    hide doctor default onlayer portraits
 
     return
 
@@ -105,15 +127,23 @@ label ch01_loop_wakeup:
 
     call ch01_remember_previous_deaths
 
+    show doctor default at left onlayer portraits
+
     doctor "There's no time to dwell on it."
 
     doctor "I have too much to do."
 
     doctor "She is in the room… I could go see her.. "
 
+    hide doctor default onlayer portraits
+
     "A dull pain twists his stomach."
 
+    show doctor default at left onlayer portraits
+
     doctor "I probably didn't eat yesterday."
+
+    hide doctor default onlayer portraits
 
     return
 
@@ -121,18 +151,36 @@ label ch01_remember_previous_deaths:
 
     if ch01_wake_happened:
 
+        show doctor default at left onlayer portraits
+
         doctor "The otsuya… The neighbors..."
+
+        hide doctor default onlayer portraits
         
     if ch01_brain_hemorrhage_happened:
 
+        show doctor default at left onlayer portraits
+
         doctor "The broken glass in the floor... Mother fell off her bed..."
+
+        hide doctor default onlayer portraits
     
     if ch01_knows_arrhythmia:
 
-        doctor "I gave her the formula... Licorice root... It caused her arrythmia..."
+        show doctor default at left onlayer portraits
 
+        $ nagomi_root_entry.locked = False
+
+        doctor "I gave her the {a=glossary:nagomi_root_entry}Nagomi Root{/a}... It caused her {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
+
+        hide doctor default onlayer portraits
+    
     if ch01_knows_coma :
 
+        show doctor default at left onlayer portraits
+
         doctor "I didn't gave her the formula... She died from coma..."
+
+        hide doctor default onlayer portraits
 
     return

@@ -1,110 +1,177 @@
 label ch01_arrythmia_good_ending :
 
-    "I glance back toward Mother's room."
+    "He glances back toward Mother's room."
 
-    "She called for me..." 
+    show doctor default at left onlayer portraits
+
+    doctor "She called for me..." 
+
+    hide doctor default onlayer portraits
 
     if not met_herbalist:
 
-        "But if Mr. Herbalist really has herbs the hospital doesn't..."
+        show doctor default at left onlayer portraits
 
-        "They could help me develop a better treatment." 
+        doctor "But if Kazuki really has herbs the hospital doesn't..."
+
+        doctor "They could help me develop a better treatment."
+
+        hide doctor default onlayer portraits
 
     else:
 
-        "Herbalist said the last time he has some herbs that might help."
+        show doctor default at left onlayer portraits
+
+        doctor "Kazuki said he has herbs that might help."
+
+        hide doctor default onlayer portraits
 
     if herbalist_visited:
 
-        "Herbalist have herbs that will help me develop a better formula."
+        show doctor default at left onlayer portraits
 
-    doctor "Alright." 
+        doctor "Kazuki has herbs that could help me develop a better formula."
 
-    doctor "I'll come with you." 
+        hide doctor default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"Alright.\""
+
+    doctor "\"I'll come with you.\""
+
+    hide doctor default onlayer portraits
 
     "The neighboring village is about a thirty-minute walk away." 
 
-    "As we walk, Herbalist tells me about the people he has treated over the years." 
+    "As they walk, Kazuki tells Yosuke about the people he has treated over the years." 
 
-    herbalist "I've never seen anyone cured." 
+    show herbalist default at left onlayer portraits
 
-    herbalist "But I've seen this illness many times." 
+    herbalist "\"I've never seen anyone cured.\"" 
 
-    herbalist "It always begins differently..." 
+    herbalist "\"But I've seen this illness many times.\"" 
 
-    herbalist "Eventually, their muscles grow too weak to support them." 
+    herbalist "\"It always begins differently...\"" 
 
-    herbalist "Many also lose the ability to swallow safely."  
+    herbalist "\"Eventually, their muscles grow too weak to support them.\"" 
 
-    herbalist "Food and even water can become dangerous." 
+    herbalist "\"Many also lose the ability to swallow safely.\""  
 
-    herbalist "Later... they begin losing their balance." 
+    herbalist "\"Food and even water can become dangerous.\"" 
 
-    "I quietly commit every word to memory."  
+    herbalist "\"Later... they begin losing their balance.\"" 
 
-    "We arrive at Herbalist's shop." 
+    hide herbalist default onlayer portraits
+
+    "Yosuke quietly commits every word to memory."
+
+    "They eventually arrive at Kazuki's shop."
 
     scene bg ch01 herbstore
 
-    "Shelves packed with dried herbs, roots, and flowers surround us." 
+    "Shelves packed with dried herbs, roots, and flowers surround them." 
 
     "The air is filled with earthy, unfamiliar scents." 
 
-    herbalist "These may interest you." 
+    show herbalist default at left onlayer portraits
 
-    "I examine the herbs carefully." 
+    herbalist "\"These may interest you.\"" 
 
-    "One catches my eye." 
+    hide herbalist default onlayer portraits
 
-    doctor "Dong quai..." 
+    "Yosuke examines the herbs carefully." 
+
+    "One catches his attention." 
+
+    $ junka_root_entry.locked = False
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"{a=glossary:junka_root_entry}Junka Root{/a}...\""
+
+    hide doctor default onlayer portraits
 
     "Traditionally used to improve blood circulation." 
 
-    "Another sits beside it." 
+    "Another remedy sits beside it."
 
-    doctor "Ganoderma lucidum..." 
+    $ tsuyomi_cap_entry.locked = False
 
-    "Reishi." 
+    show doctor default at left onlayer portraits
 
-    "Believed to strengthen the body's resilience." 
+    doctor "\"{a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}...\""
 
-    "I can only afford one." 
+    hide doctor default onlayer portraits
+
+    "It is traditionally believed to strengthen the body's resilience."
+
+    show doctor default at left onlayer portraits
+
+    doctor "I can only afford one."
+
+    hide doctor default onlayer portraits
 
     menu:
 
         "Dong quai":
 
-            "I'll take the Dong quai..."
+            show doctor default at left onlayer portraits
+
+            doctor "\"I'll take the Junka Root...\""
+
+            hide doctor default onlayer portraits
 
         "Ganoderma lucidum":
 
-            "I'll take the Ganoderma lucidum..."
+            show doctor default at left onlayer portraits
+
+            doctor "\"I'll take the Tsuyomi Cap...\""
+
+            hide doctor default onlayer portraits
 
     if ch01_cat_broke_formula:
 
-        "I also want some Licorice root and Polygala tenuifolia."
+        show doctor default at left onlayer portraits
 
-    doctor "Thank you Herbalist. Till we meet again" 
+        doctor "\"I would also like some {a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:hogo_root_entry}Hogo Root{/a}.\""
 
-    herbalist "I hope you can help your mother Yosuke. Be safe walking home." 
+        hide doctor default onlayer portraits
+
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"Thank you, Kazuki. Until we meet again.\""
+
+    hide doctor default onlayer portraits
+
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"I hope you can help your mother, Yosuke. Be careful on your way home.\""
+
+    hide herbalist default onlayer portraits
 
     $ took_herbs = True
 
     scene bg ch01 lab with fade
     
-    "I finally return home." 
+    "Yosuke finally returns home."
 
-    "The house is quiet." 
+    "The house is quiet."
 
-    "I set the herbs down." 
+    "He sets the herbs down."
 
-    doctor "Mother?" 
+    show doctor default at left onlayer portraits
 
-    "..." 
+    doctor "\"Mother?\""
+
+    hide doctor default onlayer portraits
+
+    "..."
 
     "There is no answer." 
 
-    "I hurry toward her room."  
+    "He hurries toward her room."  
 
     scene bg ch01 mother with fade
 
@@ -112,93 +179,131 @@ label ch01_arrythmia_good_ending :
 
     "The empty vial rests on the bedside table." 
 
-    "My heart sinks." 
+    "His heart sinks." 
 
-    doctor "Mother..." 
+    show doctor default at left onlayer portraits
+
+    doctor "\"Mother...\"" 
+
+    hide doctor default onlayer portraits
 
     "She slowly opens her eyes." 
 
     "Her breathing is shallow." 
 
-    "I grab her wrist." 
+    "He grab her wrist." 
 
-    "My hands are already searching for a pulse." 
+    "His hands are already searching for a pulse." 
 
-    "It's irregular..." 
+    show doctor default at left onlayer portraits
 
-    "My eyes dart to the empty vial." 
+    doctor "\"It's irregular...\"" 
 
-    "The formula..." 
+    hide doctor default onlayer portraits
 
-    "No..." 
+    "His eyes dart to the empty vial." 
 
-    "It contained Licorice Root." 
+    show doctor default at left onlayer portraits
 
-    "An experimental dose..." 
+    doctor "\"The formula...\"" 
 
-    "It was never meant to be taken." 
+    doctor "\"No...\"" 
 
-    doctor "Mother, stay with me." 
+    doctor "It contained {a=glossary:nagomi_root_entry}Nagomi Root{/a}."
 
-    "I search my notes." 
+    doctor "An experimental dose..."
 
-    "There has to be something..." 
+    doctor "It was never meant to be taken without supervision."
 
-    "There has to be..." 
+    doctor "\"Mother, stay with me.\""
+
+    hide doctor default onlayer portraits
+
+    "He desperately searches through his notes."
+
+    show doctor default at left onlayer portraits
+
+    doctor "There has to be something..."
+
+    doctor "There has to be..."
+
+    hide doctor default onlayer portraits
+
+    "..."
+
+    show doctor default at left onlayer portraits
+
+    doctor "Nothing."
+
+    hide doctor default onlayer portraits
+
+    "Her heartbeat becomes weaker."
+
+    "Weaker..."
 
     "..." 
 
-    "Nothing." 
+    "Then it stops." 
 
-    "Her heartbeat becomes weaker." 
+    show doctor default at left onlayer portraits
 
-    "Weaker..." 
+    doctor "\"Mother...\""
 
-    "..." 
+    hide doctor default onlayer portraits
 
-    "It stops." 
-
-    doctor "Mother..." 
-
-    "I remain frozen beside her." 
+    "He remain frozen beside her." 
 
     "..." 
 
-    doctor "The arrhythmia..." 
+    $ arrhythmia_entry.locked = False
 
-    doctor "I did this."
+    show doctor default at left onlayer portraits
+
+    doctor "The {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
+
+    doctor "\"I did this.\""
+
+    hide doctor default onlayer portraits
 
     if ch01_loop_count == 0:
 
-        "I hold Mother's hand, but she no longer responds." 
+        "He holds Mother's hand, but she no longer responds." 
 
-        "I wait." 
+        "He waits." 
 
-        "Maybe..." 
+        show doctor default at left onlayer portraits
 
-        "Maybe she will open her eyes." 
+        doctor "\"Maybe...\"" 
+
+        doctor "\"Maybe she will open her eyes.\"" 
+
+        hide doctor default onlayer portraits 
 
         "..." 
 
         "But she doesn't." 
 
+        show doctor default at left onlayer portraits          
+
         doctor "How could I make such a mistake?" 
 
         $ ch01_knows_arrhythmia = True
 
-        "How am I supposed to live after this?"
+        doctor "How am I supposed to live after this?"
 
-        "I know the truth." 
+        doctor "I know the truth." 
 
-        "I am a doctor." 
+        doctor "I am a doctor." 
 
-        "I know what death looks like." 
+        doctor "I know what death looks like." 
 
-        "Yet I cannot accept it." 
+        doctor "Yet I cannot accept it." 
 
-        "I close her eyes gently." 
+        doctor "I close her eyes gently." 
 
         doctor "I'm sorry, Mother..." 
+
+        hide doctor default onlayer portraits
 
         "The house feels different now." 
 
@@ -208,13 +313,19 @@ label ch01_arrythmia_good_ending :
 
         "There are things that need to be done." 
 
-        "I have to report her death." 
+        show doctor default at left onlayer portraits 
 
-        "I have to prepare her body." 
+        doctor "I have to report her death." 
 
-        "I have to tell someone."
+        doctor "I have to prepare her body." 
 
-        "Wake"
+        doctor "I have to tell someone."
+
+        hide doctor default onlayer portraits
+
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
     $ ch01_check_formula = True
 

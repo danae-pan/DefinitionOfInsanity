@@ -1,88 +1,160 @@
 label ch01_coma_ending :
 
-    "I bring the formula to the room. I look at it in my hands." 
+    "He brings the formula into Mother's room. He looks at it in his hands." 
 
     if ch01_check_formula:
 
-        "This formula has been proven dangerous before."
+        show doctor default at left onlayer portraits
+
+        doctor "This formula has been proven dangerous before."
+
+        hide doctor default onlayer portraits
 
     else:
 
-        "The answer I have been searching for... It could be right in front of me." 
+        show doctor default at left onlayer portraits
 
-    "But it has never been tested. I know the risks. If something goes wrong..."  
+        doctor "The answer I have been searching for..."
 
-    "If the formula harms her... Then I will be the reason she suffers even more." 
+        doctor "It could be right in front of me." 
 
-    "Even if the formula could help her... Even if it could be the cure..." 
-
-    "I cannot risk losing her because of something I created. I slowly place the formula back." 
+        hide doctor default onlayer portraits
 
     show doctor default at left onlayer portraits
 
-    doctor "I'm sorry, Mother..." 
+    doctor "But it has never been tested."
 
-    doctor "I can't." 
+    doctor "I know the risks."
+
+    doctor "If something goes wrong..."
+
+    doctor "If the formula harms her, then I'll be the reason she suffers even more."
+
+    doctor "Even if it could help her..."
+
+    doctor "Even if it could be the cure..."
+
+    doctor "I can't risk losing her because of something I created."
+
+    hide doctor default onlayer portraits
+
+    "He slowly lowers the {a=glossary:formula_entry}formula{/a} and sets it aside."
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"I'm sorry, Mother...\""
+
+    doctor "\"I can't.\""
 
     hide doctor default onlayer portraits
 
     if not ch01_knows_coma :
 
-        "For now, I choose not to give it to her. I stay beside her." 
+        "He chooses not to give her the formula and remains beside her."
 
     else :
 
-        "I choose not to give her the formula once again..."
+        "He chooses not to give her the formula and remains beside her."
 
-    "I monitor her condition. I do everything I can to make her comfortable." 
+    "He monitors her condition and does everything he can to keep her comfortable."
 
-    "But the illness does not stop. Her body becomes weaker." 
+    "But the illness does not stop."
 
-    "Hours pass. Until... She stops responding." 
+    "Her body grows weaker."
+
+    "Hours pass."
+
+    "Then she stops responding."
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother?" 
+    doctor "\"Mother?\"" 
 
     hide doctor default onlayer portraits
 
-    "I check her condition." 
+    "He checks her condition."
 
-    "She is still alive. But she doesn't wake up. Her body has entered a coma." 
+    "She is still alive, but she does not wake."
 
-    "I stay beside her, waiting. Maybe she will open her eyes." 
+    $ coma_entry.locked = False
 
-    if ch01_loop_count == 0 :
+    "Her body has entered a {a=glossary:coma_entry}coma{/a}."
 
-        "Maybe tomorrow she will wake up." 
+    "He remains beside her, waiting for her to open her eyes."
 
-        "Maybe..." 
+    if ch01_loop_count == 0:
 
-    "But deep down, I know. There is nothing more I can do." 
+        show doctor default at left onlayer portraits
 
-    "Hours later..." 
+        doctor "Maybe she'll wake up tomorrow."
 
-    "Her breathing becomes weaker. I hold her hand until the very end." 
+        doctor "\"Maybe...\""
+        
+        hide doctor default onlayer portraits
 
-    "She passes away peacefully beside me..." 
+    show doctor default at left onlayer portraits
+
+    doctor "But deep down, I know."
+
+    doctor "There is nothing more I can do."
+
+    hide doctor default onlayer portraits
+
+    "Hours later, her breathing becomes weaker."
+
+    "He holds her hand until the very end."
+
+    "She passes away peacefully beside him."doctor "But deep down, I know."
+
+    show doctor default at left onlayer portraits
+
+    doctor "There is nothing more I can do."
+
+    hide doctor default onlayer portraits
+
+    "Hours later, her breathing becomes weaker."
+
+    "He holds her hand until the very end."
+
+    "She passes away peacefully beside him."
 
     if ch01_loop_count >= 1 :
 
-        "I lost her again..."
+        show doctor default at left onlayer portraits
 
-    "I made the safest choice. But... One question remains." 
+        doctor "I lost her again..."
 
-    "What if the formula could have saved her?"
+        hide doctor default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
+    doctor "I made the safest choice."
+
+    doctor "But one question remains..."
+
+    doctor "What if the formula could have saved her?"
+
+    hide doctor default onlayer portraits
 
     if ch01_loop_count == 0 :
 
-        "Eventually, reality returns." 
+        "Eventually, reality begins to settle in." 
 
-        "There are things that need to be done. I have to report her death." 
+        "There are things that must be done."
 
-        "I have to prepare her body. I have to tell someone." 
+        show doctor default at left onlayer portraits
+        
+        doctor "I have to report her death."
 
-        "Wake"
+        doctor "I have to prepare her body."
+
+        doctor "I have to tell someone."
+
+        hide doctor default onlayer portraits
+
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
         $ ch01_wake_happened = True
 
@@ -90,35 +162,75 @@ label ch01_coma_ending :
 
         if ch01_knows_coma :
 
-            "The memory burns into my mind." 
+            show doctor default at left onlayer portraits
 
-            "If i don't give her the formula she dies in coma..." 
+            doctor "The memory burns into my mind."
+
+            doctor "If I don't give her the formula, she falls into a coma and dies..."
+
+            hide doctor default onlayer portraits
 
         else:
 
-            "I had read it before... This illness can end with comma."
+            show doctor default at left onlayer portraits
 
-        "I have to try again... I have to save her..." 
+            doctor "I've read about this before."
 
-        "I gently place her hand back on the bed." 
+            doctor "This illness can end in a coma."
 
-        "But I am not finished. I return to my laboratory." 
+            hide doctor default onlayer portraits
+
+        show doctor default at left onlayer portraits
+        
+        doctor "I have to try again."
+
+        doctor "I have to save her."
+
+        hide doctor default onlayer portraits
+
+        "He gently places her hand back on the bed."
+
+        show doctor default at left onlayer portraits
+
+        doctor "But I'm not finished."
+
+        hide doctor default onlayer portraits
+
+        "He returns to his laboratory."
 
         scene bg ch01 lab
 
-        "I open my notes. My hands are shaking. I write down everything." 
+        "He opens his notes."
 
-        "The mistake. The symptoms. The things I overlooked." 
+        "His hands are shaking as he writes down everything."
 
-        "If I get another chance... I will not repeat this." 
+        "The mistake."
 
-        "I will save her."
+        "The symptoms."
+
+        "The things he overlooked."
+
+        show doctor default at left onlayer portraits
+
+        doctor "If I get another chance..."
+
+        doctor "I won't repeat this."
+
+        doctor "I will save her."
+
+        hide doctor default onlayer portraits
 
         scene black 
 
-        "I close my eyes." 
+        "He closes his eyes."
 
-        "Tomorrow... I will do better." 
+        show doctor default at left onlayer portraits
+
+        doctor "\"Tomorrow...\""
+
+        doctor "\"I'll do better.\""
+
+        hide doctor default onlayer portraits
 
     if not ch01_knows_coma :
 

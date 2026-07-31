@@ -1,96 +1,171 @@
 label ch01_runs_late_at_hospital_comma_ending:
 
-    "Herbalist may have some usefull info about the illeness and the herbs that may herlp. I should stay and talk to him"
-
-    doctor "Please herbalist tell me what you have noticed all these years in your patients?"
-
-    herbalist "I've never seen anyone cured." 
-
-    herbalist "But I've seen this illness many times." 
-
-    herbalist "It always begins differently..." 
-
-    herbalist "Eventually, their muscles grow too weak to support them." 
-
-    herbalist "Many also lose the ability to swallow safely."  
-
-    herbalist "Food and even water can become dangerous." 
-
-    herbalist "Later... they begin losing their balance." 
-
-    "I quietly commit every word to memory." 
-
-    "We talk some more...but the time has passed, I should go back to mother."
-
-    doctor "I will definately come by your shop as soon as i can."
-
-    doctor "I have to go now. Have a good day Mr Herbalist."
-
-    herbalist "I hope i see you again soon Dr Yosuke. Good day to you too."
-
-    "I quicly head home."
-
-    "As soon as i enter in the house I notice the silence."
-
-    "I rush to mothers room."
-
-    scene bg ch01 mother with fade
-
-    "I see her in bed exhausted."
-
-    "I believe its too late for her now..."
-
-    "I monitor her condition. I do everything I can to make her comfortable." 
-
-    "But the illness does not stop. Her body becomes weaker." 
-
-    "Hours pass. Until... She stops responding." 
-
     show doctor default at left onlayer portraits
 
-    doctor "Mother?" 
+    doctor "The herbalist may have useful information about the illness and the herbs that could help."
+
+    doctor "I should stay and speak with him."
+
+    doctor "\"Please, Kazuki. What have you noticed over the years while treating your patients?\""
 
     hide doctor default onlayer portraits
 
-    "I check her condition." 
+    show herbalist default at left onlayer portraits
 
-    "She is still alive. But she doesn't wake up. Her body has entered a coma." 
+    herbalist "\"I've never seen anyone cured.\""
 
-    "I stay beside her, waiting. Maybe she will open her eyes." 
+    herbalist "\"But I've seen this illness many times.\""
+
+    herbalist "\"It always begins differently...\""
+
+    herbalist "\"Eventually, their muscles become too weak to support them.\""
+
+    herbalist "\"Many also lose the ability to swallow safely.\""
+
+    herbalist "\"Food, and even water, can become dangerous.\""
+
+    herbalist "\"Later... they begin losing their balance.\""
+
+    hide herbalist default onlayer portraits
+
+    "He quietly commits every word to memory."
+
+    "They continue talking for a while longer."
+
+    show doctor default at left onlayer portraits
+
+    doctor "I've already been gone too long."
+
+    doctor "I should return to Mother."
+
+    doctor "\"I'll definitely visit your shop as soon as I can.\""
+
+    doctor "\"I have to go now. Have a good day, Kazuki.\""
+
+    hide doctor default onlayer portraits
+
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"I hope I see you again soon, Dr. Yosuke.\""
+
+    herbalist "\"Good day to you as well.\""
+
+    hide herbalist default onlayer portraits
+
+    "He quickly heads home."
+
+    "As soon as he enters the house, he notices the silence."
+
+    show doctor default at left onlayer portraits
+
+    doctor "No..."
+
+    hide doctor default onlayer portraits
+
+    "He rushes to Mother's room."
+
+    scene bg ch01 mother with fade
+
+    "She lies in bed, completely exhausted."
+
+    show doctor default at left onlayer portraits
+
+    doctor "I think I'm already too late..."
+
+    hide doctor default onlayer portraits
+
+    "He monitors her condition and does everything he can to keep her comfortable."
+
+    "But the illness does not stop."
+
+    "Her body grows weaker."
+
+    "Hours pass."
+
+    "Then she stops responding."
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"Mother?\""
+
+    hide doctor default onlayer portraits
+
+    "He checks her condition."
+
+    "She is still alive, but she does not wake."
+
+    $ coma_entry.locked = False
+
+    "Her body has entered a {a=glossary:coma_entry}coma{/a}."
+
+    "He remains beside her, waiting for her to open her eyes." 
 
     if ch01_loop_count == 0 :
 
-        "Maybe tomorrow she will wake up." 
+        show doctor default at left onlayer portraits
 
-        "Maybe..." 
+        doctor "Maybe tomorrow she will wake up." 
 
-    "But deep down, I know. There is nothing more I can do." 
+        doctor "\"Maybe...\"" 
 
-    "Hours later..." 
+        hide doctor default onlayer portraits
 
-    "Her breathing becomes weaker. I hold her hand until the very end." 
+    
+    show doctor default at left onlayer portraits
 
-    "She passes away peacefully beside me..." 
+    doctor "But deep down, I know."
+
+    doctor "There is nothing more I can do."
+
+    hide doctor default onlayer portraits
+
+    "Hours later, her breathing becomes weaker."
+
+    "He holds her hand until the very end."
+
+    "She passes away peacefully beside him."
 
     if ch01_loop_count >= 1 :
 
-        "I lost her again..."
+        show doctor default at left onlayer portraits
 
-    "What if the formula could have saved her?"
+        doctor "I lost her again..."
+
+        hide doctor default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
+    doctor "What if the formula could have saved her?"
+
+    hide doctor default onlayer portraits
 
     if ch01_loop_count >= 1 :
 
-        "I should not let the cat in the laboratory any more."
+        show doctor default at left onlayer portraits
+
+        doctor "I should not let the cat in the laboratory any more."
+
+        hide doctor default onlayer portraits
 
     if ch01_loop_count == 0 :
 
-        "Eventually, reality returns." 
+        "Eventually, reality begins to settle in."
 
-        "There are things that need to be done. I have to report her death." 
+        "There are things that must be done."
 
-        "I have to prepare her body. I have to tell someone." 
+        show doctor default at left onlayer portraits
 
-        "Wake"
+        doctor "I have to report her death."
+
+        doctor "I have to prepare her body."
+
+        doctor "I have to tell someone."
+
+        hide doctor default onlayer portraits
+
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
         $ ch01_wake_happened = True
 
@@ -98,35 +173,75 @@ label ch01_runs_late_at_hospital_comma_ending:
 
         if ch01_knows_coma :
 
-            "The memory burns into my mind." 
+            show doctor default at left onlayer portraits
 
-            "If i don't give her the formula she dies in coma..." 
+            doctor "The memory burns into my mind."
 
+            doctor "If I don't give her the formula, she falls into a {a=glossary:coma_entry}coma{/a} and dies..." 
+
+            hide doctor default onlayer portraits
+        
         else:
 
-            "I had read it before... This illness can end with comma."
+            show doctor default at left onlayer portraits
 
-        "I have to try again... I have to save her..." 
+            doctor "I've read about this before..."
 
-        "I gently place her hand back on the bed." 
+            doctor "This illness can end in a {a=glossary:coma_entry}coma{/a}."
 
-        "But I am not finished. I return to my laboratory." 
+            hide doctor default onlayer portraits
+
+        show doctor default at left onlayer portraits
+        
+        doctor "I have to try again."
+
+        doctor "I have to save her."
+
+        hide doctor default onlayer portraits
+
+        "He gently places her hand back on the bed."
+
+        show doctor default at left onlayer portraits
+
+        doctor "But I'm not finished."
+
+        hide doctor default onlayer portraits
+
+        "He returns to his laboratory."
 
         scene bg ch01 lab
 
-        "I open my notes. My hands are shaking. I write down everything." 
+        "He opens his notes."
 
-        "The mistake. The symptoms. The things I overlooked." 
+        "His hands are shaking as he writes down everything."
 
-        "If I get another chance... I will not repeat this." 
+        "The mistake."
 
-        "I will save her."
+        "The symptoms."
 
-        scene black 
+        "The things he overlooked."
 
-        "I close my eyes." 
+        show doctor default at left onlayer portraits
 
-        "Tomorrow... I will do better." 
+        doctor "If I get another chance..."
+
+        doctor "I won't repeat this."
+
+        doctor "I will save her."
+
+        hide doctor default onlayer portraits
+
+        scene black
+
+        "He closes his eyes."
+
+        show doctor default at left onlayer portraits
+
+        doctor "\"Tomorrow...\""
+
+        doctor "\"I'll do better.\""
+
+        hide doctor default onlayer portraits
 
     if not ch01_knows_coma :
 

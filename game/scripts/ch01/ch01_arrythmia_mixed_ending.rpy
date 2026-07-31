@@ -1,109 +1,131 @@
 label ch01_arrythmia_mixed_ending:
 
-    doctor "I can't leave you like this, Mother." 
+    show doctor default at left onlayer portraits 
+
+    doctor "\"I can't leave you like this, Mother.\"" 
 
     if ch01_prepared_formula:
 
-        "Watching her suffer while I have something that might help..." 
+        doctor "I can't keep watching her suffer while I have something that might help..." 
 
     else:
 
-        "Watching her suffer while I can make something that might help..." 
+        doctor "I can't keep watching her suffer while I can make something that might help..." 
 
-    "I can't do nothing." 
+    doctor "I can't do nothing."
 
-    "The formula is untested." 
+    doctor "The formula is untested."
 
-    "There are risks." 
+    doctor "There are risks."
 
-    "As a doctor, I know that." 
+    doctor "As a doctor, I know that."
 
-    "But..." 
+    doctor "But..."
 
-    "What if it works?" 
+    doctor "What if it works?"
 
     if ch01_check_formula :
 
-        "What if it works this time..."
+        doctor "\"What if it works this time...\""
 
     else:
 
-        "What if it works?" 
+        doctor "\"What if it works?\"" 
 
-    "What if this is the chance I have been searching for?" 
+    doctor "I tell myself that the worst that could happen..."
 
-    "I tell myself the worst that can happen..." 
+    doctor "...is that the treatment simply doesn't work."
 
-    "...is that the treatment simply doesn't work." 
+    doctor "At least I'll have tried."
 
-    "At least I will have tried." 
+    hide doctor default onlayer portraits
 
-    "I return to the laboratory." 
+    "He returns to the laboratory."
 
-    if ch01_prepared_formula :
+    if ch01_prepared_formula:
 
-        "The formula containing Licorice Root is still there." 
+        show doctor default at left onlayer portraits   
 
-    else: 
+        doctor "The formula containing {a=glossary:nagomi_root_entry}Nagomi Root{/a} is still there."
 
-        "I quicly prepare the formula."
+        hide doctor default onlayer portraits
 
-    "I hold the vial in my hands." 
+    else:
 
-    "My hands are shaking." 
+        "He quickly prepares another dose of the {a=glossary:formula_entry}formula{/a}."
 
-    "Every decision I have made has led to this moment." 
+    "He holds the vial in his hands."
 
-    "I bring it back to Mother." 
+    "His hands are shaking."
 
-    doctor "Mother..." 
+    "Every decision he has made has led to this moment."
 
-    doctor "This might help you." 
+    "He brings the vial back to Mother."
 
-    "I carefully give her the formula." 
+    show doctor default at left onlayer portraits
 
-    "She drinks it." 
+    doctor "\"Mother...\""
 
-    "Now there is nothing left to do but wait." 
+    doctor "\"This might help you.\""
+
+    hide doctor default onlayer portraits
+
+    "He carefully gives her the formula."
+
+    "She drinks it."
+
+    "Now there is nothing left to do but wait."
 
     "Minutes pass." 
 
     "Then hours." 
 
-    "I watch her closely." 
+    "He watches her closely." 
 
-    "I hope." 
+    show doctor default at left onlayer portraits
 
-    "I pray that I made the right choice." 
+    doctor "I hope.." 
+
+    doctor "I pray that I made the right choice." 
 
     if ch01_check_formula:
 
-        "But no the same thing repeats." 
+        doctor "No..."
+
+        doctor "The same thing is happening again."
     else:
 
-        "But something is wrong." 
+        doctor "Something is wrong."
+
+    hide doctor default onlayer portraits
     
     "Her condition begins to worsen." 
 
-    "I check her immediately." 
+    "He checks her immediately." 
 
-    "My medical instincts take over." 
+    "His medical instincts take over." 
 
-    "No..." 
+    show doctor default at left onlayer portraits
 
-    "The symptoms..." 
+    doctor "\"No...\""
 
-    "The irregular heartbeat..." 
+    doctor "The symptoms..."
 
-    doctor "No, no, no..." 
+    doctor "The irregular heartbeat..."
 
-    "The formula triggered a fatal arrhythmia." 
+    doctor "\"No, no, no...\""
+
+    hide doctor default onlayer portraits
+
+    $ arrhythmia_entry.locked = False
+
+    "The formula has triggered a fatal {a=glossary:arrhythmia_entry}arrhythmia{/a}."
 
     $ ch01_knows_arrhythmia = True
 
-    "I do everything I can." 
+    "He does everything he can." 
 
-    "I try everything I know." 
+    "He tries everything he knows." 
 
     "But nothing is enough." 
 
@@ -115,35 +137,43 @@ label ch01_arrythmia_mixed_ending:
 
     "..." 
 
-    "I stare at the empty vial." 
+    "He stares at the empty vial." 
 
-    "The formula." 
+    show doctor default at left onlayer portraits
 
-    "The choice I made." 
+    doctor "The formula..." 
 
-    "I don't know what hurts more." 
+    doctor"The choice I made..." 
 
-    "Knowing that I might have caused this..." 
+    doctor "I don't know what hurts more." 
 
-    "Or knowing that maybe nothing could have saved her anymore." 
+    doctor "Knowing that I might have caused this..." 
 
-    "Was the treatment the reason she died?" 
+    doctor "Or knowing that maybe nothing could have saved her anymore." 
 
-    "Or was her illness already beyond saving?"
+    doctor "Was the treatment the reason she died?" 
+
+    doctor "Or was her illness already beyond saving?"
+
+    hide doctor default onlayer portraits
 
     if ch01_loop_count == 0:
     
-        "Eventually, reality returns." 
+        "Eventually, reality begins to settle in." 
 
-        "There are things that need to be done." 
+        "There are things that must be done." 
 
-        "I have to report her death." 
+        show doctor default at left onlayer portraits
 
-        "I have to prepare her body." 
+        doctor "I have to report her death."
 
-        "I have to tell someone."
+        doctor "I have to prepare her body."
 
-        "Wake"
+        hide doctor default onlayer portraits
+
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
         if not ch01_wake_happened:
 
@@ -151,19 +181,27 @@ label ch01_arrythmia_mixed_ending:
 
     else :
 
-        "If I get another chance..." 
+        show doctor default at left onlayer portraits
 
-        "I will not repeat this." 
+        doctor "If I get another chance..."
 
-        "I will save her."
+        doctor "I won't repeat this mistake."
 
-        scene black 
+        doctor "I will save her."
 
-        "I close my eyes." 
+        hide doctor default onlayer portraits
 
-        "Tomorrow..." 
+        scene black
 
-        "I will do better."
+        "He closes his eyes."
+
+        show doctor default at left onlayer portraits
+
+        doctor "\"Tomorrow...\""
+
+        doctor "\"I'll do better.\""
+
+        hide doctor default onlayer portraits
 
     $ ch01_check_formula = True
 

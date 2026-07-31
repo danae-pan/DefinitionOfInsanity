@@ -3,51 +3,71 @@ label ch01_dysphagia_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "Alright... let's start with the soup." 
+    doctor "\"Alright... let's start with the soup.\""
 
     hide doctor default onlayer portraits
 
-    "I carefully begin feeding her. After the soup, I pick up the bread."
+    "He carefully begins feeding her."
+    
+    "After the soup, he picks up a piece of bread."
 
     show doctor default at left onlayer portraits
     
-    doctor "Here, Mother." 
+    doctor "\"Here, Mother.\"" 
 
     hide doctor default onlayer portraits
 
-    "One bite... Two bites... She stops." 
+    "One bite..."
 
-    "At first, I think she is just tired... But something feels wrong."
+    "Then another..."
 
-    mother "..." 
+    "She suddenly stops."
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother?"
+    doctor "At first, I thought she's only tired..."
+
+    doctor "But something feels wrong."
 
     hide doctor default onlayer portraits
 
-    "She tries to breathe... She starts choking."
+    mother "\"...\""
 
     show doctor default at left onlayer portraits
 
-    doctor "What is happening?" 
-
-    doctor "How did this happen?" 
+    doctor "\"Mother?\""
 
     hide doctor default onlayer portraits
 
-    "I quickly try to help her but the situation only gets worse." 
+    "She tries to breathe."
+    
+    "Then, she begins to choke."
 
     show doctor default at left onlayer portraits
 
-    doctor "Stay with me, Mother..." 
+    doctor "\"What is happening?\""
+
+    doctor "\"How did this happen?\"" 
 
     hide doctor default onlayer portraits
 
-    "I know what to do. I have studied this illness countless times." 
+    "He quickly tries to help her but the situation only gets worse." 
 
-    "So why are my hands shaking? I try everything I can. But nothing is enough."
+    show doctor default at left onlayer portraits
+
+    doctor "\"Stay with me, Mother...\"" 
+
+    doctor "I know what to do."
+    
+    doctor "I have studied this illness countless times." 
+
+    doctor "So why are my hands shaking?"
+
+    hide doctor default onlayer portraits
+    
+    "He tries everything he can."
+    
+    "But nothing is enough."
 
     "The room becomes silent. It is already too late."
 
@@ -55,98 +75,172 @@ label ch01_dysphagia_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "No..." 
+    doctor "\"No...\"" 
 
     hide doctor default onlayer portraits
 
     if ch01_loop_count == 0:
 
-        "I hold Mother's hand, but she no longer responds." 
-
-        "I wait. Maybe... Maybe she will open her eyes..." 
-
-        "..." 
-
-        "But she doesn't." 
+        "He holds Mother's hand, but she no longer responds." 
 
         show doctor default at left onlayer portraits
 
-        doctor "How could I make such a mistake?" 
+        doctor "Maybe..."
+
+        doctor "Maybe she'll open her eyes..."
 
         hide doctor default onlayer portraits
 
-        "I had read it before... Dysphagia was a symptom of this illness." 
+        "..."
 
+        "But she does not." 
+
+        show doctor default at left onlayer portraits
+
+        doctor "\"How could I make such a mistake?\""
+
+        doctor "I've read about this before..."
+
+        $ dysphagia_entry.locked = False
         $ knows_dysphagia = True
 
-        "I knew this. So why did I forget?" 
+        doctor "{a=glossary:dysphagia_entry}Dysphagia{/a} was a symptom of this illness."
 
-        "How am I supposed to live after this?"
+        doctor "I knew this."
 
-        "I know the truth. I am a doctor. I know what death looks like." 
+        doctor "So why did I forget?"
 
-        "Yet I cannot accept it. I close her eyes gently." 
+        doctor "How am I supposed to live with this?"
 
-        show doctor default at left onlayer portraits
+        doctor "I know the truth."
 
-        doctor "I'm sorry, Mother..." 
+        doctor "I'm a doctor."
+
+        doctor "I know what death looks like."
 
         hide doctor default onlayer portraits
 
-        "I should have noticed... I should have remembered..." 
+        "Yet he cannot accept it."
 
-        "I spent years studying this illness... And still, I failed you." 
+        "He gently closes her eyes." 
 
-        "Eventually, reality returns." 
+        show doctor default at left onlayer portraits
 
-        "There are things that need to be done. I have to report her death." 
+        doctor "\"I'm sorry, Mother...\"" 
 
-        "I have to prepare her body. I have to tell someone." 
+        doctor "I should have noticed..."
 
-        "Wake"
+        doctor "I should have remembered..."
+
+        doctor "I spent years studying this illness..."
+
+        doctor "And still, I failed you."
+
+        hide doctor default onlayer portraits
+
+        "Eventually, reality begins to settle in."
+
+        "There are things that must be done."
+
+        show doctor default at left onlayer portraits
+
+        doctor "I have to report her death."
+
+        doctor "I have to prepare her body."
+
+        doctor "I have to tell someone."
+
+        hide doctor default onlayer portraits
+
+        $ wake_entry.locked = False
+
+        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
 
         $ ch01_wake_happened = True
 
     elif ch01_loop_count == 1:
 
-        "I hold Mother's hand. Her warmth slowly fades." 
+        "He holds Mother's hand as her warmth slowly fades."
 
-        "I close my eyes. Not again... I can't let this happen again." 
+        show doctor default at left onlayer portraits
+
+        doctor "Not again..."
+
+        doctor "I can't let this happen again."
 
         if knows_dysphagia:
 
-            "The memory burns into my mind." 
+            doctor "The memory burns into my mind."
 
-            "The bread. The choking. The moment I failed." 
+            doctor "The bread."
 
-            "I know what went wrong. I should have remembered. I should have seen it." 
+            doctor "The choking."
+
+            doctor "The moment I failed."
+
+            doctor "I know what went wrong."
+
+            doctor "I should have remembered."
+
+            doctor "I should have seen it."
 
         else:
 
-            "I had read it before... Dysphagia was a symptom of this illness." 
+            doctor "I had read it before..."
 
+            $ dysphagia_entry.locked = False
             $ knows_dysphagia = True
 
-        "I have to try again... I have to save her..." 
+            doctor "{a=glossary:dysphagia_entry}Dysphagia{/a} was a symptom of this illness."
 
-        "I gently place her hand back on the bed." 
+        doctor "I have to try again."
 
-        "But I am not finished. I return to my laboratory." 
+        doctor "I have to save her."
+
+        hide doctor default onlayer portraits
+
+        "He gently places her hand back on the bed."
+
+        show doctor default at left onlayer portraits
+
+        doctor "But I'm not finished."
+
+        hide doctor default onlayer portraits
+
+        "He returns to his laboratory."
 
         scene bg ch01 lab
 
-        "I open my notes. My hands are shaking. I write down everything." 
+        "He opens his notes."
 
-        "The mistake. The symptoms. The things I overlooked." 
+        "His hands are shaking as he writes down everything."
 
-        "If I get another chance... I will not repeat this." 
+        "The mistake."
 
-        "I will save her."
+        "The symptoms."
 
-        scene black 
+        "The things he overlooked."
 
-        "I close my eyes." 
+        show doctor default at left onlayer portraits
 
-        "Tomorrow... I will do better." 
+        doctor "If I get another chance..."
+
+        doctor "I won't repeat this."
+
+        doctor "I will save her."
+
+        hide doctor default onlayer portraits
+
+        scene black
+
+        "He closes his eyes."
+
+        show doctor default at left onlayer portraits
+
+        doctor "\"Tomorrow...\""
+
+        doctor "\"I'll do better.\""
+
+        hide doctor default onlayer portraits
 
     jump ch01_new_loop
