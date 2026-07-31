@@ -15,6 +15,8 @@ label ch02_reset_runtime_state:
 
 label ch02_intro:
 
+    scene bg ch01 lab with fade
+
     if chapter_1_with_one_try:
 
         "He wakes up in a daze. He cannot believe his mother is no more."
