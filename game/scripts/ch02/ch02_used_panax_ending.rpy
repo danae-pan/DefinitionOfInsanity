@@ -150,4 +150,6 @@ label ch02_used_panax_ending:
 
     "He finally falls asleep at the workbench."
 
+    $ ch02_use_panax = True
+
     jump ch02_start
