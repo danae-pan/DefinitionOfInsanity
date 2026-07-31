@@ -10,15 +10,17 @@ label ch02_first_herb_without_instructions_ending:
 
     "His mother looks up weakly as he enters"
 
-    mother "My son..."
+    mother "\"My son...\""
 
     "He kneels beside the bed."
 
     show doctor default at left onlayer portraits
 
-    doctor "I've prepared a new medicine."
+    doctor "\"I've prepared a new medicine.\""
 
-    doctor "I need you to drink this."
+    doctor "\"I need you to drink this.\""
+
+    hide doctor default onlayer portraits
 
     "He carefully helps her sit upright and raises the bottle to her lips."
 
@@ -38,7 +40,7 @@ label ch02_first_herb_without_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother?"
+    doctor "\"Mother?\""
 
     hide doctor default onlayer portraits
 
@@ -48,7 +50,7 @@ label ch02_first_herb_without_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "Easy... easy..."
+    doctor "\"Easy... easy...\""
 
     hide doctor default onlayer portraits
 
@@ -62,7 +64,11 @@ label ch02_first_herb_without_instructions_ending:
 
         "Her weakened swallowing reflex cannot protect her."
 
-        doctor "Not again…"
+        show doctor default at left onlayer portraits
+
+        doctor "\"Not again…\""
+
+        hide doctor default onlayer portraits
 
         "He recalls that {a=glossary:dysphagia_entry}dysphagia{/a} caused her to choke while eating bread before."
 
@@ -74,9 +80,9 @@ label ch02_first_herb_without_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "Come on..."
+    doctor "\"Come on...\""
 
-    doctor "Breathe!"
+    doctor "\"Breathe!\""
 
     hide doctor default onlayer portraits
 
@@ -94,7 +100,11 @@ label ch02_first_herb_without_instructions_ending:
 
     if ch02_first_herb_with_instructions :
 
-        doctor "...but why?"
+        show doctor default at left onlayer portraits
+
+        doctor "\"...but why?\""
+
+        hide doctor default onlayer portraits
 
         doctor "I tried before by following the instructions."
 
@@ -104,7 +114,11 @@ label ch02_first_herb_without_instructions_ending:
 
         doctor "..I thought this decision would save her."
 
-    doctor "...I should have listened."
+    show doctor default at left onlayer portraits
+
+    doctor "\"...I should have listened.\""
+
+    hide doctor default onlayer portraits
 
     "For a long moment, he remains kneeling beside the bed."
 
@@ -116,7 +130,7 @@ label ch02_first_herb_without_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "...I'm sorry."
+    doctor "\"...I'm sorry.\""
 
     hide doctor default onlayer portraits
 

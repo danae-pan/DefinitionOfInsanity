@@ -12,7 +12,7 @@ label ch02_feed_the_cat :
 
     show doctor default at left onlayer portraits
 
-    doctor "Feels good doesn’t it? Having a full stomach."
+    doctor "\"Feels good doesn’t it? Having a full stomach.\""
 
     hide doctor default onlayer portraits
 

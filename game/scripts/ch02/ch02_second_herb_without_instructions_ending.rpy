@@ -2,7 +2,11 @@ label ch02_second_herb_without_instructions_ending:
 
     "The doctor gently squeezes his mother's hand."
 
-    doctor "I'll prepare something right away."
+    show doctor default at left onlayer portraits
+
+    doctor "\"I'll prepare something right away.\""
+
+    hide doctor default onlayer portraits
 
     "He leaves the room and makes his way downstairs, heading first to the laboratory."
 
@@ -44,7 +48,7 @@ label ch02_second_herb_without_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "You should rest."
+    doctor "\"You should rest.\""
 
     hide doctor default onlayer portraits
 
@@ -60,7 +64,7 @@ label ch02_second_herb_without_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "I've finished it."
+    doctor "\"I've finished it.\""
 
     hide doctor default onlayer portraits
 
@@ -82,7 +86,7 @@ label ch02_second_herb_without_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother?"
+    doctor "\"Mother?\""
 
     hide doctor default onlayer portraits
 
@@ -104,7 +108,11 @@ label ch02_second_herb_without_instructions_ending:
 
     "The herbalist's warning echoes in his mind."
 
-    doctor "This herb should not be used after eating"
+    show doctor default at left onlayer portraits
+
+    doctor "\"This herb should not be used after eating\""
+
+    hide doctor default onlayer portraits
 
     if ch02_second_herb_with_instructions:
 
@@ -136,15 +144,19 @@ label ch02_second_herb_without_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "I wanted to ease your pain…"
+    doctor "\"I wanted to ease your pain…\""
 
     hide doctor default onlayer portraits
 
     "He takes her hand one last time."
 
-    doctor "Instead..."
+    show doctor default at left onlayer portraits
 
-    doctor "...I took away your chance to recover again."
+    doctor "\"Instead...\""
+
+    doctor "\"...I took away your chance to recover again.\""
+
+    hide doctor default onlayer portraits
 
     "He slowly pulls the bedsheet over his mother's face."
 

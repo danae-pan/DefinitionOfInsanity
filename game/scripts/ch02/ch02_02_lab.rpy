@@ -20,19 +20,19 @@ label ch02_take_the_first :
 
     show doctor default at left onlayer portraits
 
-    doctor "I will take {a=glossary:junka_root_entry}Junka Root{/a}."
+    doctor "\"I will take {a=glossary:junka_root_entry}Junka Root{/a}.\""
 
-    doctor "Thank you Mr. Herbalist."
+    doctor "\"Thank you Mr. Herbalist.\""
 
-    doctor "Have a nice day."
+    doctor "\"Have a nice day.\""
 
     hide doctor default onlayer portraits
 
     show herbalist default at left onlayer portraits
 
-    herbalist "No need to thank me, I just hope it helps."
+    herbalist "\"No need to thank me, I just hope it helps.\""
 
-    herbalist "Goodbye, Dr. Yosuke."
+    herbalist "\"Goodbye, Dr. Yosuke.\""
 
     hide herbalist default onlayer portraits
 
@@ -70,15 +70,15 @@ label ch02_take_the_first :
 
         doctor "But this is not a conclusive advice."
 
-        doctor "Either way, there is a risk to be taken."
+        doctor "\"Either way, there is a risk to be taken.\""
 
     doctor "After eating..."
 
-    doctor "I must remember that."
+    doctor "\"I must remember that.\""
 
     "He carefully places the Junka Root into the mortar before turning back to his notes."
 
-    doctor "Now... the second phase."
+    doctor "\"Now... the second phase.\""
 
     "He reaches for a small wooden box tucked away on the upper shelf."
 
@@ -112,9 +112,13 @@ label ch02_take_the_first :
 
     doctor "The extraction isn't complete yet."
 
-    doctor "Just a few more minutes..."
+    show doctor default at left onlayer portraits
+
+    doctor "\"Just a few more minutes...\""
 
     "A loud meow echoes through the laboratory."
+
+    hide doctor default onlayer portraits
 
     "The cat rubs itself against his leg, meowing repeatedly."
 
@@ -122,25 +126,17 @@ label ch02_take_the_first :
 
         "Only then does he notice how thin it has become."
 
-        show doctor default at left onlayer portraits
-
         doctor "You've hardly eaten..."
-
-        hide doctor default onlayer portraits
 
         "He kneels beside it."
 
-        show doctor default at left onlayer portraits
-
         doctor "You've been showing the same symptoms... loss of balance... weakness..."
-
-        hide doctor default onlayer portraits
 
     else :
 
         show doctor default at left onlayer portraits
 
-        doctor "I know you are sick.."
+        doctor "\"I know you are sick..\""
 
         hide doctor default onlayer portraits
 
@@ -148,17 +144,17 @@ label ch02_take_the_first :
 
         show doctor default at left onlayer portraits
 
-        doctor "...you made a mess before."
-
-        doctor "I should not let you inside the lab anymore."
+        doctor "\"...you made a mess before.\""
 
         hide doctor default onlayer portraits
+
+        doctor "I should not let you inside the lab anymore."
 
     if ch02_hungry_pet :
 
         show doctor default at left onlayer portraits
 
-        doctor "And last I lose time feeding you.."
+        doctor "\"And last I lose time feeding you..\""
 
         doctor "I should be careful with my choices."
 
@@ -166,13 +162,21 @@ label ch02_take_the_first :
 
     "He sighs."
 
-    doctor "Mother needs this medicine..."
+    show doctor default at left onlayer portraits
+
+    doctor "\"Mother needs this medicine...\""
+
+    hide doctor default onlayer portraits
 
     "The cat meows once more."
 
-    doctor "...but if I leave you like this..."
+    show doctor default at left onlayer portraits
 
-    doctor "...you'll only keep crying."
+    doctor "\"...but if I leave you like this...\""
+
+    doctor "\"...you'll only keep crying.\""
+
+    hide doctor default onlayer portraits
 
     $ ch02_hungry_pet = True 
 
@@ -196,19 +200,19 @@ label ch02_take_the_second :
 
     show doctor default at left onlayer portraits
 
-    doctor "I will take {a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}."
+    doctor "\"I will take {a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}.\""
 
-    doctor "Thank you Mr. Herbalist."
+    doctor "\"Thank you Mr. Herbalist.\""
 
-    doctor "Have a nice day."
+    doctor "\"Have a nice day.\""
 
     hide doctor default onlayer portraits
 
     show doctor default at left onlayer portraits
 
-    "No need to thank me, I just hope it helps."
+    herbalist "\"No need to thank me, I just hope it helps.\""
 
-    "Goodbye, Mr. Herbalist."
+    herbalist "\"Goodbye, Mr. Herbalist.\""
 
     hide doctor default onlayer portraits 
 
@@ -278,13 +282,17 @@ label ch02_take_the_second :
 
     "Just then, a weak voice echoes from upstairs."
 
-    mother "My son..."
+    mother "\"My son...\""
 
     "The doctor's hand stops."
 
     "He grips the wooden spoon a little tighter."
 
-    doctor "She's awake..."
+    show doctor default at left onlayer portraits
+
+    doctor "\"She's awake...\""
+
+    hide doctor default onlayer portraits
 
     "He glances back at the bowl."
 
@@ -296,7 +304,7 @@ label ch02_take_the_second :
 
     "A second call reaches him."
 
-    mother "My son..."
+    mother "\"My son...\""
 
     "Her voice is barely more than a whisper."
 

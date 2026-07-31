@@ -6,13 +6,21 @@ label ch02_cat_broke_formula_ending :
 
     "He closes his eyes for a brief moment."
 
-    doctor "No..."
+    show doctor default at left onlayer portraits
+
+    doctor "\"No...\""
+
+    hide doctor default onlayer portraits
 
     doctor "Every minute I spend away from the {a=glossary:formula_entry}formula{/a} is another minute Mother has to wait."
 
     "He gently nudges the cat aside with his foot."
 
-    doctor "You'll have to wait a little longer."
+    show doctor default at left onlayer portraits
+
+    doctor "\"You'll have to wait a little longer.\""
+
+    hide doctor default onlayer portraits
 
     "The cat lets out another desperate cry."
 
@@ -20,7 +28,11 @@ label ch02_cat_broke_formula_ending :
 
     "The {a=glossary:decoction_entry}decoction{/a} is reaching the final stage."
 
-    doctor "Just a little longer..."
+    show doctor default at left onlayer portraits
+    
+    doctor "\"Just a little longer...\""
+
+    hide doctor default onlayer portraits
 
     "The proportions have to be perfect."
 
@@ -36,7 +48,11 @@ label ch02_cat_broke_formula_ending :
 
     "Drop by drop, the dark liquid begins to collect inside."
 
-    doctor "Almost finished..."
+    show doctor default at left onlayer portraits
+    
+    doctor "\"Almost finished...\""
+
+    hide doctor default onlayer portraits
 
     "A sudden thud echoes through the laboratory."
 
@@ -46,7 +62,7 @@ label ch02_cat_broke_formula_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor "Wait!"
+    doctor "\"Wait!\""
 
     hide doctor default onlayer portraits
 
@@ -64,7 +80,7 @@ label ch02_cat_broke_formula_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor "No..."
+    doctor "\"No...\""
 
     hide doctor default onlayer portraits
 
@@ -88,7 +104,7 @@ label ch02_cat_broke_formula_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor "No..."
+    doctor "\"No...\""
 
     hide doctor default onlayer portraits
 
@@ -112,7 +128,7 @@ label ch02_cat_broke_formula_ending :
 
     show doctor default at left onlayer portraits
 
-    doctor "I'm here."
+    doctor "\"I'm here.\""
 
     hide doctor default onlayer portraits
 
@@ -136,7 +152,11 @@ label ch02_cat_broke_formula_ending :
 
     "Still holding her hand."
 
-    doctor "...I couldn't save you."
+    show doctor default at left onlayer portraits
+
+    doctor "\"...I couldn't save you.\""
+
+    hide doctor default onlayer portraits
 
     "But maybe, just maybe, the day repeats itself again."
 

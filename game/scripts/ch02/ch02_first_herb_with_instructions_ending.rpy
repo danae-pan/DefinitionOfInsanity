@@ -26,7 +26,11 @@ label ch02_first_herb_with_instructions_ending:
 
     doctor "Just a little longer..."
 
-    doctor "Please hold on."
+    show doctor default at left onlayer portraits
+
+    doctor "\"Please hold on.\""
+
+    hide doctor default onlayer portraits
 
     "The minutes pass agonizingly slowly."
 
@@ -40,7 +44,7 @@ label ch02_first_herb_with_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother?"
+    doctor "\"Mother?\""
 
     hide doctor default onlayer portraits
 
@@ -60,7 +64,7 @@ label ch02_first_herb_with_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "No..."
+    doctor "\"No...\""
 
     hide doctor default onlayer portraits
 
@@ -78,9 +82,9 @@ label ch02_first_herb_with_instructions_ending:
 
     show doctor default at left onlayer portraits
 
-    doctor "Mother..."
+    doctor "\"Mother...\""
 
-    doctor "Please..."
+    doctor "\"Please...\""
 
     hide doctor default onlayer portraits
 
@@ -93,18 +97,14 @@ label ch02_first_herb_with_instructions_ending:
     "The doctor remains kneeling beside the bed, unable to move."
 
     "His eyes drift toward the untouched meal and the unopened bottle of medicine lying among the broken pieces of porcelain."
-
-    show doctor default at left onlayer portraits
     
     doctor "I followed the instructions…"
-
-    hide doctor default onlayer portraits
 
     "His voice barely rises above a whisper."
 
     show doctor default at left onlayer portraits
 
-    doctor "...I was only trying to do it properly."
+    doctor "\"...I was only trying to do it properly.\""
 
     hide doctor default onlayer portraits
 
