@@ -2,6 +2,7 @@ image bg ch01 kitchen = im.Scale("images/backgrounds/kitchen_background.png", 19
 image bg ch01 mother = im.Scale("images/backgrounds/mother_background.png", 1920, 1080)
 image bg ch01 lab = im.Scale("images/backgrounds/lab_background.png", 1920, 1080)
 image bg ch01 herbstore = im.Scale("images/backgrounds/herbstore_background.png", 1920, 1080)
+image bg ch01 hospital = im.Scale("images/backgrounds/hospital_background.png", 1920, 1080)
 
 default loop_count = 0
 
