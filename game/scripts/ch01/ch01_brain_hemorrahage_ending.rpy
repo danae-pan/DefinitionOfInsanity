@@ -208,7 +208,7 @@ label ch01_brain_hemorrahage_ending:
 
         $ ch01_brain_hemorrhage_happened = True
 
-    call ch01_pass_to_chapter_2
+    call ch01_pass_to_chapter_2 from _call_ch01_pass_to_chapter_2_2
 
     if ch01_jump_to_chapter_2 :
 

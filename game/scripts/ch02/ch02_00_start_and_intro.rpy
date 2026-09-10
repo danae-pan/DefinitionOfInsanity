@@ -3,7 +3,7 @@ default ch02_loop_count = 0
 
 label ch02_start:
 
-    call ch02_reset_runtime_state
+    call ch02_reset_runtime_state from _call_ch02_reset_runtime_state
 
     jump ch02_intro
 

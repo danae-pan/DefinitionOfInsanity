@@ -1,21 +1,25 @@
 # Event Your mother chokes during swallowing (dysphagia), she dies (end of fist chapter)
 label ch01_dysphagia_ending:
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
+
+    #expression: neutral
 
     doctor "\"Alright... let's start with the soup.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He carefully begins feeding her."
     
     "After the soup, he picks up a piece of bread."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
     
     doctor "\"Here, Mother.\"" 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
+
+    #mother expression: eating
 
     "One bite..."
 
@@ -23,47 +27,49 @@ label ch01_dysphagia_ending:
 
     "She suddenly stops."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
+
+    #expression: worried
 
     doctor "At first, I thought she's only tired..."
 
     doctor "But something feels wrong."
 
-    hide doctor default onlayer portraits
-
     mother "\"...\""
-
-    show doctor default at left onlayer portraits
 
     doctor "\"Mother?\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
+
+    #mother expression: choking
 
     "She tries to breathe."
     
     "Then, she begins to choke."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "\"What is happening?\""
+    #doctor expression: panicked
+
+    doctor "\"What is going on?\""
 
     doctor "\"How did this happen?\"" 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He quickly tries to help her but the situation only gets worse." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve 
 
     doctor "\"Stay with me, Mother...\"" 
 
     doctor "I know what to do."
     
-    doctor "I have studied this illness countless times." 
+    doctor "I have studied this illness." 
 
     doctor "So why are my hands shaking?"
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
     
     "He tries everything he can."
     
@@ -71,31 +77,35 @@ label ch01_dysphagia_ending:
 
     "The room becomes silent. It is already too late."
 
-    "Her final breath leaves her body in my arms." 
+    "Her final breath leaves her body in his arms." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "\"No...\"" 
+    #doctor expression: panicked or worried
 
-    hide doctor default onlayer portraits
+    doctor "\"No...\""  
+
+    hide doctor default onlayer portraits with dissolve
 
     if ch01_loop_count == 0:
 
+        #doctor expression: maybe sad/dissapointed
+
         "He holds Mother's hand, but she no longer responds." 
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "Maybe..."
 
-        doctor "Maybe she'll open her eyes..."
+        doctor "\"Maybe she'll open her eyes...\""
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "..."
 
         "But she does not." 
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "\"How could I make such a mistake?\""
 
@@ -110,21 +120,21 @@ label ch01_dysphagia_ending:
 
         doctor "So why did I forget?"
 
-        doctor "How am I supposed to live with this?"
+        doctor "\"How am I supposed to live with this?\""
 
         doctor "I know the truth."
 
         doctor "I'm a doctor."
 
-        doctor "I know what death looks like."
+        doctor "\"I know what death looks like...\""
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "Yet he cannot accept it."
 
         "He gently closes her eyes." 
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "\"I'm sorry, Mother...\"" 
 
@@ -132,29 +142,27 @@ label ch01_dysphagia_ending:
 
         doctor "I should have remembered..."
 
-        doctor "I spent years studying this illness..."
+        doctor "\"I failed you...\""
 
-        doctor "And still, I failed you."
-
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "Eventually, reality begins to settle in."
 
         "There are things that must be done."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
-        doctor "I have to report her death."
+        doctor "\"I have to report her death.\""
 
-        doctor "I have to prepare her body."
+        doctor "\"I have to prepare her body.\""
 
-        doctor "I have to tell someone."
+        doctor "\"I have to tell someone!\""
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         $ wake_entry.locked = False
 
-        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
+        "He will have to arrange the {a=glossary:wake_entry}otsuya{/a}."
 
         $ ch01_wake_happened = True
 
@@ -162,7 +170,9 @@ label ch01_dysphagia_ending:
 
         "He holds Mother's hand as her warmth slowly fades."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
+
+        #doctor expression: panicked
 
         doctor "Not again..."
 
@@ -170,19 +180,25 @@ label ch01_dysphagia_ending:
 
         if knows_dysphagia:
 
-            doctor "The memory burns into my mind."
+            #doctor expression: panicked
+
+            hide doctor default onlayer portraits with dissolve
+
+            "The memory burns into his mind."
+
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "The bread."
 
             doctor "The choking."
 
-            doctor "The moment I failed."
+            doctor "The moment I failed..."
 
             doctor "I know what went wrong."
 
             doctor "I should have remembered."
 
-            doctor "I should have seen it."
+            doctor "\"I should have seen it...\""
 
         else:
 
@@ -193,19 +209,21 @@ label ch01_dysphagia_ending:
 
             doctor "{a=glossary:dysphagia_entry}Dysphagia{/a} was a symptom of this illness."
 
+        #doctor expression: neutral
+
         doctor "I have to try again."
 
-        doctor "I have to save her."
+        doctor "\"I have to save her.\""
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "He gently places her hand back on the bed."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "But I'm not finished."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "He returns to his laboratory."
 
@@ -215,32 +233,26 @@ label ch01_dysphagia_ending:
 
         "His hands are shaking as he writes down everything."
 
-        "The mistake."
+        "The mistakes."
 
         "The symptoms."
 
         "The things he overlooked."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 
         doctor "I won't repeat this."
 
-        doctor "I will save her."
+        doctor "\"I will save her.\""
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         scene black
 
-        "He closes his eyes."
+        "He closes his eyes thinking that tomorrow will be different."
 
-        show doctor default at left onlayer portraits
-
-        doctor "\"Tomorrow...\""
-
-        doctor "\"I'll do better.\""
-
-        hide doctor default onlayer portraits
+        "That he will do better."
 
     jump ch01_new_loop

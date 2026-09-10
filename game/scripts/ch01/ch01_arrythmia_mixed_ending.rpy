@@ -1,6 +1,6 @@
 label ch01_arrythmia_mixed_ending:
 
-    show doctor default at left onlayer portraits 
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"I can't leave you like this, Mother.\"" 
 
@@ -12,8 +12,6 @@ label ch01_arrythmia_mixed_ending:
 
         doctor "I can't keep watching her suffer while I can make something that might help..." 
 
-    doctor "I can't do nothing."
-
     doctor "The formula is untested."
 
     doctor "There are risks."
@@ -22,15 +20,13 @@ label ch01_arrythmia_mixed_ending:
 
     doctor "But..."
 
-    doctor "What if it works?"
-
     if ch01_check_formula :
 
-        doctor "\"What if it works this time...\""
+        doctor "What if it works this time..."
 
     else:
 
-        doctor "\"What if it works?\"" 
+        doctor "What if it works?" 
 
     doctor "I tell myself that the worst that could happen..."
 
@@ -38,21 +34,33 @@ label ch01_arrythmia_mixed_ending:
 
     doctor "At least I'll have tried."
 
-    hide doctor default onlayer portraits
+    doctor "\"I will be back Mother. Just wait for me.\""
+
+    hide doctor default onlayer portraits with dissolve
+
+    #to be removed??
+
+
+    scene black with fade 
 
     "He returns to the laboratory."
 
+    scene bg ch01 lab with fade
+
     if ch01_prepared_formula:
 
-        show doctor default at left onlayer portraits   
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "The formula containing {a=glossary:nagomi_root_entry}Nagomi Root{/a} is still there."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
     else:
 
         "He quickly prepares another dose of the {a=glossary:formula_entry}formula{/a}."
+
+    
+    scene black with fade
 
     "He holds the vial in his hands."
 
@@ -62,13 +70,15 @@ label ch01_arrythmia_mixed_ending:
 
     "He brings the vial back to Mother."
 
-    show doctor default at left onlayer portraits
+    scene bg ch01 mother with fade
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother...\""
 
     doctor "\"This might help you.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He carefully gives her the formula."
 
@@ -82,7 +92,7 @@ label ch01_arrythmia_mixed_ending:
 
     "He watches her closely." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "I hope.." 
 
@@ -95,9 +105,15 @@ label ch01_arrythmia_mixed_ending:
         doctor "The same thing is happening again."
     else:
 
-        doctor "Something is wrong."
+        hide doctor default onlayer portraits with dissolve
 
-    hide doctor default onlayer portraits
+        "His mother seems unusualy unresponsive."
+
+        show doctor default at left onlayer portraits with dissolve
+
+        doctor "\"Something is wrong...\""
+
+    hide doctor default onlayer portraits with dissolve
     
     "Her condition begins to worsen." 
 
@@ -105,7 +121,7 @@ label ch01_arrythmia_mixed_ending:
 
     "His medical instincts take over." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"No...\""
 
@@ -115,7 +131,7 @@ label ch01_arrythmia_mixed_ending:
 
     doctor "\"No, no, no...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     $ arrhythmia_entry.locked = False
 
@@ -139,11 +155,11 @@ label ch01_arrythmia_mixed_ending:
 
     "He stares at the empty vial." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "The formula..." 
 
-    doctor"The choice I made..." 
+    doctor "The choice I made..." 
 
     doctor "I don't know what hurts more." 
 
@@ -151,13 +167,13 @@ label ch01_arrythmia_mixed_ending:
 
     doctor "Or knowing that maybe nothing could have saved her anymore." 
 
-    doctor "Was the treatment the reason she died?" 
+    doctor "\"Was the treatment the reason she died?\""
 
-    doctor "Or was her illness already beyond saving?"
-
-    hide doctor default onlayer portraits
+    doctor "\"Or was her illness already beyond saving?\""
 
     if ch01_loop_count == 0:
+
+        hide doctor default onlayer portraits with dissolve
     
         "Eventually, reality begins to settle in." 
 
@@ -173,7 +189,7 @@ label ch01_arrythmia_mixed_ending:
 
         $ wake_entry.locked = False
 
-        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
+        "He will have to arrange the {a=glossary:wake_entry}otsuya{/a}."
 
         if not ch01_wake_happened:
 
@@ -181,31 +197,25 @@ label ch01_arrythmia_mixed_ending:
 
     else :
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 
         doctor "I won't repeat this mistake."
 
-        doctor "I will save her."
+        doctor "\"I will save her.\""
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
-        scene black
+        scene black with fade
 
-        "He closes his eyes."
+        "He closes his eyes thinking that tomorrow will be different."
 
-        show doctor default at left onlayer portraits
-
-        doctor "\"Tomorrow...\""
-
-        doctor "\"I'll do better.\""
-
-        hide doctor default onlayer portraits
+        "That he will do better."
 
     $ ch01_check_formula = True
 
-    call ch01_pass_to_chapter_2
+    call ch01_pass_to_chapter_2 from _call_ch01_pass_to_chapter_2_1
 
     if ch01_jump_to_chapter_2 :
 

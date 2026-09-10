@@ -54,7 +54,7 @@ Whenever he was able, he returned home to care for his mother, doing everything 
     narrator_nvl """
 Years later, researchers finally uncovered an important clue.
 {vspace=30}
-"The illness was linked to {a=glossary:poisoning_entry}poisoning{/a} caused by consuming contaminated fish.{w=1.2}"
+The illness was linked to {a=glossary:poisoning_entry}poisoning{/a} caused by consuming contaminated fish.{w=1.2}
 {vspace=30}
 Without hesitation, Yosuke returned to Matsushita for good. {w=1.2}
 {vspace=30}

@@ -2,7 +2,7 @@ label ch01_straight_to_lab :
 
     scene bg ch01 lab with fade
 
-    call ch01_study_prepare_formula
+    call ch01_study_prepare_formula from _call_ch01_study_prepare_formula
 
     "A sudden noise breaks the silence."
 
@@ -10,11 +10,9 @@ label ch01_straight_to_lab :
 
     "Completely absorbed in chasing a fly that somehow found its way inside, she pays no attention to the equipment around her."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Easy there, little one...\"" 
-
-    hide doctor default onlayer portraits
 
     doctor "Maybe I should let her outside."
 
@@ -26,9 +24,19 @@ label ch01_straight_to_lab :
 
         "Let your cat outside":
 
+            hide doctor default onlayer portraits with dissolve
+
+            scene black with fade
+
             "He gently picks up the cat and carries her outside."
 
+            scene bg ch01 lab with fade
+
+            show doctor default at left onlayer portraits with dissolve
+
             doctor "Today I need my full concentration. I can't afford any distractions."
+
+            hide doctor default onlayer portraits with dissolve
 
             jump ch01_mother_calls_knock_on_door
         
@@ -48,23 +56,29 @@ label ch01_eat_then_lab:
 
         "Say story about cat" :
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
+
+            #doctor expression: neutral smile
 
             doctor "\"You know, your cat has been doing some strange things these past few days.\""
 
-            hide doctor default onlayer portraits
+            hide doctor default onlayer portraits with dissolve
+
+            #mother expression: tired smile
 
             "She looks up at him , trying to smile."
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "\"Yesterday I caught her sitting in front of the mirror for almost ten minutes.\""
 
             doctor "\"She was just staring at herself like she had discovered another cat living in the house.\""
 
-            hide doctor default onlayer portraits
+            hide doctor default onlayer portraits with dissolve
             
             "Her expression immediately brightens."
+
+            #mother expression: slighty surprised smile
 
             mother "\"...Curious...\""
 
@@ -76,43 +90,47 @@ label ch01_eat_then_lab:
 
         "Say story about garden" :
             
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "\"I checked the flowers in the garden this morning.\""
 
-            hide doctor default onlayer portraits
+            hide doctor default onlayer portraits with dissolve
 
             "She looks up at him."
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
-            doctor "\"The ajisai you thought was dying... \""
+            $ ajisai_entry.locked = False
+
+            doctor "\"The {a=glossary:ajisai_entry}ajisai{/a} you thought was dying...\""
 
             doctor "\"There are new leaves coming out.\"" 
 
-            hide doctor default onlayer portraits
+            hide doctor default onlayer portraits with dissolve
 
             "A tear forms in the corner of her eye." 
 
             mother "\"...Really?\""
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "\"Yeah. Looks like it wasn't ready to give up just yet.\""
 
-            hide doctor default onlayer portraits
+            hide doctor default onlayer portraits with dissolve
 
     "After they finished eating..."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"I'll leave you to rest now, Mother. Call me if you need anything, alright? I'll be in the laboratory.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
     
-    scene bg ch01 lab
+    scene black with fade
 
     "He returns to the laboratory."
+
+    scene bg ch01 lab with fade
 
     if ch01_loop_count == 0:
 
@@ -122,33 +140,50 @@ label ch01_eat_then_lab:
 
     else:
 
-        "The ingredients are still exactly where he left them."
+        "He takes a deep breath."
 
-        "Nothing has been used."
+        "He looks at his supplies."
 
-        doctor "I guess… I should try again."
+        show doctor default at left onlayer portraits with dissolve
+
+        doctor "I should start working."
+
+        hide doctor default onlayer portraits with dissolve
 
     "His notes are waiting on the desk."
 
     "Then he notices movement in the corner of the room."
 
+    #expression: skeptical
+    #background: lab without the cat
+
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "Should I let her stay?"
 
-    doctor "It would be nice to have some company..."
+    doctor "\"It would be nice to have some company...\""
+
+    hide doctor default onlayer portraits with dissolve
 
     "He looks around the empty laboratory."
 
     "The silence has become his only companion."
 
-    doctor "But I can't let anything interfere with my research."
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "Not this time."
+    doctor "\"I can't let anything interfere with my research...\""
+
+    hide doctor default onlayer portraits with dissolve
 
     if kept_cat_in_lab_once:
 
         "Another memory returns."
 
+        show doctor default at left onlayer portraits
+
         doctor "Last time i kept her inside see broke the formula. I should not risk it again."
+
+        hide doctor default onlayer portraits
 
     menu:
 
@@ -162,9 +197,13 @@ label ch01_eat_then_lab:
 
             "He gently picks up the cat and carries her outside."
 
+            show doctor default at left onlayer portraits with dissolve
+
             doctor "Today I need my full concentration. I can't afford any distractions."
+
+            hide doctor default onlayer portraits with dissolveRRTRTRRRRR
             
-            call ch01_study_prepare_formula
+            call ch01_study_prepare_formula from _call_ch01_study_prepare_formula_1
 
             jump ch01_mother_calls_knock_on_door
 
@@ -172,7 +211,7 @@ label ch01_eat_then_lab:
 
             $ ch01_cat_in_lab = True
 
-            jump ch01_formula_cat_noisy
+            jump ch01_cat_becomes_noisy
 
 label ch01_study_prepare_formula:
 
@@ -180,25 +219,25 @@ label ch01_study_prepare_formula:
 
     "His eyes move between the old research papers and the herbs carefully arranged in front of him."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     $ nagomi_root_entry.locked = False
 
     doctor "\"{a=glossary:nagomi_root_entry}Nagomi Root{/a}...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He picks up the jar and examines the remaining amount."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "\"Enough for one full dose.\""
+    doctor "\"I have more than enough.\""
 
     $ anti_inflammatory_entry.locked = False
 
     doctor "Its {a=glossary:anti_inflammatory_entry}anti-inflammatory{/a} and soothing properties could help ease Mother's symptoms."
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     if not ch01_knows_licorice:
 
@@ -208,21 +247,25 @@ label ch01_study_prepare_formula:
 
         "A memory interrupts his thoughts."
 
-        doctor "I have strong indications that this can cause {a=glossary:arrhythmia_entry}arrhythmia{/a} to mother... But i have nothing else to try..."
+        show doctor default at left onlayer portraits with dissolve
+
+        doctor "I have strong indications that this can cause {a=glossary:arrhythmia_entry}arrhythmia{/a} to mother... But I have nothing else to try..."
+
+        hide doctor default onlayer portraits with dissolve
 
     "His attention shifts to another jar."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     $ hogo_root_entry.locked = False
 
     doctor "\"{a=glossary:hogo_root_entry}Hogo Root{/a}.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He checks the remaining supply."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Almost enough.\""
 
@@ -238,11 +281,9 @@ label ch01_study_prepare_formula:
 
     doctor "...then perhaps Hogo Root can help protect the {a=glossary:nervous_system_entry}nervous system{/a}."
 
-    doctor "..."
+    doctor "\"..It's worth trying.\""
 
-    doctor "It's worth trying."
-
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He carefully measures every ingredient."
 
@@ -254,27 +295,37 @@ label ch01_study_prepare_formula:
 
     "Finally, he pours the finished mixture into a small glass vial."
 
-    if ch01_loop_count >= 1:
+    # we need another flag here to go inside the loop because the fact that he has repeated he day doesn't mean he prepared already the formula before.
+
+    if (ch01_loop_count >= 1 and ch01_cat_broke_formula == True) or (ch01_loop_count >= 1 and ch01_check_formula == True):
 
         "His hands stop for a moment."
 
+        show doctor default at left onlayer portraits  with dissolve
+
         doctor "I did everything exactly as the last time." 
+
+        hide doctor default onlayer portraits with dissolve
 
     if ch01_cat_in_lab:
 
         "He notices movement nearby."
+        
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "I should be careful with the formula, the cat is inside the lab."
 
+        hide doctor default onlayer portraits with dissolve
+
     "He places the vial safely aside and reaches for his notebook."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Now...\"" 
 
     doctor "\"Let's make sure I didn't overlook anything.\"" 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He compares every measurement with his notes." 
 
@@ -288,11 +339,11 @@ label ch01_study_prepare_formula:
 
 label ch01_cat_becomes_noisy:
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "Come on, little one."
+    doctor "\"Come on, little one.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He gently picks up the cat."
 
@@ -302,7 +353,7 @@ label ch01_cat_becomes_noisy:
 
     "He lets her walk around the room, exploring every corner."
 
-    call ch01_study_prepare_formula
+    call ch01_study_prepare_formula from _call_ch01_study_prepare_formula_2
             
     "A sudden noise breaks the silence."
 
@@ -316,23 +367,23 @@ label ch01_cat_becomes_noisy:
 
         "A familiar memory returns."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "I have seen this before... if I let her stay inside she maybe break the formula again."
 
         doctor "Do I risk it?"
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
     else:
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
         
-        doctor "Easy there, little one..." 
+        doctor "\"Easy there, little one...\"" 
 
         doctor "Maybe I should let her outside."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
     menu:
 
@@ -340,11 +391,11 @@ label ch01_cat_becomes_noisy:
 
             "He gently picks up the cat and carries her outside."
 
-            show  doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "Today I need my full concentration. I can't afford any distractions."
 
-            hide doctor default onlayer portraits
+            hide doctor default onlayer portraits with dissolve
 
             jump ch01_mother_calls_knock_on_door
 
@@ -354,15 +405,17 @@ label ch01_cat_becomes_noisy:
 
 label ch01_cat_breaks_formula:
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "Try to be quiet, little one. I don't want to escort you outside."
+    doctor "\"Try to be quiet, little one. I don't want to escort you outside.\""
 
     doctor "Today I need my full concentration. I can't afford any distractions."
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He looks over his notes one more time."
+
+    #change the lab background with the cat in it
 
     "Suddenly, the cat jumps onto his desk!"
 
@@ -370,31 +423,35 @@ label ch01_cat_breaks_formula:
 
         "Its happening again!"
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"No! Get out of here!\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
-    "But it's took late… She tries to leave form the desc but things get in her way."
+    "But it's too late… She tries to leave form the desk but things get in her way."
+
+    #noise of breaking glass
 
     "Bottles start breaking."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
+
+    #doctor expression panicked
 
     doctor "\"Not this one!\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "The doctor tries to catch the formula but it falls in the ground and breaks."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"No No No.\""
 
     doctor "\"This can't be happening!\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     if kept_cat_in_lab_once:
 
@@ -403,6 +460,8 @@ label ch01_cat_breaks_formula:
         doctor "How could i make this mistake again?"
 
         hide doctor default onlayer portraits
+
+    #lab background without the cat
 
     "He turns to find the cat, but she is nowhere to be found."
 
@@ -426,11 +485,39 @@ label ch01_cat_breaks_formula:
 
         "Check your stock on your apothecary":
 
-            jump ch01_mother_calls_knock_on_door
+            jump ch01_check_on_the_apothecary
 
         "Go to the hospital to restore your herbs":
 
             jump ch01_go_to_hospital
+
+label ch01_check_on_the_apothecary:
+
+    show doctor default at left onlayer portraits with dissolve
+
+    doctor "Hogo root was just enough for the dose I made."
+
+    doctor "I might not be able to make another..."
+
+    doctor "\"I should look anyway.\""
+
+    hide doctor default onlayer portraits with dissolve
+
+    "He desperately search the shelves."
+
+    show doctor default at left onlayer portraits with dissolve
+
+    doctor "\"No luck...\""
+
+    doctor "I will have to go to the hospital for herbs after all."
+
+    $ ch01_prepared_formula = False
+
+    $ ch01_check_apothecary = True
+
+    hide doctor default onlayer portraits with dissolve
+
+    jump ch01_mother_calls_knock_on_door
 
 label ch01_mother_calls_knock_on_door:
 
@@ -438,25 +525,27 @@ label ch01_mother_calls_knock_on_door:
 
     "He hears Mother's weak voice calling from her room."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "I should check on her."
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     # audio *Knock... Knock...* 
 
     "*Knock... Knock...*" 
 
+    "A noise comes from the front door."
+
     $ ch01_knock_knock = True
     
     if not ch01_met_herb_in_door:
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
-        doctor "Someone is at the front door."
+        doctor "Someone is at the door?"
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
     else: 
 
@@ -476,7 +565,7 @@ label ch01_mother_calls_knock_on_door:
 
             jump ch01_answer_mothers_call
 
-label ch01_keep_cat_in_lab_mother_calls :
+label ch01_keep_cat_in_lab_mother_calls:
 
     show doctor default at left onlayer portraits
 

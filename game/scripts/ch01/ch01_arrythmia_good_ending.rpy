@@ -2,51 +2,41 @@ label ch01_arrythmia_good_ending :
 
     "He glances back toward Mother's room."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "She called for me..." 
 
-    hide doctor default onlayer portraits
-
     if not met_herbalist:
-
-        show doctor default at left onlayer portraits
 
         doctor "But if Kazuki really has herbs the hospital doesn't..."
 
         doctor "They could help me develop a better treatment."
 
-        hide doctor default onlayer portraits
-
     else:
-
-        show doctor default at left onlayer portraits
 
         doctor "Kazuki said he has herbs that might help."
 
-        hide doctor default onlayer portraits
-
     if herbalist_visited:
-
-        show doctor default at left onlayer portraits
-
-        doctor "Kazuki has herbs that could help me develop a better formula."
-
-        hide doctor default onlayer portraits
-
-    show doctor default at left onlayer portraits
+        
+        doctor "From the last time I visited..." 
+        
+        doctor "He might even have more herbs this time."
+        
+        doctor "Maybe I could develop a better formula..."
 
     doctor "\"Alright.\""
 
     doctor "\"I'll come with you.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
 
     "The neighboring village is about a thirty-minute walk away." 
 
     "As they walk, Kazuki tells Yosuke about the people he has treated over the years." 
 
-    show herbalist default at left onlayer portraits
+    show herbalist default at left onlayer portraits with dissolve
 
     herbalist "\"I've never seen anyone cured.\"" 
 
@@ -54,7 +44,7 @@ label ch01_arrythmia_good_ending :
 
     herbalist "\"It always begins differently...\"" 
 
-    herbalist "\"Eventually, their muscles grow too weak to support them.\"" 
+    herbalist "\"Eventually, the muscles grow too weak to offer any support.\"" 
 
     herbalist "\"Many also lose the ability to swallow safely.\""  
 
@@ -62,23 +52,23 @@ label ch01_arrythmia_good_ending :
 
     herbalist "\"Later... they begin losing their balance.\"" 
 
-    hide herbalist default onlayer portraits
+    hide herbalist default onlayer portraits with dissolve
 
     "Yosuke quietly commits every word to memory."
 
     "They eventually arrive at Kazuki's shop."
 
-    scene bg ch01 herbstore
+    scene bg ch01 herbstore with fade
 
     "Shelves packed with dried herbs, roots, and flowers surround them." 
 
     "The air is filled with earthy, unfamiliar scents." 
 
-    show herbalist default at left onlayer portraits
+    show herbalist default at left onlayer portraits with dissolve
 
     herbalist "\"These may interest you.\"" 
 
-    hide herbalist default onlayer portraits
+    hide herbalist default onlayer portraits with dissolve
 
     "Yosuke examines the herbs carefully." 
 
@@ -86,60 +76,61 @@ label ch01_arrythmia_good_ending :
 
     $ junka_root_entry.locked = False
 
-    show doctor default at left onlayer portraits
+    "He reads the label on the bottle."
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"{a=glossary:junka_root_entry}Junka Root{/a}...\""
 
     hide doctor default onlayer portraits
 
-    "Traditionally used to improve blood circulation." 
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"This one is traditionally used to improve blood circulation.\"" 
+
+    hide herbalist default onlayer portraits with dissolve
 
     "Another remedy sits beside it."
 
     $ tsuyomi_cap_entry.locked = False
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"{a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}...\""
 
     hide doctor default onlayer portraits
 
-    "It is traditionally believed to strengthen the body's resilience."
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"Plenty of books praise Tsuyomi Cap for its ability to strengthen the body's resilience.\""
+
+    hide herbalist default onlayer portraits
 
     show doctor default at left onlayer portraits
 
     doctor "I can only afford one."
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     menu:
 
-        "Dong quai":
+        "Junka Root":
 
             show doctor default at left onlayer portraits
 
             doctor "\"I'll take the Junka Root...\""
 
-            hide doctor default onlayer portraits
-
-        "Ganoderma lucidum":
+        "Tsuyomi Cap":
 
             show doctor default at left onlayer portraits
 
             doctor "\"I'll take the Tsuyomi Cap...\""
 
-            hide doctor default onlayer portraits
 
+    #why is this one here? if he comes only to get those herbs to make the same remedy the vat broke then we shouldn't have a choice menu for other herbs
     if ch01_cat_broke_formula:
 
-        show doctor default at left onlayer portraits
-
         doctor "\"I would also like some {a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:hogo_root_entry}Hogo Root{/a}.\""
-
-        hide doctor default onlayer portraits
-
-
-    show doctor default at left onlayer portraits
 
     doctor "\"Thank you, Kazuki. Until we meet again.\""
 
@@ -149,23 +140,25 @@ label ch01_arrythmia_good_ending :
 
     herbalist "\"I hope you can help your mother, Yosuke. Be careful on your way home.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist default onlayer portraits with dissolve
 
     $ took_herbs = True
 
-    scene bg ch01 lab with fade
+    scene black with fade
     
-    "Yosuke finally returns home."
+    "Yosuke finally returns home and heads to his lab."
+
+    scene bg ch01 lab with fade
 
     "The house is quiet."
 
     "He sets the herbs down."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother?\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "..."
 
@@ -173,6 +166,7 @@ label ch01_arrythmia_good_ending :
 
     "He hurries toward her room."  
 
+    #this is not always true because if he gets there after the cat breaks the formula then his mother won't have any way to get the vial.
     scene bg ch01 mother with fade
 
     "She's lying in bed." 
@@ -325,11 +319,11 @@ label ch01_arrythmia_good_ending :
 
         $ wake_entry.locked = False
 
-        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
+        "He will have to arrange the {a=glossary:wake_entry}otsuya{/a}."
 
     $ ch01_check_formula = True
 
-    call ch01_pass_to_chapter_2
+    call ch01_pass_to_chapter_2 from _call_ch01_pass_to_chapter_2
 
     if ch01_jump_to_chapter_2 :
 

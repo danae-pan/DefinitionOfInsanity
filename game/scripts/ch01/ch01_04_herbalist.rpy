@@ -1,29 +1,32 @@
 label ch01_meet_herbalist_on_door:
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "I should answer the door first."
 
     doctor "It won't take long."
 
-    hide doctor default onlayer portraits
-
     if not met_herbalist:
-
-        show doctor default at left onlayer portraits
 
         doctor "It's probably one of the neighbors checking on Mother."
 
-        hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
 
     "He opens the door." 
 
     if not met_herbalist:
 
+        scene bg game_main with fade
+
         "A man wearing a green kimono smiles at him." 
     
     else:
-        show doctor default at left onlayer portraits
+
+        scene bg game_main with fade
+
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "Its the herbalist."
 
@@ -31,23 +34,23 @@ label ch01_meet_herbalist_on_door:
 
         doctor "I have to be careful talking to him."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
         
     "The scent of dried leaves and flowers fills the air." 
 
-    show herbalist default at left onlayer portraits
+    show herbalist default at left onlayer portraits with dissolve
 
     herbalist "\"Goodmorning! You must be Dr. Yosuke.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist default onlayer portraits 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits 
 
     doctor "\"Goodmorning…\""
 
     doctor "\"Excuse me sir, who are you?\"" 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits 
 
     show herbalist default at left onlayer portraits
 
@@ -71,23 +74,21 @@ label ch01_meet_herbalist_on_door:
 
 label ch01_go_to_hospital:
 
-    "He looks over the herbs remaining in his laboratory."
+    $ ch01_went_to_hospital = True
+    
+    scene bg game_main with fade
 
-    show doctor default at left onlayer portraits
-
-    doctor "My supplies are not enough."
-
-    doctor "If I'm going to make the formula again, I'll need to restock." 
-
-    doctor "Mother is resting." 
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "The hospital is only ten minutes away." 
 
     doctor "If I leave now, I should be back before she needs me." 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He grabs his bag and heads for the hospital."  
+
+    scene bg ch01 hospital with fade
 
     "The halls are unusually quiet." 
 
@@ -97,7 +98,11 @@ label ch01_go_to_hospital:
 
     "He scans the shelves." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
+
+    $ hogo_root_entry.locked = False
+
+    $ nagomi_root_entry.locked = False
 
     doctor "\"{a=glossary:nagomi_root_entry}Nagomi Root{/a}...\"" 
 
@@ -107,13 +112,34 @@ label ch01_go_to_hospital:
 
     doctor "\"Good.\"" 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He gathers the herbs he needs and leaves the storage room."  
 
-    "As he steps into the hallway, he notices an elderly man sitting quietly on a wooden bench." 
+    #why we dont have a flag for the herbalist here?
+    #kimono to be added to the glossary
 
-    "The man smiles as Yosuke approaches."
+    if not ch01_met_herb_in_door:
+
+        "As he steps into the hallway, he notices an man wearing a kimono sitting quietly on a wooden bench." 
+
+        "The man smiles as Yosuke approaches."
+
+    else:
+
+        "As he steps into the hallway, he notices Kazumi sitting quietly on a wooden bench."
+
+        "He smiles as Yosuke approaches."
+
+        show doctor default at left onlayer portraits with dissolve
+
+        doctor "That's the Herbalist I met the other day."
+
+        doctor "He is not aware of that."
+
+        doctor "I should be careful to act like I haven't seen him before."
+
+        hide doctor default at left onlayer portraits
 
     show herbalist default at left onlayer portraits
 
@@ -131,7 +157,7 @@ label ch01_go_to_hospital:
 
     show herbalist default at left onlayer portraits
 
-    herbalist "\"Not yet.\"" 
+    herbalist "\"No we haven't.\"" 
 
     herbalist "\"My name is Kazuki.\""
 
@@ -143,15 +169,17 @@ label ch01_go_to_hospital:
 
     doctor "\"It's a pleasure to meet you.\"" 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "Unlike Yosuke's medical training, the herbalist's knowledge comes from generations of experience."
 
     "It is practical wisdom, passed down from one healer to the next."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "I'd like to hear more." 
+    doctor "I'd like to stay and talk to him more." 
+
+    doctor "His wisdom and kmowledge might help me to develop a better formula."
 
     doctor "But Mother is waiting for me at home." 
 
@@ -171,13 +199,35 @@ label ch01_go_to_hospital:
 
         "Return home and make the formula":
 
+            show doctor default at left onlayer portraits with dissolve
+
+            doctor "\"I am sorry Kazuki, I am in a hurry.\""
+
+            doctor "\"I will come by your store soon.\""
+
+            hide doctor default onlayer portraits
+
+            show herbalist default at left onlayer portraits
+
+            herbalist "\"Will see you soon then.\""
+
+            herbalist "\"Goodbye.\""
+
+            hide herbalist default onlayer portraits with dissolve
+
+            scene black with fade 
+
+            "He quickly returns home worried about his mother."
+
             jump ch01_answer_mothers_call
 
 label ch01_herbalists_invitation:
 
     show herbalist default at left onlayer portraits
+
+    $ mrs_Sato_entry.locked = False
     
-    herbalist "\"I was making a delivery to Mrs. Sato.\""
+    herbalist "\"I was making a delivery to {a=glossary:mrs_Sato_entry}Mrs. Sato{/a}.\""
 
     herbalist "\"She mentioned your mother's condition.\"" 
 
@@ -211,13 +261,23 @@ label ch01_herbalists_invitation:
 
     show doctor default at left onlayer portraits
 
-    doctor "\"What’s very nice of you. Yes i will be interested to see what you have. Do you have them with you?\""
+    doctor "\"That’s very nice of you.\""
+
+    doctor "\"I will be interested to see what you have.\""
+    
+    doctor "\"Do you have them with you?\""
 
     hide doctor default onlayer portraits
 
     show herbalist default at left onlayer portraits
 
-    herbalist "\"Unfortunatelly i dont carry these kinds of herbs with me but you can come with me in my shop. im heading there now. You will be back in an hour\""
+    herbalist "\"Unfortunatelly I don't carry those kinds of herbs with me but you can visit my store.\""
+    
+    herbalist "\"I'm heading there now.\""
+    
+    herbalist "\"You are welcome to join me.\""
+
+    herbalist "\"It shouldn't take more than an hour to get there and back.\""
 
     hide herbalist default onlayer portraits
 

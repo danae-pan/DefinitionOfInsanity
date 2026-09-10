@@ -247,7 +247,7 @@ label ch01_runs_late_at_hospital_comma_ending:
 
         $ ch01_knows_coma = True
 
-    call ch01_pass_to_chapter_2
+    call ch01_pass_to_chapter_2 from _call_ch01_pass_to_chapter_2_4
 
     if ch01_jump_to_chapter_2 :
 

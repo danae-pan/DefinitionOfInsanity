@@ -70,10 +70,10 @@ init python:
 
     wake_entry = EncEntry(
         parent=glossary,
-        name="Wake",
+        name="Otsuya",
         subject="Traditions",
         text=enc_utils.text_block("""\
-            An overnight vigil held before a funeral. In 1950s Japan, wakes
+            An overnight wake held before a funeral. In 1950s Japan, wakes
             were usually held in the family home, where relatives, friends,
             and neighbors gathered to pay their respects and support the
             grieving family.
@@ -106,9 +106,9 @@ init python:
         subject="Medicine",
         text=enc_utils.text_block("""\
             A combination of medicinal herbs prepared according to the
-            principles of Kampō medicine.
+            principles of Kampo medicine.
         """),
-        locked=True
+        locked=False
     )
 
 
@@ -321,6 +321,34 @@ init python:
             of a particular condition or circumstance. During the real
             Minamata disease outbreak, many patients and their families faced
             discrimination because others feared the illness was contagious.
+        """),
+        locked=True
+    )
+
+    # --------------------------------------------------
+    # Miscellaneous
+    # --------------------------------------------------
+
+    ajisai_entry = EncEntry(
+        parent=glossary,
+        name="Ajisai",
+        subject="Miscellaneous",
+        text=enc_utils.text_block("""\
+            Ajisai is the Japanese name for hydrangea, a flowering plant
+            commonly seen in Japan. It is known for its large clusters of
+            flowers, which can appear in shades of blue, purple, pink, or white.
+        """),
+        locked=True
+    )
+
+    mrs_Sato_entry = EncEntry(
+        parent=glossary,
+        name="Mrs. Sato",
+        subject="Miscellaneous",
+        text=enc_utils.text_block("""\
+            Mrs. Sato lives across from the Doctor's house and is a longtime friend of his mother. 
+            She has been aware of her illness since the early stages and was one of the few villagers 
+            who continued to support and help her despite the social stigma and fear surrounding her condition.
         """),
         locked=True
     )

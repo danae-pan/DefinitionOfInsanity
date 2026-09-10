@@ -38,3 +38,4 @@ default ch01_prepared_formula = False
 default ch01_mother_called = False
 default ch01_ansered_mothers_call = False
 default ch01_knock_knock = False
+default ch01_check_apothecary = False

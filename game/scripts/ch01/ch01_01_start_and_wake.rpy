@@ -11,7 +11,7 @@ label ch01_new_loop:
 
     $ ch01_loop_count += 1
 
-    call ch01_reset_attempt_state
+    call ch01_reset_attempt_state from _call_ch01_reset_attempt_state
 
     jump ch01_start
 
@@ -39,21 +39,27 @@ label ch01_wake_up:
 
     if ch01_loop_count == 0:
 
-        call ch01_first_wakeup
+        call ch01_first_wakeup from _call_ch01_first_wakeup
         
     else:
 
-        call ch01_loop_wakeup
+        call ch01_loop_wakeup from _call_ch01_loop_wakeup
         
     menu:
 
         "Make breakfast":
+
+            scene black with fade
 
             "He decides to prepare breakfast."
             
             jump ch01_make_breakfast
 
         "Check on your mother":
+
+            scene black with fade
+
+            "He heads to his Mother's room."
             
             jump ch01_check_mother
 
@@ -61,47 +67,41 @@ label ch01_first_wakeup:
 
     "A new day begins... and Dr Yosuke wakes up."
 
-    show doctor default at left onlayer portraits
-
-    doctor "Once again reality hits me."
-
-    hide doctor default onlayer portraits
+    "Once agan, reallity hits him."
 
     "His mother is suffering from a mysterious illness, one for which medicine has yet to discover a cure."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "I came back to help her survive, and the only way I can do that is by finding the cure myself."
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "Years of study and countless experiments have brought him closer to several possible treatments."
 
-    $ formula_entry.locked = False
-
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
     
     doctor "One of these {a=glossary:formula_entry}formulas{/a} has to work."
 
-    doctor "I just have to keep testing."
+    doctor "\"I just have to keep testing.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "A sharp pain twists his stomach."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "I probably didn't eat yesterday..."
+    doctor "\"I probably didn't eat yesterday...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "The days have begun to blur together. Endless hours spent moving between the laboratory and his mother's bedside have made him lose all sense of time."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "I should see if Mother is awake."
+    doctor "\"I should see if Mother is awake.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     return
 
@@ -119,68 +119,85 @@ label ch01_loop_wakeup:
 
     else: 
 
-        "He wakes in confusion."
+        "He wakes up in confusion."
 
         "Fragments of memories rush through his mind."
     
-    "Then everything comes back to him."
+    "Everything comes back to him."
 
-    call ch01_remember_previous_deaths
-
-    show doctor default at left onlayer portraits
+    call ch01_remember_previous_deaths from _call_ch01_remember_previous_deaths
 
     doctor "There's no time to dwell on it."
 
     doctor "I have too much to do."
 
-    doctor "She is in the room… I could go see her.. "
+    doctor "\"She is in the room… I could go see her.. \""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "A dull pain twists his stomach."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "I probably didn't eat yesterday."
+    doctor "\"I probably didn't eat yesterday.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     return
 
 label ch01_remember_previous_deaths:
 
-    if ch01_wake_happened:
+    if ch01_wake_happened and ch01_loop_count == 1:
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
-        doctor "The otsuya… The neighbors..."
+        $ wake_entry.locked = False
 
-        hide doctor default onlayer portraits
+        doctor "\"The {a=glossary:wake_entry}otsuya{/a}… The neighbors...\""
+
+    if knows_dysphagia and ch01_loop_count >1 and not ch01_brain_hemorrhage_happened and not ch01_knows_arrhythmia and not ch01_knows_coma:
+
+        show doctor default at left onlayer portraits with dissolve
+
+        $ dysphagia_entry.locked = False
+
+        doctor "\"The {a=glossary:dysphagia_entry}dysphagia{/a}… The bread...\""
         
     if ch01_brain_hemorrhage_happened:
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with disolve
 
         doctor "The broken glass in the floor... Mother fell off her bed..."
-
-        hide doctor default onlayer portraits
     
     if ch01_knows_arrhythmia:
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         $ nagomi_root_entry.locked = False
 
-        doctor "I gave her the {a=glossary:nagomi_root_entry}Nagomi Root{/a}... It caused her {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
+        $ arrhythmia_entry.locked = False
 
-        hide doctor default onlayer portraits
+        doctor "I gave her the {a=glossary:nagomi_root_entry}Nagomi Root{/a}... It caused her {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
     
     if ch01_knows_coma :
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "I didn't gave her the formula... She died from coma..."
 
-        hide doctor default onlayer portraits
+    if (ch01_knows_arrhythmia
+        + ch01_knows_coma
+        + ch01_brain_hemorrhage_happened
+        + knows_dysphagia >= 2):
+
+        doctor "What am I supposed to do now?"
+
+        doctor "\"How can I save her?\""
+
+        hide doctor default onlayer portraits with dissolve
+
+        "He let's out a sigh worrying whether he will be able to save her before he runs out of time."
+
+        show doctor default at left onlayer portraits with dissolve
 
     return
