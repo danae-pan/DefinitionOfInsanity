@@ -60,6 +60,10 @@ label ch01_answer_mothers_call:
 
         doctor "It's ready. It is waiting in the laboratory." 
 
+        doctor "\"I will be back in a minute Mother.\""
+
+        doctor "\"Just wait for me.\""
+
         hide doctor default onlayer portraits with dissolve
 
         scene bg ch01 lab with fade
@@ -85,7 +89,10 @@ label ch01_answer_mothers_call:
 
             jump ch01_go_to_hospital
 
-        if ch01_check_apothecary and ch01_went_to_hospital:
+        #TODO: See if removing the condition flag ch01_check_apothecary breaks anything
+        #OKEY
+
+        if ch01_went_to_hospital:
 
             doctor "I have the ingredients from the hospital now.."
 
@@ -180,11 +187,11 @@ label ch01_answer_mothers_call:
 
     if ch01_check_formula :
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "Last time I gave it to her she died..."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
     
     menu:
 
@@ -205,19 +212,15 @@ label ch01_check_mother :
 
         "He enters her room."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "\"Mother…?\"" 
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "She's still asleep. She looks exhausted."
 
-        show doctor default at left onlayer portraits
-
-        doctor "I should leave the soup on the bedside table and open the windows. The room needs some fresh air." 
-
-        hide doctor default onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         mother "\"Good morning…\""
 
@@ -225,13 +228,11 @@ label ch01_check_mother :
         
         "This illness is slowly stealing her strength."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "\"Good morning, Mother\"" 
 
         doctor "\"How are you feeling today?\""
-
-        hide doctor default onlayer portraits
 
         mother "\"Better…\""
         
@@ -239,7 +240,7 @@ label ch01_check_mother :
         
         "He gently takes her hand in his and smile back."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "\"Let me run my tests first.\""
 
@@ -251,33 +252,32 @@ label ch01_check_mother :
 
         doctor "But perhaps I should make us some breakfast first."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
     elif ch01_loop_count == 1 :
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "I should go visit her now…"
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         scene bg ch01 mother with fade
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "Wait… This looks strange…"
 
-        hide doctor default onlayer portraits
 
-        if ch01_wake_happened :
+        if ch01_wake_happened:
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
             
             doctor "Why is she in these clothes?"
 
-            doctor "I dressed her for the waek yesterday… I'm sure of it."
+            doctor "I dressed her for the wake yesterday… I'm sure of it."
 
-            hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
         
         "He approaches her bedside and touches her hand."
 
@@ -418,7 +418,7 @@ label ch01_check_mother :
 
             jump ch01_make_breakfast
 
-        "Go to your lab":
+        "Go to your laboratory":
 
             show doctor default at left onlayer portraits with dissolve
 

@@ -1,10 +1,10 @@
 label ch01_brain_hemorrahage_ending:
 
-    "He hesitates after hearing Kazuki's offer." 
+    "He hesitates after hearing Mr. Kazuki's offer." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "The herbs in Kazuki's shop could be exactly what I need."
+    doctor "The herbs in Mr. Kazuki's shop could be exactly what I need."
 
     doctor "Ingredients the hospital cannot provide..."
 
@@ -14,49 +14,89 @@ label ch01_brain_hemorrahage_ending:
 
     doctor "I can't ignore her."
 
-    doctor "\"Thank you, Kazuki.\""
+    #for 3, in game this condition works as expected
 
-    doctor "\"I'll visit your shop another time.\""
+    if not ch01_went_to_hospital:
 
-    hide doctor default onlayer portraits
+        doctor "\"Thank you, Mr. Kazuki.\""
 
-    "He quickly returns inside."
+        doctor "\"I'll visit your shop another time.\""
 
-    "He opens the door."
+        hide doctor default onlayer portraits
 
-    show doctor default at left onlayer portraits
+        show herbalist default at left onlayer portraits
+
+        herbaist "\"Alrigh then.\""
+
+        herbalist "\"I hope I'll see you soon Mr. Yosuke.\""
+
+        herbalist "\"Take care.\""
+
+        hide herbalist default onlayer portraits
+
+        show doctor default at left onlayer portraits
+
+        doctor "\"Goodbye Mr. Kazuki.\""
+
+        hide doctor default onlayer portraits with dissolve
+
+        "Mr. Kazuki turns around and walks away."
+
+        "The Doctor wonders if he made the right choice..."
+
+
+    else:
+
+        hide doctor default onlayer portraits with dissolve
+
+        scene black with fade
+
+        "He quickly returns home worried about his Mother."
+
+        "He opens the door."
+
+        scene bg game_main with fade
+
+        show doctor default at left onlayer portraits with dissolve
+    
 
     doctor "\"Mother?\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "..." 
 
     "There is no answer." 
 
-    if ch01_brain_hemorrhage_happened:
+    "He quickly heads to his Mother's room."
 
-        show doctor default at left onlayer portraits
+    #No need for this, we already check this condition bellow.
 
-        doctor "\"Oh no...\""
+    # if ch01_brain_hemorrhage_happened:
 
-        doctor "\"Is this happening again?\""
+    #     show doctor default at left onlayer portraits with dissolve
 
-        hide doctor default onlayer portraits
+    #     doctor "\"Oh no...\""
 
-    "Her breathing is uneven."
+    #     doctor "\"Is this happening again?\""
+
+    #     hide doctor default onlayer portraits with dissolve
+
+    scene bg ch01 mother with fade
 
     "Her face is pale."
 
     "She looks exhausted."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He immediately checks her condition."
+
+    "Her breathing is uneven."
 
     if not ch01_brain_hemorrhage_happened:
 
@@ -70,27 +110,29 @@ label ch01_brain_hemorrahage_ending:
 
         "..."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
-        doctor "She needed water."
+        doctor "She needed water and tried to get it herself..."
 
-        doctor "She tried to get it herself."
+        doctor "While I was speaking with Mr. Kazuki..."
 
-        doctor "While I was speaking with Kazuki..."
-
-        doctor "She tried to stand."
+        doctor "\"Oh, Mother...\""
 
         doctor "Her weakened body couldn't support her."
 
         doctor "She fell."
 
-        doctor "Unable to call for help, she forced herself back into bed."
+        doctor "She wanted help but I was away..."
 
-        hide doctor default onlayer portraits
+        doctor "\"This is all my fault...\""
+
+        doctor "\"I'm so sorry Mother.\""
+
+        hide doctor default onlayer portraits with dissolve
 
     else:
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "It's the same scene as before..."
 
@@ -98,7 +140,7 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "The empty bottle..."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
     "He places his hands on her."
 
@@ -106,7 +148,7 @@ label ch01_brain_hemorrahage_ending:
 
     "He checks every possible sign, searching for any chance to help her."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "But deep down..."
 
@@ -118,15 +160,13 @@ label ch01_brain_hemorrahage_ending:
 
     doctor "A {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}."
 
-    hide doctor default onlayer portraits
+    # if ch01_brain_hemorrhage_happened:
 
-    if ch01_brain_hemorrhage_happened:
+    #     #TODO: check if we need a flag here
 
-        show doctor default at left onlayer portraits
+    #     doctor "\"Exactly like last time...\""
 
-        doctor "\"Exactly like last time...\""
-
-        hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "The hours pass slowly."
 
@@ -140,21 +180,41 @@ label ch01_brain_hemorrahage_ending:
 
     "He holds Mother's hand."
 
-    if not ch01_met_herb_in_door:
+    #TODO: check if this will go corretly (OKEY)
 
-        show doctor default at left onlayer portraits
+    #TODO: check whether this block of code is needed
 
-        doctor "I came back."
+    # if not ch01_met_herb_in_door and not ch01_went_to_hospital:
 
-        doctor "I answered her call."
+    #     show doctor default at left onlayer portraits
 
-        doctor "I was here."
+    #     doctor "I came back."
 
-        doctor "And yet..."
+    #     doctor "I answered her call."
 
-        doctor "\"I still couldn't save you.\""
+    #     doctor "I was here."
 
-        hide doctor default onlayer portraits
+    #     doctor "And yet..."
+
+    #     doctor "\"I still couldn't save you.\""
+
+    if ch01_went_to_hospital and ch01_return_from_hospital:
+
+       show doctor default at left onlayer portraits with dissolve
+
+       doctor "I was too late.."
+
+       doctor "I should've just taken the herbs and gone back to her."
+
+       if ch01_loop_count > 0:
+
+        doctor "\"I did it again...\""
+
+        doctor "It's all my fault..."
+       
+
+
+
 
     if ch01_loop_count == 0:
     
@@ -182,27 +242,23 @@ label ch01_brain_hemorrahage_ending:
 
     else :
 
-        show doctor default at left onlayer portraits
+        #show doctor default at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 
         doctor "I won't repeat this."
 
-        doctor "I will save her."
+        doctor "\"I will save her.\""
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
-        scene black
+        scene black with fade
 
-        "He closes his eyes."
+        "He closes his eyes thinking that tomorrow will be different."
 
-        show doctor default at left onlayer portraits
+        "That he will do better."
 
-        doctor "\"Tomorrow...\""
-
-        doctor "\"I'll do better.\""
-
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
     if not ch01_brain_hemorrhage_happened:
 

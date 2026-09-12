@@ -352,3 +352,16 @@ init python:
         """),
         locked=True
     )
+
+    kimono_entry = EncEntry(
+        parent=glossary,
+        name="Kimono",
+        subject="Miscellaneous",
+        text=enc_utils.text_block("""\
+            A traditional Japanese garment with long sleeves and a wrap-around
+            design, usually secured with a wide belt called an obi. Kimono are
+            worn on various occasions, with their style and formality depending
+            on the event and the person wearing them.
+        """),
+        locked=True
+    )

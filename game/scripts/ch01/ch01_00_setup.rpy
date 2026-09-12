@@ -26,6 +26,7 @@ default ch01_check_formula = False # Future chapter flags
 default ch01_jump_to_chapter_2 = False
 
 # choices/actions from the previous attempt that will reset in every ending
+#TODO: check whether those conditions need reset
 default ch01_breakfast_made = False
 default ch01_bread_added = False
 default ch01_mother_checked = False

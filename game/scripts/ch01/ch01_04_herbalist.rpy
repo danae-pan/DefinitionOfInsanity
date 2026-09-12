@@ -10,6 +10,10 @@ label ch01_meet_herbalist_on_door:
 
         doctor "It's probably one of the neighbors checking on Mother."
 
+    elif ch01_met_herb_in_door: 
+
+        doctor "It might be Mr. Kazuki"
+
     hide doctor default onlayer portraits with dissolve
 
     scene black with fade
@@ -20,7 +24,9 @@ label ch01_meet_herbalist_on_door:
 
         scene bg game_main with fade
 
-        "A man wearing a green kimono smiles at him." 
+        $kimono_entry.locked = False
+
+        "A man wearing a green {a=glossary:kimono_entry}kimono{/a} smiles at him." 
     
     else:
 
@@ -28,9 +34,9 @@ label ch01_meet_herbalist_on_door:
 
         show doctor default at left onlayer portraits with dissolve
 
-        doctor "Its the herbalist."
+        doctor "Its Mr. Kazuki."
 
-        doctor "He doesnt know we have met before."
+        doctor "He doesn't know we have met before."
 
         doctor "I have to be careful talking to him."
 
@@ -56,7 +62,7 @@ label ch01_meet_herbalist_on_door:
 
     herbalist "\"My name is Kazuki.\"" 
 
-    herbalist "\"I'm the herbalist from the next village. My shop is the first one you see in the central square.\""
+    herbalist "\"I'm the Herbalist from the next village. My shop is the first one you see in the central square.\""
 
     hide herbalist default onlayer portraits
 
@@ -65,8 +71,6 @@ label ch01_meet_herbalist_on_door:
     doctor "\"Oh nice to meet you Mr. Kazuki. What brings you to our home?\""
 
     hide doctor default onlayer portraits
-
-    $ ch01_met_herb_in_door = True
 
     $ met_herbalist = True
     
@@ -106,7 +110,9 @@ label ch01_go_to_hospital:
 
     doctor "\"{a=glossary:nagomi_root_entry}Nagomi Root{/a}...\"" 
 
-    doctor "\"Still enough left.\"" 
+    doctor "I still have enough left back home." 
+
+    doctor "\"I should get some just in case.\""
 
     doctor "\"{a=glossary:hogo_root_entry}Hogo Root{/a}...\""
 
@@ -116,14 +122,19 @@ label ch01_go_to_hospital:
 
     "He gathers the herbs he needs and leaves the storage room."  
 
-    #why we dont have a flag for the herbalist here?
-    #kimono to be added to the glossary
+    #TODO: add a flag for the herbalist
+    #TODO: add kimono t the glossary
 
-    if not ch01_met_herb_in_door:
+    if not met_herbalist:
 
-        "As he steps into the hallway, he notices an man wearing a kimono sitting quietly on a wooden bench." 
+        $ kimono_entry.locked = False
+
+        "As he steps into the hallway, he notices an man wearing a {a=glossary:kimono_entry}kimono{/a} sitting quietly on a wooden bench." 
 
         "The man smiles as Yosuke approaches."
+
+        show herbalist default at left onlayer portraits with dissolve
+
 
     else:
 
@@ -141,7 +152,8 @@ label ch01_go_to_hospital:
 
         hide doctor default at left onlayer portraits
 
-    show herbalist default at left onlayer portraits
+        show herbalist default at left onlayer portraits
+
 
     herbalist "\"You must be Dr. Yosuke.\"" 
 
@@ -161,7 +173,7 @@ label ch01_go_to_hospital:
 
     herbalist "\"My name is Kazuki.\""
 
-    herbalist "\"I'm the herbalist from the neighboring village. My shop is the first one you see in the central square.\"" 
+    herbalist "\"I'm the Herbalist from the neighboring village. My shop is the first one you see in the central square.\"" 
 
     hide herbalist default onlayer portraits
 
@@ -171,7 +183,7 @@ label ch01_go_to_hospital:
 
     hide doctor default onlayer portraits with dissolve
 
-    "Unlike Yosuke's medical training, the herbalist's knowledge comes from generations of experience."
+    "Unlike Yosuke's medical training, Mr. Kazuki's knowledge comes from generations of experience."
 
     "It is practical wisdom, passed down from one healer to the next."
 
@@ -195,13 +207,15 @@ label ch01_go_to_hospital:
 
         "Stay and chat":
 
+            #TODO: Fix the routes here, there are two seperate endings
+
             jump ch01_runs_late_at_hospital_comma_ending
 
         "Return home and make the formula":
 
             show doctor default at left onlayer portraits with dissolve
 
-            doctor "\"I am sorry Kazuki, I am in a hurry.\""
+            doctor "\"I am sorry Mr. Kazuki, I am in a hurry.\""
 
             doctor "\"I will come by your store soon.\""
 
@@ -217,7 +231,7 @@ label ch01_go_to_hospital:
 
             scene black with fade 
 
-            "He quickly returns home worried about his mother."
+            "He quickly returns home worried about his Mother."
 
             jump ch01_answer_mothers_call
 
@@ -281,17 +295,43 @@ label ch01_herbalists_invitation:
 
     hide herbalist default onlayer portraits
 
-    if ch01_brain_hemorrhage_happened:
+    #TODO: check whether thss condition plays correctly wiyh the flag being moved
 
-        show doctor default at left onlayer portraits
+    #This loop is when this route continues to "Return to your mother" choice
 
-        doctor "Last time I didn't go with the herbalist my mother died from {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a} and there was nothing i could do… Maybe i should go with him."
+    #for this the condition/flag should not be reset after each chapter 1 ending
 
-        hide doctor default onlayer portraits
+    if ch01_brain_hemorrhage_happened and ch01_met_herb_in_door:
+
+        show doctor default at left onlayer portraits with dissolve
+
+        $ brain_hemorrhage_entry.locked = False
+
+        doctor "Last time I didn't go with the herbalist my mother died from {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}..."
+        
+        doctor "There was nothing I could do…"
+        
+        doctor "Maybe I should go with him."
+
+        hide doctor default onlayer portraits with dissolve
+
+    $ ch01_met_herb_in_door = True
 
     menu: 
-        "Go with the herbalist":
+        "Go with the Herbalist":
+
+            "He glances back toward Mother's room."
+
+            show doctor default at left onlayer portraits with dissolve
+
+            doctor "She called for me..." 
+
+            doctor "But..."
+
+            hide doctor default onlayer portraits with dissolve
+
             jump ch01_arrythmia_good_ending
 
-        "Return to your mother":
+        "Return to your Mother":
+
             jump ch01_brain_hemorrahage_ending

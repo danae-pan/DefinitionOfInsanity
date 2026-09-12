@@ -115,7 +115,7 @@ label ch01_make_breakfast :
 
             doctor "Better leave the bread out."
 
-            if knows_dysphagia:
+            if knows_dysphagia and ch01_loop_count > 1:
 
                 doctor "I can't risk it. I won't make the same mistake again."
 
@@ -125,7 +125,7 @@ label ch01_make_breakfast :
 
 label ch01_eat_breakfast:
 
-    scene black 
+    scene black with fade
 
     "He heads to his Mother's room with the breakfast tray in hand."
 
@@ -283,19 +283,17 @@ label ch01_eat_breakfast:
 
         if not ch01_mother_checked:
 
-            hide doctor default onlayer portraits
+            hide doctor default onlayer portraits with dissolve
 
             "He rushes to her bedside."
 
             "She's alive."
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             #doctor expression: skeptical
 
             doctor "Again..."
-
-            hide doctor default onlayer portraits
 
         show doctor default at left onlayer portraits with dissolve
 

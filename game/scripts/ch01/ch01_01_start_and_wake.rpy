@@ -23,11 +23,16 @@ label ch01_reset_attempt_state:
     $ ch01_mother_checked = False
     $ ch01_cat_in_lab = False
     $ ch01_formula_finished = False
-    $ ch01_met_herb_in_door = False
-    $ ch01_met_herb_in_hospital = False
+
+    #TODO: check if thosr flags need reset
+    # $ ch01_met_herb_in_door = False
+    # $ ch01_met_herb_in_hospital = False
     $ herbalist_visited = False
     $ ch01_cat_broke_formula = False
     $ ch01_prepared_formula = False
+    $ ch01_went_to_hospital = False
+
+    #$ ch01_return_from_hospital = False
 
     return
 
@@ -165,9 +170,9 @@ label ch01_remember_previous_deaths:
         
     if ch01_brain_hemorrhage_happened:
 
-        show doctor default at left onlayer portraits with disolve
+        show doctor default at left onlayer portraits with dissolve
 
-        doctor "The broken glass in the floor... Mother fell off her bed..."
+        doctor "The broken glass in the floor... Mother's fall..."
     
     if ch01_knows_arrhythmia:
 

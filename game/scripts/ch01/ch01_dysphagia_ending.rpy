@@ -1,7 +1,7 @@
 # Event Your mother chokes during swallowing (dysphagia), she dies (end of fist chapter)
 label ch01_dysphagia_ending:
 
-    show doctor default at left onlayer portraits with dissolve
+    #show doctor default at left onlayer portraits with dissolve
 
     #expression: neutral
 

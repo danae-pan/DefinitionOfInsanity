@@ -1,20 +1,27 @@
 label ch01_arrythmia_good_ending :
 
-    "He glances back toward Mother's room."
+    #TODO: See if I need to keep this block of code with a flag condition
+    #was moved to where the choice was made
+
+    # "He glances back toward Mother's room."
+
+    # show doctor default at left onlayer portraits
+
+    # doctor "She called for me..." 
+
+    # hide doctor default onlayer portraits
 
     show doctor default at left onlayer portraits with dissolve
 
-    doctor "She called for me..." 
-
     if not met_herbalist:
 
-        doctor "But if Kazuki really has herbs the hospital doesn't..."
+        doctor "But if Mr. Kazuki really has herbs the hospital doesn't..."
 
         doctor "They could help me develop a better treatment."
 
     else:
 
-        doctor "Kazuki said he has herbs that might help."
+        doctor "Mr. Kazuki said he has herbs that might help."
 
     if herbalist_visited:
         
@@ -34,29 +41,33 @@ label ch01_arrythmia_good_ending :
 
     "The neighboring village is about a thirty-minute walk away." 
 
-    "As they walk, Kazuki tells Yosuke about the people he has treated over the years." 
+    "As they walk, Mr. Kazuki tells Yosuke about the people he has treated over the years." 
 
-    show herbalist default at left onlayer portraits with dissolve
 
-    herbalist "\"I've never seen anyone cured.\"" 
+    #TODO: ch01_went_to_hospital this flag sjould reset after each ending
+    if not ch01_went_to_hospital:
 
-    herbalist "\"But I've seen this illness many times.\"" 
+        show herbalist default at left onlayer portraits with dissolve
 
-    herbalist "\"It always begins differently...\"" 
+        herbalist "\"I've never seen anyone cured.\"" 
 
-    herbalist "\"Eventually, the muscles grow too weak to offer any support.\"" 
+        herbalist "\"But I've seen this illness many times.\"" 
 
-    herbalist "\"Many also lose the ability to swallow safely.\""  
+        herbalist "\"It always begins differently...\"" 
 
-    herbalist "\"Food and even water can become dangerous.\"" 
+        herbalist "\"Eventually, the muscles grow too weak to offer any support.\"" 
 
-    herbalist "\"Later... they begin losing their balance.\"" 
+        herbalist "\"Many also lose the ability to swallow safely.\""  
 
-    hide herbalist default onlayer portraits with dissolve
+        herbalist "\"Food and even water can become dangerous.\"" 
 
-    "Yosuke quietly commits every word to memory."
+        herbalist "\"Later... they begin losing their balance.\"" 
 
-    "They eventually arrive at Kazuki's shop."
+        hide herbalist default onlayer portraits with dissolve
+
+        "Yosuke quietly commits every word to memory."
+
+    "They eventually arrive at Mr. Kazuki's shop."
 
     scene bg ch01 herbstore with fade
 
@@ -127,26 +138,33 @@ label ch01_arrythmia_good_ending :
             doctor "\"I'll take the Tsuyomi Cap...\""
 
 
-    #why is this one here? if he comes only to get those herbs to make the same remedy the vat broke then we shouldn't have a choice menu for other herbs
-    if ch01_cat_broke_formula:
+    #TODO: Remove those lines of code as this block is not reachable from any route
 
-        doctor "\"I would also like some {a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:hogo_root_entry}Hogo Root{/a}.\""
+    #doctor "\"I would also like some {a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:hogo_root_entry}Hogo Root{/a}.\""
 
-    doctor "\"Thank you, Kazuki. Until we meet again.\""
+    doctor "\"Thank you, Mr. Kazuki. Until we meet again.\""
 
     hide doctor default onlayer portraits
 
     show herbalist default at left onlayer portraits
 
-    herbalist "\"I hope you can help your mother, Yosuke. Be careful on your way home.\""
+    herbalist "\"I hope you can help your mother, Mr. Yosuke.\""
+    
+    herbalist "\"Be careful on your way home.\""
 
     hide herbalist default onlayer portraits with dissolve
 
     $ took_herbs = True
 
     scene black with fade
+
+    if ch01_went_to_hospital:
+
+        return
+
     
-    "Yosuke finally returns home and heads to his lab."
+    
+    "Yosuke finally returns home and heads to his laboratory."
 
     scene bg ch01 lab with fade
 
@@ -166,20 +184,26 @@ label ch01_arrythmia_good_ending :
 
     "He hurries toward her room."  
 
-    #this is not always true because if he gets there after the cat breaks the formula then his mother won't have any way to get the vial.
+    #TODO: to be removed. There is no formula if the cat broke it.
+    #If we reach this state after the hospital visit the ending can only be coma as the hemorrhage ending comes 
+    #after the doctor declines the invitation.
+
     scene bg ch01 mother with fade
 
     "She's lying in bed." 
+
+    # see here
+
 
     "The empty vial rests on the bedside table." 
 
     "His heart sinks." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother...\"" 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "She slowly opens her eyes." 
 
@@ -189,19 +213,21 @@ label ch01_arrythmia_good_ending :
 
     "His hands are already searching for a pulse." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"It's irregular...\"" 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "His eyes dart to the empty vial." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"The formula...\"" 
 
     doctor "\"No...\"" 
+
+    $ nogomi_root_entry.locked = False
 
     doctor "It contained {a=glossary:nagomi_root_entry}Nagomi Root{/a}."
 
@@ -211,25 +237,25 @@ label ch01_arrythmia_good_ending :
 
     doctor "\"Mother, stay with me.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
-    "He desperately searches through his notes."
+    "He desperately tries to recall anything from his notes that might be in use."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "There has to be something..."
 
     doctor "There has to be..."
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "..."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "Nothing."
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "Her heartbeat becomes weaker."
 
@@ -239,11 +265,11 @@ label ch01_arrythmia_good_ending :
 
     "Then it stops." 
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He remain frozen beside her." 
 
@@ -251,13 +277,13 @@ label ch01_arrythmia_good_ending :
 
     $ arrhythmia_entry.locked = False
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "The {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
 
     doctor "\"I did this.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     if ch01_loop_count == 0:
 
@@ -265,19 +291,19 @@ label ch01_arrythmia_good_ending :
 
         "He waits." 
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "\"Maybe...\"" 
 
         doctor "\"Maybe she will open her eyes.\"" 
 
-        hide doctor default onlayer portraits 
+        hide doctor default onlayer portraits with dissolve
 
         "..." 
 
         "But she doesn't." 
 
-        show doctor default at left onlayer portraits          
+        show doctor default at left onlayer portraits with dissolve      
 
         doctor "How could I make such a mistake?" 
 
@@ -295,9 +321,9 @@ label ch01_arrythmia_good_ending :
 
         doctor "I close her eyes gently." 
 
-        doctor "I'm sorry, Mother..." 
+        doctor "\"I'm sorry, Mother...\"" 
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "The house feels different now." 
 
@@ -307,19 +333,53 @@ label ch01_arrythmia_good_ending :
 
         "There are things that need to be done." 
 
-        show doctor default at left onlayer portraits 
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "I have to report her death." 
 
         doctor "I have to prepare her body." 
 
-        doctor "I have to tell someone."
+        doctor "\"I have to tell someone...\""
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         $ wake_entry.locked = False
 
         "He will have to arrange the {a=glossary:wake_entry}otsuya{/a}."
+
+    else:
+
+        scene black with fade
+
+        "He returns to his laboratory."
+
+        scene bg ch01 lab with fade
+
+        "He opens his notes."
+
+        "His hands are shaking as he writes down everything."
+
+        "The mistakes."
+
+        "The symptoms."
+
+        "The things he overlooked."
+
+        show doctor default at left onlayer portraits with dissolve
+
+        doctor "If I get another chance..."
+
+        doctor "I won't repeat this."
+
+        doctor "\"I will save her.\""
+
+        hide doctor default onlayer portraits with dissolve
+
+        scene black with fade
+
+        "He closes his eyes thinking that tomorrow will be different."
+
+        "That he will do better."
 
     $ ch01_check_formula = True
 

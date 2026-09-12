@@ -1,14 +1,16 @@
 label ch01_runs_late_at_hospital_comma_ending:
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "The herbalist may have useful information about the illness and the herbs that could help."
 
     doctor "I should stay and speak with him."
 
-    doctor "\"Please, Kazuki. What have you noticed over the years while treating your patients?\""
+    doctor "\"Mr. Kazuki, my Mother suffers from the same illness as all those patients in the hospital.\""
+    
+    doctor "\"What have you noticed over the years while treating your patients?\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits 
 
     show herbalist default at left onlayer portraits
 
@@ -26,53 +28,112 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     herbalist "\"Later... they begin losing their balance.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist default onlayer portraits with dissolve
 
     "He quietly commits every word to memory."
 
     "They continue talking for a while longer."
 
+    show herbalist default at left onlayer portraits with dissolve
+
+    herbalist "\"If you're looking for a cure.\"" 
+
+    herbalist "\"Unfortunately...\"" 
+
+    herbalist "\"I don't have one.\"" 
+
+    herbalist "\"But I might have something that could make her days a little easier.\""
+
+    herbalist "\"I have a few herbs that physicians rarely bother with.\"" 
+
+    herbalist "\"Some have been passed down through generations.\"" 
+
+    herbalist "\"Perhaps you'll find them useful.\""
+
+    hide herbalist default onlayer portraits
+
+    show doctor default at left onlayer portraits
+
+    doctor "\"That’s very nice of you.\""
+
+    doctor "\"I will be interested to see what you have.\""
+    
+    doctor "\"Do you have them with you?\""
+
+    hide doctor default onlayer portraits
+
+    show herbalist default at left onlayer portraits
+
+    herbalist "\"Unfortunatelly I don't carry those kinds of herbs with me but you can visit my store.\""
+    
+    herbalist "\"I'm heading there now.\""
+    
+    herbalist "\"You are welcome to join me.\""
+
+    hide herbalist default onlayer portraits
+    
     show doctor default at left onlayer portraits
 
     doctor "I've already been gone too long."
 
     doctor "I should return to Mother."
 
-    doctor "\"I'll definitely visit your shop as soon as I can.\""
+    doctor "But maybe those herbs Mr. Kazuki mentions help me develop a better formula..."
 
-    doctor "\"I have to go now. Have a good day, Kazuki.\""
+    hide doctor default onlayer portraits with dissolve
 
-    hide doctor default onlayer portraits
+    menu:
 
-    show herbalist default at left onlayer portraits
+        "Go with the herbalist":
 
-    herbalist "\"I hope I see you again soon, Dr. Yosuke.\""
+            call ch01_arrythmia_good_ending
 
-    herbalist "\"Good day to you as well.\""
+        "Return to your mother":
 
-    hide herbalist default onlayer portraits
+            $ ch01_return_from_hospital = True
+
+            show doctor default at left onlayer portraits
+
+            doctor "\"I'll definitely visit your shop as soon as I can.\""
+
+            doctor "\"I have to go now. Have a good day, Mr. Kazuki.\""
+
+            hide doctor default onlayer portraits
+
+            show herbalist default at left onlayer portraits
+
+            herbalist "\"I hope I see you again soon, Dr. Yosuke.\""
+
+            herbalist "\"Good day to you as well.\""
+
+            hide herbalist default onlayer portraits
+
+            jump ch01_brain_hemorrahage_ending
+
 
     "He quickly heads home."
 
+    scene bg game_main with fade
+
     "As soon as he enters the house, he notices the silence."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "No..."
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
-    "He rushes to Mother's room."
+    "He rushes to his Mother's room."
 
     scene bg ch01 mother with fade
 
     "She lies in bed, completely exhausted."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "I think I'm already too late..."
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He monitors her condition and does everything he can to keep her comfortable."
 
@@ -84,13 +145,13 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     "Then she stops responding."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother?\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
-    "He checks her condition."
+    "He checks her pulse."
 
     "She is still alive, but she does not wake."
 
@@ -100,24 +161,19 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     "He remains beside her, waiting for her to open her eyes." 
 
-    if ch01_loop_count == 0 :
+    show doctor default at left onlayer portraits with dissolve
 
-        show doctor default at left onlayer portraits
+    if ch01_loop_count == 0 :
 
         doctor "Maybe tomorrow she will wake up." 
 
         doctor "\"Maybe...\"" 
 
-        hide doctor default onlayer portraits
-
-    
-    show doctor default at left onlayer portraits
-
     doctor "But deep down, I know."
 
-    doctor "There is nothing more I can do."
+    doctor "There is nothing more I can do." 
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "Hours later, her breathing becomes weaker."
 
@@ -133,11 +189,21 @@ label ch01_runs_late_at_hospital_comma_ending:
 
         hide doctor default onlayer portraits
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "What if the formula could have saved her?"
 
-    hide doctor default onlayer portraits
+    if took_herbs and ch01_went_to_hospital:
+
+        doctor "Or what if the new herbs I got from Kazumi developed a better formula?"
+
+        doctor "\"I lost track of time...\""
+
+        doctor "But still..."
+
+        doctor "I can't help but wonder."
+ 
+    hide doctor default onlayer portraits with dissolve
 
     if ch01_loop_count >= 1 :
 
@@ -153,7 +219,7 @@ label ch01_runs_late_at_hospital_comma_ending:
 
         "There are things that must be done."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "I have to report her death."
 
@@ -161,11 +227,11 @@ label ch01_runs_late_at_hospital_comma_ending:
 
         doctor "I have to tell someone."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         $ wake_entry.locked = False
 
-        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
+        "He will have to arrange the {a=glossary:wake_entry}otsuya{/a}."
 
         $ ch01_wake_happened = True
 

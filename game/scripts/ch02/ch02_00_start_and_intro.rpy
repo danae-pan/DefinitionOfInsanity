@@ -19,6 +19,8 @@ label ch02_intro:
 
     if chapter_1_with_one_try:
 
+        $ wake_entry.locked = False
+
         "He wakes up in a daze. He cannot believe his mother is no more."
 
         doctor "How could I let this be? I don’t deserve to call myself a doctor."
@@ -45,7 +47,15 @@ label ch02_intro:
 
         "His mother might still be alive."
 
-    "He is thinking he should run some tests to check whether everything is okey but maybe he shouldn’t lose time on this and instantly try a different herb and prepare a {a=glossary:wake_entry}wake{/a}."
+    "He is thinking he should run some tests to check whether everything is okey."
+
+    show doctor default at left onlayer portraits with dissolve
+    
+    doctor "Maybe I shouldn’t lose time.."
+
+    doctor "Maybe I should start trying different herb instead."
+
+    hide doctor default onlayer portraits with dissolve
 
     menu :
 
