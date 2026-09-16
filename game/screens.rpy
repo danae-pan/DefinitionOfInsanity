@@ -99,7 +99,17 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+# Auto animation
+
+transform auto_emblem_blink:
+    alpha 1.0
+    linear 1 alpha 0.4
+    linear 1 alpha 1.0
+    repeat
+
 screen say(who, what):
+
+    #key "a" action Preference("auto-forward", "toggle")
 
     window:
         id "window"
@@ -121,6 +131,12 @@ screen say(who, what):
                 text who id "who"
 
         text what id "what"
+
+    if preferences.afm_enable:
+        add "gui/auto_emblem.png":
+            xpos 1540
+            ypos 970
+            at auto_emblem_blink
 
 
     ## If there's a side image, display it above the text. Do not display on the
@@ -1101,6 +1117,9 @@ style slider_vbox:
 screen history():
 
     tag menu
+
+    # J closes History
+    key "open_history" action Return()
 
     ## Avoid predicting this screen, as it can be very large.
     predict False
