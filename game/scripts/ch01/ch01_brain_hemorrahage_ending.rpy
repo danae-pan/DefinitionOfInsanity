@@ -14,8 +14,6 @@ label ch01_brain_hemorrahage_ending:
 
     doctor "I can't ignore her."
 
-    #for 3, in game this condition works as expected
-
     if not ch01_went_to_hospital:
 
         doctor "\"Thank you, Mr. Kazuki.\""
@@ -26,7 +24,7 @@ label ch01_brain_hemorrahage_ending:
 
         show herbalist default at left onlayer portraits
 
-        herbaist "\"Alrigh then.\""
+        herbalist "\"Alrigh then.\""
 
         herbalist "\"I hope I'll see you soon Mr. Yosuke.\""
 
@@ -184,19 +182,21 @@ label ch01_brain_hemorrahage_ending:
 
     #TODO: check whether this block of code is needed
 
-    # if not ch01_met_herb_in_door and not ch01_went_to_hospital:
+    #It is needed for when he goes to answer the door ad then returns to his mother instead of going with the herbalist but it doesn;t work.
 
-    #     show doctor default at left onlayer portraits
+    if ch01_met_herb_in_door:
 
-    #     doctor "I came back."
+        show doctor default at left onlayer portraits
 
-    #     doctor "I answered her call."
+        doctor "I came back."
 
-    #     doctor "I was here."
+        doctor "I answered her call."
 
-    #     doctor "And yet..."
+        doctor "I was here."
 
-    #     doctor "\"I still couldn't save you.\""
+        doctor "And yet..."
+
+        doctor "\"I still couldn't save you.\""
 
     if ch01_went_to_hospital and ch01_return_from_hospital:
 
@@ -217,12 +217,14 @@ label ch01_brain_hemorrahage_ending:
 
 
     if ch01_loop_count == 0:
+
+        hide doctor default onlayer portraits with dissolve
     
         "Eventually, reality begins to settle in."
 
         "There are things that must be done."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "I have to report her death."
 
@@ -230,11 +232,11 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "I have to tell someone."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolveR
 
         $ wake_entry.locked = False
 
-        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
+        "He will have to arrange the {a=glossary:wake_entry}otsuya{/a}."
 
         if not ch01_wake_happened:
 
@@ -242,7 +244,7 @@ label ch01_brain_hemorrahage_ending:
 
     else :
 
-        #show doctor default at left onlayer portraits with dissolve
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 
@@ -263,6 +265,8 @@ label ch01_brain_hemorrahage_ending:
     if not ch01_brain_hemorrhage_happened:
 
         $ ch01_brain_hemorrhage_happened = True
+
+    $ ch01_previous_death = "brain_hemorrhage"
 
     call ch01_pass_to_chapter_2 from _call_ch01_pass_to_chapter_2_2
 

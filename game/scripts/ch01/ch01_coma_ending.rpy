@@ -1,6 +1,10 @@
 label ch01_coma_ending :
 
+    scene black with fade
+
     "He brings the formula into Mother's room. He looks at it in his hands." 
+
+    scene bg ch01 mother with fade
 
     if ch01_check_formula:
 
@@ -106,6 +110,8 @@ label ch01_coma_ending :
 
         doctor "I lost her again..."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "I made the safest choice."
 
     doctor "But one question remains..."
@@ -138,14 +144,12 @@ label ch01_coma_ending :
 
         $ wake_entry.locked = False
 
-        "He will have to arrange a {a=glossary:wake_entry}wake{/a}."
+        "He will have to arrange the {a=glossary:wake_entry}otsuya{/a}."
 
         $ ch01_wake_happened = True
 
-        show doctor default at left onlayer portraits with dissolve
-
     else :
-
+        #TODO: see if this route goes only when he doesn't givve her the formula while not leaving for hospital or herbalist
         if ch01_knows_coma :
 
             doctor "The memory burns into my mind."
@@ -213,6 +217,8 @@ label ch01_coma_ending :
     if not ch01_knows_coma :
 
         $ ch01_knows_coma = True
+
+    $ ch01_previous_death = "coma"
 
     call ch01_pass_to_chapter_2 from _call_ch01_pass_to_chapter_2_3
 

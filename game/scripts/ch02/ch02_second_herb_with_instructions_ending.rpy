@@ -2,7 +2,7 @@ label ch02_second_herb_with_instructions_ending:
 
     "He gently squeezes her hand."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"I know you need to eat mother\""
 
@@ -10,13 +10,13 @@ label ch02_second_herb_with_instructions_ending:
 
     doctor "\"This medicine must not be taken after eating.\""
 
-    hide doctor default onlayer portraits
-
     if ch02_second_herb_without_instructions:
 
-        "Not to mention I already risked it and gave her a meal before.."
+        doctor "Not to mention I already risked it and gave her a meal before.."
 
-        "..and it costed her life."
+        doctor "..and it costed her life."
+
+    hide doctor default onlayer portraits with dissolve
 
     "She closes her eyes."
 
@@ -24,13 +24,13 @@ label ch02_second_herb_with_instructions_ending:
 
     "He carefully wets her lips with a damp cloth."
     
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
     
     doctor "\"Just a little longer.\""
 
     doctor "\"I'll finish the medicine first.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He slowly stands."
 
@@ -38,37 +38,45 @@ label ch02_second_herb_with_instructions_ending:
 
     "His mother looks impossibly frail beneath the blanket."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"...Forgive me.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
 
     "He quietly leaves the room and heads to the labatory."
+
+    scene bg ch01 lab with fade
 
     "He carefully stirs the mixture, watching the herbs release their final colour into the liquid."
 
     "Every few moments he glances toward the staircase."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Almost there..\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He filters the herbs through a fine cloth before pouring the finished medicine into a bottle."
 
     "He seals it immediately."
 
+    scene black with fade
+
     "Without wasting another second, he rushes upstairs."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "There is no reply."
+
+    scene bg ch01 mother with fade
 
     "He hurries to the bedside."
 
@@ -82,13 +90,13 @@ label ch02_second_herb_with_instructions_ending:
 
     "He lifts her head."
     
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"I've finished it.\""
 
     doctor "\"You can drink now.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He gently raises the bottle to her lips."
 
@@ -96,11 +104,21 @@ label ch02_second_herb_with_instructions_ending:
 
     "She can no longer swallow."
 
-    show doctor default at left onlayer portraits
+    if knows_dysphagia:
+
+        $ dysphagia_entry.locked = False
+
+        show doctor default at left onlayer portraits with dissolve
+
+        doctor "Her {a=glossary:dysphagia_entry}dysphagia{/a}..."
+
+        doctor "It's gotten worse."
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"...No.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He tries again."
 
@@ -114,11 +132,11 @@ label ch02_second_herb_with_instructions_ending:
 
     "Weak."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother!\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "Her chest rises just once."
 
@@ -130,7 +148,13 @@ label ch02_second_herb_with_instructions_ending:
 
     "He slowly lowers his mother's head back onto the pillow."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "I waited too long.."
+
+    doctor "I followed the instructions..."
+
+    doctor "But none of that matters if I can't finish the treatment in time."
 
     if ch02_second_herb_without_instructions:
 
@@ -138,17 +162,27 @@ label ch02_second_herb_with_instructions_ending:
 
         doctor "Just like before.."
 
+    hide doctor default onlayer portraits with dissolve
+
     "He gently closes her eyes."
 
     "The room slowly falls silent."
 
     "He slowly pulls the bedsheet over his mother's face."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "But maybe, just maybe, the day repeats itself again."
 
     doctor "Maybe tomorrow I will get another chance."
 
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
+
     "His legs carry him back to the laboratory almost on their own."
+
+    scene bg ch01 lab with fade
 
     "The books remain open exactly where he had left them."
 
@@ -160,9 +194,13 @@ label ch02_second_herb_with_instructions_ending:
 
     "Searching for something he had overlooked."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "Perhaps I should have studied the herb more thoroughly..."
 
     doctor "Understood why it said to be taken without eating…"
+
+    hide doctor default onlayer portraits with dissolve
 
     "He begins writing new observations beneath his previous notes."
 
@@ -172,6 +210,8 @@ label ch02_second_herb_with_instructions_ending:
 
     "His handwriting grows slower."
 
+    scene black with fade
+
     "His eyes become heavy."
 
     "Still staring at the open manuscript with his head resting on the workbench.."
@@ -180,4 +220,6 @@ label ch02_second_herb_with_instructions_ending:
 
     $ ch02_second_herb_with_instructions = True
 
-    jump ch02_start
+    $ ch02_previous_death = "second_herb_with_instructions"
+
+    jump ch02_new_loop

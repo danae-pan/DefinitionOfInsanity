@@ -1,6 +1,10 @@
 label ch02_cardiac_arrest_ending:
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "Just a few minutes."
+
+    hide doctor default onlayer portraits with dissolve
 
     scene bg ch01 kitchen with fade
 
@@ -12,9 +16,13 @@ label ch02_cardiac_arrest_ending:
 
     "A loud crash echoes from upstairs."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "\"...Mother?\""
-    hide doctor default onlayer portraits
+
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
 
     "He sprints toward her room."
 
@@ -28,9 +36,11 @@ label ch02_cardiac_arrest_ending:
 
     "Foam gathers at the corner of her mouth."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "\"Mother! Stay with me!\""
-    hide doctor default onlayer portraits
+
+    hide doctor default onlayer portraits with dissolve
 
     "He kneels beside her, trying desperately to hold her still."
 
@@ -44,11 +54,17 @@ label ch02_cardiac_arrest_ending:
 
     "No pulse."
 
-    "The seizure had placed too much strain on her heart, leading to cardiac arrest before he could intervene."
+    $ cardiac_arrest_entry.locked = False
+
+    "The seizure had placed too much strain on her heart, leading to {a=glossary:cardiac_arrest_entry}cardiac arrest{/a} before he could intervene."
 
     "The untouched bottle of medicine still waits downstairs."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "I only looked away for a moment..."
+
+    hide doctor default onlayer portraits with dissolve
 
     "The doctor kneels beside his mother's bed for what feels like hours."
 
@@ -64,9 +80,9 @@ label ch02_cardiac_arrest_ending:
 
     "Even its presence fills him with guilt."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "\"I should have been with her...\""
-    hide doctor default onlayer portraits
 
     doctor "But maybe, just maybe, the day repeats itself again."
 
@@ -76,11 +92,17 @@ label ch02_cardiac_arrest_ending:
 
     doctor "...for this night to end quickly."
 
+    hide doctor default onlayer portraits with dissolve
+
+    scene bg game_main with fade
+
     "He grabs his coat, heading to the hospital."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "\"If I stay here... I'll lose my mind.\""
-    hide doctor default onlayer portraits
+
+    hide doctor default onlayer portraits with dissolve
 
     scene bg ch01 hospital with fade
 
@@ -96,11 +118,19 @@ label ch02_cardiac_arrest_ending:
 
     "Each patient keeps his mind occupied for only a few moments before the image of his mother returns."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "I just hope tomorrow I will find her in bed alive again."
+
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
 
     "Hours pass before exhaustion finally forces him home."
 
     "The house is silent."
+
+    scene bg ch01 mother with fade
 
     "He slowly opens the door to his mother's room."
 
@@ -112,9 +142,15 @@ label ch02_cardiac_arrest_ending:
 
     "Unable to move."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "I should go to sleep."
 
     doctor "Soon, I will know whether I get another chance."
+
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
 
     "He quietly closes the door."
 
@@ -128,9 +164,14 @@ label ch02_cardiac_arrest_ending:
 
     "A faint smile crosses his face, disappearing almost as quickly as it came."
 
-    show doctor default at left onlayer portraits
-    doctor "\"At least...\""
-    doctor "\"...I'm not completely alone.\""
-    hide doctor default onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    jump ch02_start
+    doctor "\"At least...\""
+
+    doctor "\"...I'm not completely alone.\""
+
+    hide doctor default onlayer portraits with dissolve
+
+    $ ch02_previous_death = "cardiac_arrest"
+
+    jump ch02_new_loop

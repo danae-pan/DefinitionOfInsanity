@@ -2,10 +2,11 @@ label ch02_try_different_herb :
 
     scene bg ch01 lab 
 
-    doctor "I should not lose time. I need a different herb now."
+    show doctor default at left onlayer portraits with dissolve
 
-    $ ch02_checked_mother = False
-    $ ch02_route_choice = "try_herb"
+    doctor "I should not lose more time."
+
+    call ch02_check_mother
 
     menu:
         "Go to the herbalist":
@@ -18,15 +19,19 @@ label ch02_try_different_herb :
 
 label ch02_take_the_first :
 
-    show doctor default at left onlayer portraits
+    scene bg ch01 herbstore with fade
+
+    show doctor default at left onlayer portraits with dissolve
+
+    $ junka_root_entry.locked = False
 
     doctor "\"I will take {a=glossary:junka_root_entry}Junka Root{/a}.\""
 
-    doctor "\"Thank you Mr. Herbalist.\""
+    doctor "\"Thank you Mr. Kazuki.\""
 
     doctor "\"Have a nice day.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits 
 
     show herbalist default at left onlayer portraits
 
@@ -34,13 +39,19 @@ label ch02_take_the_first :
 
     herbalist "\"Goodbye, Dr. Yosuke.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist default onlayer portraits with dissolve
 
     scene bg ch01 lab with fade
 
-    "The doctor returns home, walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampō{/a}  manuscripts across the desk."
+    $ kampo_entry.locked = False
 
-    if ch02_use_panax :
+    "The doctor returns home, walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
+
+    show doctor default at left onlayer portraits with dissolve
+    
+    if not ch02_used_taeru_happened:
+
+        $ nagomi_root_entry.locked = False
 
         doctor "Along with my research I know one more thing... {a=glossary:nagomi_root_entry}Nagomi Root{/a} is too dangerous. "
 
@@ -48,55 +59,125 @@ label ch02_take_the_first :
 
     else :
 
-        doctor "I have done my research and I already used two herbs that led to Mother’s death."
+        #TODO: maybe add to the glossary the phases of the medicine
 
-        doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a} and Panax Ginseg."
+        $ nagomi_root_entry.locked = False
 
-        doctor "I will not make the same mistakes again."
+        $ taeru_root_entry.locked = False
+
+        #TODO: add the condition for the first herb tried on the take second label
+
+        if ch02_second_herb_with_instructions or ch02_second_herb_without_instructions:
+
+            $ tsuyomi_cap_entry.locked = False
+
+            doctor "I've already tried three different herbs."
+
+            doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a}, {a=glossary:taeru_root_entry}Taeru Root{/a}, and {a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}."
+
+            doctor "None of them were able to save Mother."
+
+            doctor "I won't make the same mistakes again."
+
+        else:
+
+            doctor "I've already tried two different herbs."
+
+            doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:taeru_root_entry}Taeru Root{/a}."
+
+            doctor "I won't make the same mistakes again."
+
+    hide doctor default onlayer portraits with dissolve
 
     "He places the herbalist's pouches on the table and gently pours the dried herbs into his hand."
 
-    doctor "This tonic is said to strengthen the body by improving blood circulation."
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "If the body cannot endure the treatment, restoring the nervous system is meaningless."
+    if ch02_first_herb_with_instructions or ch02_first_herb_without_instructions:
+
+        doctor "I've already tried Junka Root in the first phase of the treatment."
+
+        if ch02_first_herb_with_instructions:
+
+            doctor "Last time, I followed the instructions and made sure Mother ate first."
+
+            doctor "But by the time the formula was ready, I was too late."
+
+        if ch02_first_herb_without_instructions:
+
+            doctor "When I ignored the instructions and gave it to Mother without eating first."
+
+            doctor "It made her violently sick, and she choked."
+
+        doctor "There must be another way to make this work."
+
+    else:
+
+        doctor "This tonic is said to strengthen the body by improving blood circulation."
+
+        doctor "If the body cannot endure the treatment, restoring the nervous system is meaningless."
+
+    hide doctor default onlayer portraits with dissolve
 
     "He recalls what the herbalist said."
 
-    if ch02_first_herb_without_instructions or ch02_first_herb_with_instructions :
+    show doctor default at left onlayer portraits with dissolve
 
-        doctor "It is advised to take after eating.."
+    if ch02_first_herb_without_instructions or ch02_first_herb_with_instructions:
 
-        doctor "..otherwise it might upset the stomach."
+        doctor "Eating beforehand is advised."
 
-        doctor "But this is not a conclusive advice."
+        doctor "Otherwise, it might upset the stomach."
+
+        doctor "But his advice wasn't conclusive."
 
         doctor "\"Either way, there is a risk to be taken.\""
 
-    doctor "After eating..."
+    else:
 
-    doctor "\"I must remember that.\""
+        doctor "After eating..."
+
+        doctor "\"I must remember that.\""
+
+    hide doctor default onlayer portraits with dissolve
 
     "He carefully places the Junka Root into the mortar before turning back to his notes."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "\"Now... the second phase.\""
 
+    hide doctor default onlayer portraits with dissolve
+
     "He reaches for a small wooden box tucked away on the upper shelf."
+
+    $ hogo_root_entry.locked = False
 
     "Inside lies the last of his {a=glossary:hogo_root_entry}Hogo Root{/a}."
 
     "He carefully examines the remaining dried roots."
 
-    doctor "There isn't much left..."
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "It should be enough for one preparation."
+    doctor "I used this before..."
 
-    "He opens one of his Kampō manuscripts and rereads a passage he had marked days before."
+    doctor "I know there isn't much left."
+
+    doctor "But it should be enough for one preparation."
+
+    hide doctor default onlayer portraits with dissolve
+
+    "He opens one of his Kampo manuscripts and rereads a passage he had marked days before."
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "Some physicians believe Hogo Root calms the mind and supports the nervous system."
 
     doctor "If healthy neurons can compensate for those that have been damaged."
 
     doctor "Perhaps this will encourage that process."
+
+    hide doctor default onlayer portraits with dissolve
 
     "He places the Hogo Root into the mortar beside the Junka Root."
 
@@ -108,79 +189,80 @@ label ch02_take_the_first :
 
     "The laboratory fills with the aroma of the herbs."
 
-    "He gently stirs the {a=glossary:decoction_entry}decoction{/a}, carefully observing its colour and consistency."
+    $ decoction_entry.locked = False
+
+    "He stirs the {a=glossary:decoction_entry}decoction{/a}, carefully observing its colour and consistency."
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "The extraction isn't complete yet."
 
-    show doctor default at left onlayer portraits
-
     doctor "\"Just a few more minutes...\""
+
+    hide doctor default onlayer portraits with dissolve
 
     "A loud meow echoes through the laboratory."
 
-    hide doctor default onlayer portraits
-
     "The cat rubs itself against his leg, meowing repeatedly."
 
-    if not ch02_sick_pet :
+    if not ch02_knows_cat_is_sick :
 
         "Only then does he notice how thin it has become."
 
+        show doctor default at left onlayer portraits with dissolve
+
         doctor "You've hardly eaten..."
 
-        "He kneels beside it."
+        hide doctor default onlayer portraits with dissolve
+
+        "He kneels beside her."
+
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "You've been showing the same symptoms... loss of balance... weakness..."
 
+        $ ch02_knows_cat_is_sick = True
+
     else :
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
-        doctor "\"I know you are sick..\""
-
-        hide doctor default onlayer portraits
+        doctor "\"I know you are sick...\""
 
     if kept_cat_in_lab_once :
 
-        show doctor default at left onlayer portraits
-
         doctor "\"...you made a mess before.\""
-
-        hide doctor default onlayer portraits
 
         doctor "I should not let you inside the lab anymore."
 
-    if ch02_hungry_pet :
 
-        show doctor default at left onlayer portraits
+    #TODO: check if this flag is necessary
+    # if ch02_hungry_pet :
 
-        doctor "\"And last I lose time feeding you..\""
+    #     doctor "\"And when I lose time feeding you..\""
 
-        doctor "I should be careful with my choices."
+    #     doctor "I should be careful with my choices."
 
-        hide doctor default onlayer portraits
+    
+    hide doctor default onlayer portraits with dissolve
 
     "He sighs."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother needs this medicine...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "The cat meows once more."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "\"...but if I leave you like this...\""
+    doctor "\"But if I leave you like this...\""
 
     doctor "\"...you'll only keep crying.\""
 
-    hide doctor default onlayer portraits
-
-    $ ch02_hungry_pet = True 
-
-    $ ch02_sick_pet = True
+    hide doctor default onlayer portraits with dissolve
 
     "He remains frozen between the workbench and the hungry animal at his feet."
 
@@ -198,67 +280,145 @@ label ch02_take_the_first :
 
 label ch02_take_the_second :
 
-    show doctor default at left onlayer portraits
+    $ ch02_second_herb_taken = True
 
-    doctor "\"I will take {a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}.\""
+    show bg ch01 herbstore with fade
 
-    doctor "\"Thank you Mr. Herbalist.\""
+    show doctor default at left onlayer portraits with dissolve
+
+    #TODO: remove glossary definiton from take first too.
+
+    doctor "\"I will take Tsuyomi Cap.\""
+
+    doctor "\"Thank you Mr. Kazuki.\""
 
     doctor "\"Have a nice day.\""
 
     hide doctor default onlayer portraits
 
-    show doctor default at left onlayer portraits
+    show herbalist default at left onlayer portraits
 
     herbalist "\"No need to thank me, I just hope it helps.\""
 
-    herbalist "\"Goodbye, Mr. Herbalist.\""
+    herbalist "\"Goodbye, Mr. Yosuke.\""
 
-    hide doctor default onlayer portraits 
+    hide herbalist default onlayer portraits with dissolve
 
     scene bg ch01 lab with fade
 
-    "The doctor returns home, walks into his laboratory and spreads several worn medical journals and Kampō manuscripts across the desk."
+    $ kampo_entry.locked = False
 
-    if ch02_use_panax :
+    "The doctor returns home, walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
 
-        doctor "Along with my research I know one more thing... Nagomi Root is too dangerous."
+    show doctor default at left onlayer portraits with dissolve
+
+    if not ch02_used_taeru_happened:
+
+        $ nagomi_root_entry.locked = False
+
+        doctor "Along with my research I know one more thing... {a=glossary:nagomi_root_entry}Nagomi Root{/a} is too dangerous. "
 
         doctor "I will not make the same mistake again."
 
     else :
 
-        doctor "I have done my research and I already used two herbs that led to Mother’s death."
+        $ nagomi_root_entry.locked = False
 
-        doctor "Nagomi Root and Panax Ginseg."
+        $ taeru_root_entry.locked = False
 
-        doctor "I will not make the same mistakes again."
+        $junka_root_entry.locked = False
 
-    if ch02_first_herb_without_instructions :
+        if ch02_first_herb_with_instructions or ch02_first_herb_without_instructions:
 
-        doctor "Last time, I took Junka Root from the herbalist and used it for the first phase of the treatment."
+                $ junka_root_entry.locked = False
 
-        doctor "Now, it's time to focus on the second phase."
+                doctor "I've already tried three different herbs."
 
-        doctor "I only hope Tsuyomi Cap will prove effective."
+                doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a}, {a=glossary:taeru_root_entry}Taeru Root{/a}, and {a=glossary:junka_root_entry}Junka Root{/a}."
+
+                doctor "None of them were able to save Mother."
+
+                doctor "I won't make the same mistakes again."
+
+        else:
+
+            doctor "I've already tried two different herbs."
+
+            doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:taeru_root_entry}Taeru Root{/a}."
+
+            doctor "I won't make the same mistakes again."
+
+    if ch02_second_herb_with_instructions or ch02_second_herb_without_instructions:
+
+        doctor "I've already tried Tsuyomi Cap."
+
+        if ch02_second_herb_with_instructions:
+
+            doctor "Last time, I followed the instructions and made sure Mother didn't eat first."
+
+            doctor "But I waited too long."
+
+            doctor "By the time the formula was ready, she could no longer swallow."
+
+        if ch02_second_herb_without_instructions:
+
+            doctor "When I ignored the instructions and fed Mother first..."
+
+            doctor "The medicine had no effect."
+
+            doctor "Her condition continued to worsen."
+
+        doctor "There must be another way to make this work."
+
+    else:
+
+        doctor "Tsuyomi Cap..."
+
+        doctor "It is believed to strengthen the immune system and support recovery."
+
+        doctor "If the body cannot endure the treatment..."
+
+        doctor "...there is little hope of restoring the nervous system."
+
+    hide doctor default onlayer portraits with dissolve
+
+    "He recalls what the herbalist said."
+
+    show doctor default at left onlayer portraits with dissolve
+
+    if ch02_second_herb_with_instructions or ch02_second_herb_without_instructions:
+
+        doctor "It should be taken on an empty stomach."
+
+        doctor "Taking it after eating may interfere with its effects."
+
+        doctor "But his advice wasn't conclusive."
+
+        doctor "\"Either way, there is a risk to be taken.\""
+
+    else:
+
+        doctor "On an empty stomach..."
+
+        doctor "\"I must remember that.\""
+
+    hide doctor default onlayer portraits with dissolve
 
     "He unties the herbalist's pouch and gently pours the dried herb into his hand."
 
-    doctor "Tsuyomu..."
-
-    doctor "It is believed to strengthen the immune system and support recovery."
-
     "He studies the mushroom slices for a moment before placing them beside the mortar."
 
-    doctor "If the body cannot endure the treatment.."
+    $ ryoku_berry_entry.locked = False
 
-    doctor "..there is little hope of restoring the nervous system."
+    "Then, his eyes settle on the container with {a=glossary:ryoku_berry_entry}Ryoku Berry{/a}."
 
-    "Then, his eyes settle on the container with Ryoku Berry."
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "Ryoku Berry... it strengthens the body and may improve its resilience. "
 
     doctor "I only have a small amount left, but it should be enough."
+
+    hide doctor default onlayer portraits with dissolve
 
     "With his decision made, he places the Tsuyomi Cap and Ryoku Berry into the mortar."
 
@@ -272,13 +432,21 @@ label ch02_take_the_second :
 
     "The doctor observes the ceramic bowl."
 
-    doctor "Good. The extraction has begun.Then another."
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "Just a little longer."
+    doctor "Good. The extraction has begun."
+
+    doctor "\"Just a little longer.\""
+
+    hide doctor default onlayer portraits with dissolve
 
     "The color of the mix is just as his research described."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "This may actually work."
+
+    hide doctor default onlayer portraits with dissolve
 
     "Just then, a weak voice echoes from upstairs."
 
@@ -288,11 +456,11 @@ label ch02_take_the_second :
 
     "He grips the wooden spoon a little tighter."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"She's awake...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He glances back at the bowl."
 
@@ -300,7 +468,7 @@ label ch02_take_the_second :
 
     "Interrupting the preparation now could alter the concentration."
 
-    "He would have to begin again and he knows that {a=glossary:ryoku_berry_entry}Ryoku Berry{/a} might not be enough."
+    "He would have to begin again and he knows that Ryoku Berry might not be enough."
 
     "A second call reaches him."
 
@@ -310,11 +478,15 @@ label ch02_take_the_second :
 
     "He lowers his eyes to the simmering mixture."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "There isn't much left. "
 
     doctor "Just a few more minutes."
 
-    doctor "If I stop now, all of this may have been for nothing."
+    doctor "\"If I stop now, all of this may have been for nothing...\""
+
+    hide doctor default onlayer portraits with dissolve
 
     menu : 
 

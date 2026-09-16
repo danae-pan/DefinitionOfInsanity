@@ -34,7 +34,7 @@ label ch01_meet_herbalist_on_door:
 
         show doctor default at left onlayer portraits with dissolve
 
-        doctor "Its Mr. Kazuki."
+        doctor "It's Mr. Kazuki."
 
         doctor "He doesn't know we have met before."
 
@@ -62,7 +62,7 @@ label ch01_meet_herbalist_on_door:
 
     herbalist "\"My name is Kazuki.\"" 
 
-    herbalist "\"I'm the Herbalist from the next village. My shop is the first one you see in the central square.\""
+    herbalist "\"I'm the Herbalist from the neighboring village. My store is the first one you see in the central square.\""
 
     hide herbalist default onlayer portraits
 
@@ -173,7 +173,7 @@ label ch01_go_to_hospital:
 
     herbalist "\"My name is Kazuki.\""
 
-    herbalist "\"I'm the Herbalist from the neighboring village. My shop is the first one you see in the central square.\"" 
+    herbalist "\"I'm the Herbalist from the neighboring village. My store is the first one you see in the central square.\"" 
 
     hide herbalist default onlayer portraits
 
@@ -295,7 +295,7 @@ label ch01_herbalists_invitation:
 
     hide herbalist default onlayer portraits
 
-    #TODO: check whether thss condition plays correctly wiyh the flag being moved
+    #TODO: check whether thss condition plays correctly wiyh the flag being moved OK :)
 
     #This loop is when this route continues to "Return to your mother" choice
 

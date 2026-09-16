@@ -84,7 +84,7 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     menu:
 
-        "Go with the herbalist":
+        "Go with the Herbalist":
 
             call ch01_arrythmia_good_ending
 
@@ -239,79 +239,71 @@ label ch01_runs_late_at_hospital_comma_ending:
 
         if ch01_knows_coma :
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "The memory burns into my mind."
 
             doctor "If I don't give her the formula, she falls into a {a=glossary:coma_entry}coma{/a} and dies..." 
-
-            hide doctor default onlayer portraits
         
         else:
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "I've read about this before..."
 
             doctor "This illness can end in a {a=glossary:coma_entry}coma{/a}."
 
-            hide doctor default onlayer portraits
-
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
         
         doctor "I have to try again."
 
         doctor "I have to save her."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "He gently places her hand back on the bed."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "But I'm not finished."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "He returns to his laboratory."
 
-        scene bg ch01 lab
+        scene bg ch01 lab with fade
 
         "He opens his notes."
 
         "His hands are shaking as he writes down everything."
 
-        "The mistake."
+        "The mistakes."
 
         "The symptoms."
 
         "The things he overlooked."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 
         doctor "I won't repeat this."
 
-        doctor "I will save her."
+        doctor "\"I will save her.\""
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
-        scene black
+        scene black with fade
 
-        "He closes his eyes."
+        "He closes his eyes thinking that tomorrow will be different."
 
-        show doctor default at left onlayer portraits
-
-        doctor "\"Tomorrow...\""
-
-        doctor "\"I'll do better.\""
-
-        hide doctor default onlayer portraits
+        "That he will do better."
 
     if not ch01_knows_coma :
 
         $ ch01_knows_coma = True
+
+    $ ch01_previous_death = "coma"
 
     call ch01_pass_to_chapter_2 from _call_ch01_pass_to_chapter_2_4
 

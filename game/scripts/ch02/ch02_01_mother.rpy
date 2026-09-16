@@ -1,59 +1,119 @@
 label ch02_check_mother :
 
-    scene bg ch01 mother
 
-    "He checks her pulse and temperature, seems good. He fixes her pillow, making sure she’s comfortable."
-    
-    show doctor default at left onlayer portraits
+    if ch02_route_choice == "check_mother":
 
-    doctor "\"Mother, how are you feeling today?\""
+        scene bg ch01 mother
 
-    hide doctor default onlayer portraits
+        "He checks her pulse and temperature."
 
-    doctor "She tries to smile, I can see it is difficult for her. "
+        show doctor default at left onlayer portraits with dissolve
 
-    doctor "Her body won’t take the pain for much longer..I should hurry. "
+        doctor "Everything appers to be okey."
 
-    doctor "I run the usual tests, checking her pulse and pressure."
+        hide doctor default onlayer portraits with dissolve
 
-    doctor "Everything seems normal."
+        "He fixes her pillow, making sure she’s comfortable."
 
-    if took_herbs :
+        show doctor default at left onlayer portraits with dissolve
 
-        doctor "I wasn’t able to test any herbs that the herbalist gave me. Maybe I will have time to do that today if I rush now to him."
+        doctor "\"Mother, how are you feeling today?\""
 
-    if not ch02_use_panax :
+        mother "\"I'm feeling better my son.\""
 
-        if not ch02_stock_panax :
+        doctor "She tries to smile, I can see it is difficult for her. "
 
-            doctor "Or maybe I should head to the hospital, check the stock there."
+        doctor "Her body won’t take the pain for much longer..I should hurry. "
+
+        hide doctor default onlayer portraits with dissolve
+
+        "He runs the usual tests, checking her pulse and pressure."
+
+        show doctor default at left onlayer portraits with dissolve
+
+    if ch02_route_choice == "check_mother" or ch02_route_choice == "try_herb":
+
+        if took_herbs and not (
+        ch02_first_herb_with_instructions
+        or ch02_first_herb_without_instructions
+        or ch02_second_herb_with_instructions
+        or ch02_second_herb_without_instructions
+        ):
+
+            doctor "Last time I wasn’t able to test any herbs that the herbalist gave me."
+            
+            doctor "Maybe I will have time to do that today if I rush now to him."
+
+        elif not took_herbs:
+
+            doctor "Maybe I should go over to Mr. Kazuki's store."
+
+            doctor "He might have something that could help Mother."
+
+
+        elif (
+        ch02_first_herb_with_instructions
+        or ch02_first_herb_without_instructions
+        or ch02_second_herb_with_instructions
+        or ch02_second_herb_without_instructions
+        ):
+
+            doctor "Maybe I should go back to Mr. Kazuki's store."
+
+            doctor "Perhaps there's another way I could use the herbs he gave me."
+
+        if not ch02_used_taeru_happened:
+
+            if not ch02_knows_taeru_in_stock: 
+
+                doctor "I already tried the formula before..."
+
+                doctor "It didn't help."
+
+                doctor "Maybe I should head to the hospital, check the stock for any other herbs there."
+
+            else :
+
+                $ taeru_root_entry.locked = False
+
+                $ hogo_root_entry.locked = False
+
+                doctor "Maybe I should head to the hospital, I remember {a=glossary:taeru_root_entry}Taeru Root{/a} was in stock."
+
+                doctor "I could use this for phase two, replacing {a=glossary:hogo_root_entry}Hogo Root{/a} that I only have in a small amount."
+
+            doctor "If there was more time, I would check on some patients too..."
+
+            doctor "The situation worsens everyday...a cure must be found...and quickly."   
+
+            hide doctor default onlayer portraits with dissolve
 
         else :
 
-            doctor "Or maybe I should head to the hospital, I remember {a=glossary:taeru_root_entry}Taeru Root{/a} was in stock."
+            doctor "No use going to the hospital anymore. "
 
-            doctor "I could use this for phase two, replacing {a=glossary:hogo_root_entry}Hogo Root{/a} that I only have in a small amount."
+            $ taeru_root_entry.locked = False
 
-        doctor "If there was more time, I would check on some patients too.."
+            doctor "I already know what is in stock and using {a=glossary:taeru_root_entry}Taeru Root{/a} proved to be fatal at the end."
 
-        doctor "The situation worsens everyday..a cure must be found..and quickly."   
+            doctor "But what if something changed?"
 
-    else :
+            doctor "\"What if every day is not exactly the same?\""
 
-        doctor "No use going to the hospital anymore. "
+            hide doctor default onlayer portraits with dissolve
 
-        doctor "I already know what is in stock and using {a=glossary:taeru_root_entry}Taeru Root{/a} proved to be fatal at the end."
+    if ch02_route_choice == "try_herb":
 
-        doctor "But what if something changed?"
-
-        doctor "What if every day is not exactly the same?"
+        return
     
-
-    $ ch02_checked_mother = True
-    $ ch02_route_choice = "check_mother"
+    
+    hide doctor default onlayer portraits with dissolve
     
     menu:
+
         "Go to the herbalist":
+
+
             jump ch02_go_to_herbalist
 
         "Go to the hospital":
@@ -67,13 +127,22 @@ label ch02_go_to_mother :
 
 label ch02_mother_calls_for_food :
 
-    "The doctor takes another look at the {a=glossary:decoction_entry}decoction{/a} before setting the wooden spoon aside."
+    #TODO: check where decoction was mentioned on this route
+    "The doctor takes another look at the decoction before setting the wooden spoon aside."
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "It can wait a few minutes.."
 
     doctor "..at least that is what I hope."
 
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
+
     "He leaves the laboratory and makes his way upstairs."
+
+    scene bg ch01 mother with fade
 
     "His mother is awake, though only barely."
 
@@ -83,11 +152,11 @@ label ch02_mother_calls_for_food :
 
     "He kneels beside the bed."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"I'm here.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "She reaches for his hand."
 
@@ -101,11 +170,11 @@ label ch02_mother_calls_for_food :
 
     "The doctor gently supports her shoulders."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "\"I know.\""
+    doctor "\"I know...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "She closes her eyes tightly."
 
@@ -129,11 +198,9 @@ label ch02_mother_calls_for_food :
 
     "His thoughts return to the herbalist."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "The second herb should not be taken after eating."
-
-    hide doctor default onlayer portraits
 
     if ch02_second_herb_with_instructions:
 
@@ -141,11 +208,17 @@ label ch02_mother_calls_for_food :
 
         doctor "..I failed."
 
+    hide doctor default onlayer portraits with dissolve
+
     "He looks at his mother."
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "If I feed her now, the medicine may not work."
 
     doctor "But if I don't…she'll only grow weaker."
+
+    hide doctor default onlayer portraits with dissolve
 
     "She squeezes his hand ever so slightly."
 

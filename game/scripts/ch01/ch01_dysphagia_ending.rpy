@@ -255,4 +255,6 @@ label ch01_dysphagia_ending:
 
         "That he will do better."
 
+        $ ch01_previous_death = "dysphagia"
+
     jump ch01_new_loop

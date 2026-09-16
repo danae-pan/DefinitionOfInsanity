@@ -24,6 +24,7 @@ default ch01_knows_polygala = False
 
 default ch01_check_formula = False # Future chapter flags
 default ch01_jump_to_chapter_2 = False
+default ch01_previous_death = None
 
 # choices/actions from the previous attempt that will reset in every ending
 #TODO: check whether those conditions need reset
@@ -40,3 +41,5 @@ default ch01_mother_called = False
 default ch01_ansered_mothers_call = False
 default ch01_knock_knock = False
 default ch01_check_apothecary = False
+default ch01_prepare_food = False
+default ch01_supplies_from_herbalist = False

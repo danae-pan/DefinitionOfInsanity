@@ -23,14 +23,20 @@ label ch01_reset_attempt_state:
     $ ch01_mother_checked = False
     $ ch01_cat_in_lab = False
     $ ch01_formula_finished = False
+    $ ch01_prepare_food = False
 
     #TODO: check if thosr flags need reset
-    # $ ch01_met_herb_in_door = False
+    #met herbalist in door probably needs reset
+    $ ch01_met_herb_in_door = False
     # $ ch01_met_herb_in_hospital = False
     $ herbalist_visited = False
+
+    #why is this one reset? 
     $ ch01_cat_broke_formula = False
     $ ch01_prepared_formula = False
     $ ch01_went_to_hospital = False
+
+    $ ch01_supplies_from_herbalist = False
 
     #$ ch01_return_from_hospital = False
 
@@ -160,21 +166,23 @@ label ch01_remember_previous_deaths:
 
         doctor "\"The {a=glossary:wake_entry}otsuya{/a}… The neighbors...\""
 
-    if knows_dysphagia and ch01_loop_count >1 and not ch01_brain_hemorrhage_happened and not ch01_knows_arrhythmia and not ch01_knows_coma:
+    if knows_dysphagia and ch01_loop_count >=1 and not ch01_brain_hemorrhage_happened and not ch01_knows_arrhythmia and not ch01_knows_coma:
 
         show doctor default at left onlayer portraits with dissolve
 
         $ dysphagia_entry.locked = False
 
         doctor "\"The {a=glossary:dysphagia_entry}dysphagia{/a}… The bread...\""
+
+    #TODO: check those two condirions
         
-    if ch01_brain_hemorrhage_happened:
+    if ch01_brain_hemorrhage_happened and ch01_loop_count >=1 and not knows_dysphagia  and not ch01_knows_arrhythmia and not ch01_knows_coma:
 
         show doctor default at left onlayer portraits with dissolve
 
         doctor "The broken glass in the floor... Mother's fall..."
     
-    if ch01_knows_arrhythmia:
+    if ch01_knows_arrhythmia and ch01_loop_count >=1 and not knows_dysphagia  and not ch01_brain_hemorrhage_happened and not ch01_knows_coma:
 
         show doctor default at left onlayer portraits with dissolve
 
@@ -182,13 +190,15 @@ label ch01_remember_previous_deaths:
 
         $ arrhythmia_entry.locked = False
 
-        doctor "I gave her the {a=glossary:nagomi_root_entry}Nagomi Root{/a}... It caused her {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
+        doctor "The {a=glossary:nagomi_root_entry}Nagomi Root{/a}... It caused her {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
     
-    if ch01_knows_coma :
+    if ch01_knows_coma and ch01_loop_count >=1 and not knows_dysphagia  and not ch01_brain_hemorrhage_happened and not ch01_knows_arrhythmia:
 
         show doctor default at left onlayer portraits with dissolve
 
-        doctor "I didn't gave her the formula... She died from coma..."
+        $ coma_entry.locked = False
+
+        doctor "I didn't gave her the formula... She died from {a=glossary:coma_entry}coma{/a}..."
 
     if (ch01_knows_arrhythmia
         + ch01_knows_coma
@@ -204,5 +214,22 @@ label ch01_remember_previous_deaths:
         "He let's out a sigh worrying whether he will be able to save her before he runs out of time."
 
         show doctor default at left onlayer portraits with dissolve
+
+    return
+
+
+label ch01_remember_previous_death_for_ch02:
+
+    if ch01_previous_death == "dysphagia":
+        doctor "The dysphagia... The bread..."
+
+    elif ch01_previous_death == "brain_hemorrhage":
+        doctor "The broken glass on the floor... Mother's fall..."
+
+    elif ch01_previous_death == "arrhythmia":
+        doctor "The Nagomi Root... It caused her arrhythmia..."
+
+    elif ch01_previous_death == "coma":
+        doctor "I didn't give her the formula... She died from a coma..."
 
     return

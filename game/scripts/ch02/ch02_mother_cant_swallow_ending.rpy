@@ -4,29 +4,35 @@ label ch02_mother_cant_swallow_ending :
 
     "He continues stirring the mixture, watching the colour deepen with each passing moment."
 
-    doctor "If I interrupt the preparation now I'll only lose more time."
+    show doctor default at left onlayer portraits with dissolve
 
-    show doctor default at left onlayer portraits
+    doctor "If I interrupt the preparation now I'll only lose more time."
 
     doctor "\"Almost there.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "The doctor filters the herbs through a fine cloth before pouring the finished medicine into a bottle."
 
     "He seals it carefully."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Finally.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
 
     "Without another thought, he rushes upstairs."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother...\""
+
+    hide doctor default onlayer portraits with dissolve
+
+    scene bg ch01 mother with fade
 
     "His mother lies motionless."
 
@@ -47,22 +53,52 @@ label ch02_mother_cant_swallow_ending :
     "Even her own saliva no longer passes."
 
     "He quickly lifts her into his arms."
+ 
+    show doctor default at left onlayer portraits with dissolve
 
-    show doctor default at left onlayer portraits
+    doctor "\"Mother!\""
 
-    doctor "\"Mother...\""
+    hide doctor default onlayer portraits with dissolve
 
     "The liquid trickles down her chin."
 
     "She can no longer swallow."
 
+    if knows_dysphagia:
+
+        $ dysphagia_entry.locked = False
+
+        show doctor default at left onlayer portraits with dissolve
+
+        doctor "Her {a=glossary:dysphagia_entry}dysphagia{/a}..."
+
+        doctor "It's gotten much worse."
+
+        hide doctor default onlayer portraits with dissolve
+
+    else:
+
+        show doctor default at left onlayer portraits with dissolve
+
+        doctor "Of course."
+
+        $ dysphagia_entry.locked = False
+
+        doctor "{a=glossary:dysphagia_entry}Dysphagia{/a}."
+
+        doctor "The disease has progressed further than I thought."
+
+        hide doctor default onlayer portraits with dissolve
+
+        $ knows_dysphagia = True
+
     "His hands begin to shake."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"...No.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He reaches for the glass of water."
 
@@ -82,11 +118,13 @@ label ch02_mother_cant_swallow_ending :
 
     "Feels for a pulse."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother!\""
 
-    hide doctor default onlayer portraits
+    doctor "\"Stay with me!\""
+
+    hide doctor default onlayer portraits with dissolve
 
     "Her chest rises once then nothing."
 
@@ -96,23 +134,31 @@ label ch02_mother_cant_swallow_ending :
 
     "He bows his head."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"You were calling for me.\""
 
     doctor "\"And I never came.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "For several long moments, he cannot move."
 
     "Finally, he gently pulls the bedsheet over her face."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "But maybe, just maybe, the day repeats itself again."
 
     doctor "Maybe tomorrow I will get another chance."
 
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
+
     "His legs carry him back to the laboratory almost on their own."
+
+    scene bg ch01 lab with fade
 
     "The books remain open exactly where he had left them."
 
@@ -124,9 +170,13 @@ label ch02_mother_cant_swallow_ending :
 
     "Searching for something he had overlooked."
 
+    show doctor default at left onlayer portraits with dissolve
+
     doctor "Perhaps I should have studied the herb more thoroughly..."
 
     doctor "Understood why it said to be taken without eating..."
+
+    hide doctor default onlayer portraits with dissolve
 
     "He begins writing new observations beneath his previous notes."
 
@@ -136,10 +186,14 @@ label ch02_mother_cant_swallow_ending :
 
     "His handwriting grows slower."
 
+    scene black with fade
+
     "His eyes become heavy."
 
     "Still staring at the open manuscript with his head resting on the workbench.."
 
     "..he falls asleep."
 
-    return
+    $ ch02_previous_death = "mother_cant_swallow"
+
+    jump ch02_new_loop

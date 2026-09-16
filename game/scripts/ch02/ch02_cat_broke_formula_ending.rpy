@@ -6,33 +6,35 @@ label ch02_cat_broke_formula_ending :
 
     "He closes his eyes for a brief moment."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"No...\""
 
-    hide doctor default onlayer portraits
+    #TODO: check on the formuula mentioned
 
-    doctor "Every minute I spend away from the {a=glossary:formula_entry}formula{/a} is another minute Mother has to wait."
+    doctor "Every minute I spend away from the formula is another minute Mother has to wait."
+
+    hide doctor default onlayer portraits with dissolve
 
     "He gently nudges the cat aside with his foot."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"You'll have to wait a little longer.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "The cat lets out another desperate cry."
 
     "The doctor turns back to the workbench."
 
-    "The {a=glossary:decoction_entry}decoction{/a} is reaching the final stage."
+    "The decoction is reaching the final stage."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
     
     doctor "\"Just a little longer...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "The proportions have to be perfect."
 
@@ -48,11 +50,11 @@ label ch02_cat_broke_formula_ending :
 
     "Drop by drop, the dark liquid begins to collect inside."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
     
     doctor "\"Almost finished...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "A sudden thud echoes through the laboratory."
 
@@ -60,11 +62,11 @@ label ch02_cat_broke_formula_ending :
 
     "The doctor reaches out."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Wait!\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "Too late."
 
@@ -78,11 +80,19 @@ label ch02_cat_broke_formula_ending :
 
     "The doctor freezes."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"No...\""
 
-    hide doctor default onlayer portraits
+    if kept_cat_in_lab_once:
+
+        doctor "I can't believe she made a mess again..."
+
+        doctor "I knew this happened before."
+
+        doctor "So why I wasn't more careful?"
+
+    hide doctor default onlayer portraits with dissolve
 
     "He immediately drops to his knees."
 
@@ -94,21 +104,21 @@ label ch02_cat_broke_formula_ending :
 
     "He slowly looks toward the shelf."
 
-    "The wooden box that once held the last of the {a=glossary:hogo_root_entry}Hogo Root{/a} sits open."
+    "The wooden box that once held the last of the Hogo Root sits open."
 
     "Empty."
 
-    "The pouch of {a=glossary:junka_root_entry}Junka Root{/a} from the herbalist is empty as well."
+    "The pouch of Junka Root from the herbalist is empty as well."
 
     "There is nothing left."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"No...\""
 
-    hide doctor default onlayer portraits
-
     doctor "I don't have enough herbs to prepare another."
+
+    hide doctor default onlayer portraits with dissolve
 
     "The laboratory falls silent."
 
@@ -118,19 +128,25 @@ label ch02_cat_broke_formula_ending :
 
     "There is nothing left to do."
 
+    scene black with fade
+
     "He slowly stands and walks upstairs."
 
-    "His mother is still awake."
+    "He enters his Mother's room."
+
+    scene bg ch01 mother with fade
+
+    "She is still awake."
 
     "She smiles faintly as he enters."
 
     "He forces a smile."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"I'm here.\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "He pulls a chair beside her bed and takes her hand in his."
 
@@ -148,20 +164,26 @@ label ch02_cat_broke_formula_ending :
 
     "It stops."
 
+    $ respiratory_failure_entry.locked = False
+
+    "She dies from {a=glossary:respiratory_failure_entry}respiratory failure{/a}."
+
     "The doctor remains seated beside her long after the room has fallen silent."
 
     "Still holding her hand."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"...I couldn't save you.\""
 
-    hide doctor default onlayer portraits
+    doctor "But maybe, just maybe, the day repeats itself again."
 
-    "But maybe, just maybe, the day repeats itself again."
+    doctor "Maybe tomorrow I will get another chance."
 
-    "Maybe tomorrow I will get another chance."
+    hide doctor default onlayer portraits with dissolve
 
     $ kept_cat_in_lab_once = True
 
-    jump ch02_start
+    $ ch02_previous_death = "cat_broke_formula"
+
+    jump ch02_new_loop

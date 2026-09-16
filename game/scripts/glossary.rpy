@@ -88,11 +88,11 @@ init python:
 
     kampo_entry = EncEntry(
         parent=glossary,
-        name="Kampō",
+        name="Kampo",
         subject="Medicine",
         text=enc_utils.text_block("""\
             Japan's traditional system of herbal medicine. Derived from
-            ancient Chinese medicine and adapted to Japanese culture, Kampō
+            ancient Chinese medicine and adapted to Japanese culture, Kampo
             uses carefully selected herbal formulas to restore the body's
             overall balance rather than treating a single symptom.
         """),
@@ -306,6 +306,34 @@ init python:
     """),
     locked=True
     )
+
+    respiratory_failure_entry = EncEntry(
+    parent=glossary,
+    name="Respiratory Failure",
+    subject="Medical Terms",
+    text=enc_utils.text_block("""\
+        A serious condition in which the body cannot get enough oxygen
+        or properly remove carbon dioxide. In severe neurological illnesses,
+        respiratory failure may occur when the nervous system can no longer
+        properly control breathing.
+    """),
+    locked=True
+    )
+
+    cardiac_arrest_entry = EncEntry(
+    parent=glossary,
+    name="Cardiac Arrest",
+    subject="Medical Terms",
+    text=enc_utils.text_block("""\
+        A sudden condition in which the heart stops beating effectively,
+        preventing blood from reaching the brain and other vital organs.
+        Without immediate treatment, cardiac arrest can quickly lead to
+        unconsciousness and death.
+    """),
+    locked=True
+    )
+
+
 
 
     # --------------------------------------------------

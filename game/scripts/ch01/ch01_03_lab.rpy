@@ -318,7 +318,8 @@ label ch01_study_prepare_formula:
     # we need another flag here to go inside the loop because the fact that he has repeated he day doesn't mean he prepared already the formula before.
 
     #TODO: check this condition when the fitst condition is true
-    if (ch01_loop_count >= 1 and ch01_cat_broke_formula == True) or (ch01_loop_count >= 1 and ch01_check_formula == True):
+    #didn;t work because it resets on each ending. replaced with check_apothecary flag
+    if (ch01_loop_count >= 1 and ch01_check_apothecary == True) or (ch01_loop_count >= 1 and ch01_check_formula == True):
 
         "His hands stop for a moment."
 
@@ -327,6 +328,8 @@ label ch01_study_prepare_formula:
         doctor "I did everything exactly as the last time." 
 
         hide doctor default onlayer portraits with dissolve
+
+    #TODO: check if this condition needs to be removed
 
     if ch01_cat_in_lab:
 
@@ -476,6 +479,8 @@ label ch01_cat_breaks_formula:
 
     "The doctor tries to catch the formula but it falls in the ground and breaks."
 
+    $ ch01_cat_broke_formula = True
+
     show doctor default at left onlayer portraits with dissolve
 
     doctor "\"No No No.\""
@@ -483,8 +488,6 @@ label ch01_cat_breaks_formula:
     doctor "\"This can't be happening!\""
 
     if kept_cat_in_lab_once:
-
-        show doctor default at left onlayer portraits with dissolve
 
         doctor "How could I make this mistake again?"
 
@@ -551,7 +554,13 @@ label ch01_mother_calls_knock_on_door:
 
     mother "\"Yosuke...\""
 
-    "He hears Mother's weak voice calling from her room."
+    if ch01_mother_called:
+
+        "He hears his Mother calling for him again..."
+
+    else: 
+
+        "He hears Mother's weak voice calling from her room."
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -694,6 +703,24 @@ label ch01_check_mother_cat_in_lab :
     menu :
 
         "Prepare food for her":
+
+            $ ch01_prepare_food = True
+            #TODO: see if the following lines are needed in other routes that end up in the same menu choices
+            show doctor default at left onlayer portraits with dissolve
+
+            doctor "\"I will prepare something for you Mother.\""
+
+            doctor "\"I will be back soon.\""
+
+            mother "\"Thank you my son.\""
+
+            hide doctor default onlayer portraits with dissolve
+
+            scene black with fade
+
+            "He heads to the kitchen."
+
+            scene bg ch01 kitchen with fade
 
             "He started preparing food when some noise from the lab distracted him."
 

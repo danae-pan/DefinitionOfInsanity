@@ -1,6 +1,6 @@
 label ch01_answer_mothers_call:
 
-    if ch01_knock_knock and not ch01_check_apothecary:
+    if ch01_knock_knock and not ch01_check_apothecary and not ch01_supplies_from_herbalist:
         if not ch01_met_herb_in_door:
 
             show doctor default at left onlayer portraits with dissolve
@@ -22,12 +22,14 @@ label ch01_answer_mothers_call:
         "He enters the house and hears his mother calling for him."
 
     scene black with fade
+
+    if not ch01_supplies_from_herbalist:
     
-    show doctor default at left onlayer portraits with dissolve
+        show doctor default at left onlayer portraits with dissolve
 
-    doctor "\"Mother?\"" 
+        doctor "\"Mother?\"" 
 
-    hide doctor default onlayer portraits with dissolve
+        hide doctor default onlayer portraits with dissolve
 
     "He opens the door." 
 
@@ -43,6 +45,37 @@ label ch01_answer_mothers_call:
     "He quickly moves to her side." 
 
     mother "\"Yosuke...\"" 
+
+    if ch01_prepare_food:
+
+        mother "\"Is the food ready?\""
+
+        mother "\"I'm really hungry...\""
+
+        "Yosuke looks at his mother, sadness covering his face."
+
+        show doctor default at left onlayer portraits with dissolve
+
+        doctor "She seems even weaker..."
+
+        doctor "The cat... she distracted me and I didn't manage to finish preparing her meal."
+
+        if ch01_supplies_from_herbalist:
+
+            doctor "And then I had to lose more time going with Mr. Kazuki..."
+
+        doctor "\"I'm sorry Mother.\""
+
+        doctor "\"I had to run to the laboratory because the cat started making noises.\""
+
+        doctor "\"I was afraid she broke something.\""
+
+        mother "\"It's okey son...\""
+
+        hide doctor default onlayer portraits with dissolve
+
+        "But he could see the weakness in her eyes..."
+
 
     "She reaches for his hand. He holds it gently." 
 
@@ -71,7 +104,7 @@ label ch01_answer_mothers_call:
 
     else: 
 
-        if ch01_check_apothecary and not ch01_went_to_hospital:
+        if ch01_check_apothecary and not ch01_went_to_hospital and not ch01_supplies_from_herbalist:
 
             doctor "I already now I am out of stock."
 
@@ -109,6 +142,19 @@ label ch01_answer_mothers_call:
             "He fixes her pillows to make her feel more comfortable."
 
             show doctor default at left onlayer portraits with dissolve
+
+        if ch01_supplies_from_herbalist:
+
+            doctor "I have necessary ammount of Hogo root now."
+
+            doctor "I was right to take some from Mr. Kazuki's store..."
+
+            doctor "Mother looks already too weak..."
+
+            doctor "I have no time now to study the new herbs."
+
+            doctor "I have to make the same formula."
+
 
 
         doctor "I should go prepare it quickly."

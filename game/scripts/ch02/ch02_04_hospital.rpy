@@ -1,16 +1,28 @@
 label ch02_go_to_hospital :
 
+    scene bg game_main with fade
+
     "The doctor puts on his coat and leaves the house."
 
-    doctor "The hospital is closer than the herbalist’s shop. "
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "It should take 10 minutes walk to get there."
+    doctor "The hospital is closer than the herbalist’s store. "
+
+    doctor "It should take only 10 minutes walk to get there."
+
+    hide doctor default onlayer portraits with dissolve
+
+    scene black with fade
 
     "The doctor heads to the hospital. He walks in a fast pace, trying not to lose more time."
+    
+    scene bg ch01 hospital with fade
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "I should go straight to the pharmacy. "
 
-    if use_panax :
+    if ch02_used_taeru_happened:
 
         doctor "Check the stock, take what’s needed and leave."
 
@@ -20,7 +32,9 @@ label ch02_go_to_hospital :
 
         doctor "Maybe there is a herb that I didn’t notice before."
 
-    doctor "I should avoid any conversation, otherwise I will won’t avoid looking at the patients here."
+    doctor "I should avoid any conversation, otherwise I won't be able to avoid looking at the patients here."
+
+    hide doctor default onlayer portraits with dissolve
 
     "He arrives at the pharmacy."
 
@@ -30,30 +44,48 @@ label ch02_go_to_hospital :
 
     "Not many of them are left. The hospital runs out of stock fast because of the number of diseased people."
 
-    if not ch02_use_panax :
+    if not ch02_used_taeru_happened:
 
-        if not ch02_stock_panax :
+        if not ch02_knows_taeru_in_stock: 
+
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "Nothing from the herbs are suitable for what I need.."
 
-
-            show doctor default at left onlayer portraits
             doctor "\"Wait a minute!\""
-            hide doctor default onlayer portraits
+
+            $ taeru_root_entry.locked = False
 
             doctor "There is a glass bottle of dry {a=glossary:taeru_root_entry}Taeru Root{/a}."
 
+            $ ch02_knows_taeru_in_stock = True
+
+            $ hogo_root_entry.locked = False
+
+            # TODO: add info about the phases of the cure
+
             doctor "I could use this for phase two, replacing {a=glossary:hogo_root_entry}Hogo Root{/a} that I only have in a small amount."
 
-        else:
+            hide doctor default onlayer portraits with dissolve
+
+        else :
+
+            $ taeru_root_entry.locked = False
+
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "The glass bottle of dry {a=glossary:taeru_root_entry}Taeru Root{/a} is still there."
+
+            hide doctor default onlayer portraits with dissolve
+
 
     else :
 
         "After some time he realizes that none of the herbs available are suitable for him." 
 
-        $ ch02_second_visit_hospital = True 
+        $ taeru_root_entry.locked = False
+
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "{a=glossary:taeru_root_entry}Taeru Root{/a} is still there but I already know, I can’t use this one."
 
@@ -61,65 +93,119 @@ label ch02_go_to_hospital :
 
         doctor "I should go to the herbalist instead."
 
+        $ ch02_coming_from_hospital = True 
+
+        hide doctor default onlayer portraits with dissolve
+
         jump ch02_go_to_herbalist
 
     "The doctor grabs the bottle and quickly heads home to prepare the {a=glossary:formula_entry}formula{/a}."
 
     scene bg ch01 lab with fade 
 
-    "He walks into his laboratory and spreads several worn medical journals and Kampō manuscripts across the desk."
+    $ kampo_entry.locked = False
 
-    "Yesterday taught me one thing... {a=glossary:nagomi_root_entry}Nagomi Root{/a} seems too dangerous. "
+    "He walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
+
+    $ nagomi_root_entry.locked = False
+
+    show doctor default at left onlayer portraits with dissolve
+
+    doctor "My previous attempts taught me one thing... {a=glossary:nagomi_root_entry}Nagomi Root{/a} seems too dangerous. "
+
+    hide doctor default onlayer portraits with dissolve
+
+    $ ryoku_berry_entry.locked = False
 
     "His eyes settle on the container with {a=glossary:ryoku_berry_entry}Ryoku Berry{/a}."
 
+    show doctor default at left onlayer portraits with dissolve
+
+    doctor "\"Right...\""
+
+    #TODO: explain phases
+
     doctor "Ryoku Berry can replace Nagomi Root for the first phase."
 
-    doctor "It strengthens the body and may improve its resilience. "
+    doctor "It strengthens the body and may improve its resilience."
+    
+    doctor "I didn't use this before before..."
 
-    doctor "I only have a small amount left, but it should be enough."
+    doctor "I only have a small amount left."
+    
+    doctor "But it should be enough."
 
-    doctor "Now for the second phase..."
+    doctor "\"Now for the second phase...\""
+
+    hide doctor default onlayer portraits with dissolve
 
     "He pulls the small bottle of dried Taeru Root from his coat pocket, which he had obtained from the hospital."
 
-    doctor "It is known to restore strength and reduce fatigue... perhaps it can stimulate the healthy neurons to compensate for the damaged ones."
+    show doctor default at left onlayer portraits with dissolve
 
-    "He hesitates. reading the next pages of the book in front of him."
+    doctor "It is known to restore strength and reduce fatigue..."
+    
+    doctor "Perhaps it can stimulate the healthy neurons to compensate for the damaged ones."
+
+    hide doctor default onlayer portraits with dissolve
+
+    "He hesitates reading the next pages of the book in front of him."
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "The reports mention changes in blood pressure... but they are uncommon."
+
+    hide doctor default onlayer portraits with dissolve
 
     "He closes the book."
 
     "He decides not to lose more precious time."
 
-    "He begins grinding the dried roots with a mortar and pestle until they become a fine powder. "
+    "He begins grinding the dried roots with a mortar and pestle until they become a fine powder."
 
-    "Slowly, he combines the measured ingredients inside a ceramic bowl, adding hot water drop by drop until the mixture forms a dark herbal {a=glossary:decoction_entry}decoction{/a}."
+    $ decoction_entry.locked = False
 
+    "He combines the measured ingredients inside a ceramic bowl."
+    
+    "Adding hot water drop by drop, the mixture finally forms a dark herbal {a=glossary:decoction_entry}decoction{/a}."
+
+    show doctor default at left onlayer portraits with dissolve
+    
     doctor "Every measurement has to be exact."
 
-    "He pours the medicine into a small porcelain bottle."
+    hide doctor default onlayer portraits with dissolve
+
+    "He pours the medicine into a small glass bottle."
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "If my theory is correct... this should be enough."
+
+    hide doctor default onlayer portraits with dissolve
 
     "A loud meow echoes through the laboratory."
 
     "The cat rubs itself against his leg, meowing repeatedly."
 
-    if not ch02_sick_pet:
+    if not ch02_knows_cat_is_sick:
 
         "Only then does he notice how thin it has become."
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "You've hardly eaten..."
 
-        hide doctor default onlayer portraits
+        hide doctor default onlayer portraits with dissolve
 
         "He kneels beside it."
 
+        show doctor default at left onlayer portraits with dissolve
+
         doctor "You've been showing the same symptoms... loss of balance... weakness..."
+
+        hide doctor default onlayer portraits with dissolve
+
+        $ ch02_knows_cat_is_sick = True
 
     else :
 
@@ -135,37 +221,35 @@ label ch02_go_to_hospital :
 
         doctor "\"You made a mess before.\""
 
-        
-
         hide doctor default onlayer portraits
 
         doctor "I should not let you inside the lab anymore."
 
-    if ch02_hungry_pet :
+    #TODO: check if this flag is necessary
 
-        show doctor default at left onlayer portraits
+    # if ch02_hungry_pet :
 
-        doctor "\"And last I lose time feeding you..\""
+    #     show doctor default at left onlayer portraits
 
-        
+    #     doctor "\"And last I lose time feeding you..\""
 
-        hide doctor default onlayer portraits
+    #     hide doctor default onlayer portraits
 
-        doctor "I should be careful with my choices."
+    #     doctor "I should be careful with my choices."
 
     "He sighs."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Mother needs this medicine...\""
 
-    hide doctor default onlayer portraits
+    hide doctor default onlayer portraits with dissolve
 
     "The cat meows once more."
 
-    show doctor default at left onlayer portraits
+    show doctor default at left onlayer portraits with dissolve
 
-    doctor "\...but if I leave you like this...\""
+    doctor "\But if I leave you like this...\""
 
     doctor "\"...you'll only keep crying.\""
 
@@ -177,7 +261,7 @@ label ch02_go_to_hospital :
 
         "Go to your mother" :
 
-            jump ch02_used_panax_ending 
+            jump ch02_used_taeru_ending
 
         "Play with and feed the cat":
 

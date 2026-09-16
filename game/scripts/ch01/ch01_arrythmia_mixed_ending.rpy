@@ -2,7 +2,7 @@ label ch01_arrythmia_mixed_ending:
 
     show doctor default at left onlayer portraits with dissolve
 
-    doctor "\"I can't leave you like this, Mother.\"" 
+    doctor "I can't leave you like this, Mother." 
 
     if ch01_prepared_formula:
 
@@ -47,17 +47,19 @@ label ch01_arrythmia_mixed_ending:
 
     scene bg ch01 lab with fade
 
-    if ch01_prepared_formula:
+    #TODO: see if this can be reached without him preparing the formula
 
-        show doctor default at left onlayer portraits with dissolve
+    
 
-        doctor "The formula containing {a=glossary:nagomi_root_entry}Nagomi Root{/a} is still there."
+    show doctor default at left onlayer portraits with dissolve
 
-        hide doctor default onlayer portraits with dissolve
+    $ nagomi_root_entry.locked = False
 
-    else:
+    doctor "The formula containing {a=glossary:nagomi_root_entry}Nagomi Root{/a} is still there."
 
-        "He quickly prepares another dose of the {a=glossary:formula_entry}formula{/a}."
+    hide doctor default onlayer portraits with dissolve
+
+
 
     
     scene black with fade
@@ -139,6 +141,8 @@ label ch01_arrythmia_mixed_ending:
 
     $ ch01_knows_arrhythmia = True
 
+    $ ch01_previous_death = "arrhythmia"
+
     "He does everything he can." 
 
     "He tries everything he knows." 
@@ -196,8 +200,6 @@ label ch01_arrythmia_mixed_ending:
             $ ch01_wake_happened = True
 
     else :
-
-        show doctor default at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 

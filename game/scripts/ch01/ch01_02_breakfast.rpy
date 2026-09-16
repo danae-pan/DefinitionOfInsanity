@@ -34,10 +34,12 @@ label ch01_make_breakfast :
             show doctor default at left onlayer portraits
 
             doctor "A soup should help Mother feel better."
-        
-        doctor "Wait...something feels strange. I feel like I've done this before."
 
-        doctor "\"I’m probably confused from the lack of sleep…\"" 
+        if knows_dysphagia:
+        
+            doctor "Wait...something feels strange. I feel like I've done this before."
+
+            doctor "\"I’m probably confused from the lack of sleep…\"" 
 
         hide doctor default onlayer portraits with dissolve
 
@@ -86,8 +88,6 @@ label ch01_make_breakfast :
         doctor "The bread... Mother choked on it because of her {a=glossary:dysphagia_entry}dysphagia{/a}..."
 
         if ch01_mother_checked:
-
-            show doctor default at left onlayer portraits with dissolve
 
             doctor "I have to be careful. I cannot make the same mistakes again."
 
