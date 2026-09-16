@@ -2,8 +2,15 @@ image bg lab = "images/backgrounds/lab_background.png"
 
 label ch01_start:
 
-    scene bg lab
-    with fade
+    if ch01_loop_count == 0:
+
+        scene chapter_1_title with fade
+
+        pause 3
+
+        scene black with dissolve
+
+    scene bg lab with fade
 
     jump ch01_wake_up
 
@@ -50,6 +57,8 @@ label ch01_wake_up:
 
     if ch01_loop_count == 0:
 
+        
+
         call ch01_first_wakeup from _call_ch01_first_wakeup
         
     else:
@@ -81,6 +90,8 @@ label ch01_first_wakeup:
     "Once agan, reallity hits him."
 
     "His mother is suffering from a mysterious illness, one for which medicine has yet to discover a cure."
+
+    scene bg ch01 lab with fade
 
     show doctor default at left onlayer portraits with dissolve
 

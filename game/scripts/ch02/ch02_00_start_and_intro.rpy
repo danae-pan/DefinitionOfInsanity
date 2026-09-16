@@ -8,6 +8,14 @@ label ch02_start:
 
     call ch02_reset_runtime_state from _call_ch02_reset_runtime_state
 
+    if ch02_loop_count == 0:
+
+        scene chapter_2_title with fade
+
+        pause 3
+
+        scene black with dissolve
+
     jump ch02_intro
 
 label ch02_reset_runtime_state:
