@@ -443,7 +443,6 @@ label ch02_go_to_herbalist :
 
     hide doctor default onlayer portraits with dissolve
 
-
     menu : 
 
         "Take the first":

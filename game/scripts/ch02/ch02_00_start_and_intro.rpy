@@ -6,6 +6,14 @@ label ch02_new_loop:
 
 label ch02_start:
 
+    if (
+        ch02_first_herb_without_instructions
+        and ch02_first_herb_with_instructions
+        and ch02_second_herb_without_instructions
+        and ch02_second_herb_with_instructions
+    ):
+        jump ch02_ending
+
     call ch02_reset_runtime_state from _call_ch02_reset_runtime_state
 
     if ch02_loop_count == 0:
@@ -15,6 +23,7 @@ label ch02_start:
         pause 3
 
         scene black with dissolve
+
 
     jump ch02_intro
 

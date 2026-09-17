@@ -84,6 +84,8 @@ label ch02_feed_the_cat :
 
         doctor "Every minute counts."
 
+    hide doctor default onlayer portraits with dissolve
+
     menu : 
 
         "Give formula to mother":

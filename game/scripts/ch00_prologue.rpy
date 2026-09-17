@@ -81,5 +81,9 @@ To find a cure...
 """
 
     nvl clear
+    
     hide prologue overlay
+
+    $ preferences.text_cps = old_text_cps
+
     jump ch01_start
