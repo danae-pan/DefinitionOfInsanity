@@ -4,7 +4,7 @@ label ch01_brain_hemorrahage_ending:
 
     show doctor default at left onlayer portraits with dissolve
 
-    doctor "The herbs in Mr. Kazuki's shop could be exactly what I need."
+    doctor "The herbs in Mr. Kazuki's store could be exactly what I need."
 
     doctor "Ingredients the hospital cannot provide..."
 
@@ -18,7 +18,7 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "\"Thank you, Mr. Kazuki.\""
 
-        doctor "\"I'll visit your shop another time.\""
+        doctor "\"I'll visit your store another time.\""
 
         hide doctor default onlayer portraits
 
@@ -182,7 +182,7 @@ label ch01_brain_hemorrahage_ending:
 
     #TODO: check whether this block of code is needed
 
-    #It is needed for when he goes to answer the door ad then returns to his mother instead of going with the herbalist but it doesn;t work.
+    #It is needed for when he goes to answer the door ad then returns to his Mother instead of going with the herbalist but it doesn;t work.
 
     if ch01_met_herb_in_door:
 
@@ -232,7 +232,7 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "I have to tell someone."
 
-        hide doctor default onlayer portraits with dissolveR
+        hide doctor default onlayer portraits with dissolve
 
         $ wake_entry.locked = False
 

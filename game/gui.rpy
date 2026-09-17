@@ -381,12 +381,13 @@ define gui.slider_tile = False
 ## Horizontal borders.
 define gui.bar_borders = Borders(6, 6, 6, 6)
 define gui.scrollbar_borders = Borders(6, 6, 6, 6)
-define gui.slider_borders = Borders(12, 6, 12, 6)
+define gui.slider_borders = Borders(0, 0, 0, 0)
+
 
 ## Vertical borders.
 define gui.vbar_borders = Borders(6, 6, 6, 6)
 define gui.vscrollbar_borders = Borders(6, 6, 6, 6)
-define gui.vslider_borders = Borders(6, 6, 6, 6)
+define gui.vslider_borders = Borders(12, 6, 12, 6)
 
 ## What to do with unscrollable scrollbars in the game menu. "hide" hides them,
 ## while None shows them.
