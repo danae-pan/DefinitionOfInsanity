@@ -24,25 +24,65 @@ define config.check_conflicting_properties = True
 ##
 ## The colors of text in the interface.
 
+## UI Palette ###################################################################
+
+define gui.color_brown = "#402814"
+define gui.color_cream = "#DAD18F"
+define gui.color_pale_cream = "#CFC98B"
+define gui.color_olive = "#746F4C"
+define gui.color_warm_gray = "#77736A"
+define gui.color_red = "#801C1C"
+define gui.color_tan = "#AE9572"
+define gui.color_off_white = "#FFF5E9"
+define gui.color_medium_brown = "#654B35"
+
+## Game Color Palette
+
+define gui.dark_brown = "#402814"
+define gui.cream = "#DAD18F"
+define gui.off_white = "#FFF5E9"
+
+define gui.deep_red = "#801C1C"
+define gui.tan = "#AE9572"
+define gui.olive = "#746F4C"
+## Secondary UI text
+define gui.secondary_text_color = "#9A8E7A"
+
+
+## Ren'Py interface colors
+
+define gui.accent_color = gui.color_brown
+
+define gui.idle_color = gui.color_brown
+define gui.idle_small_color = gui.color_warm_gray
+
+define gui.hover_color = gui.color_off_white
+define gui.selected_color = gui.color_cream
+
+define gui.insensitive_color = "#77736A7F"
+
+define gui.text_color = "#404040"
+define gui.interface_text_color = "#404040"
+
 ## An accent color used throughout the interface to label and highlight text.
-define gui.accent_color = '#003366'
+#define gui.accent_color = '#003366'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#707070'
+#define gui.idle_color = '#707070'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
-define gui.idle_small_color = '#606060'
+#define gui.idle_small_color = '#77736A'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#003366'
+#define gui.hover_color = '#003366'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#555555'
+#define gui.selected_color = '#555555'
 
 ## The color used for a text button when it cannot be selected.
-define gui.insensitive_color = '#7070707f'
+#define gui.insensitive_color = '#7070707f'
 
 ## Colors used for the portions of bars that are not filled in. These are not
 ## used directly, but are used when re-generating bar image files.
@@ -50,8 +90,11 @@ define gui.muted_color = '#6684a3'
 define gui.hover_muted_color = '#99adc1'
 
 ## The colors used for dialogue and menu choice text.
-define gui.text_color = '#404040'
-define gui.interface_text_color = '#404040'
+#define gui.text_color = '#404040'
+#define gui.interface_text_color = '#404040'
+
+## Secondary text, such as save dates and less important information.
+#define gui.secondary_text_color = '#77736A'
 
 
 ## Fonts and Font Sizes ########################################################
@@ -86,11 +129,9 @@ define gui.notify_text_color = "#404040"
 define gui.title_text_size = 75
 
 ## Content/UI text colors
-define gui.interface_text_color = "#DCD2B1"
-#DAD18F (this is the correct color)
-define gui.idle_color = "#DCD2B1"
-define gui.hover_color = "#FFF1B8"
-define gui.selected_color = "#FFF1B8"
+#define gui.idle_color = "#DCD2B1"
+#define gui.hover_color = "#FFF1B8"
+#define gui.selected_color = "#FFF1B8"
 
 ## Main and Game Menus #########################################################
 
@@ -361,7 +402,7 @@ define config.history_length = 250
 
 ## The height of a history screen entry, or None to make the height variable at
 ## the cost of performance.
-define gui.history_height = 210
+define gui.history_height = None
 
 ## Additional space to add between history screen entries.
 define gui.history_spacing = 0

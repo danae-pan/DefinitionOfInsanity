@@ -454,7 +454,7 @@ label ch01_check_mother :
     $ ch01_mother_checked = True
 
     menu :
-        "Make breakfast":
+        "Prepare breakfast":
 
             show doctor default at left onlayer portraits with dissolve
 

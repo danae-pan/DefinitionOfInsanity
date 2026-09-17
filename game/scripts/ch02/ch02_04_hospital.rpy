@@ -259,7 +259,7 @@ label ch02_go_to_hospital :
 
     menu :
 
-        "Go to your mother" :
+        "Go to your Mother" :
 
             jump ch02_used_taeru_ending
 

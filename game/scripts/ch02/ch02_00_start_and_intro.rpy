@@ -123,7 +123,7 @@ label ch02_intro:
 
     menu :
 
-        "Check on your mother":
+        "Check on your Mother":
 
             #TODO:reset the chosen from menu choices to their default state
 

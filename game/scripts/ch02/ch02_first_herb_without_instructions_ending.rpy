@@ -18,7 +18,7 @@ label ch02_first_herb_without_instructions_ending:
 
     scene bg ch01 mother with fade
 
-    "His mother looks up weakly as he enters."
+    "His Mother looks up weakly as he enters."
 
     mother "\"My son...\""
 
@@ -118,7 +118,7 @@ label ch02_first_herb_without_instructions_ending:
 
     "He stares at the floor."
     
-    "Broken pieces of the medicine bottle his mother threw."
+    "Broken pieces of the medicine bottle his Mother threw."
 
     if ch02_first_herb_with_instructions :
 
@@ -148,7 +148,7 @@ label ch02_first_herb_without_instructions_ending:
 
     "Finally, he reaches for the bedsheet."
 
-    "He gently pulls it over his mother's face."
+    "He gently pulls it over his Mother's face."
 
     show doctor default at left onlayer portraits with dissolve
 

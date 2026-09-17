@@ -332,6 +332,6 @@ label ch01_herbalists_invitation:
 
             jump ch01_arrythmia_good_ending
 
-        "Return to your Mother":
+        "Answer your Mother's call":
 
             jump ch01_brain_hemorrahage_ending

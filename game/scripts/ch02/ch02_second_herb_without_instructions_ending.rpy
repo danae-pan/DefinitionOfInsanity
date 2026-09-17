@@ -1,6 +1,6 @@
 label ch02_second_herb_without_instructions_ending:
 
-    "The doctor gently squeezes his mother's hand."
+    "The doctor gently squeezes his Mother's hand."
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -52,7 +52,7 @@ label ch02_second_herb_without_instructions_ending:
 
     scene bg ch01 mother with fade
 
-    "His mother struggles to sit upright."
+    "His Mother struggles to sit upright."
 
     "He patiently supports her back, feeding her one small spoonful at a time."
 
@@ -96,7 +96,7 @@ label ch02_second_herb_without_instructions_ending:
 
     hide doctor default onlayer portraits
 
-    "He gently helps his mother drink the medicine."
+    "He gently helps his Mother drink the medicine."
 
     "Then he sits beside her bed, notebook in hand."
 
@@ -188,7 +188,7 @@ label ch02_second_herb_without_instructions_ending:
 
     hide doctor default onlayer portraits with dissolve
 
-    "He slowly pulls the bedsheet over his mother's face."
+    "He slowly pulls the bedsheet over his Mother's face."
 
     show doctor default at left onlayer portraits with dissolve
 

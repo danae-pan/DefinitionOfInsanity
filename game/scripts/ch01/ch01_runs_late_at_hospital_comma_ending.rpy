@@ -84,17 +84,17 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     menu:
 
-        "Go with the Herbalist":
+        "Join the Herbalist":
 
             call ch01_arrythmia_good_ending
 
-        "Return to your mother":
+        "Return to your Mother":
 
             $ ch01_return_from_hospital = True
 
             show doctor default at left onlayer portraits
 
-            doctor "\"I'll definitely visit your shop as soon as I can.\""
+            doctor "\"I'll definitely visit your store as soon as I can.\""
 
             doctor "\"I have to go now. Have a good day, Mr. Kazuki.\""
 

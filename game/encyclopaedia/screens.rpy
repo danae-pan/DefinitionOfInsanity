@@ -88,77 +88,80 @@ screen encyclopaedia_list(enc):
         If(enc.active, enc.SetEntry(enc.active)),
     ]
 
-    frame:
-        style_prefix "encyclopaedia"
-        yfill True
-        xsize 0.5
+    use game_menu(_("DICTIONARY")):
 
-        vbox:
-            frame:
-                style_prefix "encyclopaedia"
-                xfill True
-
-                text enc.name
-
-            frame:
-                style_prefix "encyclopaedia"
-                xfill True
-
-                hbox:
-                    xfill True
-                    # Percentage unlocked display
-                    text _("[enc.percentage_unlocked] % Complete") style "encyclopaedia_header_text"
-
-            frame:
-                style_prefix "encyclopaedia"
-                xfill True
-
-                vbox:
-                    spacing 6
-
-                    hbox:
-                        spacing 8
-
-                        text _("Filter") style "encyclopaedia_header_text"
-
-                        use dropdown(focus_name="diff_drop"):
-                            text enc.filtering or _("---") style "encyclopaedia_subject_filters_button_text"
-
-                    vbox:
-                        text _("Sorting") style "encyclopaedia_sorting_label_text"
-                        hbox:
-                            xfill True
-                            # Buttons to sort entries.
-                            textbutton "⇕ " + encyclopaedia.sort_by_number action enc.Sort(sorting_mode=SortMode.NUMBER) style_suffix "sort_by_button"
-                            textbutton "⇕ " + encyclopaedia.sort_by_alphabetical action enc.Sort(sorting_mode=SortMode.ALPHABETICAL) style_suffix "sort_by_button"
-                            textbutton "⇕ " + encyclopaedia.sort_by_reverse_alphabetical action enc.Sort(sorting_mode=SortMode.REVERSE_ALPHABETICAL) style_suffix "sort_by_button"
-                            textbutton "⇕ " + encyclopaedia.sort_by_subject action enc.Sort(sorting_mode=SortMode.SUBJECT) style_suffix "sort_by_button"
-                            textbutton "⇕ " + encyclopaedia.sort_by_unread action enc.Sort(sorting_mode=SortMode.UNREAD) style_suffix "sort_by_button"
+        frame:
+            style_prefix "encyclopaedia"
+            yfill True
+            xfill True
 
             vbox:
-                hbox:
-                    frame:
-                        style_prefix "encyclopaedia"
-                        ymaximum 1.0
+                frame:
+                    style_prefix "encyclopaedia"
+                    xfill True
 
-                        viewport:
-                            scrollbars "vertical"
-                            mousewheel True
-                            draggable True
-
-                            ymaximum 0.908
-
-                            vbox:
-                                spacing 0
-                                use vertical_list(enc) id "vertical list"
+                    text enc.name style "encyclopaedia_title_text"
 
                 frame:
                     style_prefix "encyclopaedia"
-
                     xfill True
 
                     hbox:
-                        textbutton _("Return") action [enc.CloseActiveEntry(), Return()] style "encyclopaedia_close_button"
+                        xfill True
+                        # Percentage unlocked display
+                        text _("[enc.percentage_unlocked] % Complete") style "encyclopaedia_header_text"
+
+                frame:
+                    style_prefix "encyclopaedia"
+                    xfill True
+
+                    vbox:
+                        spacing 6
+
+                        hbox:
+                            spacing 8
+
+                            text _("Filter") style "encyclopaedia_header_text"
+
+                            use dropdown(focus_name="diff_drop"):
+                                text enc.filtering or _("---") style "encyclopaedia_subject_filters_button_text"
+
+                        vbox:
+                            text _("Sorting") style "encyclopaedia_sorting_label_text"
+                            hbox:
+                                xfill True
+                                # Buttons to sort entries.
+                                textbutton "⇕ " + encyclopaedia.sort_by_number action enc.Sort(sorting_mode=SortMode.NUMBER) style_suffix "sort_by_button"
+                                textbutton "⇕ " + encyclopaedia.sort_by_alphabetical action enc.Sort(sorting_mode=SortMode.ALPHABETICAL) style_suffix "sort_by_button"
+                                textbutton "⇕ " + encyclopaedia.sort_by_reverse_alphabetical action enc.Sort(sorting_mode=SortMode.REVERSE_ALPHABETICAL) style_suffix "sort_by_button"
+                                textbutton "⇕ " + encyclopaedia.sort_by_subject action enc.Sort(sorting_mode=SortMode.SUBJECT) style_suffix "sort_by_button"
+                                textbutton "⇕ " + encyclopaedia.sort_by_unread action enc.Sort(sorting_mode=SortMode.UNREAD) style_suffix "sort_by_button"
+
+                vbox:
+                    hbox:
+                        frame:
+                            style_prefix "encyclopaedia"
+                            ymaximum 1.0
+
+                            viewport:
+                                scrollbars "vertical"
+                                mousewheel True
+                                draggable True
+
+                                ymaximum 0.908
+
+                                vbox:
+                                    spacing 0
+                                    use vertical_list(enc) id "vertical list"
+
+                    ## remove return
+                    # frame:
+                    #     style_prefix "encyclopaedia"
+
+                    #     xfill True
+
+                    #     hbox:
+                    #         textbutton _("Return") action [enc.CloseActiveEntry(), Return()] style "encyclopaedia_close_button"
 
     use dropdown_options("diff_drop"):
         textbutton _("---"):
@@ -181,94 +184,98 @@ screen encyclopaedia_list(enc):
 screen encyclopaedia_entry(enc):
     tag encyclopaedia_entry
 
-    frame:
-        style_prefix "encyclopaedia_entry"
+    on "show" action Hide("encyclopaedia_list")
 
-        vbox:
-            # Flavour text to indicate which entry we're currently on.
-            frame:
-                style_suffix "label_frame"
+    use game_menu(_("DICTIONARY")):
 
-                text str(enc.active)
+        frame:
+            style_prefix "encyclopaedia_entry"
 
-            # Buttons to swap between pages.
-            frame:
-                style_suffix "change_entry_frame"
-                id "entry_nav"
-
-                hbox:
-                    style_suffix "change_entry_hbox"
-
-                    # Previous / Next is relative to the sorting mode
-                    textbutton _("Previous Entry") xalign .02 action enc.PreviousEntry() style_suffix "change_entry_button"
-                    textbutton _("Next Entry") xalign .98 action enc.NextEntry() style_suffix "change_entry_button"
-
-            # Entry text
             vbox:
-                spacing 8
-                # If the entry has an image
-                if enc.active.current_page.has_image:
+                # Flavour text to indicate which entry we're currently on.
+                frame:
+                    style_suffix "label_frame"
+
+                    text str(enc.active) style "encyclopaedia_entry_title_text"
+
+                # Buttons to swap between pages.
+                frame:
+                    style_suffix "change_entry_frame"
+                    id "entry_nav"
+
+                    hbox:
+                        style_suffix "change_entry_hbox"
+
+                        # Previous / Next is relative to the sorting mode
+                        textbutton _("Previous Entry") xalign .02 action enc.PreviousEntry() style_suffix "change_entry_button"
+                        textbutton _("Next Entry") xalign .98 action enc.NextEntry() style_suffix "change_entry_button"
+
+                # Entry text
+                vbox:
+                    spacing 8
+                    # If the entry has an image
+                    if enc.active.current_page.has_image:
+                        frame:
+                            style_prefix "encyclopaedia_entry_image"
+
+                            viewport:
+                                scrollbars None
+                                draggable True
+                                mousewheel True
+                                edgescroll (1.0, 1.0)
+
+                                add enc.active.current_page.image
+
                     frame:
-                        style_prefix "encyclopaedia_entry_image"
+                        style_prefix "encyclopaedia_entry_content"
+                        id "entry_window"
+
+                        if enc.active.current_page.has_image:
+                            ymaximum 0.685
+                        else:
+                            ymaximum 0.846
 
                         viewport:
-                            scrollbars None
-                            draggable True
+                            scrollbars "vertical"
                             mousewheel True
-                            edgescroll (1.0, 1.0)
-
-                            add enc.active.current_page.image
+                            draggable True
+                            vbox:
+                                spacing 8
+                                # Display the current entry's text
+                                for item in enc.active.current_page.text:
+                                    text "[item]" style "encyclopaedia_entry_text"
 
                 frame:
-                    style_prefix "encyclopaedia_entry_content"
-                    id "entry_window"
-
-                    if enc.active.current_page.has_image:
-                        ymaximum 0.685
-                    else:
-                        ymaximum 0.846
-
-                    viewport:
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        vbox:
-                            spacing 8
-                            # Display the current entry's text
-                            for item in enc.active.current_page.text:
-                                text "[item]" style "encyclopaedia_entry_text"
-
-            frame:
-                style_prefix "encyclopaedia"
-                xalign 1.0
-                xfill True
-
-                # If the entry has pages, add Prev/Next Page buttons
-                if len(enc.active.pages) > 1:
-                    hbox:
-                        style "encyclopaedia_entry_change_entry_hbox"
-
-                        textbutton _("Previous Page") xalign .02 action enc.PreviousPage() style "encyclopaedia_entry_change_entry_button"
-
-                        # Flavour text to indicate which page out of the total is being viewed
-                        $ total_pages = len(enc.active.pages)
-                        text _("Page [enc.active.current_page.page_number] / [total_pages]") style "encyclopaedia_entry_page_label"
-
-                        textbutton _("Next Page") xalign .98 action enc.NextPage() style "encyclopaedia_entry_change_entry_button"
-
-                else:
-                    xpadding 10
-                    ypadding 10
-                    text " " size 18 yalign 0.5
-
-            frame:
-                style_prefix "encyclopaedia"
-                xfill True
-
-                hbox:
+                    style_prefix "encyclopaedia"
+                    xalign 1.0
                     xfill True
-                    # Flavour text that displays the current sorting mode
-                    textbutton _("Close Entry") id "close_entry_button" xalign .98 clicked enc.CloseActiveEntry() style "encyclopaedia_close_button"
+
+                    # If the entry has pages, add Prev/Next Page buttons
+                    if len(enc.active.pages) > 1:
+                        hbox:
+                            style "encyclopaedia_entry_change_entry_hbox"
+
+                            textbutton _("Previous Page") xalign .02 action enc.PreviousPage() style "encyclopaedia_entry_change_entry_button"
+
+                            # Flavour text to indicate which page out of the total is being viewed
+                            $ total_pages = len(enc.active.pages)
+                            text _("Page [enc.active.current_page.page_number] / [total_pages]") style "encyclopaedia_entry_page_label"
+
+                            textbutton _("Next Page") xalign .98 action enc.NextPage() style "encyclopaedia_entry_change_entry_button"
+
+                    else:
+                        xpadding 10
+                        ypadding 10
+                        text " " size 18 yalign 0.5
+
+                frame:
+                    style_prefix "encyclopaedia"
+                    xfill True
+
+                    hbox:
+                        xfill True
+                        # Flavour text that displays the current sorting mode
+                        textbutton _("Close Entry") id "close_entry_button" xalign .98 clicked enc.CloseActiveEntry() style "encyclopaedia_close_button"
 
 
 ###
@@ -319,6 +326,18 @@ screen dropdown_options(focus_name):
 ######################
 # Encyclopaedia Styles
 ######################
+
+style encyclopaedia_title_text:
+    size 44
+    color gui.color_cream
+
+    drop_shadow (0, 2)
+    drop_shadow_color gui.color_brown
+
+style encyclopaedia_entry_title_text:
+    size 32
+    color gui.secondary_text_color
+
 style dropdown_arrow is button_text:
     size 18
     xalign 1.0
@@ -327,17 +346,19 @@ style encyclopaedia_vbox is vbox:
     spacing 6
 
 style encyclopaedia_frame is frame:
+    background None
     padding (6, 6, 6, 6)
 
 style encyclopaedia_header_text:
     yalign 0.5
-
-    size 20
+    size 38
+    color gui.secondary_text_color
 
 style encyclopaedia_sorting_label_text:
     xalign 0.5
     yalign 0.5
-    size 14
+    size 32
+    color gui.secondary_text_color
 
 style encyclopaedia_scrollbar is scrollbar
 
@@ -345,75 +366,86 @@ style encyclopaedia_vscrollbar is vscrollbar
 
 style encyclopaedia_button is button
 
-style encyclopaedia_button_text is button_text
+style encyclopaedia_list_button_text is encyclopaedia_button_text:
+    size 32
+    xalign 0.5
+    color gui.secondary_text_color
+    hover_color gui.color_off_white
+    selected_color gui.color_cream
+    insensitive_color gui.insensitive_color
 
 style encyclopaedia_list_button is encyclopaedia_button:
-    background Solid("#000")
-    hover_background Solid(gui.hover_color)
-    selected_background Solid(gui.accent_color)
-    selected_hover_background Solid(gui.hover_color)
+    background None
+    hover_background Solid("#DAD18F30")
+    selected_background Solid("#DAD18F45")
+    selected_hover_background Solid("#DAD18F55")
+
     xsize 1.0
     yalign 0.5
     padding (6, 0, 0, 0)
 
-style encyclopaedia_list_button_text is encyclopaedia_button_text:
-    size 18
-    xalign 0.5
-    color gui.accent_color
-    hover_color "#000"
-    selected_color "#000"
-    insensitive_color "#3D3D3D"
-
 style encyclopaedia_list_letter_text:
-    size 24
+    size 34
+    color gui.color_brown
     padding (10, 10, 10, 10)
     yalign 0.5
 
+
 style encyclopaedia_list_number_text:
-    size 18
+    size 28
+    color gui.secondary_text_color
     padding (10, 10, 10, 10)
     yalign 0.5
 
 style unread_entry_notice_text:
-    size 18
+    size 26
+    color gui.color_red
     padding (10, 10, 10, 10)
     yalign 0.5
 
+
 style encyclopaedia_entry_text is default:
-    size 16
+    size 32
+    color gui.cream
+
 
 style encyclopaedia_list_subject_header:
-    size 24
+    size 34
+    color gui.color_brown
 
-style encyclopaedia_subject_filters_button is encyclopaedia_button:
-    xfill False
 
 style encyclopaedia_subject_filters_button_text is encyclopaedia_button_text:
-    size 18
+    size 30
+    color gui.color_brown
+    hover_color gui.color_off_white
+
 
 style encyclopaedia_sort_by
 style encyclopaedia_sort_by_button is encyclopaedia_button
 style encyclopaedia_sort_by_button_text is encyclopaedia_button_text:
-    size 18
+    size 30
+    color gui.color_brown
+    hover_color gui.color_off_white
+    selected_color gui.color_cream
 
 style encyclopaedia_close_button is encyclopaedia_button
 style encyclopaedia_close_button_text is encyclopaedia_button_text:
-    size 18
+    size 30
+    color gui.color_brown
+    hover_color gui.color_off_white
 
+    
 # Styles for encyclopaedia_entry screen
 style encyclopaedia_entry_frame is encyclopaedia_frame:
-    xalign 1.0
-    yalign 1.0
-
-    xsize 0.5
-    ysize 1.0
-
+    xfill True
+    yfill True
     padding (6, 6, 6, 6)
 
 style encyclopaedia_entry_vbox is vbox:
     spacing 6
 
 style encyclopaedia_entry_label_frame is encyclopaedia_frame:
+    color gui.secondary_text_color
     xalign 1.0
     xfill True
 
@@ -436,10 +468,13 @@ style encyclopaedia_entry_change_entry_hbox is hbox:
 
 style encyclopaedia_entry_change_entry_button is button
 style encyclopaedia_entry_change_entry_button_text is button_text:
-    size 18
+    size 28
+    color gui.color_brown
+    hover_color gui.color_off_white
 
 style encyclopaedia_entry_page_label:
-    size 18
+    size 28
+    color gui.secondary_text_color
     yalign 0.5
 
 ##########################

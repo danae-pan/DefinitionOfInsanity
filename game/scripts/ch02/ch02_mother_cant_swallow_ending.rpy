@@ -34,7 +34,7 @@ label ch02_mother_cant_swallow_ending :
 
     scene bg ch01 mother with fade
 
-    "His mother lies motionless."
+    "His Mother lies motionless."
 
     "One arm hangs weakly over the side of the bed."
 

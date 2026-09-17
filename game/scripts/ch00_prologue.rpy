@@ -41,13 +41,13 @@ Believing the illness to be contagious, many residents avoided those who had fal
 {vspace=30}
 Families became isolated, and the disease carried a heavy {a=glossary:social_stigma_entry}social stigma{/a}.{w=1.2}
 {vspace=30}
-Among the victims was Dr. Yosuke's mother.{w=1.2}
+Among the victims was Dr. Yosuke's Mother.{w=1.2}
 {vspace=30}
 Her symptoms had first appeared more than fifteen years earlier, growing steadily worse with each passing year.{w=1.2}
 {vspace=30}
 In 1930, Yosuke left Matsushita to study medicine in the capital.{w=1.2}
 {vspace=30}
-Whenever he was able, he returned home to care for his mother, doing everything he could to ease her suffering.{w=1.2}
+Whenever he was able, he returned home to care for his Mother, doing everything he could to ease her suffering.{w=1.2}
 {vspace=30}"""
     nvl clear
 
@@ -58,7 +58,7 @@ The illness was linked to {a=glossary:poisoning_entry}poisoning{/a} caused by co
 {vspace=30}
 Without hesitation, Yosuke returned to Matsushita for good. {w=1.2}
 {vspace=30}
-He removed seafood from his mother's diet and accepted a position at the town's small hospital, where the growing number of patients had overwhelmed the remaining physicians. {w=1.2}
+He removed seafood from his Mother's diet and accepted a position at the town's small hospital, where the growing number of patients had overwhelmed the remaining physicians. {w=1.2}
 {vspace=30}
 The discovery proved that the illness was not contagious, yet the stigma remained.{w=1.2}
 {vspace=30}
@@ -73,7 +73,7 @@ To many, believing the sea itself had become dangerous was simply unthinkable.{w
 {vspace=30}
 So, they simply refused to accept that fish could be responsible.{w=1.2}
 {vspace=30}
-With his mother's condition worsening by the day and the number of patients continuing to rise, Yosuke devoted himself to a single goal.{w=1.2}
+With his Mother's condition worsening by the day and the number of patients continuing to rise, Yosuke devoted himself to a single goal.{w=1.2}
 {vspace=30}
 To find a cure...
 {vspace=30}
@@ -81,7 +81,7 @@ To find a cure...
 """
 
     nvl clear
-    
+
     hide prologue overlay
 
     $ preferences.text_cps = old_text_cps

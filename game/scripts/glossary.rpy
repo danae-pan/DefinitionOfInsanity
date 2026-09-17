@@ -374,7 +374,7 @@ init python:
         name="Mrs. Sato",
         subject="Miscellaneous",
         text=enc_utils.text_block("""\
-            Mrs. Sato lives across from the Doctor's house and is a longtime friend of his mother. 
+            Mrs. Sato lives across from the Doctor's house and is a longtime friend of his Mother. 
             She has been aware of her illness since the early stages and was one of the few villagers 
             who continued to support and help her despite the social stigma and fear surrounding her condition.
         """),

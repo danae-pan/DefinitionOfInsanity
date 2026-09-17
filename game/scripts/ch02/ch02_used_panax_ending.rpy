@@ -2,7 +2,7 @@ label ch02_used_taeru_ending:
 
     scene black with fade
 
-    "The doctor picks up the bottle and hurries to his mother's bedside."
+    "The doctor picks up the bottle and hurries to his Mother's bedside."
 
     scene bg ch01 mother with fade
 
@@ -34,7 +34,7 @@ label ch02_used_taeru_ending:
 
     "A sudden gasp interrupts his notes."
 
-    "His mother presses a hand against her head."
+    "His Mother presses a hand against her head."
 
     "Her breathing becomes rapid."
 
@@ -66,7 +66,7 @@ label ch02_used_taeru_ending:
 
     "The stimulation from the experimental formula triggered a sudden rise in blood pressure, causing a massive {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}."
 
-    "The doctor slowly lowers his mother's hand onto the bed."
+    "The doctor slowly lowers his Mother's hand onto the bed."
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -96,7 +96,7 @@ label ch02_used_taeru_ending:
 
     hide doctor default onlayer portraits with dissolve
 
-    "He leaves his mother's room, heading toward the laboratory."
+    "He leaves his Mother's room, heading toward the laboratory."
 
     scene bg ch01 lab with fade
 
@@ -136,7 +136,7 @@ label ch02_used_taeru_ending:
 
         show doctor default at left onlayer portraits with dissolve
 
-        doctor "\"If I can not save mother...\""
+        doctor "\"If I can not save Mother...\""
 
         hide doctor default onlayer portraits with dissolve
 

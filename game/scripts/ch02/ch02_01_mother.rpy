@@ -111,8 +111,7 @@ label ch02_check_mother :
     
     menu:
 
-        "Go to the herbalist":
-
+        "Go to the Herbalist":
 
             jump ch02_go_to_herbalist
 

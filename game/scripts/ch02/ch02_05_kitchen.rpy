@@ -88,11 +88,11 @@ label ch02_feed_the_cat :
 
     menu : 
 
-        "Give formula to mother":
+        "Give formula to Mother":
 
             jump ch02_first_herb_without_instructions_ending
 
-        "Make dinner for mother":
+        "Make dinner for Mother":
 
             jump ch02_first_herb_with_instructions_ending
 

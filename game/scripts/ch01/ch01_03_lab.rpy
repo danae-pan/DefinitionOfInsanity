@@ -46,7 +46,7 @@ label ch01_straight_to_lab :
 
             jump ch01_mother_calls_knock_on_door
         
-        "Keep your cat in the lab":
+        "Keep your cat in the laboratory":
 
             jump ch01_keep_cat_in_lab_mother_calls
 
@@ -203,7 +203,7 @@ label ch01_eat_then_lab:
 
     menu:
 
-        "Let your cat outside":
+        "Take the cat outside":
 
             show doctor default at left onlayer portraits with dissolve
 
@@ -227,7 +227,7 @@ label ch01_eat_then_lab:
 
             jump ch01_mother_calls_knock_on_door
 
-        "Keep your cat in the laboratory":
+        "Let the cat stay in the laboratory":
 
             $ ch01_cat_in_lab = True
 
@@ -411,7 +411,7 @@ label ch01_cat_becomes_noisy:
 
     menu:
 
-        "Let your cat outside":
+        "Carry her outside":
 
             show doctor default at left onlayer portraits with dissolve
 
@@ -433,7 +433,7 @@ label ch01_cat_becomes_noisy:
 
             jump ch01_mother_calls_knock_on_door
 
-        "Keep your cat inside":
+        "Let her stay":
             
             jump ch01_cat_breaks_formula
 

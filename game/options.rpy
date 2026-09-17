@@ -37,7 +37,7 @@ define gui.about = _p("""
 ## distribution. This must be ASCII-only, and must not contain spaces, colons,
 ## or semicolons.
 
-define build.name = "InsanityGameJam"
+define build.name = "AshitaOMotomete"
 
 
 define config.developer = True

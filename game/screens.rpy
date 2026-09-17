@@ -19,8 +19,8 @@ style input:
 
 style hyperlink_text:
     properties gui.text_properties("hyperlink", accent=True)
-    color "#801C1C"
-    hover_color "#402814"
+    color gui.deep_red
+    hover_color gui.dark_brown
     hover_underline True
 
 style gui_text:
@@ -179,7 +179,7 @@ style namebox:
 
 style say_label:
     properties gui.text_properties("name", accent=True)
-    color "#801C1C"
+    color gui.deep_red
     xalign gui.name_xalign
     yalign 0.5
 
@@ -381,7 +381,7 @@ screen navigation():
 
             textbutton _("MAIN MENU") action MainMenu()
 
-        textbutton _("DICTIONARY") action ShowMenu("dictionary")
+        textbutton _("DICTIONARY") action ShowMenu("encyclopaedia_list", glossary)
 
         textbutton _("ABOUT") action ShowMenu("about")
 
@@ -411,11 +411,11 @@ style navigation_button_text:
     spacing gui.navigation_button_text_spacing
 
     drop_shadow (0, 2)
-    drop_shadow_color "#402814"
+    drop_shadow_color gui.dark_brown
 
     hover_size 50
     hover_drop_shadow (0, 2)
-    hover_drop_shadow_color "#402814"
+    hover_drop_shadow_color gui.dark_brown
 
     selected_drop_shadow (0, 2)
     selected_drop_shadow_color "#000000"
@@ -633,23 +633,80 @@ screen about():
 
     tag menu
 
-    ## This use statement includes the game_menu screen inside this one. The
-    ## vbox child is then included inside the viewport inside the game_menu
-    ## screen.
+    default about_tab = "about"
+
     use game_menu(_("ABOUT"), scroll="viewport"):
 
         style_prefix "about"
 
         vbox:
+            spacing 20
 
-            label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            # ABOUT / CREDITS tabs
+            hbox:
+                spacing 30
 
-            ## gui.about is usually set in options.rpy.
-            if gui.about:
-                text "[gui.about!t]\n"
+                textbutton _("About"):
+                    action SetScreenVariable("about_tab", "about")
+                    selected about_tab == "about"
+                    style "options_tab_button"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+                textbutton _("Credits"):
+                    action SetScreenVariable("about_tab", "credits")
+                    selected about_tab == "credits"
+                    style "options_tab_button"
+
+            if about_tab == "about":
+
+                text "[config.name!t]" style "about_game_title"
+
+                text _("Version [config.version!t]") style "about_version"
+
+                vbox:
+                    spacing 10
+
+                    text _("Developed by") style "about_role"
+                    text "Danae Panagiotopoulou\nKaterina Papachristopoulou" style "about_name"
+
+                vbox:
+                    spacing 10
+
+                    text _("Game Concept & Design") style "about_role"
+                    text "Danae Panagiotopoulou\nKaterina Papachristopoulou" style "about_name"
+
+                vbox:
+                    spacing 10
+
+                    text _("Narrative & Script Writing") style "about_role"
+                    text "Danae Panagiotopoulou\nKaterina Papachristopoulou" style "about_name"
+
+                vbox:
+                    spacing 10
+
+                    text _("Programming") style "about_role"
+                    text "Danae Panagiotopoulou\nKaterina Papachristopoulou" style "about_name"
+
+                vbox:
+                    spacing 10
+
+                    text _("Art & Character Design") style "about_role"
+                    text "Danae Panagiotopoulou" style "about_name"
+
+                vbox:
+                    spacing 10
+
+                    text _("UI/UX Design") style "about_role"
+                    text "Danae Panagiotopoulou" style "about_name"
+
+                text "Copyright 2026 Danae Panagiotopoulou & Katerina Papachristopoulou.\nAll rights reserved." style "about_copyright_text"
+
+            elif about_tab == "credits":
+
+                label _("Credits")
+
+                text _("Music & Sound credits will be added here.")
+
+                text _("\nMade with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
 screen dictionary():
@@ -668,10 +725,39 @@ style about_text is gui_text
 
 style about_label_text:
     size gui.label_text_size
-    color "#DAD18F"
+    color gui.cream
+    drop_shadow (0, 2)
+    drop_shadow_color "#000000CC"
 
-style about_text: 
-    color "#402814"
+style about_text:
+    color gui.off_white
+
+style about_game_title:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 44
+    color gui.cream
+    drop_shadow (0, 2)
+    drop_shadow_color gui.dark_brown
+
+style about_role:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 38
+    color gui.secondary_text_color
+
+style about_name:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 34
+    color gui.off_white
+
+style about_version:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 30
+    color gui.dark_brown
+
+style about_copyright_text:
+    font "fonts/Schoolbell-Regular.ttf"
+    size 30
+    color gui.cream
 
 
 ## Load and Save screens #######################################################
@@ -1182,6 +1268,7 @@ style history_name:
 style history_name_text:
     min_width gui.history_name_width
     textalign gui.history_name_xalign
+    color gui.cream
 
 style history_text:
     xpos gui.history_text_xpos
@@ -1191,6 +1278,7 @@ style history_text:
     min_width gui.history_text_width
     textalign gui.history_text_xalign
     layout ("subtitle" if gui.history_text_xalign else "tex")
+    color gui.off_white
 
 style history_label:
     xfill True
@@ -1352,9 +1440,9 @@ style help_button:
 style help_button_text:
     font "fonts/Schoolbell-Regular.ttf"
     size 40
-    color "#D8CC9E"
-    hover_color "#E7D9A8"
-    selected_color "#E7D9A8"
+    color gui.cream
+    hover_color gui.off_white
+    selected_color gui.off_white
     drop_shadow (0, 2)
     drop_shadow_color "#000000CC"
 
@@ -1365,14 +1453,14 @@ style help_label:
 style help_label_text:
     font "fonts/Schoolbell-Regular.ttf"
     size 40
-    color "#CBBF9B"
+    color gui.secondary_text_color
     xalign 1.0
     textalign 1.0
 
 style help_text:
     font "fonts/Schoolbell-Regular.ttf"
     size 38
-    color "#4A3B2A"
+    color gui.cream
 
 
 
@@ -1455,43 +1543,44 @@ style options_tab_button:
 style options_tab_button_text:
     font "fonts/Schoolbell-Regular.ttf"
     size 40
-    color "#5A4833"
-    hover_color "#E7D9A8"
-    selected_color "#E7D9A8"
+    color gui.dark_brown
+    hover_color gui.color_off_white
+    selected_color gui.color_cream
     drop_shadow (0, 2)
     drop_shadow_color "#000000CC"
 
 style pref_label_text:
     font "fonts/Schoolbell-Regular.ttf"
     size 44
-    color "#3A2D20"
+    color gui.secondary_text_color
 
 style radio_button_text:
     font "fonts/Schoolbell-Regular.ttf"
     size 38
-    color "#5A4833"
-    hover_color "#1F1710"
-    selected_color "#1F1710"
+    color gui.dark_brown
+    hover_color gui.color_off_white
+    selected_color gui.color_cream
 
 style check_button_text:
     font "fonts/Schoolbell-Regular.ttf"
     size 38
-    color "#5A4833"
-    hover_color "#1F1710"
-    selected_color "#1F1710"
+    color gui.dark_brown
+    hover_color gui.color_off_white
+    selected_color gui.color_cream
 
 style slider_button_text:
     font "fonts/Schoolbell-Regular.ttf"
     size 34
-    color "#5A4833"
-    hover_color "#1F1710"
+    color gui.color_brown
+    hover_color gui.color_off_white
+    selected_color gui.color_cream
 
 style mute_all_button_text:
     font "fonts/Schoolbell-Regular.ttf"
     size 36
-    color "#CBBF9B"
-    hover_color "#1F1710"
-    selected_color "#1F1710"
+    color gui.color_brown
+    hover_color gui.color_off_white
+    selected_color gui.color_cream
 
 ## Skip indicator screen #######################################################
 ##

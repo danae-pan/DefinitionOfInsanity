@@ -111,7 +111,7 @@ label ch02_go_to_herbalist :
 
     doctor "\"Good morning. I'm Dr.Kazuki.\""
 
-    doctor "\"My mother has fallen ill after eating contaminated fish.\""
+    doctor "\"My Mother has fallen ill after eating contaminated fish.\""
     
     doctor "\"Some colleagues at the hospital mentioned that you have some herbs that may help.\""
 
@@ -141,7 +141,7 @@ label ch02_go_to_herbalist :
 
     herbalist "\"While I'm looking...\""
 
-    herbalist "\"How is your mother doing?\""
+    herbalist "\"How is your Mother doing?\""
 
     hide herbalist default onlayer portraits with dissolve
 
@@ -195,7 +195,7 @@ label ch02_go_to_herbalist :
 
     doctor "\"But knowledge means very little when you cannot save your own family.\""
 
-    doctor "\"My mother is all I have.\""
+    doctor "\"My Mother is all I have.\""
 
     hide doctor default onlayer portraits with dissolve
 
@@ -442,6 +442,8 @@ label ch02_go_to_herbalist :
     doctor "I should choose now."
 
     hide doctor default onlayer portraits with dissolve
+
+    scene bg ch01 herbstore with fade 
 
     menu : 
 

@@ -30,7 +30,7 @@ label ch02_cardiac_arrest_ending:
 
     "The bedroom door is half open."
 
-    "His mother is lying on the floor, her entire body shaking violently."
+    "His Mother is lying on the floor, her entire body shaking violently."
 
     "Her arms and legs jerk uncontrollably."
 
@@ -66,7 +66,7 @@ label ch02_cardiac_arrest_ending:
 
     hide doctor default onlayer portraits with dissolve
 
-    "The doctor kneels beside his mother's bed for what feels like hours."
+    "The doctor kneels beside his Mother's bed for what feels like hours."
 
     "Eventually, he rises."
 
@@ -116,7 +116,7 @@ label ch02_cardiac_arrest_ending:
 
     "The doctor throws himself into his work."
 
-    "Each patient keeps his mind occupied for only a few moments before the image of his mother returns."
+    "Each patient keeps his mind occupied for only a few moments before the image of his Mother returns."
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -130,9 +130,9 @@ label ch02_cardiac_arrest_ending:
 
     "The house is silent."
 
-    scene bg ch01 mother with fade
+    scene bg ch01 Mother with fade
 
-    "He slowly opens the door to his mother's room."
+    "He slowly opens the door to his Mother's room."
 
     "Nothing has changed yet."
 

@@ -81,6 +81,8 @@ class CloseActiveEntry(EncyclopaediaAction):
         self.enc.active = None
         self.enc.ResetSubPage()()
         renpy.hide_screen(self.enc.entry_screen)
+        renpy.show_screen(self.enc.list_screen, enc=self.enc)
+        renpy.restart_interaction()
 
 
 class PreviousEntry(EncyclopaediaAction):

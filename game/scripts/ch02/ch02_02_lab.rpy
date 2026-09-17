@@ -1,6 +1,6 @@
 label ch02_try_different_herb :
 
-    scene bg ch01 lab 
+    scene bg ch01 lab with fade
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -9,17 +9,15 @@ label ch02_try_different_herb :
     call ch02_check_mother
 
     menu:
-        "Go to the herbalist":
+        "Visit Mr. Kazuki's store":
             jump ch02_go_to_herbalist
 
-        "Go to the hospital":
+        "Head to the hospital":
             jump ch02_go_to_hospital
     
     return
 
 label ch02_take_the_first :
-
-    scene bg ch01 herbstore with fade
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -281,8 +279,6 @@ label ch02_take_the_first :
 label ch02_take_the_second :
 
     $ ch02_second_herb_taken = True
-
-    show bg ch01 herbstore with fade
 
     show doctor default at left onlayer portraits with dissolve
 
