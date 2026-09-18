@@ -68,7 +68,7 @@ label ch02_first_herb_with_instructions_ending:
 
     "The room is silent."
 
-    "His mother lies motionless in bed, exactly as he had left her."
+    "His Mother lies motionless in bed, exactly as he had left her."
 
     "The tray slips from his hands."
 
@@ -126,7 +126,7 @@ label ch02_first_herb_with_instructions_ending:
 
     hide doctor default onlayer portraits with dissolve
 
-    "He slowly pulls the bedsheet over his mother's face."
+    "He slowly pulls the bedsheet over his Mother's face."
 
     "He kneels there a while longer before gathering the broken pieces of the bowl from the floor."
 
@@ -146,7 +146,7 @@ label ch02_first_herb_with_instructions_ending:
 
     "His legs carry him back to the laboratory almost on their own."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     "The books remain open exactly where he had left them."
 

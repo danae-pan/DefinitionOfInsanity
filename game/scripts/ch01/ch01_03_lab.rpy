@@ -1,10 +1,12 @@
 label ch01_straight_to_lab :
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     call ch01_study_prepare_formula from _call_ch01_study_prepare_formula
 
     "A sudden noise breaks the silence."
+
+    scene bg ch01 lab with fade
 
     "He looks up to see Mother's cat leaping from chair to chair."
 
@@ -36,7 +38,7 @@ label ch01_straight_to_lab :
 
             "He gently picks up the cat and carries her outside."
 
-            scene bg ch01 lab with fade
+            scene bg ch01 lab_no_cat with fade
 
             show doctor default at left onlayer portraits with dissolve
 
@@ -144,7 +146,7 @@ label ch01_eat_then_lab:
 
     "He returns to the laboratory."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     if ch01_loop_count == 0:
 
@@ -170,6 +172,7 @@ label ch01_eat_then_lab:
 
     #expression: skeptical
     #background: lab without the cat
+    scene bg ch01 lab with fade
 
     "His Mother's cat is wondering around the laboratory."
 
@@ -215,7 +218,7 @@ label ch01_eat_then_lab:
 
             "He gently picks up the cat and carries her outside."
 
-            scene bg ch01 lab with fade
+            scene bg ch01 lab_no_cat with fade
 
             show doctor default at left onlayer portraits with dissolve
 
@@ -269,7 +272,7 @@ label ch01_study_prepare_formula:
 
         show doctor default at left onlayer portraits with dissolve
 
-        doctor "I have strong indications that this can cause {a=glossary:arrhythmia_entry}arrhythmia{/a} to mother... But I have nothing else to try..."
+        doctor "I have strong indications that this can cause {a=glossary:arrhythmia_entry}arrhythmia{/a} to Mother... But I have nothing else to try..."
 
         hide doctor default onlayer portraits with dissolve
 
@@ -334,6 +337,8 @@ label ch01_study_prepare_formula:
     if ch01_cat_in_lab:
 
         "He notices movement nearby."
+
+        scene bg ch01 lab with fade
         
         show doctor default at left onlayer portraits with dissolve
 
@@ -376,6 +381,10 @@ label ch01_cat_becomes_noisy:
     "For a moment, the laboratory feels less lonely."
 
     "He lets her walk around the room, exploring every corner."
+
+    # it is probably alrady like that.
+
+    scene bg ch01 lab with fade
 
     call ch01_study_prepare_formula from _call_ch01_study_prepare_formula_2
             
@@ -423,7 +432,7 @@ label ch01_cat_becomes_noisy:
 
             "He gently picks up the cat and carries her outside."
 
-            scene bg ch01 lab with fade
+            scene bg ch01 lab_no_cat with fade
 
             show doctor default at left onlayer portraits with dissolve
 
@@ -451,7 +460,15 @@ label ch01_cat_breaks_formula:
 
     #change the lab background with the cat in it
 
+    # probably already done
+
+    scene bg ch01 lab with fade
+
     "Suddenly, the cat jumps onto his desk!"
+
+    #TODO: check the places for the right bg
+
+    scene bg ch01 lab with fade
 
     if kept_cat_in_lab_once:
 
@@ -598,7 +615,7 @@ label ch01_mother_calls_knock_on_door:
 
             jump ch01_meet_herbalist_on_door
 
-        "Answer your mother call":
+        "Answer your Mother call":
 
             jump ch01_answer_mothers_call
 
@@ -613,6 +630,8 @@ label ch01_keep_cat_in_lab_mother_calls:
     "He cradles her in his arms, and she purrs softly."
 
     "He lets her wander around the room..."
+
+    scene bg ch01 lab with fade
 
     mother "\"Yosuke...\""
 
@@ -742,7 +761,7 @@ label ch01_check_mother_cat_in_lab :
 
         "Return to study":
 
-            scene bg ch01 lab with fade
+            scene bg ch01 lab_no_cat with fade
 
             "He returns to his lab to study some more about the formula he made..."
 

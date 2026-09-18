@@ -182,7 +182,7 @@ label ch02_first_herb_without_instructions_ending:
 
     "His legs carry him back to the laboratory almost on their own."
 
-    scene bg ch01 lab with fade 
+    scene bg ch01 lab_no_cat with fade 
 
     "The books remain open exactly where he had left them."
 

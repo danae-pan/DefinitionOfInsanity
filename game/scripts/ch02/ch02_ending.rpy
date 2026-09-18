@@ -2,7 +2,7 @@
 
 label ch02_ending:
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     "He wakes up in a daze."
 
@@ -79,7 +79,7 @@ label ch02_final_card:
 
     narrator_nvl "Knowing how to save her means nothing\nif you can't act fast enough."
 
-    narrator_nvl "{b}Can you stay one step ahead\nand save your mother before time runs out?{/b}"
+    narrator_nvl "{b}Can you stay one step ahead\nand save your Mother before time runs out?{/b}"
 
     narrator_nvl "{b}Find out in Chapter 3.{/b}"
 

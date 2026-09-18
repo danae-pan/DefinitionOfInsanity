@@ -49,7 +49,7 @@ label ch02_reset_runtime_state:
 
 label ch02_intro:
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     #TODO: Add chapter 2 label
 
@@ -61,21 +61,21 @@ label ch02_intro:
 
             $ wake_entry.locked = False
 
-            "He wakes up in a daze. He cannot believe his mother is no more."
+            "He wakes up in a daze. He cannot believe his Mother is no more."
 
             doctor "How could I let this be? I don’t deserve to call myself a doctor."
 
             doctor "No time for this, I should prepare the death certificate and go to the municipality."
             
-            doctor "But first, I should prepare my mother for the {a=glossary:wake_entry}otsuya{/a}."
+            doctor "But first, I should prepare my Mother for the {a=glossary:wake_entry}otsuya{/a}."
 
-            "He heads to his mother’s room and for his surprise, find her alive."
+            "He heads to his Mother’s room and for his surprise, find her alive."
 
             doctor "Wait a second, what? Am I in a dream?"
 
             "He slaps himself, pinch his arm and he feels the pain."
 
-            doctor "Maybe yesterday was just a nightmare? Maybe mother never died."
+            doctor "Maybe yesterday was just a nightmare? Maybe Mother never died."
 
             doctor "No way, I remember it clearly."
 

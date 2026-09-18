@@ -12,7 +12,7 @@ label ch02_second_herb_without_instructions_ending:
 
     "He leaves the room and makes his way downstairs, heading first to the laboratory."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     "The unfinished decoction is still warm."
 
@@ -78,7 +78,7 @@ label ch02_second_herb_without_instructions_ending:
 
     "The doctor quietly returns to the laboratory."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     "The decoction has finally reached the proper consistency."
 
@@ -202,7 +202,7 @@ label ch02_second_herb_without_instructions_ending:
 
     "His legs carry him back to the laboratory almost on their own."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     "The books remain open exactly where he had left them."
 

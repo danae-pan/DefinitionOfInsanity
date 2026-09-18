@@ -26,7 +26,7 @@ label ch02_feed_the_cat :
 
     hide doctor default onlayer portraits with dissolve
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     "He keeps on stirring the decoction."
 

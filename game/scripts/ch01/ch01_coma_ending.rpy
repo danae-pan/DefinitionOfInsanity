@@ -186,7 +186,7 @@ label ch01_coma_ending :
 
         "He returns to his laboratory."
 
-        scene bg ch01 lab
+        scene bg ch01 lab_no_cat with fade
 
         "He opens his notes."
 

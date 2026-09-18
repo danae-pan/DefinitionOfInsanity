@@ -271,7 +271,7 @@ label ch01_runs_late_at_hospital_comma_ending:
 
         "He returns to his laboratory."
 
-        scene bg ch01 lab with fade
+        scene bg ch01 lab_no_cat with fade
 
         "He opens his notes."
 

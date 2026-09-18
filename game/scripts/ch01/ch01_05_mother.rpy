@@ -19,7 +19,7 @@ label ch01_answer_mothers_call:
 
     elif ch01_check_apothecary and ch01_went_to_hospital:
 
-        "He enters the house and hears his mother calling for him."
+        "He enters the house and hears his Mother calling for him."
 
     scene black with fade
 
@@ -52,7 +52,7 @@ label ch01_answer_mothers_call:
 
         mother "\"I'm really hungry...\""
 
-        "Yosuke looks at his mother, sadness covering his face."
+        "Yosuke looks at his Mother, sadness covering his face."
 
         show doctor default at left onlayer portraits with dissolve
 
@@ -99,7 +99,7 @@ label ch01_answer_mothers_call:
 
         hide doctor default onlayer portraits with dissolve
 
-        scene bg ch01 lab with fade
+        scene bg ch01 lab_no_cat with fade
 
 
     else: 
@@ -161,7 +161,7 @@ label ch01_answer_mothers_call:
 
         hide doctor default onlayer portraits with dissolve
 
-        scene bg ch01 lab with fade
+        scene bg ch01 lab_no_cat with fade
 
         "He enters the laboratory and sees the mess the cat has caused."
 
@@ -191,7 +191,7 @@ label ch01_answer_mothers_call:
 
     scene black with fade
 
-    "He heads to his mother's room, leaving the vial behind."
+    "He heads to his Mother's room, leaving the vial behind."
 
     scene bg ch01 mother with fade
 

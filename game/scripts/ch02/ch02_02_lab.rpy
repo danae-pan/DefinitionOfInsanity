@@ -1,6 +1,6 @@
 label ch02_try_different_herb :
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -39,7 +39,7 @@ label ch02_take_the_first :
 
     hide herbalist default onlayer portraits with dissolve
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     $ kampo_entry.locked = False
 
@@ -199,6 +199,8 @@ label ch02_take_the_first :
 
     hide doctor default onlayer portraits with dissolve
 
+    scene bg ch01 lab with fade
+
     "A loud meow echoes through the laboratory."
 
     "The cat rubs itself against his leg, meowing repeatedly."
@@ -300,7 +302,7 @@ label ch02_take_the_second :
 
     hide herbalist default onlayer portraits with dissolve
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     $ kampo_entry.locked = False
 

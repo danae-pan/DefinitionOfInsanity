@@ -4,7 +4,7 @@ label ch02_second_herb_with_instructions_ending:
 
     show doctor default at left onlayer portraits with dissolve
 
-    doctor "\"I know you need to eat mother\""
+    doctor "\"I know you need to eat Mother\""
 
     doctor "\"But the herbalist was very clear.\""
 
@@ -36,7 +36,7 @@ label ch02_second_herb_with_instructions_ending:
 
     "For a moment, he hesitates at the bedroom door."
 
-    "His mother looks impossibly frail beneath the blanket."
+    "His Mother looks impossibly frail beneath the blanket."
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -48,7 +48,7 @@ label ch02_second_herb_with_instructions_ending:
 
     "He quietly leaves the room and heads to the labatory."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     "He carefully stirs the mixture, watching the herbs release their final colour into the liquid."
 
@@ -80,7 +80,7 @@ label ch02_second_herb_with_instructions_ending:
 
     "He hurries to the bedside."
 
-    "His mother lies motionless."
+    "His Mother lies motionless."
 
     "Her mouth is slightly open."
 
@@ -146,7 +146,7 @@ label ch02_second_herb_with_instructions_ending:
 
     "The bottle slips from his hand and rolls across the wooden floor."
 
-    "He slowly lowers his mother's head back onto the pillow."
+    "He slowly lowers his Mother's head back onto the pillow."
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -168,7 +168,7 @@ label ch02_second_herb_with_instructions_ending:
 
     "The room slowly falls silent."
 
-    "He slowly pulls the bedsheet over his mother's face."
+    "He slowly pulls the bedsheet over his Mother's face."
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -182,7 +182,7 @@ label ch02_second_herb_with_instructions_ending:
 
     "His legs carry him back to the laboratory almost on their own."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     "The books remain open exactly where he had left them."
 

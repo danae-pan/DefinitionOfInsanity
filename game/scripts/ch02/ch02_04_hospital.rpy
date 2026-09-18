@@ -101,7 +101,7 @@ label ch02_go_to_hospital :
 
     "The doctor grabs the bottle and quickly heads home to prepare the {a=glossary:formula_entry}formula{/a}."
 
-    scene bg ch01 lab with fade 
+    scene bg ch01 lab_no_cat with fade 
 
     $ kampo_entry.locked = False
 
@@ -184,6 +184,8 @@ label ch02_go_to_hospital :
     hide doctor default onlayer portraits with dissolve
 
     "A loud meow echoes through the laboratory."
+
+    scene bg ch01 lab with fade
 
     "The cat rubs itself against his leg, meowing repeatedly."
 

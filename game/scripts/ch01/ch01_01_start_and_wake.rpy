@@ -1,5 +1,3 @@
-image bg lab = "images/backgrounds/lab_background.png"
-
 label ch01_start:
 
     if ch01_loop_count == 0:
@@ -10,7 +8,7 @@ label ch01_start:
 
         scene black with dissolve
 
-    scene bg lab with fade
+    scene bg ch01 lab with fade
 
     jump ch01_wake_up
 
@@ -75,7 +73,7 @@ label ch01_wake_up:
             
             jump ch01_make_breakfast
 
-        "Check on your mother":
+        "Check on your Mother":
 
             scene black with fade
 
@@ -89,9 +87,9 @@ label ch01_first_wakeup:
 
     "Once agan, reallity hits him."
 
-    "His mother is suffering from a mysterious illness, one for which medicine has yet to discover a cure."
+    "His Mother is suffering from a mysterious illness, one for which medicine has yet to discover a cure."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -117,7 +115,7 @@ label ch01_first_wakeup:
 
     hide doctor default onlayer portraits with dissolve
 
-    "The days have begun to blur together. Endless hours spent moving between the laboratory and his mother's bedside have made him lose all sense of time."
+    "The days have begun to blur together. Endless hours spent moving between the laboratory and his Mother's bedside have made him lose all sense of time."
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -137,7 +135,7 @@ label ch01_loop_wakeup:
 
         "His body feels heavy. His mind feels even heavier."
 
-        "His mother is dead."
+        "His Mother is dead."
 
     else: 
 

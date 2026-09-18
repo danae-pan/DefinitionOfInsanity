@@ -98,7 +98,7 @@ label ch02_used_taeru_ending:
 
     "He leaves his Mother's room, heading toward the laboratory."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     show doctor default at left onlayer portraits with dissolve
 

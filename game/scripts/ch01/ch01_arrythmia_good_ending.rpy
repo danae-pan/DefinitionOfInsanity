@@ -71,7 +71,7 @@ label ch01_arrythmia_good_ending :
 
         "Yosuke quietly commits every word to memory."
 
-    "They eventually arrive at Mr. Kazuki's shop."
+    "They eventually arrive at Mr. Kazuki's store."
 
     scene bg ch01 herbstore with fade
 
@@ -191,7 +191,7 @@ label ch01_arrythmia_good_ending :
 
     show herbalist default at left onlayer portraits
 
-    herbalist "\"I hope you can help your mother, Mr. Yosuke.\""
+    herbalist "\"I hope you can help your Mother, Mr. Yosuke.\""
     
     herbalist "\"Be careful on your way home.\""
 
@@ -215,7 +215,7 @@ label ch01_arrythmia_good_ending :
 
     "Yosuke finally returns home and heads to his laboratory."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     "The house is quiet."
 
@@ -405,7 +405,7 @@ label ch01_arrythmia_good_ending :
 
         "He returns to his laboratory."
 
-        scene bg ch01 lab with fade
+        scene bg ch01 lab_no_cat with fade
 
         "He opens his notes."
 

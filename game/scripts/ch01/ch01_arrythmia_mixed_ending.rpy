@@ -45,11 +45,9 @@ label ch01_arrythmia_mixed_ending:
 
     "He returns to the laboratory."
 
-    scene bg ch01 lab with fade
+    scene bg ch01 lab_no_cat with fade
 
     #TODO: see if this can be reached without him preparing the formula
-
-    
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -109,7 +107,7 @@ label ch01_arrythmia_mixed_ending:
 
         hide doctor default onlayer portraits with dissolve
 
-        "His mother seems unusualy unresponsive."
+        "His Mother seems unusualy unresponsive."
 
         show doctor default at left onlayer portraits with dissolve
 

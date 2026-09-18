@@ -3,6 +3,7 @@ image bg ch01 mother = im.Scale("images/backgrounds/mother_background.png", 1920
 image bg ch01 lab = im.Scale("images/backgrounds/lab_background.png", 1920, 1080)
 image bg ch01 herbstore = im.Scale("images/backgrounds/herbstore_background.png", 1920, 1080)
 image bg ch01 hospital = im.Scale("images/backgrounds/hospital_background.png", 1920, 1080)
+image bg ch01 lab_no_cat = im.Scale("images/backgrounds/labwithoutcat_background.png", 1920,1080)
 image chapter_1_title = "gui/chapter_one.png"
 image chapter_2_title = "gui/chapter_two.png"
 

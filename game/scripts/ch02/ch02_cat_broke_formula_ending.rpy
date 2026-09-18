@@ -58,6 +58,8 @@ label ch02_cat_broke_formula_ending :
 
     "A sudden thud echoes through the laboratory."
 
+    scene bg ch01 lab with fade
+
     "Before he has time to react the cat leaps onto the workbench."
 
     "The doctor reaches out."
@@ -93,6 +95,8 @@ label ch02_cat_broke_formula_ending :
         doctor "So why I wasn't more careful?"
 
     hide doctor default onlayer portraits with dissolve
+
+    scene bg ch01 lab_no_cat with fade
 
     "He immediately drops to his knees."
 
