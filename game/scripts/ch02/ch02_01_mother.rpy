@@ -3,15 +3,15 @@ label ch02_check_mother :
 
     if ch02_route_choice == "check_mother":
 
-        scene bg ch01 mother
+        show mother default with dissolve
 
         "He checks her pulse and temperature."
 
         show doctor default at left onlayer portraits with dissolve
 
-        doctor "Everything appers to be okey."
+        doctor "Everything appears to be okey."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He fixes her pillow, making sure she’s comfortable."
 
@@ -19,13 +19,15 @@ label ch02_check_mother :
 
         doctor "\"Mother, how are you feeling today?\""
 
+        show mother smile with dissolve
+
         mother "\"I'm feeling better my son.\""
 
-        doctor "She tries to smile, I can see it is difficult for her. "
+        doctor "She tries to smile, I can see it is difficult for her."
 
         doctor "Her body won’t take the pain for much longer..I should hurry. "
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He runs the usual tests, checking her pulse and pressure."
 
@@ -66,9 +68,13 @@ label ch02_check_mother :
 
             if not ch02_knows_taeru_in_stock: 
 
+                show doctor worried at left onlayer portraits with dissolve
+
                 doctor "I already tried the formula before..."
 
                 doctor "It didn't help."
+
+                show doctor default at left onlayer portraits with dissolve
 
                 doctor "Maybe I should head to the hospital, check the stock for any other herbs there."
 
@@ -86,7 +92,7 @@ label ch02_check_mother :
 
             doctor "The situation worsens everyday...a cure must be found...and quickly."   
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
         else :
 
@@ -94,20 +100,22 @@ label ch02_check_mother :
 
             $ taeru_root_entry.locked = False
 
+            show doctor worried at left onlayer portraits with dissolve
+
             doctor "I already know what is in stock and using {a=glossary:taeru_root_entry}Taeru Root{/a} proved to be fatal at the end."
 
             doctor "But what if something changed?"
 
             doctor "\"What if every day is not exactly the same?\""
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
     if ch02_route_choice == "try_herb":
 
         return
     
     
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
     
     menu:
 
@@ -135,13 +143,13 @@ label ch02_mother_calls_for_food :
 
     doctor "..at least that is what I hope."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
     "He leaves the laboratory and makes his way upstairs."
 
-    scene bg ch01 mother with fade
+    show mother default with dissolve
 
     "His Mother is awake, though only barely."
 
@@ -155,11 +163,13 @@ label ch02_mother_calls_for_food :
 
     doctor "\"I'm here.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "She reaches for his hand."
 
     "Her fingers tremble."
+
+    show mother sick with dissolve
 
     mother "\"I...\""
 
@@ -169,13 +179,15 @@ label ch02_mother_calls_for_food :
 
     "The doctor gently supports her shoulders."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"I know...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "She closes her eyes tightly."
+
+    show mother default with dissolve
 
     mother "\"My throat...\""
 
@@ -203,11 +215,13 @@ label ch02_mother_calls_for_food :
 
     if ch02_second_herb_with_instructions:
 
+        show doctor worried at left onlayer portraits with dissolve
+
         doctor "However, last time I did follow the instructions and still.."
 
         doctor "..I failed."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He looks at his Mother."
 
@@ -217,9 +231,11 @@ label ch02_mother_calls_for_food :
 
     doctor "But if I don't…she'll only grow weaker."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "She squeezes his hand ever so slightly."
+
+    show mother sick with dissolve
 
     mother "\"...please...\""
 

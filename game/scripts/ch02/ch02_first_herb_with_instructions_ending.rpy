@@ -8,17 +8,21 @@ label ch02_first_herb_with_instructions_ending:
 
         doctor "In result.."
 
+        show doctor worried at left onlayer portraits with dissolve
+
         doctor "..I lost mother again."
 
         doctor "The herbalist wasn’t sure about the risks…"
 
         doctor "But better be safe than sorry."
 
+        show doctor default at left onlayer portraits with dissolve
+
         doctor "If I'm going to trust his herbs..."
 
         doctor "Then I must trust his instructions as well."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     "He carefully places the bottle back on the workbench before making his way into the kitchen."
 
@@ -36,7 +40,7 @@ label ch02_first_herb_with_instructions_ending:
 
     doctor "\"Please hold on.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The minutes pass agonizingly slowly."
 
@@ -44,11 +48,11 @@ label ch02_first_herb_with_instructions_ending:
 
     "Beside it, he carefully sets the bottle."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor smile at left onlayer portraits with dissolve
 
     doctor "\"Everything is ready.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -58,13 +62,13 @@ label ch02_first_herb_with_instructions_ending:
 
     doctor "\"Mother?\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "No answer."
 
     "He quickens his pace and pushes open the bedroom door."
 
-    scene bg ch01 mother with fade
+    show mother default with dissolve
 
     "The room is silent."
 
@@ -72,15 +76,17 @@ label ch02_first_herb_with_instructions_ending:
 
     "The tray slips from his hands."
 
+    ## SOUND
+
     "The bowl shatters across the wooden floor."
 
     "Rice scatters across the room."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve with vpunch
 
     doctor "\"No...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He rushes to her bedside."
 
@@ -94,13 +100,13 @@ label ch02_first_herb_with_instructions_ending:
 
     "He gently shakes her shoulder."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "\"Mother...\""
 
     doctor "\"Please...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "No response."
 
@@ -112,25 +118,25 @@ label ch02_first_herb_with_instructions_ending:
 
     "His eyes drift toward the untouched meal and the unopened bottle of medicine lying among the broken pieces of porcelain."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
     
     doctor "I followed the instructions…"
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "His voice barely rises above a whisper."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve
 
     doctor "\"...I was only trying to do it properly.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He slowly pulls the bedsheet over his Mother's face."
 
     "He kneels there a while longer before gathering the broken pieces of the bowl from the floor."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "But maybe, just maybe, the day repeats itself again."
 
@@ -140,7 +146,7 @@ label ch02_first_herb_with_instructions_ending:
 
     doctor "That way, I won’t lose time during the day."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -158,13 +164,13 @@ label ch02_first_herb_with_instructions_ending:
 
     "Searching for something he had overlooked."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "Perhaps I should have studied the herb more thoroughly..."
 
     doctor "Understood why it said to be taken after eating…"
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He begins writing new observations beneath his previous notes."
 

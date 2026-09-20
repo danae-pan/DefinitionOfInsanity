@@ -29,9 +29,9 @@ label ch02_take_the_first :
 
     doctor "\"Have a nice day.\""
 
-    hide doctor default onlayer portraits 
+    hide doctor onlayer portraits 
 
-    show herbalist default at left onlayer portraits
+    show herbalist smile at left onlayer portraits
 
     herbalist "\"No need to thank me, I just hope it helps.\""
 
@@ -45,7 +45,7 @@ label ch02_take_the_first :
 
     "The doctor returns home, walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
     
     if not ch02_used_taeru_happened:
 
@@ -85,7 +85,7 @@ label ch02_take_the_first :
 
             doctor "I won't make the same mistakes again."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He places the herbalist's pouches on the table and gently pours the dried herbs into his hand."
 
@@ -115,17 +115,19 @@ label ch02_take_the_first :
 
         doctor "If the body cannot endure the treatment, restoring the nervous system is meaningless."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He recalls what the herbalist said."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     if ch02_first_herb_without_instructions or ch02_first_herb_with_instructions:
 
         doctor "Eating beforehand is advised."
 
         doctor "Otherwise, it might upset the stomach."
+
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "But his advice wasn't conclusive."
 
@@ -137,7 +139,7 @@ label ch02_take_the_first :
 
         doctor "\"I must remember that.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He carefully places the Junka Root into the mortar before turning back to his notes."
 
@@ -145,7 +147,7 @@ label ch02_take_the_first :
 
     doctor "\"Now... the second phase.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He reaches for a small wooden box tucked away on the upper shelf."
 
@@ -163,7 +165,7 @@ label ch02_take_the_first :
 
     doctor "But it should be enough for one preparation."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He opens one of his Kampo manuscripts and rereads a passage he had marked days before."
 
@@ -175,7 +177,7 @@ label ch02_take_the_first :
 
     doctor "Perhaps this will encourage that process."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He places the Hogo Root into the mortar beside the Junka Root."
 
@@ -197,7 +199,7 @@ label ch02_take_the_first :
 
     doctor "\"Just a few more minutes...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene bg ch01 lab with fade
 
@@ -213,11 +215,11 @@ label ch02_take_the_first :
 
         doctor "You've hardly eaten..."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He kneels beside her."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "You've been showing the same symptoms... loss of balance... weakness..."
 
@@ -225,26 +227,17 @@ label ch02_take_the_first :
 
     else :
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"I know you are sick...\""
 
     if kept_cat_in_lab_once :
 
-        doctor "\"...you made a mess before.\""
+        doctor "\"You made a mess before.\""
 
         doctor "I should not let you inside the lab anymore."
 
-
-    #TODO: check if this flag is necessary
-    # if ch02_hungry_pet :
-
-    #     doctor "\"And when I lose time feeding you..\""
-
-    #     doctor "I should be careful with my choices."
-
-    
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He sighs."
 
@@ -252,17 +245,17 @@ label ch02_take_the_first :
 
     doctor "\"Mother needs this medicine...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The cat meows once more."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"But if I leave you like this...\""
 
     doctor "\"...you'll only keep crying.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He remains frozen between the workbench and the hungry animal at his feet."
 
@@ -284,17 +277,17 @@ label ch02_take_the_second :
 
     show doctor default at left onlayer portraits with dissolve
 
-    #TODO: remove glossary definiton from take first too.
-
     doctor "\"I will take Tsuyomi Cap.\""
+
+    show doctor smile at left onlayer portraits with dissolve
 
     doctor "\"Thank you Mr. Kazuki.\""
 
     doctor "\"Have a nice day.\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
-    show herbalist default at left onlayer portraits
+    show herbalist smile at left onlayer portraits
 
     herbalist "\"No need to thank me, I just hope it helps.\""
 
@@ -308,7 +301,7 @@ label ch02_take_the_second :
 
     "The doctor returns home, walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     if not ch02_used_taeru_happened:
 
@@ -346,6 +339,8 @@ label ch02_take_the_second :
 
             doctor "I won't make the same mistakes again."
 
+    show doctor default at left onlayer portraits with dissolve
+
     if ch02_second_herb_with_instructions or ch02_second_herb_without_instructions:
 
         doctor "I've already tried Tsuyomi Cap."
@@ -378,17 +373,19 @@ label ch02_take_the_second :
 
         doctor "...there is little hope of restoring the nervous system."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He recalls what the herbalist said."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     if ch02_second_herb_with_instructions or ch02_second_herb_without_instructions:
 
         doctor "It should be taken on an empty stomach."
 
         doctor "Taking it after eating may interfere with its effects."
+
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "But his advice wasn't conclusive."
 
@@ -400,7 +397,7 @@ label ch02_take_the_second :
 
         doctor "\"I must remember that.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He unties the herbalist's pouch and gently pours the dried herb into his hand."
 
@@ -416,7 +413,7 @@ label ch02_take_the_second :
 
     doctor "I only have a small amount left, but it should be enough."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "With his decision made, he places the Tsuyomi Cap and Ryoku Berry into the mortar."
 
@@ -436,7 +433,7 @@ label ch02_take_the_second :
 
     doctor "\"Just a little longer.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The color of the mix is just as his research described."
 
@@ -444,7 +441,7 @@ label ch02_take_the_second :
 
     doctor "This may actually work."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "Just then, a weak voice echoes from upstairs."
 
@@ -454,11 +451,11 @@ label ch02_take_the_second :
 
     "He grips the wooden spoon a little tighter."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"She's awake...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He glances back at the bowl."
 
@@ -482,9 +479,11 @@ label ch02_take_the_second :
 
     doctor "Just a few more minutes."
 
+    show doctor worried at left onlayer portraits with dissolve
+
     doctor "\"If I stop now, all of this may have been for nothing...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     menu : 
 

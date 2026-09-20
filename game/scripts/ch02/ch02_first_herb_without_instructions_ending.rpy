@@ -1,22 +1,22 @@
 label ch02_first_herb_without_instructions_ending:
 
-    hide doctor default at left onlayer portraits with dissolve
+    hide doctor at left onlayer portraits with dissolve
 
     "The doctor grips the medicine bottle tightly."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "I don't have time to prepare a meal."
 
     doctor "Every minute I wait is another minute the poison spreads."
 
-    hide doctor default at left onlayer portraits with dissolve
+    hide doctor at left onlayer portraits with dissolve
 
     scene black with fade
 
     "He hurries upstairs."
 
-    scene bg ch01 mother with fade
+    show mother sick with dissolve
 
     "His Mother looks up weakly as he enters."
 
@@ -30,7 +30,7 @@ label ch02_first_herb_without_instructions_ending:
 
     doctor "\"I need you to drink this.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He carefully helps her sit upright and raises the bottle to her lips."
 
@@ -46,27 +46,31 @@ label ch02_first_herb_without_instructions_ending:
 
     doctor "Perhaps this was the right decision."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "Then she suddenly clutches her stomach."
 
+    #SOUND
+
     "A painful groan escapes her lips."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve with vpunch
 
     doctor "\"Mother?\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
+
+    show mother sick with dissolve with vpunch
 
     "Without warning, she begins vomiting violently."
 
     "The doctor reaches forward to support her."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"Easy... easy...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "She tries to cough."
 
@@ -78,7 +82,7 @@ label ch02_first_herb_without_instructions_ending:
 
         "Her weakened swallowing reflex cannot protect her."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve with vpunch
 
         doctor "Her swallowing..."
 
@@ -90,7 +94,7 @@ label ch02_first_herb_without_instructions_ending:
 
         doctor "How could I forget? It's a symptom of the disease."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         $ knows_dysphagia = True
 
@@ -98,13 +102,13 @@ label ch02_first_herb_without_instructions_ending:
 
     "The doctor quickly turns her onto her side, desperately trying to clear her airway."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "\"Come on...\""
 
     doctor "\"Breathe!\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "Her struggles become weaker."
 
@@ -122,11 +126,11 @@ label ch02_first_herb_without_instructions_ending:
 
     if ch02_first_herb_with_instructions :
 
-        show doctor default at left onlayer portraits
+        show doctor panicked at left onlayer portraits with dissolve with vpunch
 
         doctor "\"...but why?\""
 
-        hide doctor default onlayer portraits
+        hide doctor onlayer portraits
 
         doctor "I tried before by following the instructions."
 
@@ -136,11 +140,11 @@ label ch02_first_herb_without_instructions_ending:
 
         doctor "..I thought this decision would save her."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve
 
     doctor "\"...I should have listened.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "For a long moment, he remains kneeling beside the bed."
 
@@ -150,11 +154,11 @@ label ch02_first_herb_without_instructions_ending:
 
     "He gently pulls it over his Mother's face."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve
 
     doctor "\"...I'm sorry.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He fetches a cloth and a bucket of water."
 
@@ -164,7 +168,7 @@ label ch02_first_herb_without_instructions_ending:
 
     "The shattered bottle."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "But maybe, just maybe, the day repeats itself again."
 
@@ -176,7 +180,7 @@ label ch02_first_herb_without_instructions_ending:
 
         doctor "That way, I won’t lose time during the day."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -194,13 +198,13 @@ label ch02_first_herb_without_instructions_ending:
 
     "Searching for something he had overlooked."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "Perhaps I should have studied the herb more thoroughly..."
 
     doctor "Understood why it said to be taken after eating…"
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He begins writing new observations beneath his previous notes."
 

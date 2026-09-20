@@ -6,7 +6,7 @@ label ch02_cat_broke_formula_ending :
 
     "He closes his eyes for a brief moment."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"No...\""
 
@@ -14,7 +14,7 @@ label ch02_cat_broke_formula_ending :
 
     doctor "Every minute I spend away from the formula is another minute Mother has to wait."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He gently nudges the cat aside with his foot."
 
@@ -22,7 +22,7 @@ label ch02_cat_broke_formula_ending :
 
     doctor "\"You'll have to wait a little longer.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The cat lets out another desperate cry."
 
@@ -30,11 +30,11 @@ label ch02_cat_broke_formula_ending :
 
     "The decoction is reaching the final stage."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
     
     doctor "\"Just a little longer...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The proportions have to be perfect."
 
@@ -50,11 +50,11 @@ label ch02_cat_broke_formula_ending :
 
     "Drop by drop, the dark liquid begins to collect inside."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor smile at left onlayer portraits with dissolve
     
     doctor "\"Almost finished...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "A sudden thud echoes through the laboratory."
 
@@ -64,11 +64,11 @@ label ch02_cat_broke_formula_ending :
 
     "The doctor reaches out."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve with vpunch
 
     doctor "\"Wait!\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "Too late."
 
@@ -82,7 +82,7 @@ label ch02_cat_broke_formula_ending :
 
     "The doctor freezes."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "\"No...\""
 
@@ -94,7 +94,7 @@ label ch02_cat_broke_formula_ending :
 
         doctor "So why I wasn't more careful?"
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene bg ch01 lab_no_cat with fade
 
@@ -116,13 +116,13 @@ label ch02_cat_broke_formula_ending :
 
     "There is nothing left."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "\"No...\""
 
     doctor "I don't have enough herbs to prepare another."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The laboratory falls silent."
 
@@ -138,9 +138,11 @@ label ch02_cat_broke_formula_ending :
 
     "He enters his Mother's room."
 
-    scene bg ch01 mother with fade
+    show mother default with dissolve
 
     "She is still awake."
+
+    show mother smile with dissolve
 
     "She smiles faintly as he enters."
 
@@ -150,7 +152,7 @@ label ch02_cat_broke_formula_ending :
 
     doctor "\"I'm here.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He pulls a chair beside her bed and takes her hand in his."
 
@@ -166,6 +168,8 @@ label ch02_cat_broke_formula_ending :
 
     "Until, at last..."
 
+    show mother default with dissolve
+
     "It stops."
 
     $ respiratory_failure_entry.locked = False
@@ -176,7 +180,7 @@ label ch02_cat_broke_formula_ending :
 
     "Still holding her hand."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"...I couldn't save you.\""
 
@@ -184,7 +188,7 @@ label ch02_cat_broke_formula_ending :
 
     doctor "Maybe tomorrow I will get another chance."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     $ kept_cat_in_lab_once = True
 

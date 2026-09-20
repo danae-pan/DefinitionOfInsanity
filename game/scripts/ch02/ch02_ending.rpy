@@ -6,7 +6,7 @@ label ch02_ending:
 
     "He wakes up in a daze."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "I've seen Mother die so many times now..."
 
@@ -36,7 +36,7 @@ label ch02_ending:
 
     "He was too late."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "The treatment isn't enough."
 

@@ -12,11 +12,11 @@ label ch02_feed_the_cat :
 
     "For the first time in days, the room feels almost peaceful."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor smile at left onlayer portraits with dissolve
 
     doctor "\"Feels good doesn’t it? Having a full stomach.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He fills a second bowl with some water."
 
@@ -24,7 +24,7 @@ label ch02_feed_the_cat :
 
     doctor "Time to go back to the lab and continue working on the formula."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene bg ch01 lab_no_cat with fade
 
@@ -36,11 +36,11 @@ label ch02_feed_the_cat :
 
     doctor "The extraction is complete."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He pours the mix slowly on a glass bottle."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     if ch02_first_herb_with_instructions :
 
@@ -64,11 +64,15 @@ label ch02_feed_the_cat :
 
     if ch02_first_herb_with_instructions or ch02_first_herb_without_instructions :
 
+        show doctor default at left onlayer portraits with dissolve
+
         doctor "I did ask the herbalist for more information."
 
         doctor "He mentioned that it could be heavy on the stomach.."
 
         doctor "He wasn’t sure about the risks.."
+
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "So many complications.."
 
@@ -84,7 +88,7 @@ label ch02_feed_the_cat :
 
         doctor "Every minute counts."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     menu : 
 

@@ -10,7 +10,7 @@ label ch02_go_to_hospital :
 
     doctor "It should take only 10 minutes walk to get there."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -34,7 +34,7 @@ label ch02_go_to_hospital :
 
     doctor "I should avoid any conversation, otherwise I won't be able to avoid looking at the patients here."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He arrives at the pharmacy."
 
@@ -52,6 +52,8 @@ label ch02_go_to_hospital :
 
             doctor "Nothing from the herbs are suitable for what I need.."
 
+            show doctor dsmile at left onlayer portraits with dissolve
+
             doctor "\"Wait a minute!\""
 
             $ taeru_root_entry.locked = False
@@ -66,7 +68,7 @@ label ch02_go_to_hospital :
 
             doctor "I could use this for phase two, replacing {a=glossary:hogo_root_entry}Hogo Root{/a} that I only have in a small amount."
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
         else :
 
@@ -76,7 +78,7 @@ label ch02_go_to_hospital :
 
             doctor "The glass bottle of dry {a=glossary:taeru_root_entry}Taeru Root{/a} is still there."
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
 
     else :
@@ -95,7 +97,7 @@ label ch02_go_to_hospital :
 
         $ ch02_coming_from_hospital = True 
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         jump ch02_go_to_herbalist
 
@@ -109,11 +111,11 @@ label ch02_go_to_hospital :
 
     $ nagomi_root_entry.locked = False
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "My previous attempts taught me one thing... {a=glossary:nagomi_root_entry}Nagomi Root{/a} seems too dangerous. "
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     $ ryoku_berry_entry.locked = False
 
@@ -137,7 +139,7 @@ label ch02_go_to_hospital :
 
     doctor "\"Now for the second phase...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He pulls the small bottle of dried Taeru Root from his coat pocket, which he had obtained from the hospital."
 
@@ -147,15 +149,15 @@ label ch02_go_to_hospital :
     
     doctor "Perhaps it can stimulate the healthy neurons to compensate for the damaged ones."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He hesitates reading the next pages of the book in front of him."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "The reports mention changes in blood pressure... but they are uncommon."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He closes the book."
 
@@ -173,7 +175,7 @@ label ch02_go_to_hospital :
     
     doctor "Every measurement has to be exact."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He pours the medicine into a small glass bottle."
 
@@ -181,7 +183,7 @@ label ch02_go_to_hospital :
 
     doctor "If my theory is correct... this should be enough."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "A loud meow echoes through the laboratory."
 
@@ -197,47 +199,31 @@ label ch02_go_to_hospital :
 
         doctor "You've hardly eaten..."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He kneels beside it."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "You've been showing the same symptoms... loss of balance... weakness..."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         $ ch02_knows_cat_is_sick = True
 
     else :
 
-        show doctor default at left onlayer portraits
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"I know you are sick...\""
 
-        hide doctor default onlayer portraits
-
     if kept_cat_in_lab_once :
-
-        show doctor default at left onlayer portraits
 
         doctor "\"You made a mess before.\""
 
-        hide doctor default onlayer portraits
-
         doctor "I should not let you inside the lab anymore."
 
-    #TODO: check if this flag is necessary
-
-    # if ch02_hungry_pet :
-
-    #     show doctor default at left onlayer portraits
-
-    #     doctor "\"And last I lose time feeding you..\""
-
-    #     hide doctor default onlayer portraits
-
-    #     doctor "I should be careful with my choices."
+    hide doctor onlayer portraits with dissolve
 
     "He sighs."
 
@@ -245,17 +231,17 @@ label ch02_go_to_hospital :
 
     doctor "\"Mother needs this medicine...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The cat meows once more."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\But if I leave you like this...\""
 
     doctor "\"...you'll only keep crying.\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     "He remains frozen between the workbench and the hungry animal at his feet."
 

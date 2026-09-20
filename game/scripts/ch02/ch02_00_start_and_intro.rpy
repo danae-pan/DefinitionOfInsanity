@@ -63,9 +63,13 @@ label ch02_intro:
 
             "He wakes up in a daze. He cannot believe his Mother is no more."
 
+            show doctor worried at left onlayer portraits with dissolve
+
             doctor "How could I let this be? I don’t deserve to call myself a doctor."
 
             doctor "No time for this, I should prepare the death certificate and go to the municipality."
+
+            show doctor default at left onlayer portraits with dissolve
             
             doctor "But first, I should prepare my Mother for the {a=glossary:wake_entry}otsuya{/a}."
 
@@ -77,7 +81,11 @@ label ch02_intro:
 
             doctor "Maybe yesterday was just a nightmare? Maybe Mother never died."
 
+            show doctor worried at left onlayer portraits with dissolve
+
             doctor "No way, I remember it clearly."
+
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "This is an act of god, I should take advantage of this second chance to save her this time."
         
@@ -90,6 +98,8 @@ label ch02_intro:
             show doctor default at left onlayer portraits with dissolve
 
             call ch01_remember_previous_death_for_ch02
+
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "Mother might still be alive."
 
@@ -105,6 +115,8 @@ label ch02_intro:
         show doctor default at left onlayer portraits with dissolve
 
         call ch02_remember_previous_death
+
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "But she might still be alive..."
 

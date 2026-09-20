@@ -4,7 +4,7 @@ label ch02_cardiac_arrest_ending:
 
     doctor "Just a few minutes."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene bg ch01 kitchen with fade
 
@@ -16,7 +16,7 @@ label ch02_cardiac_arrest_ending:
 
     "A loud crash echoes from upstairs."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"...Mother?\""
 
@@ -26,21 +26,21 @@ label ch02_cardiac_arrest_ending:
 
     "He sprints toward her room."
 
-    scene bg ch01 mother with fade
+    show mother sick with dissolve with vpunch
 
     "The bedroom door is half open."
 
-    "His Mother is lying on the floor, her entire body shaking violently."
+    "His Mother is in bed, her entire body shaking violently."
 
     "Her arms and legs jerk uncontrollably."
 
     "Foam gathers at the corner of her mouth."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "\"Mother! Stay with me!\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He kneels beside her, trying desperately to hold her still."
 
@@ -56,15 +56,17 @@ label ch02_cardiac_arrest_ending:
 
     $ cardiac_arrest_entry.locked = False
 
+    show mother default with dissolve
+
     "The seizure had placed too much strain on her heart, leading to {a=glossary:cardiac_arrest_entry}cardiac arrest{/a} before he could intervene."
 
     "The untouched bottle of medicine still waits downstairs."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "I only looked away for a moment..."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The doctor kneels beside his Mother's bed for what feels like hours."
 
@@ -80,7 +82,7 @@ label ch02_cardiac_arrest_ending:
 
     "Even its presence fills him with guilt."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"I should have been with her...\""
 
@@ -92,7 +94,7 @@ label ch02_cardiac_arrest_ending:
 
     doctor "...for this night to end quickly."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene bg game_main with fade
 
@@ -102,7 +104,7 @@ label ch02_cardiac_arrest_ending:
 
     doctor "\"If I stay here... I'll lose my mind.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene bg ch01 hospital with fade
 
@@ -122,7 +124,7 @@ label ch02_cardiac_arrest_ending:
 
     doctor "I just hope tomorrow I will find her in bed alive again."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -130,7 +132,7 @@ label ch02_cardiac_arrest_ending:
 
     "The house is silent."
 
-    scene bg ch01 Mother with fade
+    show mother default with dissolve
 
     "He slowly opens the door to his Mother's room."
 
@@ -148,7 +150,7 @@ label ch02_cardiac_arrest_ending:
 
     doctor "Soon, I will know whether I get another chance."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -170,7 +172,7 @@ label ch02_cardiac_arrest_ending:
 
     doctor "\"...I'm not completely alone.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     $ ch02_previous_death = "cardiac_arrest"
 

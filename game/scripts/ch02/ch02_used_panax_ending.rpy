@@ -4,17 +4,17 @@ label ch02_used_taeru_ending:
 
     "The doctor picks up the bottle and hurries to his Mother's bedside."
 
-    scene bg ch01 mother with fade
+    ahow mother smile with dissolve
 
     "She smiles weakly as he enters, struggling to form a sentence."
 
     mother "My son..."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "Don't speak Mother. I've prepared something for you."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He carefully helps her sit upright and supports the bottle with trembling hands."
 
@@ -24,13 +24,15 @@ label ch02_used_taeru_ending:
 
     "The doctor begins writing observations."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "Pulse... unchanged."
 
     doctor "Breathing... steady."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
+
+    show mother sick with dissolve with vpunch
 
     "A sudden gasp interrupts his notes."
 
@@ -42,11 +44,11 @@ label ch02_used_taeru_ending:
 
     "Blood begins to run from one nostril."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "No... that's impossible..."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "She suddenly collapses back onto the pillow."
 
@@ -58,6 +60,8 @@ label ch02_used_taeru_ending:
 
     "Then..."
 
+    show mother default with dissolve
+
     "Nothing."
 
     "Silence fills the room."
@@ -68,51 +72,51 @@ label ch02_used_taeru_ending:
 
     "The doctor slowly lowers his Mother's hand onto the bed."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "\"...I did this.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "His hands still tremble from checking her pulse, though he already knows there is nothing left to find."
 
     "He slowly pulls the blanket over her face."
 
-    show doctor default at left onlayer portraits with dissolve
+    show panicked default at left onlayer portraits with dissolve
 
     doctor "\"That can't be...\""
 
     doctor "\"The reports mentioned changes in blood pressure, but they were supposed to be uncommon.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He lowers his head."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"...I knew there was a risk.\""
 
     doctor "\"...and I took it anyway.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He leaves his Mother's room, heading toward the laboratory."
 
     scene bg ch01 lab_no_cat with fade
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve
 
     doctor "\"I made a mistake.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He sinks into his chair before staring silently at the open manuscript."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"I need to understand what I failed to see.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "His eyes wander across the scattered pages."
 
@@ -134,39 +138,39 @@ label ch02_used_taeru_ending:
 
         "The same weakness."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"If I can not save Mother...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He swallows."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"...perhaps I can still save you.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     "Another thought crosses his mind."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "Perhaps tomorrow I will be given another chance."
 
     doctor "\"If Mother wakes once more, I cannot repeat today's mistake.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "Unable to bear the silence of the house any longer, he buries himself in books."
     
     "An attempt to escape the weight of what he has done."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve
 
     doctor "\"Please...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 

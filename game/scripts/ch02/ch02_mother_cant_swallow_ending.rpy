@@ -10,29 +10,29 @@ label ch02_mother_cant_swallow_ending :
 
     doctor "\"Almost there.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The doctor filters the herbs through a fine cloth before pouring the finished medicine into a bottle."
 
     "He seals it carefully."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor smile at left onlayer portraits with dissolve
 
     doctor "\"Finally.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
     "Without another thought, he rushes upstairs."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"Mother...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
-    scene bg ch01 mother with fade
+    show mother sick with dissolve
 
     "His Mother lies motionless."
 
@@ -46,6 +46,8 @@ label ch02_mother_cant_swallow_ending :
 
     "Her throat moves weakly."
 
+    show mother sick with dissolve with vpunch
+
     "She is trying to swallow."
 
     "But nothing happens."
@@ -54,11 +56,11 @@ label ch02_mother_cant_swallow_ending :
 
     "He quickly lifts her into his arms."
  
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "\"Mother!\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The liquid trickles down her chin."
 
@@ -68,17 +70,17 @@ label ch02_mother_cant_swallow_ending :
 
         $ dysphagia_entry.locked = False
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve with vpunch
 
         doctor "Her {a=glossary:dysphagia_entry}dysphagia{/a}..."
 
         doctor "It's gotten much worse."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     else:
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve with vpunch
 
         doctor "Of course."
 
@@ -88,17 +90,17 @@ label ch02_mother_cant_swallow_ending :
 
         doctor "The disease has progressed further than I thought."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         $ knows_dysphagia = True
 
     "His hands begin to shake."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "\"...No.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He reaches for the glass of water."
 
@@ -118,13 +120,15 @@ label ch02_mother_cant_swallow_ending :
 
     "Feels for a pulse."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve with vpunch
 
     doctor "\"Mother!\""
 
     doctor "\"Stay with me!\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
+
+    show mother default with dissolve
 
     "Her chest rises once then nothing."
 
@@ -134,25 +138,25 @@ label ch02_mother_cant_swallow_ending :
 
     "He bows his head."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve
 
     doctor "\"You were calling for me.\""
 
     doctor "\"And I never came.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "For several long moments, he cannot move."
 
     "Finally, he gently pulls the bedsheet over her face."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "But maybe, just maybe, the day repeats itself again."
 
     doctor "Maybe tomorrow I will get another chance."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -170,13 +174,13 @@ label ch02_mother_cant_swallow_ending :
 
     "Searching for something he had overlooked."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "Perhaps I should have studied the herb more thoroughly..."
 
     doctor "Understood why it said to be taken without eating..."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He begins writing new observations beneath his previous notes."
 

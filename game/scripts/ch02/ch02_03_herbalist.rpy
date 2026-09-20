@@ -22,7 +22,7 @@ label ch02_go_to_herbalist :
 
             doctor "It is only 30 minutes walk, I better hurry."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He finally reaches the central square and heads to Mr. Kazuki's store."
 
@@ -36,7 +36,7 @@ label ch02_go_to_herbalist :
 
         doctor "If not... I can always ask someone."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "After 30 minutes of walking, he reaches the central square."
 
@@ -46,11 +46,11 @@ label ch02_go_to_herbalist :
 
         "A small wooden store with bundles of dried herbs hanging above the entrance"
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor smile at left onlayer portraits with dissolve
 
         doctor "This must be it."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         $ herbalist_visited = True 
 
@@ -69,31 +69,31 @@ label ch02_go_to_herbalist :
 
     doctor "\"Hello? Is anyone here?\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "A voice calls from the back of the store."
 
-    show herbalist default at left onlayer portraits with dissolve
+    show herbalist smile at left onlayer portraits with dissolve
 
     herbalist "\"Just a moment! I'll be right there!\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "After a few seconds, the Herbalist appears, struggling to balance several glass jars and wooden boxes in his arms."
 
-    show herbalist default at left onlayer portraits with dissolve
+    show herbalist smile at left onlayer portraits with dissolve
     
     herbalist "\"Oh! Good morning!\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "He carefully places everything on the counter before smiling warmly."
 
-    show herbalist default at left onlayer portraits with dissolve
+    show herbalist smile at left onlayer portraits with dissolve
 
     herbalist "\"What can I do for you today?\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "The doctor hesitates."
 
@@ -103,11 +103,11 @@ label ch02_go_to_herbalist :
 
     doctor "To him, we've never met."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He clears his throat"
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor smile at left onlayer portraits with dissolve
 
     doctor "\"Good morning. I'm Dr.Kazuki.\""
 
@@ -115,25 +115,27 @@ label ch02_go_to_herbalist :
     
     doctor "\"Some colleagues at the hospital mentioned that you have some herbs that may help.\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     show herbalist default at left onlayer portraits
 
     herbalist "\"Ah, yes... yes, of course.\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "The herbalist begins searching through the clutter covering his workbench."
 
-    show herbalist default at left onlayer portraits
+    show herbalist smile at left onlayer portraits
 
     herbalist "\"Now where did I put them...\""
 
     herbalist "\"Forgive the mess.\""
 
+    show herbalist sceptical at left onlayer portraits
+
     herbalist "\"Ever since all these people started getting sick, I barely have enough time to organize the store before another customer arrives.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
     "He continues rummaging through jars and bundles of herbs."
 
@@ -143,11 +145,11 @@ label ch02_go_to_herbalist :
 
     herbalist "\"How is your Mother doing?\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "The doctor's expression darkens."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"Not well.\""
 
@@ -163,7 +165,7 @@ label ch02_go_to_herbalist :
 
     doctor "\"Maybe things would have been different.\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     show herbalist default at left onlayer portraits
 
@@ -171,13 +173,13 @@ label ch02_go_to_herbalist :
 
     herbalist "\"You left for the city around 1930 to study medicine, didn't you?\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
     show doctor default at left onlayer portraits
 
     doctor "\"Yes.\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     show herbalist default at left onlayer portraits
 
@@ -185,9 +187,11 @@ label ch02_go_to_herbalist :
 
     herbalist "\"You weren't here to eat the poisoned fish.\""
 
+    show herbalist smile at left onlayer portraits with dissolve
+
     herbalist "\"Now you've returned with the knowledge to help those who remained.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
     show doctor default at left onlayer portraits
 
@@ -195,41 +199,41 @@ label ch02_go_to_herbalist :
 
     doctor "\"But knowledge means very little when you cannot save your own family.\""
 
+    show doctor worried at left onlayer portraits with dissolve
+
     doctor "\"My Mother is all I have.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The herbalist smiles gently."
 
-    show herbalist default at left onlayer portraits with dissolve
+    show herbalist smile at left onlayer portraits with dissolve
 
     herbalist "\"You cannot ask more of yourself than to do everything within your power.\""
 
     herbalist "\"Remember that.\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "He suddenly reaches beneath a shelf."
 
-    show herbalist default at left onlayer portraits with dissolve
+    show herbalist smile at left onlayer portraits with dissolve
 
     herbalist "\"Ah!\""
 
     herbalist "\"Here they are.\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "He places two small containers on the counter."
 
     show herbalist default at left onlayer portraits with dissolve
 
-    #TODO: Maybe change this in the first chapter too. don't make it like the doctor can't afford it, it is just the herbalists
-
     herbalist "\"Unfortunately, my stock is running low.\""
 
     herbalist "\"I can only spare enough of one of these for now.\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -237,7 +241,7 @@ label ch02_go_to_herbalist :
 
     doctor "\"Could you tell me, what are their properties?\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     #TODO: change the bottle's to pouches on ch1 herbalist's store
 
@@ -253,7 +257,7 @@ label ch02_go_to_herbalist :
 
     herbalist "\"But it must be taken after eating.\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "He sets it down and picks up the second pouch."
 
@@ -265,11 +269,11 @@ label ch02_go_to_herbalist :
 
     herbalist "\"It can be taken without food.\""
     
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "The doctor studies both herbs in silence."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve 
 
     if ch02_previous_death == "cat_broke_formula":
 
@@ -305,15 +309,17 @@ label ch02_go_to_herbalist :
 
         doctor "I should ask him."
 
+        show doctor default at left onlayer portraits with dissolve 
+
         doctor "\"Mr. Kazuki?\""
 
-        hide doctor default onlayer portraits
+        hide doctor onlayer portraits
 
         show herbalist default at left onlayer portraits
 
         herbalist "\"Yes, Mr. Yosuke. Do you have any questions?\""
 
-        hide herbalist default onlayer portraits
+        hide herbalist onlayer portraits
 
         show doctor default at left onlayer portraits
 
@@ -325,9 +331,9 @@ label ch02_go_to_herbalist :
 
         doctor "\"Any risks I should know?\""
 
-        hide doctor default onlayer portraits
+        hide doctor onlayer portraits
 
-        show herbalist default at left onlayer portraits
+        show herbalist sceptical at left onlayer portraits
 
         herbalist "\"To be honest, I only know that eating is advised.\""
 
@@ -337,7 +343,7 @@ label ch02_go_to_herbalist :
 
         herbalist "\"You can try without it, but if you ask my opinion you should follow the instructions.\""
 
-        hide herbalist default onlayer portraits with dissolve
+        hide herbalist onlayer portraits with dissolve
 
     else :
 
@@ -345,12 +351,12 @@ label ch02_go_to_herbalist :
 
         doctor "Perhaps the tonic could replace it..."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
 
     "His gaze shifts to the second pouch."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     if not ch02_used_taeru_happened:
 
@@ -392,15 +398,17 @@ label ch02_go_to_herbalist :
 
         doctor "I should clarify something before I decide."
 
+        show doctor default at left onlayer portraits with dissolve 
+
         doctor "\"Mr. Kazuki?\""
 
-        hide doctor default onlayer portraits
+        hide doctor onlayer portraits
 
         show herbalist default at left onlayer portraits
 
         herbalist "\"Yes, Dr. Yosuke?\""
 
-        hide herbalist default onlayer portraits
+        hide herbalist onlayer portraits
 
         show doctor default at left onlayer portraits
 
@@ -412,9 +420,9 @@ label ch02_go_to_herbalist :
 
         doctor "\"Would eating beforehand make it dangerous?\""
 
-        hide doctor default onlayer portraits
+        hide doctor onlayer portraits
 
-        show herbalist default at left onlayer portraits
+        show herbalist sceptical at left onlayer portraits
 
         herbalist "\"I can't say for certain.\""
 
@@ -424,10 +432,10 @@ label ch02_go_to_herbalist :
 
         herbalist "\"If you ask me, I would still follow the instructions.\""
 
-        hide herbalist default onlayer portraits with dissolve
+        hide herbalist onlayer portraits with dissolve
 
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
     
     scene black with fade
 
@@ -437,11 +445,13 @@ label ch02_go_to_herbalist :
 
     doctor "Whatever I decide, it will have a level of risk."
 
+    show doctor worried at left onlayer portraits with dissolve
+
     doctor "But time won’t wait for me."
 
     doctor "I should choose now."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene bg ch01 herbstore with fade 
 

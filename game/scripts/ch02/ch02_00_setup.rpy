@@ -37,7 +37,7 @@ label ch02_remember_previous_death:
 
     if ch02_previous_death == "cardiac_arrest":
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ cardiac_arrest_entry.locked = False
 
@@ -50,6 +50,8 @@ label ch02_remember_previous_death:
         doctor "She went into {a=glossary:cardiac_arrest_entry}cardiac arrest{/a} before I could help her."
 
     elif ch02_previous_death == "cat_broke_formula":
+        
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "The cat knocked over the formula..."
 
@@ -63,7 +65,7 @@ label ch02_remember_previous_death:
 
     elif ch02_previous_death == "first_herb_with_instructions":
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ junka_root_entry.locked = False
 
@@ -79,7 +81,7 @@ label ch02_remember_previous_death:
 
     elif ch02_previous_death == "first_herb_without_instructions":
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ junka_root_entry.locked = False
 
@@ -99,7 +101,7 @@ label ch02_remember_previous_death:
 
     elif ch02_previous_death == "mother_cant_swallow":
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ dysphagia_entry.locked = False
 
@@ -113,7 +115,7 @@ label ch02_remember_previous_death:
 
     elif ch02_previous_death == "second_herb_with_instructions":
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ tsuyomi_cap_entry.locked = False
 
@@ -129,7 +131,7 @@ label ch02_remember_previous_death:
 
     elif ch02_previous_death == "second_herb_without_instructions":
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ tsuyomi_cap_entry.locked = False
 
@@ -150,7 +152,7 @@ label ch02_remember_previous_death:
 
     elif ch02_previous_death == "used_taeru":
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ taeru_root_entry.locked = False
 
