@@ -37,7 +37,8 @@ label ch01_dysphagia_ending:
 
     hide doctor onlayer portraits with dissolve
 
-    show mother sick with dissolve with vpunch
+    show mother sick with dissolve 
+    with vpunch
 
     "She tries to breathe."
     

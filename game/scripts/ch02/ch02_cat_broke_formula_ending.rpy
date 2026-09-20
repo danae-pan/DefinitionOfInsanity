@@ -64,7 +64,8 @@ label ch02_cat_broke_formula_ending :
 
     "The doctor reaches out."
 
-    show doctor worried at left onlayer portraits with dissolve with vpunch
+    show doctor worried at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"Wait!\""
 
@@ -82,7 +83,8 @@ label ch02_cat_broke_formula_ending :
 
     "The doctor freezes."
 
-    show doctor panicked at left onlayer portraits with dissolve with vpunch
+    show doctor panicked at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"No...\""
 
@@ -116,7 +118,8 @@ label ch02_cat_broke_formula_ending :
 
     "There is nothing left."
 
-    show doctor panicked at left onlayer portraits with dissolve with vpunch
+    show doctor panicked at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"No...\""
 

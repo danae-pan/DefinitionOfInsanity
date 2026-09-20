@@ -244,9 +244,25 @@ label ch01_study_prepare_formula:
 
     show doctor default at left onlayer portraits with dissolve
 
+    "The treatment needs to work in three phases."
+
+    "First, I need to prepare her body and create the best possible conditions for recovery."
+
+    "Then, I need to stimulate the damaged nervous system... encourage healthy neurons to compensate for those that were lost."
+
+    "And finally..."
+
+    "If I can combine the effects of both phases, perhaps I can force the new pathways to synchronize with the rest of her nervous system."
+
+    "There's no evidence that the last step will work."
+
+    "But if I'm right..."
+
     $ nagomi_root_entry.locked = False
 
     doctor "\"{a=glossary:nagomi_root_entry}Nagomi Root{/a}...\""
+
+    doctor "Phase 1. Preparing the body for recovery..."
 
     hide doctor onlayer portraits with dissolve
 
@@ -283,6 +299,8 @@ label ch01_study_prepare_formula:
     $ hogo_root_entry.locked = False
 
     doctor "\"{a=glossary:hogo_root_entry}Hogo Root{/a}.\""
+
+    doctor "Phase 2. Protecting the nervous system and encouraging it to adapt..."
 
     hide doctor onlayer portraits with dissolve
 

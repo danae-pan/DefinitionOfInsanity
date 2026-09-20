@@ -11,6 +11,7 @@ label prologue:
     $ nervous_system_entry.locked = False
     $ social_stigma_entry.locked = False
     $ poisoning_entry.locked = False
+    $ kampo_entry.locked = False
     window hide
 
     scene bg game_main
@@ -74,6 +75,30 @@ To many, believing the sea itself had become dangerous was simply unthinkable.{w
 So, they simply refused to accept that fish could be responsible.{w=1.2}
 {vspace=30}
 With his Mother's condition worsening by the day and the number of patients continuing to rise, Yosuke devoted himself to a single goal.{w=1.2}
+{vspace=30}
+Modern medicine offered no way to reverse the damage that had already been done.{w=1.2}
+{vspace=30}"""
+    nvl clear
+
+    narrator_nvl """
+
+Desperate for another approach, Yosuke turned to {a=glossary:kampo_entry}Kampo{/a} medicine, searching for a way to support the body's own ability to recover.{w=1.2}
+{vspace=30}
+His research eventually led him to an old manuscript describing a treatment that went beyond accepted medical practice.{w=1.2}
+{vspace=30}
+The damage could not simply be undone... but perhaps the nervous system could adapt.{w=1.2}
+{vspace=30}
+If healthy neural pathways could compensate for those that had been lost, perhaps the body could learn to function again.{w=1.2}
+{vspace=30}
+It was only a theory.
+{vspace=30}
+And Yosuke intended to test it.
+{vspace=30}
+"""
+    nvl clear
+
+    narrator_nvl """
+He had only one goal.
 {vspace=30}
 To find a cure...
 {vspace=30}

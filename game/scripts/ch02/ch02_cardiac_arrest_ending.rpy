@@ -26,7 +26,8 @@ label ch02_cardiac_arrest_ending:
 
     "He sprints toward her room."
 
-    show mother sick with dissolve with vpunch
+    show mother sick with dissolve 
+    with vpunch
 
     "The bedroom door is half open."
 
@@ -36,7 +37,8 @@ label ch02_cardiac_arrest_ending:
 
     "Foam gathers at the corner of her mouth."
 
-    show doctor panicked at left onlayer portraits with dissolve with vpunch
+    show doctor panicked at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"Mother! Stay with me!\""
 

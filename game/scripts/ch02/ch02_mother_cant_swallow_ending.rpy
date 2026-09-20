@@ -46,7 +46,8 @@ label ch02_mother_cant_swallow_ending :
 
     "Her throat moves weakly."
 
-    show mother sick with dissolve with vpunch
+    show mother sick with dissolve 
+    with vpunch
 
     "She is trying to swallow."
 
@@ -56,7 +57,8 @@ label ch02_mother_cant_swallow_ending :
 
     "He quickly lifts her into his arms."
  
-    show doctor panicked at left onlayer portraits with dissolve with vpunch
+    show doctor panicked at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"Mother!\""
 
@@ -70,7 +72,8 @@ label ch02_mother_cant_swallow_ending :
 
         $ dysphagia_entry.locked = False
 
-        show doctor worried at left onlayer portraits with dissolve with vpunch
+        show doctor worried at left onlayer portraits with dissolve 
+        with vpunch
 
         doctor "Her {a=glossary:dysphagia_entry}dysphagia{/a}..."
 
@@ -80,7 +83,8 @@ label ch02_mother_cant_swallow_ending :
 
     else:
 
-        show doctor worried at left onlayer portraits with dissolve with vpunch
+        show doctor worried at left onlayer portraits with dissolve 
+        with vpunch
 
         doctor "Of course."
 
@@ -96,7 +100,8 @@ label ch02_mother_cant_swallow_ending :
 
     "His hands begin to shake."
 
-    show doctor panicked at left onlayer portraits with dissolve with vpunch
+    show doctor panicked at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"...No.\""
 
@@ -120,7 +125,8 @@ label ch02_mother_cant_swallow_ending :
 
     "Feels for a pulse."
 
-    show doctor panicked at left onlayer portraits with dissolve with vpunch
+    show doctor panicked at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"Mother!\""
 

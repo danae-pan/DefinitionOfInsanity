@@ -82,7 +82,8 @@ label ch02_first_herb_with_instructions_ending:
 
     "Rice scatters across the room."
 
-    show doctor worried at left onlayer portraits with dissolve with vpunch
+    show doctor worried at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"No...\""
 
@@ -100,7 +101,8 @@ label ch02_first_herb_with_instructions_ending:
 
     "He gently shakes her shoulder."
 
-    show doctor panicked at left onlayer portraits with dissolve with vpunch
+    show doctor panicked at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"Mother...\""
 
