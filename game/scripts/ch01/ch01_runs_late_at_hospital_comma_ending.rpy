@@ -14,6 +14,10 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     show herbalist default at left onlayer portraits
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     herbalist "\"I've never seen anyone cured.\""
 
     herbalist "\"But I've seen this illness many times.\""
@@ -28,6 +32,10 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     herbalist "\"Food, and even water, can become dangerous.\""
 
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
+
     herbalist "\"Later... they begin losing their balance.\""
 
     hide herbalist onlayer portraits with dissolve
@@ -41,6 +49,10 @@ label ch01_runs_late_at_hospital_comma_ending:
     herbalist "\"If you're looking for a cure.\"" 
 
     herbalist "\"Unfortunately...\"" 
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     herbalist "\"I don't have one.\"" 
 
@@ -66,7 +78,7 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     show herbalist smile at left onlayer portraits
 
-    herbalist "\"Unfortunatelly I don't carry those kinds of herbs with me but you can visit my store.\""
+    herbalist "\"I don't carry those kinds of herbs with me but you can visit my store.\""
     
     herbalist "\"I'm heading there now.\""
     
@@ -117,14 +129,34 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     scene bg game_main with fade
 
+    #SOUND
+
+    play sound "audio/sfx/door.mp3"
+        
     "As soon as he enters the house, he notices the silence."
 
     show doctor worried at left onlayer portraits with dissolve
-    with vpunch
+     
+
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "No..."
 
     hide doctor onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
 
     "He rushes to his Mother's room."
 
@@ -133,6 +165,10 @@ label ch01_runs_late_at_hospital_comma_ending:
     "She lies in bed, completely exhausted."
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "I think I'm already too late..."
 
@@ -152,6 +188,10 @@ label ch01_runs_late_at_hospital_comma_ending:
 
     show doctor panicked at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
+
     doctor "\"Mother?\""
 
     hide doctor onlayer portraits with dissolve
@@ -159,6 +199,10 @@ label ch01_runs_late_at_hospital_comma_ending:
     "He checks her pulse."
 
     "She is still alive, but she does not wake."
+
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
 
     $ coma_entry.locked = False
 
@@ -171,6 +215,10 @@ label ch01_runs_late_at_hospital_comma_ending:
     if ch01_loop_count == 0 :
 
         doctor "Maybe tomorrow she will wake up." 
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "\"Maybe...\"" 
 
@@ -190,6 +238,10 @@ label ch01_runs_late_at_hospital_comma_ending:
     
     if ch01_loop_count >= 1 :
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "I lost her again..."
 
     doctor "What if the formula could have saved her?"
@@ -201,6 +253,10 @@ label ch01_runs_late_at_hospital_comma_ending:
         doctor "\"I lost track of time...\""
 
         doctor "But still..."
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "I can't help but wonder."
  
@@ -228,6 +284,10 @@ label ch01_runs_late_at_hospital_comma_ending:
 
         show doctor worried at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         doctor "\"I have to tell someone...\""
 
         hide doctor onlayer portraits with dissolve
@@ -244,6 +304,10 @@ label ch01_runs_late_at_hospital_comma_ending:
             
             hide doctor onlayer portraits with dissolve
 
+            #SOUND
+
+            play sound "audio/sfx/suspence.mp3"
+
             "The memory burns into his mind."
 
             $ coma_entry.locked = False
@@ -257,6 +321,10 @@ label ch01_runs_late_at_hospital_comma_ending:
             show doctor default at left onlayer portraits with dissolve
 
             doctor "I've read about this before..."
+
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
 
             doctor "This illness can end in a {a=glossary:coma_entry}coma{/a}."
 

@@ -1,7 +1,5 @@
 label ch01_brain_hemorrahage_ending:
 
-    "He hesitates after hearing Mr. Kazuki's offer." 
-
     show doctor default at left onlayer portraits with dissolve
 
     doctor "The herbs in Mr. Kazuki's store could be exactly what I need."
@@ -40,6 +38,18 @@ label ch01_brain_hemorrahage_ending:
 
         hide doctor onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/footsteps_rock.mp3"
+        
+        pause 1.2
+
+        play sound "audio/sfx/footsteps_rock.mp3"
+
+        pause 1.2
+
+        play sound "audio/sfx/footsteps_rock.mp3"
+
         "Mr. Kazuki turns around and walks away."
 
         "The Doctor wonders if he made the right choice..."
@@ -51,8 +61,24 @@ label ch01_brain_hemorrahage_ending:
 
         scene black with fade
 
+        #SOUND
+
+        play sound "audio/sfx/footsteps_rock.mp3"
+        
+        pause 1.0
+
+        play sound "audio/sfx/footsteps_rock.mp3"
+
+        pause 1.0
+
+        play sound "audio/sfx/footsteps_rock.mp3"
+
         "He quickly returns home worried about his Mother."
 
+        #SOUND
+
+        play sound "audio/sfx/door.mp3"
+        
         "He opens the door."
 
         scene bg game_main with fade
@@ -78,6 +104,10 @@ label ch01_brain_hemorrahage_ending:
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/gasp.mp3"
+
     doctor "\"Mother...\""
 
     hide doctor onlayer portraits with dissolve
@@ -86,11 +116,27 @@ label ch01_brain_hemorrahage_ending:
 
     "He immediately checks her condition."
 
+    #SOUND
+
+    play sound "audio/sfx/mother_breath.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/mother_breath.mp3"
+
+    pause 1.3
+
+    play sound "audio/sfx/mother_breath.mp3"
+
     "Her breathing is uneven."
 
     if not ch01_brain_hemorrhage_happened:
 
         "Then he notices something."
+
+        #SOUND
+
+        play sound "audio/sfx/suspence.mp3"
 
         "A broken glass lies on the floor."
 
@@ -101,11 +147,15 @@ label ch01_brain_hemorrahage_ending:
         "..."
 
         show doctor panicked at left onlayer portraits with dissolve
-        with punch
+         
 
         doctor "She needed water and tried to get it herself..."
 
         doctor "While I was speaking with Mr. Kazuki..."
+
+        #SOUND
+
+        play sound "audio/sfx/Socked.mp3"
 
         doctor "\"Oh, Mother...\""
 
@@ -119,6 +169,10 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "\"This is all my fault...\""
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "\"I'm so sorry Mother.\""
 
         hide doctor onlayer portraits with dissolve
@@ -126,7 +180,11 @@ label ch01_brain_hemorrahage_ending:
     else:
 
         show doctor panicked at left onlayer portraits with dissolve
-        with vpunch
+         
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "It's the same scene as before..."
 
@@ -147,6 +205,10 @@ label ch01_brain_hemorrahage_ending:
     doctor "But deep down..."
 
     doctor "I already know."
+
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3" volume 0.8
 
     $ brain_hemorrhage_entry.locked = False
 
@@ -173,7 +235,7 @@ label ch01_brain_hemorrahage_ending:
     if ch01_met_herb_in_door:
 
         show doctor worried at left onlayer portraits with dissolve
-        with vpunch
+         
 
         doctor "I came back."
 
@@ -183,12 +245,20 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "And yet..."
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         doctor "\"I still couldn't save you.\""
 
     if ch01_went_to_hospital and ch01_return_from_hospital:
 
        show doctor worried at left onlayer portraits with dissolve
-       with vpunch
+        
+
+        #SOUND
+
+       play sound "audio/sfx/Sigh.mp3"
 
        doctor "I was too late.."
 
@@ -219,6 +289,10 @@ label ch01_brain_hemorrahage_ending:
         doctor "I have to prepare her body."
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "\"I have to tell someone...\""
 

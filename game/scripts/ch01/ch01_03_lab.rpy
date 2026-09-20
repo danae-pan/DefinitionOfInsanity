@@ -4,11 +4,19 @@ label ch01_straight_to_lab :
 
     call ch01_study_prepare_formula from _call_ch01_study_prepare_formula
 
+    #SOUND
+
+    play sound "audio/sfx/noise.mp3"
+
     "A sudden noise breaks the silence."
 
     scene bg ch01 lab with fade
 
     "He looks up to see Mother's cat leaping from chair to chair."
+
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
 
     "Completely absorbed in chasing a fly that somehow found its way inside."
 
@@ -29,6 +37,10 @@ label ch01_straight_to_lab :
         "Let your cat outside":
 
             show doctor smile at left onlayer portraits with dissolve
+
+            #SOUND
+
+            play sound "audio/sfx/cat_short.mp3"
 
             doctor "\"Come on, little one.\""
 
@@ -58,8 +70,6 @@ label ch01_straight_to_lab :
 
 label ch01_eat_then_lab:
 
-    #TODO: see if hiding the sprite here is necessary
-
     hide doctor onlayer portraits with dissolve
 
     "He helps her with her food while eating his own meal."
@@ -70,15 +80,11 @@ label ch01_eat_then_lab:
 
             show doctor default at left onlayer portraits with dissolve
 
-            #doctor expression: neutral smile
-
             doctor "\"You know, your cat has been doing some strange things these past few days.\""
 
             hide doctor onlayer portraits with dissolve
 
-            #mother expression: tired smile
-
-            "She looks up at him , trying to smile."
+            "She looks up at him, trying to smile."
 
             show doctor smile at left onlayer portraits with dissolve
 
@@ -90,7 +96,9 @@ label ch01_eat_then_lab:
             
             "Her expression immediately brightens."
 
-            #mother expression: slighty surprised smile
+            #SOUND
+
+            play sound "audio/sfx/female_laugh.mp3" volume 1.1
 
             mother "\"...Curious...\""
 
@@ -144,6 +152,18 @@ label ch01_eat_then_lab:
     
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
     "He returns to the laboratory."
 
     scene bg ch01 lab_no_cat with fade
@@ -170,9 +190,11 @@ label ch01_eat_then_lab:
 
     "Then he notices movement in the corner of the room."
 
-    #expression: skeptical
-    #background: lab without the cat
-    scene bg ch01 lab with fade
+    scene bg ch01 lab
+
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
 
     "His Mother's cat is wondering around the laboratory."
 
@@ -196,6 +218,10 @@ label ch01_eat_then_lab:
 
     if kept_cat_in_lab_once:
 
+        #SOUND
+
+        play sound "audio/sfx/suspence.mp3"
+
         "Another memory returns."
 
         show doctor worried at left onlayer portraits with dissolve
@@ -209,6 +235,10 @@ label ch01_eat_then_lab:
         "Take the cat outside":
 
             show doctor smile at left onlayer portraits with dissolve
+
+            #SOUND
+
+            play sound "audio/sfx/cat_short.mp3"
 
             doctor "\"Come on, little one.\""
 
@@ -243,6 +273,10 @@ label ch01_study_prepare_formula:
     "His eyes move between the old research papers and the herbs carefully arranged in front of him."
 
     show doctor default at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     "The treatment needs to work in three phases."
 
@@ -330,6 +364,10 @@ label ch01_study_prepare_formula:
 
     "Every movement is precise."
 
+    #SOUND
+
+    play sound "audio/sfx/cutlery.mp3"
+
     "The herbs are ground into a fine powder before being slowly mixed into the solution."
 
     "The color of the {a=glossary:formula_entry}formula{/a} changes as the ingredients dissolve."
@@ -356,7 +394,9 @@ label ch01_study_prepare_formula:
 
         "He notices movement nearby."
 
-        scene bg ch01 lab with fade
+        #SOUND
+
+        play sound "audio/sfx/cat_short.mp3"
         
         show doctor default at left onlayer portraits with dissolve
 
@@ -370,6 +410,10 @@ label ch01_study_prepare_formula:
 
     doctor "\"Now...\"" 
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "\"Let's make sure I didn't overlook anything.\"" 
 
     hide doctor onlayer portraits with dissolve
@@ -382,11 +426,13 @@ label ch01_study_prepare_formula:
 
     return
 
-    # jump ch01_mother_calls_knock_on_door
-
 label ch01_cat_becomes_noisy:
 
     show doctor smile at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
 
     doctor "\"Come on, little one.\""
 
@@ -400,11 +446,13 @@ label ch01_cat_becomes_noisy:
 
     "He lets her walk around the room, exploring every corner."
 
-    # it is probably alrady like that.
-
     scene bg ch01 lab with fade
 
     call ch01_study_prepare_formula from _call_ch01_study_prepare_formula_2
+
+    #SOUND
+
+    play sound "audio/sfx/bottle_trash.mp3" volume 0.4
             
     "A sudden noise breaks the silence."
 
@@ -415,6 +463,10 @@ label ch01_cat_becomes_noisy:
     "She's chasing a fly that somehow found its way into the laboratory." 
 
     if kept_cat_in_lab_once:
+
+        #SOUND
+
+        play sound "audio/sfx/suspence.mp3"
 
         "A familiar memory returns."
 
@@ -429,6 +481,10 @@ label ch01_cat_becomes_noisy:
     else:
 
         show doctor default at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/cat_long.mp3"
         
         doctor "\"Easy there, little one...\"" 
 
@@ -441,6 +497,10 @@ label ch01_cat_becomes_noisy:
         "Carry her outside":
 
             show doctor smile at left onlayer portraits with dissolve
+
+            #SOUND
+
+            play sound "audio/sfx/cat_short.mp3"
 
             doctor "\"Come on, little one.\""
 
@@ -468,6 +528,10 @@ label ch01_cat_breaks_formula:
 
     show doctor default at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
+
     doctor "\"Try to be quiet, little one. I don't want to escort you outside.\""
 
     doctor "Today I need my full concentration. I can't afford any distractions."
@@ -476,23 +540,25 @@ label ch01_cat_breaks_formula:
 
     "He looks over his notes one more time."
 
-    #change the lab background with the cat in it
-
-    # probably already done
-
     scene bg ch01 lab with fade
 
     "Suddenly, the cat jumps onto his desk!"
 
-    #TODO: check the places for the right bg
+    #SOUND
+
+    play sound "audio/sfx/cat_long.mp3"
 
     scene bg ch01 lab with fade
 
+    show doctor worried at left onlayer portraits with dissolve
+
     if kept_cat_in_lab_once:
 
-        "Its happening again!"
+        #SOUND
 
-    show doctor worried at left onlayer portraits with dissolve
+        play sound "audio/sfx/Gasp.mp3"
+        
+        doctor "Its happening again!"
 
     doctor "\"No! Get out of here!\""
 
@@ -500,23 +566,35 @@ label ch01_cat_breaks_formula:
 
     "But it's too late… She tries to leave form the desk but things get in her way."
 
-    #noise of breaking glass
+    #SOUND
+
+    play sound "audio/sfx/bottle_trash.mp3" volume 0.4
 
     "Bottles start breaking."
 
     show doctor worried at left onlayer portraits with dissolve
 
-    #doctor expression panicked
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3" volume 1.2
 
     doctor "\"Not this one!\""
 
     hide doctor onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/bottle_trash.mp3" volume 0.5
 
     "The doctor tries to catch the formula but it falls in the ground and breaks."
 
     $ ch01_cat_broke_formula = True
 
     show doctor panicked at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3" volume 1.2
 
     doctor "\"No No No.\""
 
@@ -526,19 +604,30 @@ label ch01_cat_breaks_formula:
 
         doctor "How could I make this mistake again?"
 
-    #lab background without the cat
     hide doctor onlayer portraits with dissolve
+
+    scene bg ch01 lab_no_cat 
 
     "He turns to find the cat, but she is nowhere to be found."
 
+    #SOUND
+
+    play sound "audio/sfx/suspence.mp3" 
+
     show doctor panicked at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3" 
+
     doctor "I have to make the formula again."
+
+    show doctor default at left onlayer portraits with dissolve
 
     doctor "I have to check what herbs I have at the apothecary."
 
     doctor "Or I could go to the hospital and replenish my herbs."
-
+    
     hide doctor onlayer portraits with dissolve
 
     $ ch01_prepared_formula = False
@@ -565,6 +654,10 @@ label ch01_check_on_the_apothecary:
 
     doctor "I might not be able to make another..."
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3" 
+
     doctor "\"I should look anyway.\""
 
     hide doctor onlayer portraits with dissolve
@@ -573,6 +666,10 @@ label ch01_check_on_the_apothecary:
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
+    
     doctor "\"No luck...\""
 
     doctor "I will have to go to the hospital for herbs after all."
@@ -603,9 +700,12 @@ label ch01_mother_calls_knock_on_door:
 
     hide doctor onlayer portraits with dissolve
 
-    # audio *Knock... Knock...* 
+    # SOUND: two knocks
+    play sound "audio/sfx/knock.mp3" volume 1.5
 
-    "*Knock... Knock...*" 
+    pause 0.18
+
+    play sound "audio/sfx/knock.mp3" volume 1.5
 
     "A noise comes from the front door."
 
@@ -642,6 +742,10 @@ label ch01_keep_cat_in_lab_mother_calls:
     show doctor smile at left onlayer portraits with dissolve
 
     doctor "\"Come on, little one.\""
+
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
 
     hide doctor onlayer portraits with dissolve
 
@@ -758,6 +862,16 @@ label ch01_check_mother_cat_in_lab :
             "He heads to the kitchen."
 
             scene bg ch01 kitchen with fade
+
+            #SOUND
+
+            play sound "audio/sfx/cutlery.mp3"
+
+            pause 0.8
+
+            #SOUND
+
+            play sound "audio/sfx/noise.mp3"
 
             "He started preparing food when some noise from the lab distracted him."
 

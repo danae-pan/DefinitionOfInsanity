@@ -8,6 +8,18 @@ label ch01_make_breakfast :
 
     if ch01_loop_count == 0 :
 
+        #SOUND
+
+        play sound "audio/sfx/footsteps.mp3"
+        
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
         "He steps into the kitchen."
 
         show doctor smile at left onlayer portraits with dissolve
@@ -23,6 +35,10 @@ label ch01_make_breakfast :
         if not ch01_mother_checked :
 
             show doctor default at left onlayer portraits with dissolve
+
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
             
             doctor "My stomach is hurting so much..."
             
@@ -41,6 +57,10 @@ label ch01_make_breakfast :
         
             doctor "Wait...something feels strange. I feel like I've done this before."
 
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
+
             doctor "\"I’m probably confused from the lack of sleep…\"" 
 
         hide doctor onlayer portraits with dissolve
@@ -53,8 +73,11 @@ label ch01_make_breakfast :
 
             show doctor default at left onlayer portraits with dissolve
 
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
+
             doctor "My stomach is hurting so much..."
-            
             
             doctor "Maybe a bowl of soup will help."
 
@@ -64,15 +87,31 @@ label ch01_make_breakfast :
 
             doctor "A soup should help Mother feel better."
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         doctor "This is happening again… I'm doing the same things again and again… but maybe I will get another chance.."
 
         hide doctor onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/cutlery.mp3"
+
+    pause 1.5
+
+    play sound "audio/sfx/cutlery.mp3"
 
     "Ever since contaminated fish entered the food supply, everyday meals have become much more difficult."
 
     "He has learned to question every ingredient before putting it on the table."
 
     show doctor default at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
     
     doctor "Who would've imagined that one of our most common foods could become so dangerous?"
 
@@ -132,6 +171,18 @@ label ch01_eat_breakfast:
 
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
     "He heads to his Mother's room with the breakfast tray in hand."
 
     show mother default with dissolve
@@ -150,8 +201,6 @@ label ch01_eat_breakfast:
 
             "He quietly places the soup on the bedside table and opens the window, letting fresh air fill the room."
 
-            #mother opens her eyes (expression: tired)
-
             show mother smile with dissolve
 
             mother "\"Good morning...\"" 
@@ -159,8 +208,6 @@ label ch01_eat_breakfast:
             "She turns toward him with a faint smile. The illness has stolen so much of her strength."
 
             show doctor smile at left onlayer portraits with dissolve
-
-            #doctor expression: neutral smile
             
             doctor "\"Good morning, Mother.\""
 
@@ -174,13 +221,10 @@ label ch01_eat_breakfast:
 
             show doctor default at left onlayer portraits with dissolve
 
-            #doctor expresssion: skeptical
-
             doctor "\"Let me run my tests first.\"" 
 
             doctor "\"Alright... Everything seems stable.\""
         
-        #doctor expression: neutral smile
         doctor "\"Here.\""
 
         doctor "\"I made you miso soup. Your favorite.\""
@@ -201,9 +245,15 @@ label ch01_eat_breakfast:
 
                 $ wake_entry.locked = False
 
-                doctor "Why is she in these clothes? I dressed her yesterday… im sure.. for the {a=glossary:wake_entry}otsuya{/a}."
+                #SOUND
 
-                hide doctor onlayer portraits with dissolve
+                play sound "audio/sfx/suspence.mp3"
+
+                doctor "Why is she in these clothes?"
+                
+                doctor "I dressed her yesterday..."
+                
+                doctor "I am sure of it... for the {a=glossary:wake_entry}otsuya{/a}."
 
             hide doctor onlayer portraits with dissolve
 
@@ -213,9 +263,11 @@ label ch01_eat_breakfast:
 
             show doctor worried at left onlayer portraits with dissolve
 
-            #doctor expression: shocked
-
             doctor "She's alive...?"
+
+            #SOUND
+
+            play sound "audio/sfx/Gasp.mp3"
 
             doctor "\"She's alive...!\""
 
@@ -237,8 +289,6 @@ label ch01_eat_breakfast:
 
             doctor "Did I really get another chance?"
 
-            #doctor expression: neutral smile
-
             doctor "Calm down. Don't let her notice. Just act normal."
 
             hide doctor onlayer portraits with dissolve
@@ -259,27 +309,33 @@ label ch01_eat_breakfast:
 
         show doctor smile at left onlayer portraits with dissolve
 
-        doctor "\"Good morning, Mother.\""
+        if ch01_mother_checked:
 
-        show mother smile
+            doctor "\"Breakfast is ready, Mother.\""
 
-        mother "\"Good morning...\""
+        else:
 
-        doctor "\"How are you feeling today?\""
+            doctor "\"Good morning, Mother.\""
 
-        mother "\"Better...\""
+            show mother smile
 
-        hide doctor onlayer portraits with dissolve
+            mother "\"Good morning...\""
 
-        "She reaches for his hand, but it trembles."
+            doctor "\"How are you feeling today?\""
 
-        "He gently holds it between his own."
+            mother "\"Better...\""
 
-        show doctor default at left onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
-        doctor "\"Let me run my tests first.\""
+            "She reaches for his hand, but it trembles."
 
-        doctor  "\"Alright... Everything seems stable.\""
+            "He gently holds it between his own."
+
+            show doctor default at left onlayer portraits with dissolve
+
+            doctor "\"Let me run my tests first.\""
+
+            doctor  "\"Alright... Everything seems stable.\""
 
         doctor "\"Here.\""
 
@@ -295,11 +351,13 @@ label ch01_eat_breakfast:
 
             "He rushes to her bedside."
 
+            #SOUND
+
+            play sound "audio/sfx/suspence.mp3"
+
             "She's alive."
 
             show doctor worried at left onlayer portraits with dissolve
-
-            #doctor expression: skeptical
 
             doctor "Again..."
 
@@ -330,8 +388,6 @@ label ch01_eat_breakfast:
         hide doctor onlayer portraits with dissolve
 
         "She reaches for his hand, her arm trembling."
-
-        #expressipn: neutral smile
 
         "He gently holds it and smiles."
 

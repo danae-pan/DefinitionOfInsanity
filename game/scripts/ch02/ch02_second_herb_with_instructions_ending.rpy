@@ -87,7 +87,7 @@ label ch02_second_herb_with_instructions_ending:
     "Her mouth is slightly open."
 
     show mother sick with dissolve 
-    with vpunch
+     
 
     "She struggles weakly to breathe."
 
@@ -96,7 +96,7 @@ label ch02_second_herb_with_instructions_ending:
     "He lifts her head."
     
     show doctor worried at left onlayer portraits with dissolve 
-    with vpunch
+     
 
     doctor "\"I've finished it.\""
 
@@ -111,7 +111,7 @@ label ch02_second_herb_with_instructions_ending:
     "She can no longer swallow."
 
     show doctor worried at left onlayer portraits with dissolve 
-    with vpunch
+     
 
     if knows_dysphagia:
 
@@ -138,7 +138,7 @@ label ch02_second_herb_with_instructions_ending:
     "Weak."
 
     show doctor panicked at left onlayer portraits with dissolve 
-    with vpunch
+     
 
     doctor "\"Mother!\""
 

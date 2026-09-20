@@ -10,4 +10,6 @@ define e = Character("Eileen")
 
 label start:
 
+    play music "audio/music/deep server.mp3" fadeout 2.0 fadein 2.0
+
     jump prologue

@@ -27,3 +27,6 @@
 
 #plugin files
 /game/renpy_encyclopaedia-*.dist-info/
+
+#audio
+/game/audio/*

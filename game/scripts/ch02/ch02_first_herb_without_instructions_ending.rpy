@@ -55,14 +55,14 @@ label ch02_first_herb_without_instructions_ending:
     "A painful groan escapes her lips."
 
     show doctor worried at left onlayer portraits with dissolve 
-    with vpunch
+     
 
     doctor "\"Mother?\""
 
     hide doctor onlayer portraits with dissolve
 
     show mother sick with dissolve 
-    with vpunch
+     
 
     "Without warning, she begins vomiting violently."
 
@@ -85,7 +85,7 @@ label ch02_first_herb_without_instructions_ending:
         "Her weakened swallowing reflex cannot protect her."
 
         show doctor worried at left onlayer portraits with dissolve 
-        with vpunch
+         
 
         doctor "Her swallowing..."
 
@@ -106,7 +106,7 @@ label ch02_first_herb_without_instructions_ending:
     "The doctor quickly turns her onto her side, desperately trying to clear her airway."
 
     show doctor panicked at left onlayer portraits with dissolve 
-    with vpunch
+     
 
     doctor "\"Come on...\""
 
@@ -131,7 +131,7 @@ label ch02_first_herb_without_instructions_ending:
     if ch02_first_herb_with_instructions :
 
         show doctor panicked at left onlayer portraits with dissolve 
-        with vpunch
+         
 
         doctor "\"...but why?\""
 

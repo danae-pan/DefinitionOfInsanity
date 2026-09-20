@@ -1,16 +1,5 @@
 label ch01_arrythmia_good_ending :
 
-    #TODO: See if I need to keep this block of code with a flag condition
-    #was moved to where the choice was made
-
-    # "He glances back toward Mother's room."
-
-    # show doctor default at left onlayer portraits
-
-    # doctor "She called for me..." 
-
-    # hide doctor default onlayer portraits
-
     show doctor default at left onlayer portraits with dissolve
 
     if not met_herbalist:
@@ -31,8 +20,6 @@ label ch01_arrythmia_good_ending :
         
         doctor "Maybe I could develop a better formula..."
 
-    
-    
 
     doctor "\"Alright.\""
 
@@ -42,16 +29,21 @@ label ch01_arrythmia_good_ending :
 
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/music/town.mp3"
+
     "The neighboring village is about a thirty-minute walk away." 
 
     "As they walk, Mr. Kazuki tells Yosuke about the people he has treated over the years." 
 
-
-    #TODO: ch01_went_to_hospital this flag sjould reset after each ending
-    #This comdition is true when he meets the herbalist on the door and NOT at the hospital
     if not ch01_went_to_hospital:
 
         show herbalist default at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         herbalist "\"I've never seen anyone cured.\"" 
 
@@ -66,6 +58,10 @@ label ch01_arrythmia_good_ending :
         herbalist "\"Many also lose the ability to swallow safely.\""  
 
         herbalist "\"Food and even water can become dangerous.\"" 
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         herbalist "\"Later... they begin losing their balance.\"" 
 
@@ -187,10 +183,6 @@ label ch01_arrythmia_good_ending :
             doctor "\"I'll take the Tsuyomi Cap...\""
 
 
-    #TODO: Remove those lines of code as this block is not reachable from any route
-
-    #doctor "\"I would also like some {a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:hogo_root_entry}Hogo Root{/a}.\""
-
     show doctor smile at left onlayer portraits with dissolve
 
     doctor "\"Thank you, Mr. Kazuki. Until we meet again.\""
@@ -209,17 +201,21 @@ label ch01_arrythmia_good_ending :
 
     scene black with fade
 
-    # "DEBUG hospital: [ch01_went_to_hospital]"
-    # "DEBUG cat broke formula: [ch01_cat_broke_formula]"
-
-    #TODO: check this return condition
-
     if ch01_went_to_hospital and ch01_cat_broke_formula:
-
-        #"DEBUG: ENTERED RETURN CONDITION"
 
         return
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.2
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.2
+
+    play sound "audio/sfx/footsteps.mp3"
 
     "Yosuke finally returns home and heads to his laboratory."
 
@@ -271,6 +267,10 @@ label ch01_arrythmia_good_ending :
 
         show doctor worried at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/sigh.mp3"
+
         doctor "\"It's irregular...\"" 
 
         hide doctor onlayer portraits with dissolve
@@ -281,6 +281,10 @@ label ch01_arrythmia_good_ending :
 
         doctor "\"The formula...\"" 
 
+        #SOUND
+
+        play sound "audio/sfx/Socked.mp3"
+
         doctor "\"No...\"" 
 
         $ nagomi_root_entry.locked = False
@@ -290,9 +294,13 @@ label ch01_arrythmia_good_ending :
         doctor "An experimental dose..."
 
         show doctor panicked at left onlayer portraits with dissolve
-        with vpunch
+         
 
         doctor "It was never meant to be taken without supervision."
+
+        #SOUND
+
+        play sound "audio/sfx/Gasp.mp3"
 
         doctor "\"Mother, stay with me.\""
 
@@ -324,12 +332,16 @@ label ch01_arrythmia_good_ending :
 
         "..." 
 
+        #SOUND
+
+        play sound "audio/sfx/heavy_suspence.mp3"
+
         "Then it stops." 
 
         show mother default with dissolve
 
         show doctor panicked at left onlayer portraits with dissolve
-        with vpunch
+         
 
         doctor "\"Mother...\""
 
@@ -376,7 +388,7 @@ label ch01_arrythmia_good_ending :
         "But she doesn't." 
 
         show doctor panicked at left onlayer portraits with dissolve      
-        with vpunch
+         
 
         doctor "How could I make such a mistake?" 
 
@@ -389,6 +401,10 @@ label ch01_arrythmia_good_ending :
         doctor "I know what death looks like." 
 
         doctor "Yet I cannot accept it."    
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "\"I'm sorry, Mother...\"" 
 
@@ -409,6 +425,10 @@ label ch01_arrythmia_good_ending :
         doctor "I have to prepare her body." 
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "\"I have to tell someone...\""
 

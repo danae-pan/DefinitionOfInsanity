@@ -1,10 +1,6 @@
 # Event Your mother chokes during swallowing (dysphagia), she dies (end of fist chapter)
 label ch01_dysphagia_ending:
 
-    #show doctor default at left onlayer portraits with dissolve
-
-    #expression: neutral
-
     doctor "\"Alright... let's start with the soup.\""
 
     hide doctor onlayer portraits with dissolve
@@ -19,6 +15,8 @@ label ch01_dysphagia_ending:
 
     hide doctor onlayer portraits with dissolve
 
+    show mother smile with dissolve
+
     "One bite..."
 
     "Then another..."
@@ -31,22 +29,47 @@ label ch01_dysphagia_ending:
 
     doctor "But something feels wrong."
 
+    show mother sick with dissolve
+
+    play sound "audio/sfx/mother_breathe.mp3"
+
     mother "\"...\""
+
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "\"Mother?\""
 
     hide doctor onlayer portraits with dissolve
 
     show mother sick with dissolve 
-    with vpunch
+
+    #SOUND
+
+    play sound "audio/sfx/mother_breathe.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/mother_breathe.mp3"
+
+    pause 1.3
+
+    play sound "audio/sfx/mother_breathe.mp3"
 
     "She tries to breathe."
+
+    #SOUND
+
+    play sound "audio/sfx/mother_cough.mp3"
     
     "Then, she begins to choke."
 
     show doctor worried at left onlayer portraits with dissolve
 
-    #doctor expression: panicked
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
 
     doctor "\"What is going on?\""
 
@@ -57,9 +80,12 @@ label ch01_dysphagia_ending:
     "He quickly tries to help her but the situation only gets worse." 
 
     show doctor panicked at left onlayer portraits with dissolve 
-    with vpunch
-
+     
     doctor "\"Stay with me, Mother...\"" 
+
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "I know what to do."
     
@@ -73,13 +99,19 @@ label ch01_dysphagia_ending:
     
     "But nothing is enough."
 
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
+
     "The room becomes silent. It is already too late."
 
     "Her final breath leaves her body in his arms." 
 
     show doctor panicked at left onlayer portraits with dissolve
 
-    #doctor expression: panicked or worried
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
 
     doctor "\"No...\""  
 
@@ -88,8 +120,6 @@ label ch01_dysphagia_ending:
     show mother default with dissolve
 
     if ch01_loop_count == 0:
-
-        #doctor expression: maybe sad/dissapointed
 
         "He holds Mother's hand, but she no longer responds." 
 
@@ -107,6 +137,10 @@ label ch01_dysphagia_ending:
 
         show doctor panicked at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "\"How could I make such a mistake?\""
 
         doctor "I've read about this before..."
@@ -119,6 +153,10 @@ label ch01_dysphagia_ending:
         doctor "I knew this."
 
         doctor "So why did I forget?"
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "\"How am I supposed to live with this?\""
 
@@ -134,11 +172,19 @@ label ch01_dysphagia_ending:
 
         show doctor worried at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         doctor "\"I'm sorry, Mother...\"" 
 
         doctor "I should have noticed..."
 
         doctor "I should have remembered..."
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "\"I failed you...\""
 
@@ -156,6 +202,10 @@ label ch01_dysphagia_ending:
 
         show doctor worried at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         doctor "\"I have to tell someone...\""
 
         hide doctor onlayer portraits with dissolve
@@ -171,9 +221,10 @@ label ch01_dysphagia_ending:
         "He holds Mother's hand as her warmth slowly fades."
 
         show doctor panicked at left onlayer portraits with dissolve
-        with vpunch
+    
+        #SOUND
 
-        #doctor expression: panicked
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "Not again..."
 
@@ -181,7 +232,9 @@ label ch01_dysphagia_ending:
 
         if knows_dysphagia:
 
-            #doctor expression: panicked
+            #SOUND
+
+            play sound "audio/sfx/suspence.mp3"
 
             hide doctor onlayer portraits with dissolve
 
@@ -199,6 +252,10 @@ label ch01_dysphagia_ending:
 
             doctor "I should have remembered."
 
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
+
             doctor "\"I should have seen it...\""
 
         else:
@@ -207,6 +264,10 @@ label ch01_dysphagia_ending:
 
             $ dysphagia_entry.locked = False
             $ knows_dysphagia = True
+
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
 
             doctor "{a=glossary:dysphagia_entry}Dysphagia{/a} was a symptom of this illness."
 

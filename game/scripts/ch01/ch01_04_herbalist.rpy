@@ -18,6 +18,18 @@ label ch01_meet_herbalist_on_door:
 
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.2
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.2
+
+    play sound "audio/sfx/footsteps.mp3"
+
     "He opens the door." 
 
     if not met_herbalist:
@@ -94,11 +106,27 @@ label ch01_go_to_hospital:
 
     scene bg ch01 hospital with fade
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps_tile.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/footsteps_tile.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps_tile.mp3"
+
     "The halls are unusually quiet." 
 
     "The doctors and nurses are taking advantage of the rare moment of peace." 
 
     "He makes his way to the medical storage room."  
+
+    #SOUND
+
+    play sound "audio/sfx/cutlery.mp3"
 
     "He scans the shelves." 
 
@@ -122,14 +150,23 @@ label ch01_go_to_hospital:
 
     "He gathers the herbs he needs and leaves the storage room."  
 
-    #TODO: add a flag for the herbalist
-    #TODO: add kimono t the glossary
-
     if not met_herbalist:
 
         $ kimono_entry.locked = False
 
         "As he steps into the hallway, he notices an man wearing a {a=glossary:kimono_entry}kimono{/a} sitting quietly on a wooden bench." 
+
+        #SOUND
+
+        play sound "audio/sfx/footsteps_tile.mp3"
+        
+        pause 1.0
+
+        play sound "audio/sfx/footsteps_tile.mp3"
+
+        pause 1.0
+
+        play sound "audio/sfx/footsteps_tile.mp3"
 
         "The man smiles as Yosuke approaches."
 
@@ -139,6 +176,18 @@ label ch01_go_to_hospital:
     else:
 
         "As he steps into the hallway, he notices Kazumi sitting quietly on a wooden bench."
+
+        #SOUND
+
+        play sound "audio/sfx/footsteps_tile.mp3"
+        
+        pause 1.2
+
+        play sound "audio/sfx/footsteps_tile.mp3"
+
+        pause 1.2
+
+        play sound "audio/sfx/footsteps_tile.mp3"
 
         "He smiles as Yosuke approaches."
 
@@ -206,8 +255,6 @@ label ch01_go_to_hospital:
     menu :
 
         "Stay and chat":
-
-            #TODO: Fix the routes here, there are two seperate endings
 
             jump ch01_runs_late_at_hospital_comma_ending
 
@@ -295,17 +342,15 @@ label ch01_herbalists_invitation:
 
     hide herbalist onlayer portraits
 
-    #TODO: check whether thss condition plays correctly wiyh the flag being moved OK :)
-
-    #This loop is when this route continues to "Return to your Mother" choice
-
-    #for this the condition/flag should not be reset after each chapter 1 ending
-
     if ch01_brain_hemorrhage_happened and ch01_met_herb_in_door:
 
         show doctor worried at left onlayer portraits with dissolve
 
         $ brain_hemorrhage_entry.locked = False
+
+        #SOUND
+
+        play sound "audio/sfx/suspence.mp3"
 
         doctor "Last time I didn't go with the herbalist my Mother died from {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}..."
         

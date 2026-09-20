@@ -8,11 +8,19 @@ label ch01_arrythmia_mixed_ending:
 
         show doctor worried at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "I can't keep watching her suffer while I have something that might help..." 
 
     else:
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "I can't keep watching her suffer while I can make something that might help..." 
 
@@ -25,6 +33,10 @@ label ch01_arrythmia_mixed_ending:
     doctor "As a doctor, I know that."
 
     doctor "But..."
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     show doctor worried at left onlayer portraits with dissolve
 
@@ -49,6 +61,18 @@ label ch01_arrythmia_mixed_ending:
     hide doctor onlayer portraits with dissolve
 
     scene black with fade 
+
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.2
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.2
+
+    play sound "audio/sfx/footsteps.mp3"
 
     "He returns to the laboratory."
 
@@ -104,6 +128,10 @@ label ch01_arrythmia_mixed_ending:
 
     show mother sick with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/suspence.mp3"
+
     if ch01_check_formula:
 
         show doctor worried at left onlayer portraits with dissolve
@@ -130,13 +158,21 @@ label ch01_arrythmia_mixed_ending:
     "His medical instincts take over." 
 
     show doctor panicked at left onlayer portraits with dissolve
-    with vpunch
+     
+
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "\"No...\""
 
     doctor "The symptoms..."
 
     doctor "The irregular heartbeat..."
+
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
 
     doctor "\"No, no, no...\""
 
@@ -170,6 +206,10 @@ label ch01_arrythmia_mixed_ending:
 
     show doctor panicked at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
+
     doctor "The formula..." 
 
     doctor "The choice I made..." 
@@ -201,6 +241,10 @@ label ch01_arrythmia_mixed_ending:
         doctor "I have to prepare her body." 
 
         show doctor worried at left onlayer portraits with dissolve
+        
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "\"I have to tell someone...\""
 

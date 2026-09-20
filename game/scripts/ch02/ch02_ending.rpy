@@ -20,7 +20,7 @@ label ch02_ending:
 
     doctor "Each one brought me closer to the solution."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He had found what was missing."
 
@@ -42,7 +42,7 @@ label ch02_ending:
 
     doctor "Even when I know what to do, I can't reach her in time."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He looks at the clock."
 
@@ -56,7 +56,7 @@ label ch02_ending:
 
     doctor "\"I just need to be faster.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     jump ch02_final_card
 

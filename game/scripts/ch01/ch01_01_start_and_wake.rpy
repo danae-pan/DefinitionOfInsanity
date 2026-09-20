@@ -2,6 +2,11 @@ label ch01_start:
 
     if ch01_loop_count == 0:
 
+        
+        #SOUND
+
+        play sound "audio/sfx/transition.mp3" volume 0.8
+
         scene chapter_1_title with fade
 
         pause 3
@@ -36,7 +41,6 @@ label ch01_reset_attempt_state:
     # $ ch01_met_herb_in_hospital = False
     $ herbalist_visited = False
 
-    #why is this one reset? 
     $ ch01_cat_broke_formula = False
     $ ch01_prepared_formula = False
     $ ch01_went_to_hospital = False
@@ -47,10 +51,6 @@ label ch01_reset_attempt_state:
 
     return
 
-# Event Wake UP
-# Choices
-#   Make Breakfast 
-#   Check on Mother
 label ch01_wake_up:
 
     if ch01_loop_count == 0:
@@ -74,10 +74,6 @@ label ch01_wake_up:
             jump ch01_make_breakfast
 
         "Check on your Mother":
-
-            scene black with fade
-
-            "He heads to his Mother's room."
             
             jump ch01_check_mother
 
@@ -92,6 +88,10 @@ label ch01_first_wakeup:
     scene bg ch01 lab_no_cat with fade
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
 
     doctor "I came back to help her survive, and the only way I can do that is by finding the cure myself."
 
@@ -111,11 +111,17 @@ label ch01_first_wakeup:
 
     show doctor default at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "\"I probably didn't eat yesterday...\""
 
     hide doctor onlayer portraits with dissolve
 
-    "The days have begun to blur together. Endless hours spent moving between the laboratory and his Mother's bedside have made him lose all sense of time."
+    "The days have begun to blur together."
+    
+    "Endless hours spent moving between the laboratory and his Mother's bedside have made him lose all sense of time."
 
     show doctor default at left onlayer portraits with dissolve
 
@@ -145,6 +151,14 @@ label ch01_loop_wakeup:
     
     "Everything comes back to him."
 
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/suspence.mp3"
+
     call ch01_remember_previous_deaths from _call_ch01_remember_previous_deaths
 
     doctor "There's no time to dwell on it."
@@ -159,7 +173,11 @@ label ch01_loop_wakeup:
 
     show doctor default at left onlayer portraits with dissolve
 
-    doctor "\"I probably didn't eat yesterday.\""
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
+    doctor "\"I probably didn't eat yesterday...\""
 
     hide doctor onlayer portraits with dissolve
 

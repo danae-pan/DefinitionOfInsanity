@@ -59,7 +59,7 @@ label ch02_second_herb_without_instructions_ending:
     "Each swallow is slow and painful."
 
     show mother sick with dissolve 
-    with vpunch
+     
 
     "She coughs between bites, but eventually manages to finish the meal."
 
@@ -120,7 +120,7 @@ label ch02_second_herb_without_instructions_ending:
     "Her eyelids begin to droop."
 
     show doctor worried at left onlayer portraits with dissolve 
-    with vpunch
+     
 
     doctor "\"Mother?\""
 
@@ -151,7 +151,7 @@ label ch02_second_herb_without_instructions_ending:
     if ch02_second_herb_with_instructions:
 
         show doctor panicked at left onlayer portraits with dissolve 
-        with vpunch
+         
 
         doctor "But.."
 
@@ -184,7 +184,7 @@ label ch02_second_herb_without_instructions_ending:
     "The doctor remains frozen beside the bed."
 
     show doctor worried at left onlayer portraits with dissolve 
-    with vpunch
+     
 
     doctor "\"I wanted to ease your pain…\""
 

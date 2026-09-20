@@ -10,6 +10,10 @@ label ch01_coma_ending :
 
         show doctor worried at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         doctor "This formula has been proven dangerous before."
 
         doctor "I know the risks."
@@ -21,6 +25,10 @@ label ch01_coma_ending :
         doctor "The answer I have been searching for..."
 
         doctor "It could be right in front of me." 
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "But it has never been tested."
 
@@ -40,6 +48,10 @@ label ch01_coma_ending :
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "\"I'm sorry, Mother...\""
 
     doctor "\"I can't.\""
@@ -54,6 +66,16 @@ label ch01_coma_ending :
 
     else :
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
+        show doctor worried at left onlayer portraits with dissolve
+
+        doctor "I can't make the same mistake again..."
+
+        hide doctor onlayer portraits with dissolve
+
         "He chooses not to give her the formula and remains beside her."
 
     "He monitors her condition and does everything he can to keep her comfortable."
@@ -67,7 +89,7 @@ label ch01_coma_ending :
     "Then she stops responding."
 
     show doctor panicked at left onlayer portraits with dissolve
-    with vpunch
+     
 
     doctor "\"Mother?\"" 
 
@@ -76,6 +98,10 @@ label ch01_coma_ending :
     "He checks her condition."
 
     "She is still alive, but she does not wake."
+
+    #SOUND
+
+    play sound "audio/sfx/heavy_syspence.mp3"
 
     $ coma_entry.locked = False
 
@@ -89,6 +115,10 @@ label ch01_coma_ending :
 
         doctor "Maybe she'll wake up tomorrow."
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         doctor "\"Maybe...\""
         
         hide doctor onlayer portraits
@@ -96,6 +126,10 @@ label ch01_coma_ending :
     show doctor panicked at left onlayer portraits with dissolve
 
     doctor "But deep down, I know."
+
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
 
     doctor "\"There is nothing more I can do.\""
 
@@ -116,6 +150,10 @@ label ch01_coma_ending :
     doctor "I made the safest choice."
 
     doctor "But one question remains..."
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     if ch01_check_formula:
 
@@ -141,6 +179,10 @@ label ch01_coma_ending :
 
         show doctor worried at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         doctor "\"I have to tell someone...\""
 
         hide doctor onlayer portraits with dissolve
@@ -157,6 +199,10 @@ label ch01_coma_ending :
 
             hide doctor onlayer portraits with dissolve
 
+            #SOUND
+
+            play sound "audio/sfx/suspence.mp3"
+
             "The memory burns into his mind."
 
             $ coma_entry.locked = False
@@ -168,8 +214,6 @@ label ch01_coma_ending :
         else:
 
             doctor "I've read about this before."
-
-            #do i need this here?
 
             $ coma_entry.locked = False
 
@@ -184,6 +228,10 @@ label ch01_coma_ending :
         "He gently places her hand back on the bed."
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "But I'm not finished."
 

@@ -15,6 +15,18 @@ label ch01_answer_mothers_call:
 
         scene black with fade
 
+        #SOUND
+
+        play sound "audio/sfx/footsteps.mp3"
+        
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
         "He rushes toward her room."
 
     elif ch01_check_apothecary and ch01_went_to_hospital:
@@ -27,6 +39,18 @@ label ch01_answer_mothers_call:
     
         show doctor default at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/footsteps.mp3"
+        
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
         doctor "\"Mother?\"" 
 
         hide doctor onlayer portraits with dissolve
@@ -35,7 +59,17 @@ label ch01_answer_mothers_call:
 
     show mother sick with dissolve
 
-    #expression mother: tired no smile
+    #SOUND
+
+    play sound "audio/sfx/mother_breath.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/mother_breath.mp3"
+
+    pause 1.2
+
+    play sound "audio/sfx/mother_breath.mp3"
 
     "She is struggling to breathe. Her condition has worsened." 
 
@@ -54,6 +88,10 @@ label ch01_answer_mothers_call:
         "Yosuke looks at his Mother, sadness covering his face."
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "She seems even weaker..."
 
@@ -86,6 +124,10 @@ label ch01_answer_mothers_call:
 
     show doctor default at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "The formula..." 
 
     if ch01_prepared_formula:
@@ -113,6 +155,10 @@ label ch01_answer_mothers_call:
             
             show doctor worried at left onlayer portraits with dissolve
 
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
+
             doctor "But...her condition...is worse now."
 
             show doctor default at left onlayer portraits with dissolve
@@ -127,8 +173,6 @@ label ch01_answer_mothers_call:
 
             jump ch01_go_to_hospital
 
-        #TODO: See if removing the condition flag ch01_check_apothecary breaks anything
-        #OKEY
 
         if ch01_went_to_hospital:
 
@@ -142,6 +186,10 @@ label ch01_answer_mothers_call:
 
             hide doctor onlayer portraits with dissolve
 
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
+
             "By the look in her eyes he knows she is worried."
 
             "He fixes her pillows to make her feel more comfortable."
@@ -154,12 +202,15 @@ label ch01_answer_mothers_call:
 
             doctor "I was right to take some from Mr. Kazuki's store..."
 
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
+
             doctor "Mother looks already too weak..."
 
             doctor "I have no time now to study the new herbs."
 
             doctor "I have to make the same formula."
-
 
 
         doctor "I should go prepare it quickly."
@@ -169,6 +220,10 @@ label ch01_answer_mothers_call:
         scene bg ch01 lab_no_cat with fade
 
         "He enters the laboratory and sees the mess the cat has caused."
+
+        #SOUND
+
+        play sound "audio/sfx/cutlery.mp3"
 
         "He begins preparing the formula again, repeating each step as carefully as before."
 
@@ -188,6 +243,10 @@ label ch01_answer_mothers_call:
 
     doctor "It has never been tested. I don't know the side effects." 
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "I don't know if it will help her... Or if it will make everything worse." 
 
     doctor "As a doctor... I know what I should do. An untested treatment could harm her." 
@@ -195,6 +254,18 @@ label ch01_answer_mothers_call:
     hide doctor onlayer portraits with dissolve
 
     scene black with fade
+
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.2
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.2
+
+    play sound "audio/sfx/footsteps.mp3"
 
     "He heads to his Mother's room, leaving the vial behind."
 
@@ -208,8 +279,6 @@ label ch01_answer_mothers_call:
 
     doctor "I cannot just stand here and watch." 
 
-    #mother expression: tired no smile
-
     mother "\"Yosuke...\""
 
     hide doctor onlayer portraits with dissolve
@@ -217,6 +286,12 @@ label ch01_answer_mothers_call:
     "Her grip weakens."
 
     mother "\"Please...\""
+
+    scene black with fade
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     "He closes his eyes."
 
@@ -227,6 +302,8 @@ label ch01_answer_mothers_call:
     doctor "Or it could take away the little time she has left..."
 
     hide doctor onlayer portraits with dissolve
+
+    show mother default with dissolve
 
     "His hands tighten."
 
@@ -239,6 +316,10 @@ label ch01_answer_mothers_call:
     if ch01_check_formula :
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/suspence.mp3"
 
         doctor "Last time I gave it to her she died..."
 
@@ -259,9 +340,23 @@ label ch01_check_mother :
 
     if ch01_loop_count == 0 :
 
+        scene black with fade
+
+        #SOUND
+
+        play sound "audio/sfx/footsteps.mp3"
+        
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
         show mother default with dissolve
 
-        "He enters her room."
+        "He enters his Mother's room."
 
         show doctor default at left onlayer portraits with dissolve
 
@@ -297,6 +392,10 @@ label ch01_check_mother :
 
         doctor  "\"Alright… everything seems stable.\""
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         doctor "She is stable, but that doesn’t mean that she is alright."
         
         doctor "I need to find a solution soon."
@@ -313,20 +412,39 @@ label ch01_check_mother :
 
         hide doctor onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/footsteps.mp3"
+        
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
+        pause 1.0
+
+        play sound "audio/sfx/footsteps.mp3"
+
+        scene black with fade 
+
         show mother default with dissolve
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "Wait… This looks strange…"
 
-
         if ch01_wake_happened:
 
-            show doctor default at left onlayer portraits with dissolve
-            
-            doctor "Why is she in these clothes?"
+            $ wake_entry.locked = False
 
-            doctor "I dressed her for the wake yesterday… I'm sure of it."
+            #SOUND
+
+            play sound "audio/sfx/suspence.mp3"
+
+            doctor "Why is she in these clothes?"
+            
+            doctor "I dressed her yesterday..."
+            
+            doctor "I am sure of it... for the {a=glossary:wake_entry}otsuya{/a}."
 
         hide doctor onlayer portraits with dissolve
         
@@ -335,6 +453,10 @@ label ch01_check_mother :
         "It is warm."
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/Gasp.mp3"
 
         doctor "She's alive...?"
 
@@ -354,6 +476,12 @@ label ch01_check_mother :
 
         doctor "Am I getting another chance?"
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
+        show doctor default at left onlayer portraits with dissolve
+
         doctor "I have to calm down."
 
         doctor "I shouldn't upset her."
@@ -363,6 +491,8 @@ label ch01_check_mother :
         show mother smile with dissolve
 
         mother "\"Good morning…\""
+
+        show doctor smile at left onlayer portraits with dissolve
 
         doctor "\"Good morning, Mother\""
 
@@ -381,6 +511,10 @@ label ch01_check_mother :
         doctor "\"Let me run my tests first.\""
 
         doctor "\"Alright... Everything seems stable.\""
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "She's stable, but that doesn't mean she's alright."
 
@@ -410,6 +544,10 @@ label ch01_check_mother :
 
         hide doctor onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
+
         "She looks as exhausted as every other time."
 
         show doctor default at left onlayer portraits with dissolve
@@ -417,8 +555,6 @@ label ch01_check_mother :
         doctor "I should open the windows."
 
         hide doctor onlayer portraits with dissolve
-
-        #mother expression: tired smile
 
         show mother smile with dissolve
 
@@ -445,6 +581,10 @@ label ch01_check_mother :
         doctor "\"Let me run my tests first.\""
 
         doctor "\"Alright... Everything seems stable.\""
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "She's stable, but that doesn't mean she's alright."
 

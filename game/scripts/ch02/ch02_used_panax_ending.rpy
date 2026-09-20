@@ -33,7 +33,7 @@ label ch02_used_taeru_ending:
     hide doctor onlayer portraits with dissolve
 
     show mother sick with dissolve 
-    with vpunch
+     
 
     "A sudden gasp interrupts his notes."
 
@@ -46,7 +46,7 @@ label ch02_used_taeru_ending:
     "Blood begins to run from one nostril."
 
     show doctor panicked at left onlayer portraits with dissolve 
-    with vpunch
+     
 
     doctor "No... that's impossible..."
 
@@ -75,7 +75,7 @@ label ch02_used_taeru_ending:
     "The doctor slowly lowers his Mother's hand onto the bed."
 
     show doctor panicked at left onlayer portraits with dissolve 
-    with vpunch
+     
 
     doctor "\"...I did this.\""
 
