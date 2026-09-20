@@ -11,7 +11,7 @@ label ch01_answer_mothers_call:
 
         doctor "Nothing else matters right now."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         scene black with fade
 
@@ -29,12 +29,11 @@ label ch01_answer_mothers_call:
 
         doctor "\"Mother?\"" 
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     "He opens the door." 
 
-    scene bg ch01 mother 
-    with fade
+    show mother sick with dissolve
 
     #expression mother: tired no smile
 
@@ -54,7 +53,7 @@ label ch01_answer_mothers_call:
 
         "Yosuke looks at his Mother, sadness covering his face."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "She seems even weaker..."
 
@@ -72,7 +71,7 @@ label ch01_answer_mothers_call:
 
         mother "\"It's okey son...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "But he could see the weakness in her eyes..."
 
@@ -93,11 +92,13 @@ label ch01_answer_mothers_call:
 
         doctor "It's ready. It is waiting in the laboratory." 
 
+        show doctor smile at left onlayer portraits with dissolve
+
         doctor "\"I will be back in a minute Mother.\""
 
         doctor "\"Just wait for me.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         scene bg ch01 lab_no_cat with fade
 
@@ -109,8 +110,12 @@ label ch01_answer_mothers_call:
             doctor "I already now I am out of stock."
 
             doctor "I will have to go to the hospital."
+            
+            show doctor worried at left onlayer portraits with dissolve
 
             doctor "But...her condition...is worse now."
+
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "\"I need to go to the hospital now Mother.\""
 
@@ -118,7 +123,7 @@ label ch01_answer_mothers_call:
 
             mother "\"Thank you my son. Be careful on your way there.\""
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             jump ch01_go_to_hospital
 
@@ -135,7 +140,7 @@ label ch01_answer_mothers_call:
 
             doctor "\"Have a bit more patience Mother.\""
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             "By the look in her eyes he knows she is worried."
 
@@ -159,7 +164,7 @@ label ch01_answer_mothers_call:
 
         doctor "I should go prepare it quickly."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         scene bg ch01 lab_no_cat with fade
 
@@ -173,13 +178,13 @@ label ch01_answer_mothers_call:
 
         doctor "I should return to Mother."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He takes a look at the bottle one last time."
 
         $ ch01_prepared_formula = True
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "It has never been tested. I don't know the side effects." 
 
@@ -187,13 +192,13 @@ label ch01_answer_mothers_call:
 
     doctor "As a doctor... I know what I should do. An untested treatment could harm her." 
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
     "He heads to his Mother's room, leaving the vial behind."
 
-    scene bg ch01 mother with fade
+    show mother sick with dissolve
 
     "He looks at her."
 
@@ -207,7 +212,7 @@ label ch01_answer_mothers_call:
 
     mother "\"Yosuke...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "Her grip weakens."
 
@@ -215,13 +220,13 @@ label ch01_answer_mothers_call:
 
     "He closes his eyes."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "The {a=glossary:formula_entry}formula{/a} could save her."
 
     doctor "Or it could take away the little time she has left..."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "His hands tighten."
 
@@ -229,15 +234,15 @@ label ch01_answer_mothers_call:
 
     doctor "I have to decide."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     if ch01_check_formula :
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "Last time I gave it to her she died..."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
     
     menu:
 
@@ -254,7 +259,7 @@ label ch01_check_mother :
 
     if ch01_loop_count == 0 :
 
-        scene bg ch01 mother with fade
+        show mother default with dissolve
 
         "He enters her room."
 
@@ -262,11 +267,11 @@ label ch01_check_mother :
 
         doctor "\"Mother…?\"" 
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "She's still asleep. She looks exhausted."
 
-        show doctor default at left onlayer portraits with dissolve
+        show mother smile with dissolve
 
         mother "\"Good morning…\""
 
@@ -274,7 +279,7 @@ label ch01_check_mother :
         
         "This illness is slowly stealing her strength."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor smile at left onlayer portraits with dissolve
 
         doctor "\"Good morning, Mother\"" 
 
@@ -298,7 +303,7 @@ label ch01_check_mother :
 
         doctor "But perhaps I should make us some breakfast first."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     elif ch01_loop_count == 1 :
 
@@ -306,9 +311,9 @@ label ch01_check_mother :
 
         doctor "I should go visit her now…"
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
-        scene bg ch01 mother with fade
+        show mother default with dissolve
 
         show doctor default at left onlayer portraits with dissolve
 
@@ -323,13 +328,13 @@ label ch01_check_mother :
 
             doctor "I dressed her for the wake yesterday… I'm sure of it."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
         
         "He approaches her bedside and touches her hand."
 
         "It is warm."
 
-        show doctor default at left onlayer portraits
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "She's alive...?"
 
@@ -337,11 +342,9 @@ label ch01_check_mother :
 
         doctor "\"Mother!\""
 
-        hide doctor default onlayer portraits
-
         mother "\"Son…?\""
 
-        show doctor default at left onlayer portraits
+        show doctor smile at left onlayer portraits with dissolve
 
         doctor "She's alive..."
 
@@ -357,25 +360,23 @@ label ch01_check_mother :
 
         doctor "I have to act normally."
 
-        hide doctor default onlayer portraits
+        show mother smile with dissolve
 
         mother "\"Good morning…\""
-
-        show doctor default at left onlayer portraits
 
         doctor "\"Good morning, Mother\""
 
         doctor "\"How are you feeling today?\""
 
-        hide doctor default onlayer portraits
-
         mother "\"Better…\""
 
-        "She tries to reach for my hand, but her arm trembles."
+        hide doctor onlayer portraits
+
+        "She tries to reach for his hand, but her arm trembles."
         
         "He gently takes her hand in his and smile back"
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         doctor "\"Let me run my tests first.\""
 
@@ -387,13 +388,13 @@ label ch01_check_mother :
 
         doctor "But perhaps I should make us some breakfast first."
 
-        hide doctor default onlayer portraits
+        hide doctor onlayer portraits
     
     else :
 
         "He enters her room and rushes to her bedside."
 
-        scene bg ch01 mother with fade
+        show mother default with dissolve
 
         "She is alive."
 
@@ -407,7 +408,7 @@ label ch01_check_mother :
 
         doctor "I have to act normally."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "She looks as exhausted as every other time."
 
@@ -415,15 +416,17 @@ label ch01_check_mother :
 
         doctor "I should open the windows."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         #mother expression: tired smile
+
+        show mother smile with dissolve
 
         mother "\"Good morning...\""
 
         "He turns and sees her trying to smile at him."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor smile at left onlayer portraits with dissolve
 
         doctor "\"Good morning, Mother.\""
 
@@ -431,7 +434,7 @@ label ch01_check_mother :
 
         mother "\"Better...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "She tries to reach for his hand, but her arm trembles."
 
@@ -449,27 +452,27 @@ label ch01_check_mother :
 
         doctor "But perhaps I should make us some breakfast first."
 
-        hide doctor default at left onlayer portraits with dissolve
+        hide doctor at left onlayer portraits with dissolve
     
     $ ch01_mother_checked = True
 
     menu :
         "Prepare breakfast":
 
-            show doctor default at left onlayer portraits with dissolve
+            show doctor smile at left onlayer portraits with dissolve
 
             doctor "\"I'm going to make us some breakfast. I'll be back soon.\""
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             jump ch01_make_breakfast
 
         "Go to your laboratory":
 
-            show doctor default at left onlayer portraits with dissolve
+            show doctor smile at left onlayer portraits with dissolve
 
             doctor "\"I'm going to my laboratory. Call me if you need anything.\""
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             jump ch01_straight_to_lab

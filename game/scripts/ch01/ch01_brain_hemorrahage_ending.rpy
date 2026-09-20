@@ -16,13 +16,15 @@ label ch01_brain_hemorrahage_ending:
 
     if not ch01_went_to_hospital:
 
+        show doctor smile at left onlayer portraits with dissolve
+
         doctor "\"Thank you, Mr. Kazuki.\""
 
         doctor "\"I'll visit your store another time.\""
 
-        hide doctor default onlayer portraits
+        hide doctor onlayer portraits
 
-        show herbalist default at left onlayer portraits
+        show herbalist smile at left onlayer portraits
 
         herbalist "\"Alrigh then.\""
 
@@ -30,13 +32,13 @@ label ch01_brain_hemorrahage_ending:
 
         herbalist "\"Take care.\""
 
-        hide herbalist default onlayer portraits
+        hide herbalist onlayer portraits
 
-        show doctor default at left onlayer portraits
+        show doctor smile at left onlayer portraits
 
         doctor "\"Goodbye Mr. Kazuki.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "Mr. Kazuki turns around and walks away."
 
@@ -45,7 +47,7 @@ label ch01_brain_hemorrahage_ending:
 
     else:
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         scene black with fade
 
@@ -60,7 +62,7 @@ label ch01_brain_hemorrahage_ending:
 
     doctor "\"Mother?\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "..." 
 
@@ -68,29 +70,19 @@ label ch01_brain_hemorrahage_ending:
 
     "He quickly heads to his Mother's room."
 
-    #No need for this, we already check this condition bellow.
-
-    # if ch01_brain_hemorrhage_happened:
-
-    #     show doctor default at left onlayer portraits with dissolve
-
-    #     doctor "\"Oh no...\""
-
-    #     doctor "\"Is this happening again?\""
-
-    #     hide doctor default onlayer portraits with dissolve
-
-    scene bg ch01 mother with fade
+    show mother default with dissolve
 
     "Her face is pale."
 
     "She looks exhausted."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"Mother...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
+
+    show mother sick with dissolve
 
     "He immediately checks her condition."
 
@@ -108,7 +100,8 @@ label ch01_brain_hemorrahage_ending:
 
         "..."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor panicked at left onlayer portraits with dissolve
+        with punch
 
         doctor "She needed water and tried to get it herself..."
 
@@ -122,15 +115,18 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "She wanted help but I was away..."
 
+        show doctor worried at left onlayer portraits with dissolve
+
         doctor "\"This is all my fault...\""
 
         doctor "\"I'm so sorry Mother.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     else:
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor panicked at left onlayer portraits with dissolve
+        with vpunch
 
         doctor "It's the same scene as before..."
 
@@ -138,7 +134,7 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "The empty bottle..."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     "He places his hands on her."
 
@@ -146,7 +142,7 @@ label ch01_brain_hemorrahage_ending:
 
     "He checks every possible sign, searching for any chance to help her."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "But deep down..."
 
@@ -158,13 +154,7 @@ label ch01_brain_hemorrahage_ending:
 
     doctor "A {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}."
 
-    # if ch01_brain_hemorrhage_happened:
-
-    #     #TODO: check if we need a flag here
-
-    #     doctor "\"Exactly like last time...\""
-
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The hours pass slowly."
 
@@ -174,19 +164,16 @@ label ch01_brain_hemorrahage_ending:
 
     "Until finally..."
 
+    show mother default with dissolve
+
     "She is gone."
 
     "He holds Mother's hand."
 
-    #TODO: check if this will go corretly (OKEY)
-
-    #TODO: check whether this block of code is needed
-
-    #It is needed for when he goes to answer the door ad then returns to his Mother instead of going with the herbalist but it doesn;t work.
-
     if ch01_met_herb_in_door:
 
-        show doctor default at left onlayer portraits
+        show doctor worried at left onlayer portraits with dissolve
+        with vpunch
 
         doctor "I came back."
 
@@ -200,7 +187,8 @@ label ch01_brain_hemorrahage_ending:
 
     if ch01_went_to_hospital and ch01_return_from_hospital:
 
-       show doctor default at left onlayer portraits with dissolve
+       show doctor worried at left onlayer portraits with dissolve
+       with vpunch
 
        doctor "I was too late.."
 
@@ -218,7 +206,7 @@ label ch01_brain_hemorrahage_ending:
 
     if ch01_loop_count == 0:
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
     
         "Eventually, reality begins to settle in."
 
@@ -230,9 +218,11 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "I have to prepare her body."
 
-        doctor "I have to tell someone."
+        show doctor worried at left onlayer portraits with dissolve
 
-        hide doctor default onlayer portraits with dissolve
+        doctor "\"I have to tell someone...\""
+
+        hide doctor onlayer portraits with dissolve
 
         $ wake_entry.locked = False
 
@@ -244,15 +234,15 @@ label ch01_brain_hemorrahage_ending:
 
     else :
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 
-        doctor "I won't repeat this."
+        doctor "I won't repeat this mistake."
 
         doctor "\"I will save her.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         scene black with fade
 
@@ -260,7 +250,7 @@ label ch01_brain_hemorrahage_ending:
 
         "That he will do better."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     if not ch01_brain_hemorrhage_happened:
 

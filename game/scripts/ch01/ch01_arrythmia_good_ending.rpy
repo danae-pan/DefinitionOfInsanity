@@ -38,7 +38,7 @@ label ch01_arrythmia_good_ending :
 
     doctor "\"I'll come with you.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -59,6 +59,8 @@ label ch01_arrythmia_good_ending :
 
         herbalist "\"It always begins differently...\"" 
 
+        show herbalist sceptical at left onlayer portraits with dissolve
+
         herbalist "\"Eventually, the muscles grow too weak to offer any support.\"" 
 
         herbalist "\"Many also lose the ability to swallow safely.\""  
@@ -67,7 +69,7 @@ label ch01_arrythmia_good_ending :
 
         herbalist "\"Later... they begin losing their balance.\"" 
 
-        hide herbalist default onlayer portraits with dissolve
+        hide herbalist onlayer portraits with dissolve
 
         "Yosuke quietly commits every word to memory."
 
@@ -83,7 +85,7 @@ label ch01_arrythmia_good_ending :
 
     herbalist "\"These may interest you.\"" 
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "Yosuke examines the herbs carefully." 
 
@@ -97,13 +99,13 @@ label ch01_arrythmia_good_ending :
 
     doctor "\"{a=glossary:junka_root_entry}Junka Root{/a}...\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     show herbalist default at left onlayer portraits
 
     herbalist "\"This one is traditionally used to improve blood circulation.\"" 
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     "Another remedy sits beside it."
 
@@ -113,13 +115,13 @@ label ch01_arrythmia_good_ending :
 
     doctor "\"{a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}...\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     show herbalist default at left onlayer portraits
 
     herbalist "\"Plenty of books praise Tsuyomi Cap for its ability to strengthen the body's resilience.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
     show doctor default at left onlayer portraits
 
@@ -139,15 +141,15 @@ label ch01_arrythmia_good_ending :
 
         doctor "\"Do you happen to have any?\""
 
-        hide doctor default onlayer portraits
+        hide doctor onlayer portraits
 
-        show herbalist default at left onlayer portraits
+        show herbalist smile at left onlayer portraits
 
         herbalist "\"Yes, of course.\""
 
         herbalist "\"I have plenty, how much whould you want?\""
 
-        hide herbalist default onlayer portraits
+        hide herbalist onlayer portraits
 
         show doctor default at left onlayer portraits
         
@@ -157,26 +159,30 @@ label ch01_arrythmia_good_ending :
 
         doctor "I can come again if needed."
 
+        show doctor smile at left onlayer portraits with dissolve
+
         doctor "\"One bottle would be enough.\""
 
         doctor "\"Thank you again Mr. Kazuki.\""
 
+        show doctor default at left onlayer portraits with dissolve
+
         doctor "\"Now, for the rest..\""
 
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     menu:
 
         "Junka Root":
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "\"I'll take the Junka Root...\""
 
         "Tsuyomi Cap":
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "\"I'll take the Tsuyomi Cap...\""
 
@@ -185,17 +191,19 @@ label ch01_arrythmia_good_ending :
 
     #doctor "\"I would also like some {a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:hogo_root_entry}Hogo Root{/a}.\""
 
+    show doctor smile at left onlayer portraits with dissolve
+
     doctor "\"Thank you, Mr. Kazuki. Until we meet again.\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
-    show herbalist default at left onlayer portraits
+    show herbalist smile at left onlayer portraits
 
     herbalist "\"I hope you can help your Mother, Mr. Yosuke.\""
     
     herbalist "\"Be careful on your way home.\""
 
-    hide herbalist default onlayer portraits with dissolve
+    hide herbalist onlayer portraits with dissolve
 
     $ took_herbs = True
 
@@ -225,7 +233,7 @@ label ch01_arrythmia_good_ending :
 
     doctor "\"Mother?\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -237,7 +245,7 @@ label ch01_arrythmia_good_ending :
 
     if not ch01_cat_broke_formula:
 
-        scene bg ch01 mother with fade
+        show mother default with dissolve
 
         "She's lying in bed." 
 
@@ -245,11 +253,13 @@ label ch01_arrythmia_good_ending :
 
         "His heart sinks." 
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"Mother...\"" 
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
+
+        show mother sick with dissolve
 
         "She slowly opens her eyes." 
 
@@ -259,15 +269,15 @@ label ch01_arrythmia_good_ending :
 
         "His hands are already searching for a pulse." 
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"It's irregular...\"" 
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "His eyes dart to the empty vial." 
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"The formula...\"" 
 
@@ -279,29 +289,34 @@ label ch01_arrythmia_good_ending :
 
         doctor "An experimental dose..."
 
+        show doctor panicked at left onlayer portraits with dissolve
+        with vpunch
+
         doctor "It was never meant to be taken without supervision."
 
         doctor "\"Mother, stay with me.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He desperately tries to recall anything from his notes that might be in use."
 
-        show doctor default at left onlayer portraits with dissolve
+        #see if vpunvh has to be added everytime
+
+        show doctor panicked at left onlayer portraits with dissolve
 
         doctor "There has to be something..."
 
         doctor "There has to be..."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "..."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor panicked at left onlayer portraits with dissolve
 
         doctor "Nothing."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "Her heartbeat becomes weaker."
 
@@ -311,11 +326,14 @@ label ch01_arrythmia_good_ending :
 
         "Then it stops." 
 
-        show doctor default at left onlayer portraits with dissolve
+        show mother default with dissolve
+
+        show doctor panicked at left onlayer portraits with dissolve
+        with vpunch
 
         doctor "\"Mother...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He remain frozen beside her." 
 
@@ -323,7 +341,7 @@ label ch01_arrythmia_good_ending :
 
         $ arrhythmia_entry.locked = False
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor panicked at left onlayer portraits with dissolve
 
         doctor "The {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
 
@@ -333,7 +351,7 @@ label ch01_arrythmia_good_ending :
 
         $ ch01_previous_death = "arrhythmia"
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     else: 
         call ch01_answer_mothers_call
@@ -345,19 +363,20 @@ label ch01_arrythmia_good_ending :
 
         "He waits." 
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"Maybe...\"" 
 
         doctor "\"Maybe she will open her eyes.\"" 
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "..." 
 
         "But she doesn't." 
 
-        show doctor default at left onlayer portraits with dissolve      
+        show doctor panicked at left onlayer portraits with dissolve      
+        with vpunch
 
         doctor "How could I make such a mistake?" 
 
@@ -369,13 +388,11 @@ label ch01_arrythmia_good_ending :
 
         doctor "I know what death looks like." 
 
-        doctor "Yet I cannot accept it." 
-
-        doctor "I close her eyes gently." 
+        doctor "Yet I cannot accept it."    
 
         doctor "\"I'm sorry, Mother...\"" 
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "The house feels different now." 
 
@@ -391,9 +408,11 @@ label ch01_arrythmia_good_ending :
 
         doctor "I have to prepare her body." 
 
+        show doctor worried at left onlayer portraits with dissolve
+
         doctor "\"I have to tell someone...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         $ wake_entry.locked = False
 
@@ -417,15 +436,15 @@ label ch01_arrythmia_good_ending :
 
         "The things he overlooked."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 
-        doctor "I won't repeat this."
+        doctor "I won't repeat this mistake."
 
         doctor "\"I will save her.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         scene black with fade
 

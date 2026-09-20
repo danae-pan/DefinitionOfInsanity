@@ -7,19 +7,17 @@ label ch01_dysphagia_ending:
 
     doctor "\"Alright... let's start with the soup.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He carefully begins feeding her."
     
     "After the soup, he picks up a piece of bread."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor smile at left onlayer portraits with dissolve
     
     doctor "\"Here, Mother.\"" 
 
-    hide doctor default onlayer portraits with dissolve
-
-    #mother expression: eating
+    hide doctor onlayer portraits with dissolve
 
     "One bite..."
 
@@ -27,9 +25,7 @@ label ch01_dysphagia_ending:
 
     "She suddenly stops."
 
-    show doctor default at left onlayer portraits with dissolve
-
-    #expression: worried
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "At first, I thought she's only tired..."
 
@@ -39,15 +35,15 @@ label ch01_dysphagia_ending:
 
     doctor "\"Mother?\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
-    #mother expression: choking
+    show mother sick with dissolve with vpunch
 
     "She tries to breathe."
     
     "Then, she begins to choke."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     #doctor expression: panicked
 
@@ -55,11 +51,12 @@ label ch01_dysphagia_ending:
 
     doctor "\"How did this happen?\"" 
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He quickly tries to help her but the situation only gets worse." 
 
-    show doctor default at left onlayer portraits with dissolve 
+    show doctor panicked at left onlayer portraits with dissolve 
+    with vpunch
 
     doctor "\"Stay with me, Mother...\"" 
 
@@ -69,7 +66,7 @@ label ch01_dysphagia_ending:
 
     doctor "So why are my hands shaking?"
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
     
     "He tries everything he can."
     
@@ -79,13 +76,15 @@ label ch01_dysphagia_ending:
 
     "Her final breath leaves her body in his arms." 
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve
 
     #doctor expression: panicked or worried
 
     doctor "\"No...\""  
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor  onlayer portraits with dissolve
+
+    show mother default with dissolve
 
     if ch01_loop_count == 0:
 
@@ -93,19 +92,19 @@ label ch01_dysphagia_ending:
 
         "He holds Mother's hand, but she no longer responds." 
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "Maybe..."
 
         doctor "\"Maybe she'll open her eyes...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "..."
 
         "But she does not." 
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor panicked at left onlayer portraits with dissolve
 
         doctor "\"How could I make such a mistake?\""
 
@@ -128,13 +127,11 @@ label ch01_dysphagia_ending:
 
         doctor "\"I know what death looks like...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "Yet he cannot accept it."
 
-        "He gently closes her eyes." 
-
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"I'm sorry, Mother...\"" 
 
@@ -144,7 +141,7 @@ label ch01_dysphagia_ending:
 
         doctor "\"I failed you...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor  onlayer portraits with dissolve
 
         "Eventually, reality begins to settle in."
 
@@ -152,13 +149,15 @@ label ch01_dysphagia_ending:
 
         show doctor default at left onlayer portraits with dissolve
 
-        doctor "\"I have to report her death.\""
+        doctor "I have to report her death." 
 
-        doctor "\"I have to prepare her body.\""
+        doctor "I have to prepare her body." 
 
-        doctor "\"I have to tell someone!\""
+        show doctor worried at left onlayer portraits with dissolve
 
-        hide doctor default onlayer portraits with dissolve
+        doctor "\"I have to tell someone...\""
+
+        hide doctor onlayer portraits with dissolve
 
         $ wake_entry.locked = False
 
@@ -170,7 +169,8 @@ label ch01_dysphagia_ending:
 
         "He holds Mother's hand as her warmth slowly fades."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor panicked at left onlayer portraits with dissolve
+        with vpunch
 
         #doctor expression: panicked
 
@@ -182,11 +182,11 @@ label ch01_dysphagia_ending:
 
             #doctor expression: panicked
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             "The memory burns into his mind."
 
-            show doctor default at left onlayer portraits with dissolve
+            show doctor worried at left onlayer portraits with dissolve
 
             doctor "The bread."
 
@@ -215,15 +215,15 @@ label ch01_dysphagia_ending:
 
         doctor "\"I have to save her.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He gently places her hand back on the bed."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "But I'm not finished."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He returns to his laboratory."
 
@@ -239,15 +239,15 @@ label ch01_dysphagia_ending:
 
         "The things he overlooked."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 
-        doctor "I won't repeat this."
+        doctor "I won't repeat this mistake."
 
         doctor "\"I will save her.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         scene black
 

@@ -10,11 +10,11 @@ label ch01_make_breakfast :
 
         "He steps into the kitchen."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor smile at left onlayer portraits with dissolve
 
         doctor "A soup should help Mother feel better."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
     
     elif ch01_loop_count == 1:
 
@@ -31,17 +31,19 @@ label ch01_make_breakfast :
         
         else :
 
-            show doctor default at left onlayer portraits
+            show doctor smile at left onlayer portraits with dissolve
 
             doctor "A soup should help Mother feel better."
 
         if knows_dysphagia:
+
+            show doctor default at left onlayer portraits with dissolve
         
             doctor "Wait...something feels strange. I feel like I've done this before."
 
             doctor "\"I’m probably confused from the lack of sleep…\"" 
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     else:
 
@@ -49,21 +51,22 @@ label ch01_make_breakfast :
 
         if not ch01_mother_checked :
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "My stomach is hurting so much..."
+            
             
             doctor "Maybe a bowl of soup will help."
 
         else :
 
-            show doctor default at left onlayer portraits with dissolve
+            show doctor smile at left onlayer portraits with dissolve
 
             doctor "A soup should help Mother feel better."
 
         doctor "This is happening again… I'm doing the same things again and again… but maybe I will get another chance.."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     "Ever since contaminated fish entered the food supply, everyday meals have become much more difficult."
 
@@ -73,7 +76,7 @@ label ch01_make_breakfast :
     
     doctor "Who would've imagined that one of our most common foods could become so dangerous?"
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
     
     "He notices a loaf of bread sitting inside the cupboard."
 
@@ -83,15 +86,17 @@ label ch01_make_breakfast :
 
         $ dysphagia_entry.locked = False
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "The bread... Mother choked on it because of her {a=glossary:dysphagia_entry}dysphagia{/a}..."
 
         if ch01_mother_checked:
 
+            show doctor default at left onlayer portraits with dissolve
+
             doctor "I have to be careful. I cannot make the same mistakes again."
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
     $ ch01_breakfast_made = True
 
@@ -99,11 +104,11 @@ label ch01_make_breakfast :
 
         "Add bread":
             
-            show doctor default at left onlayer portraits with dissolve
+            show doctor smile at left onlayer portraits with dissolve
             
             doctor "\"Alright, breakfast is ready.\""
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
             
             $ ch01_bread_added = True
 
@@ -119,7 +124,7 @@ label ch01_make_breakfast :
 
                 doctor "I can't risk it. I won't make the same mistake again."
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             jump ch01_eat_breakfast
 
@@ -129,7 +134,7 @@ label ch01_eat_breakfast:
 
     "He heads to his Mother's room with the breakfast tray in hand."
 
-    scene bg ch01 mother with fade
+    show mother default with dissolve
 
     if ch01_loop_count == 0:
         
@@ -139,18 +144,21 @@ label ch01_eat_breakfast:
 
             doctor "\"Mother...?\""
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             "She is still asleep, her face worn with exhaustion."
 
             "He quietly places the soup on the bedside table and opens the window, letting fresh air fill the room."
 
             #mother opens her eyes (expression: tired)
+
+            show mother smile with dissolve
+
             mother "\"Good morning...\"" 
 
             "She turns toward him with a faint smile. The illness has stolen so much of her strength."
 
-            show doctor default at left onlayer portraits with dissolve
+            show doctor smile at left onlayer portraits with dissolve
 
             #doctor expression: neutral smile
             
@@ -160,7 +168,7 @@ label ch01_eat_breakfast:
 
             mother "\"Better...\""
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             "She reaches for his hand, but her arm trembles. He gently takes her hand and smiles reassuringly."
 
@@ -177,7 +185,7 @@ label ch01_eat_breakfast:
 
         doctor "\"I made you miso soup. Your favorite.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     elif ch01_loop_count == 1:
 
@@ -185,7 +193,7 @@ label ch01_eat_breakfast:
 
         if not ch01_mother_checked:
 
-            show doctor default at left onlayer portraits with dissolve
+            show doctor worried at left onlayer portraits with dissolve
 
             doctor "Something feels wrong."
 
@@ -195,15 +203,15 @@ label ch01_eat_breakfast:
 
                 doctor "Why is she in these clothes? I dressed her yesterday… im sure.. for the {a=glossary:wake_entry}otsuya{/a}."
 
-                hide doctor default onlayer portraits with dissolve
+                hide doctor onlayer portraits with dissolve
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             "He rushes to her bedside and gently takes her hand."
 
             "It's warm."
 
-            show doctor default at left onlayer portraits with dissolve
+            show doctor worried at left onlayer portraits with dissolve
 
             #doctor expression: shocked
 
@@ -215,11 +223,11 @@ label ch01_eat_breakfast:
 
             doctor "\"Mother!\""
 
-            #mother expression: tired
+            show mother smile with dissolve
 
             mother "\"Son...?\""
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             "Relief crashes over him."
 
@@ -233,27 +241,27 @@ label ch01_eat_breakfast:
 
             doctor "Calm down. Don't let her notice. Just act normal."
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
         
         else: 
 
-            show doctor default at left onlayer portraits
+            show doctor default at left onlayer portraits with dissolve
 
             doctor "Stay calm."
 
             doctor "She can't know."  
 
-            hide doctor default onlayer portraits
+            hide doctor onlayer portraits
 
         "She looks just as exhausted as he remembers."
 
         "He places the soup beside her bed and opens the window."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor smile at left onlayer portraits with dissolve
 
         doctor "\"Good morning, Mother.\""
 
-        #mother expression: tired smile
+        show mother smile
 
         mother "\"Good morning...\""
 
@@ -261,7 +269,7 @@ label ch01_eat_breakfast:
 
         mother "\"Better...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "She reaches for his hand, but it trembles."
 
@@ -279,17 +287,17 @@ label ch01_eat_breakfast:
 
     else: 
 
-        show doctor default at left onlayer portraits
+        show doctor default at left onlayer portraits with dissolve
 
         if not ch01_mother_checked:
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             "He rushes to her bedside."
 
             "She's alive."
 
-            show doctor default at left onlayer portraits with dissolve
+            show doctor worried at left onlayer portraits with dissolve
 
             #doctor expression: skeptical
 
@@ -303,23 +311,23 @@ label ch01_eat_breakfast:
 
         doctor "I've done this before."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "She looks just as exhausted as every other time."
 
         "He places the soup beside her bed and opens the window."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor smile at left onlayer portraits with dissolve
 
         doctor "\"Good morning, Mother.\""
 
         doctor "\"How are you feeling today?\""
 
-        #mother expression: tired smile
+        show mother smile
 
         mother "\"Better...\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "She reaches for his hand, her arm trembling."
 
@@ -337,7 +345,7 @@ label ch01_eat_breakfast:
 
         doctor "\"I made you miso soup. Your favorite.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     if ch01_bread_added:
 

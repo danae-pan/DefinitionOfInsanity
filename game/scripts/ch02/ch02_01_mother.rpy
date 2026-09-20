@@ -143,7 +143,7 @@ label ch02_mother_calls_for_food :
 
     scene bg ch01 mother with fade
 
-    "His mother is awake, though only barely."
+    "His Mother is awake, though only barely."
 
     "She turns her head as he enters the room."
 
@@ -209,7 +209,7 @@ label ch02_mother_calls_for_food :
 
     hide doctor default onlayer portraits with dissolve
 
-    "He looks at his mother."
+    "He looks at his Mother."
 
     show doctor default at left onlayer portraits with dissolve
 

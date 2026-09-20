@@ -91,11 +91,11 @@ label ch01_first_wakeup:
 
     scene bg ch01 lab_no_cat with fade
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "I came back to help her survive, and the only way I can do that is by finding the cure myself."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "Years of study and countless experiments have brought him closer to several possible treatments."
 
@@ -105,7 +105,7 @@ label ch01_first_wakeup:
 
     doctor "\"I just have to keep testing.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "A sharp pain twists his stomach."
 
@@ -113,7 +113,7 @@ label ch01_first_wakeup:
 
     doctor "\"I probably didn't eat yesterday...\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "The days have begun to blur together. Endless hours spent moving between the laboratory and his Mother's bedside have made him lose all sense of time."
 
@@ -121,7 +121,7 @@ label ch01_first_wakeup:
 
     doctor "\"I should see if Mother is awake.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     return
 
@@ -153,7 +153,7 @@ label ch01_loop_wakeup:
 
     doctor "\"She is in the room… I could go see her.. \""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "A dull pain twists his stomach."
 
@@ -161,7 +161,7 @@ label ch01_loop_wakeup:
 
     doctor "\"I probably didn't eat yesterday.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     return
 
@@ -169,45 +169,60 @@ label ch01_remember_previous_deaths:
 
     if ch01_wake_happened and ch01_loop_count == 1:
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor panicked at left onlayer portraits with dissolve
 
         $ wake_entry.locked = False
 
         doctor "\"The {a=glossary:wake_entry}otsuya{/a}… The neighbors...\""
 
+        show doctor default at left onlayer portraits with dissolve
+
+
     if knows_dysphagia and ch01_loop_count >=1 and not ch01_brain_hemorrhage_happened and not ch01_knows_arrhythmia and not ch01_knows_coma:
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ dysphagia_entry.locked = False
 
         doctor "\"The {a=glossary:dysphagia_entry}dysphagia{/a}… The bread...\""
 
+        show doctor default at left onlayer portraits with dissolve
+
+
     #TODO: check those two condirions
         
     if ch01_brain_hemorrhage_happened and ch01_loop_count >=1 and not knows_dysphagia  and not ch01_knows_arrhythmia and not ch01_knows_coma:
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "The broken glass in the floor... Mother's fall..."
+
+        show doctor default at left onlayer portraits with dissolve
+
     
     if ch01_knows_arrhythmia and ch01_loop_count >=1 and not knows_dysphagia  and not ch01_brain_hemorrhage_happened and not ch01_knows_coma:
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ nagomi_root_entry.locked = False
 
         $ arrhythmia_entry.locked = False
 
         doctor "The {a=glossary:nagomi_root_entry}Nagomi Root{/a}... It caused her {a=glossary:arrhythmia_entry}arrhythmia{/a}..."
+
+        show doctor default at left onlayer portraits with dissolve
+
     
     if ch01_knows_coma and ch01_loop_count >=1 and not knows_dysphagia  and not ch01_brain_hemorrhage_happened and not ch01_knows_arrhythmia:
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ coma_entry.locked = False
 
         doctor "I didn't gave her the formula... She died from {a=glossary:coma_entry}coma{/a}..."
+
+        show doctor default at left onlayer portraits with dissolve
+
 
     if (ch01_knows_arrhythmia
         + ch01_knows_coma
@@ -218,7 +233,7 @@ label ch01_remember_previous_deaths:
 
         doctor "\"How can I save her?\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor worried onlayer portraits with dissolve
 
         "He let's out a sigh worrying whether he will be able to save her before he runs out of time."
 

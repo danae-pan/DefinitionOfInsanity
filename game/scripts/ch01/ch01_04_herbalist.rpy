@@ -14,7 +14,7 @@ label ch01_meet_herbalist_on_door:
 
         doctor "It might be Mr. Kazuki"
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 
@@ -40,37 +40,37 @@ label ch01_meet_herbalist_on_door:
 
         doctor "I have to be careful talking to him."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
         
     "The scent of dried leaves and flowers fills the air." 
 
-    show herbalist default at left onlayer portraits with dissolve
+    show herbalist smile at left onlayer portraits with dissolve
 
-    herbalist "\"Goodmorning! You must be Dr. Yosuke.\""
+    herbalist "\"Good morning! You must be Dr. Yosuke.\""
 
-    hide herbalist default onlayer portraits 
+    hide herbalist onlayer portraits 
 
-    show doctor default at left onlayer portraits 
+    show doctor smile at left onlayer portraits 
 
-    doctor "\"Goodmorning…\""
+    doctor "\"Good morning…\""
 
     doctor "\"Excuse me sir, who are you?\"" 
 
-    hide doctor default onlayer portraits 
+    hide doctor onlayer portraits 
 
-    show herbalist default at left onlayer portraits
+    show herbalist smile at left onlayer portraits
 
     herbalist "\"My name is Kazuki.\"" 
 
     herbalist "\"I'm the Herbalist from the neighboring village. My store is the first one you see in the central square.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
-    show doctor default at left onlayer portraits
+    show doctor smile at left onlayer portraits
 
     doctor "\"Oh nice to meet you Mr. Kazuki. What brings you to our home?\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     $ met_herbalist = True
     
@@ -88,7 +88,7 @@ label ch01_go_to_hospital:
 
     doctor "If I leave now, I should be back before she needs me." 
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He grabs his bag and heads for the hospital."  
 
@@ -118,7 +118,7 @@ label ch01_go_to_hospital:
 
     doctor "\"Good.\"" 
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He gathers the herbs he needs and leaves the storage room."  
 
@@ -133,7 +133,7 @@ label ch01_go_to_hospital:
 
         "The man smiles as Yosuke approaches."
 
-        show herbalist default at left onlayer portraits with dissolve
+        show herbalist smile at left onlayer portraits with dissolve
 
 
     else:
@@ -150,14 +150,14 @@ label ch01_go_to_hospital:
 
         doctor "I should be careful to act like I haven't seen him before."
 
-        hide doctor default at left onlayer portraits
+        hide doctor at left onlayer portraits
 
-        show herbalist default at left onlayer portraits
+        show herbalist smile at left onlayer portraits
 
 
     herbalist "\"You must be Dr. Yosuke.\"" 
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
     show doctor default at left onlayer portraits
 
@@ -165,7 +165,7 @@ label ch01_go_to_hospital:
 
     doctor "\"Have we met before?\"" 
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     show herbalist default at left onlayer portraits
 
@@ -175,13 +175,13 @@ label ch01_go_to_hospital:
 
     herbalist "\"I'm the Herbalist from the neighboring village. My store is the first one you see in the central square.\"" 
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
-    show doctor default at left onlayer portraits
+    show doctor smile at left onlayer portraits
 
     doctor "\"It's a pleasure to meet you.\"" 
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "Unlike Yosuke's medical training, Mr. Kazuki's knowledge comes from generations of experience."
 
@@ -197,7 +197,7 @@ label ch01_go_to_hospital:
 
     doctor "I shouldn't stay away for too long."
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     $ ch01_met_herb_in_hospital = True
 
@@ -213,21 +213,21 @@ label ch01_go_to_hospital:
 
         "Return home and make the formula":
 
-            show doctor default at left onlayer portraits with dissolve
+            show doctor smile at left onlayer portraits with dissolve
 
             doctor "\"I am sorry Mr. Kazuki, I am in a hurry.\""
 
             doctor "\"I will come by your store soon.\""
 
-            hide doctor default onlayer portraits
+            hide doctor onlayer portraits
 
-            show herbalist default at left onlayer portraits
+            show herbalist smile at left onlayer portraits
 
             herbalist "\"Will see you soon then.\""
 
             herbalist "\"Goodbye.\""
 
-            hide herbalist default onlayer portraits with dissolve
+            hide herbalist onlayer portraits with dissolve
 
             scene black with fade 
 
@@ -243,17 +243,17 @@ label ch01_herbalists_invitation:
     
     herbalist "\"I was making a delivery to {a=glossary:mrs_Sato_entry}Mrs. Sato{/a}.\""
 
-    herbalist "\"She mentioned your mother's condition.\"" 
+    herbalist "\"She mentioned your Mother's condition.\"" 
 
     herbalist "\"Word travels quickly in a village this small.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
     show doctor default at left onlayer portraits
 
     doctor "\"I suppose it does.\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
     show herbalist default at left onlayer portraits
 
@@ -271,9 +271,9 @@ label ch01_herbalists_invitation:
 
     herbalist "\"Perhaps you'll find them useful.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
-    show doctor default at left onlayer portraits
+    show doctor smile at left onlayer portraits
 
     doctor "\"That’s very nice of you.\""
 
@@ -281,9 +281,9 @@ label ch01_herbalists_invitation:
     
     doctor "\"Do you have them with you?\""
 
-    hide doctor default onlayer portraits
+    hide doctor onlayer portraits
 
-    show herbalist default at left onlayer portraits
+    show herbalist smile at left onlayer portraits
 
     herbalist "\"Unfortunatelly I don't carry those kinds of herbs with me but you can visit my store.\""
     
@@ -293,27 +293,27 @@ label ch01_herbalists_invitation:
 
     herbalist "\"It shouldn't take more than an hour to get there and back.\""
 
-    hide herbalist default onlayer portraits
+    hide herbalist onlayer portraits
 
     #TODO: check whether thss condition plays correctly wiyh the flag being moved OK :)
 
-    #This loop is when this route continues to "Return to your mother" choice
+    #This loop is when this route continues to "Return to your Mother" choice
 
     #for this the condition/flag should not be reset after each chapter 1 ending
 
     if ch01_brain_hemorrhage_happened and ch01_met_herb_in_door:
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         $ brain_hemorrhage_entry.locked = False
 
-        doctor "Last time I didn't go with the herbalist my mother died from {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}..."
+        doctor "Last time I didn't go with the herbalist my Mother died from {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}..."
         
         doctor "There was nothing I could do…"
         
         doctor "Maybe I should go with him."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
     $ ch01_met_herb_in_door = True
 
@@ -328,7 +328,7 @@ label ch01_herbalists_invitation:
 
             doctor "But..."
 
-            hide doctor default onlayer portraits with dissolve
+            hide doctor onlayer portraits with dissolve
 
             jump ch01_arrythmia_good_ending
 

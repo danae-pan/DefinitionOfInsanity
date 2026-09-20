@@ -4,11 +4,11 @@ label ch01_coma_ending :
 
     "He brings the formula into Mother's room. He looks at it in his hands." 
 
-    scene bg ch01 mother with fade
+    show mother sick with dissolve
 
     if ch01_check_formula:
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "This formula has been proven dangerous before."
 
@@ -16,7 +16,7 @@ label ch01_coma_ending :
 
     else:
 
-        show doctor default at left onlayer portraits
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "The answer I have been searching for..."
 
@@ -34,17 +34,19 @@ label ch01_coma_ending :
 
     doctor "I can't risk losing her because of something I created."
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He slowly lowers the {a=glossary:formula_entry}formula{/a} and sets it aside."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor worried at left onlayer portraits with dissolve
 
     doctor "\"I'm sorry, Mother...\""
 
     doctor "\"I can't.\""
 
-    hide doctor default onlayer portraits with dissolve
+    show mother default with dissolve
+
+    hide doctor onlayer portraits with dissolve
 
     if not ch01_knows_coma :
 
@@ -64,11 +66,12 @@ label ch01_coma_ending :
 
     "Then she stops responding."
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve
+    with vpunch
 
     doctor "\"Mother?\"" 
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "He checks her condition."
 
@@ -82,21 +85,21 @@ label ch01_coma_ending :
 
     if ch01_loop_count == 0:
 
-        show doctor default at left onlayer portraits
+        show doctor panicked at left onlayer portraits with dissolve
 
         doctor "Maybe she'll wake up tomorrow."
 
         doctor "\"Maybe...\""
         
-        hide doctor default onlayer portraits
+        hide doctor onlayer portraits
 
-    show doctor default at left onlayer portraits with dissolve
+    show doctor panicked at left onlayer portraits with dissolve
 
     doctor "But deep down, I know."
 
     doctor "\"There is nothing more I can do.\""
 
-    hide doctor default onlayer portraits with dissolve
+    hide doctor onlayer portraits with dissolve
 
     "Hours later, her breathing becomes weaker."
 
@@ -104,13 +107,11 @@ label ch01_coma_ending :
 
     "She passes away peacefully beside him."
 
+    show doctor worried at left onlayer portraits with dissolve
+
     if ch01_loop_count >= 1 :
 
-        show doctor default at left onlayer portraits with dissolve
-
         doctor "I lost her again..."
-
-    show doctor default at left onlayer portraits with dissolve
 
     doctor "I made the safest choice."
 
@@ -126,7 +127,7 @@ label ch01_coma_ending :
 
     if ch01_loop_count == 0 :
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "Eventually, reality begins to settle in." 
 
@@ -138,9 +139,11 @@ label ch01_coma_ending :
 
         doctor "I have to prepare her body."
 
-        doctor "I have to tell someone."
+        show doctor worried at left onlayer portraits with dissolve
 
-        hide doctor default onlayer portraits with dissolve
+        doctor "\"I have to tell someone...\""
+
+        hide doctor onlayer portraits with dissolve
 
         $ wake_entry.locked = False
 
@@ -152,9 +155,13 @@ label ch01_coma_ending :
         #TODO: see if this route goes only when he doesn't givve her the formula while not leaving for hospital or herbalist
         if ch01_knows_coma :
 
-            doctor "The memory burns into my mind."
+            hide doctor onlayer portraits with dissolve
+
+            "The memory burns into his mind."
 
             $ coma_entry.locked = False
+
+            show doctor worried at left onlayer portraits with dissolve
 
             doctor "If I don't give her the formula, she falls into a {a=glossary:coma_entry}coma{/a} and dies..."
 
@@ -172,15 +179,15 @@ label ch01_coma_ending :
 
         doctor "I have to save her."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         "He gently places her hand back on the bed."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "But I'm not finished."
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         scene black with fade
 
@@ -198,7 +205,7 @@ label ch01_coma_ending :
 
         "The things he overlooked."
 
-        show doctor default at left onlayer portraits with dissolve
+        show doctor worried at left onlayer portraits with dissolve
 
         doctor "If I get another chance..."
 
@@ -206,7 +213,7 @@ label ch01_coma_ending :
 
         doctor "\"I will save her.\""
 
-        hide doctor default onlayer portraits with dissolve
+        hide doctor onlayer portraits with dissolve
 
         scene black with fade
 
