@@ -42,11 +42,11 @@ label ch01_brain_hemorrahage_ending:
 
         play sound "audio/sfx/footsteps_rock.mp3"
         
-        pause 1.2
+        pause 1.0
 
         play sound "audio/sfx/footsteps_rock.mp3"
 
-        pause 1.2
+        pause 1.0
 
         play sound "audio/sfx/footsteps_rock.mp3"
 
@@ -255,7 +255,6 @@ label ch01_brain_hemorrahage_ending:
 
        show doctor worried at left onlayer portraits with dissolve
         
-
         #SOUND
 
        play sound "audio/sfx/Sigh.mp3"
@@ -270,9 +269,6 @@ label ch01_brain_hemorrahage_ending:
 
         doctor "It's all my fault..."
        
-
-
-
 
     if ch01_loop_count == 0:
 

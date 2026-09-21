@@ -30,6 +30,10 @@ label ch01_meet_herbalist_on_door:
 
     play sound "audio/sfx/footsteps.mp3"
 
+    pause 0.8
+
+    play sound "audio/sfx/open_door.mp3"
+
     "He opens the door." 
 
     if not met_herbalist:
@@ -308,6 +312,10 @@ label ch01_herbalists_invitation:
 
     herbalist "\"Unfortunately...\"" 
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     herbalist "\"I don't have one.\"" 
 
     herbalist "\"But I might have something that could make her days a little easier.\""
@@ -332,7 +340,7 @@ label ch01_herbalists_invitation:
 
     show herbalist smile at left onlayer portraits
 
-    herbalist "\"Unfortunatelly I don't carry those kinds of herbs with me but you can visit my store.\""
+    herbalist "\"I don't carry those kinds of herbs with me but you can visit my store.\""
     
     herbalist "\"I'm heading there now.\""
     

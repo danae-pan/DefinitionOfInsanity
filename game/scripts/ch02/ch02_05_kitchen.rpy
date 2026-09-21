@@ -6,6 +6,18 @@ label ch02_feed_the_cat :
 
     scene bg ch01 kitchen with fade
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
     "He heads to the kitchen, fills a small bowl with food and kneels beside the cat."
 
     "She eagerly begins eating while he gently strokes her back."
@@ -13,6 +25,10 @@ label ch02_feed_the_cat :
     "For the first time in days, the room feels almost peaceful."
 
     show doctor smile at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
 
     doctor "\"Feels good doesn’t it? Having a full stomach.\""
 
@@ -50,6 +66,10 @@ label ch02_feed_the_cat :
 
         doctor "..after eating."
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "But I wasn’t fast enough and Mother already passed."
 
         doctor "Maybe now.."
@@ -73,6 +93,10 @@ label ch02_feed_the_cat :
         doctor "He wasn’t sure about the risks.."
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "So many complications.."
 

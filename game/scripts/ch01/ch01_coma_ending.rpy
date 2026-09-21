@@ -194,7 +194,7 @@ label ch01_coma_ending :
         $ ch01_wake_happened = True
 
     else :
-        #TODO: see if this route goes only when he doesn't givve her the formula while not leaving for hospital or herbalist
+        
         if ch01_knows_coma :
 
             hide doctor onlayer portraits with dissolve

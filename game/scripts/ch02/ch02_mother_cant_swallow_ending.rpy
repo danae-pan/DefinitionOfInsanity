@@ -12,17 +12,37 @@ label ch02_mother_cant_swallow_ending :
 
     hide doctor onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/filling_glass.mp3"
+
     "The doctor filters the herbs through a fine cloth before pouring the finished medicine into a bottle."
 
     "He seals it carefully."
 
     show doctor smile at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "\"Finally.\""
 
     hide doctor onlayer portraits with dissolve
 
     scene black with fade
+
+    #SOUND
+
+    play sound "audio/sfx/run.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
 
     "Without another thought, he rushes upstairs."
 
@@ -34,6 +54,10 @@ label ch02_mother_cant_swallow_ending :
 
     show mother sick with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/suspence.mp3"
+
     "His Mother lies motionless."
 
     "One arm hangs weakly over the side of the bed."
@@ -44,11 +68,22 @@ label ch02_mother_cant_swallow_ending :
 
     "Her lips are cracked."
 
+    #SOUND
+
+    play sound "audio/sfx/mother_breath.mp3" volume 0.4
+    
+    pause 0.8
+
+    play sound "audio/sfx/mother_breath.mp3" volume 0.4
+
+    pause 1.2
+
+    play sound "audio/sfx/mother_breath.mp3" volume 0.4
+
     "Her throat moves weakly."
 
     show mother sick with dissolve 
      
-
     "She is trying to swallow."
 
     "But nothing happens."
@@ -59,6 +94,9 @@ label ch02_mother_cant_swallow_ending :
  
     show doctor panicked at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "\"Mother!\""
 
@@ -74,8 +112,11 @@ label ch02_mother_cant_swallow_ending :
 
         show doctor worried at left onlayer portraits with dissolve 
          
-
         doctor "Her {a=glossary:dysphagia_entry}dysphagia{/a}..."
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "It's gotten much worse."
 
@@ -84,7 +125,10 @@ label ch02_mother_cant_swallow_ending :
     else:
 
         show doctor worried at left onlayer portraits with dissolve 
-         
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "Of course."
 
@@ -102,6 +146,9 @@ label ch02_mother_cant_swallow_ending :
 
     show doctor panicked at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
 
     doctor "\"...No.\""
 
@@ -115,6 +162,18 @@ label ch02_mother_cant_swallow_ending :
 
     "Too late."
 
+    #SOUND
+
+    play sound "audio/sfx/mother_breath.mp3" volume 0.6
+    
+    pause 0.6
+
+    play sound "audio/sfx/mother_breath.mp3" volume 0.4
+
+    pause 0.4
+
+    play sound "audio/sfx/mother_breath.mp3" volume 0.2
+
     "Her breathing becomes ragged."
 
     "Each breath shorter than the last."
@@ -127,6 +186,9 @@ label ch02_mother_cant_swallow_ending :
 
     show doctor panicked at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
 
     doctor "\"Mother!\""
 
@@ -135,6 +197,11 @@ label ch02_mother_cant_swallow_ending :
     hide doctor onlayer portraits with dissolve
 
     show mother default with dissolve
+
+
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
 
     "Her chest rises once then nothing."
 

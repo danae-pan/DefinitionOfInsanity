@@ -4,6 +4,22 @@ label ch02_used_taeru_ending:
 
     "The doctor picks up the bottle and hurries to his Mother's bedside."
 
+    #SOUND
+
+    play sound "audio/sfx/run.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.6
+
+    play sound "audio/sfx/open_door.mp3"
+
     show mother smile with dissolve
 
     "She smiles weakly as he enters, struggling to form a sentence."
@@ -28,16 +44,39 @@ label ch02_used_taeru_ending:
 
     doctor "Pulse... unchanged."
 
+    #SOUND
+
+    play sound "audio/sfx/mother_breathe.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/mother_breathe.mp3"
+
     doctor "Breathing... steady."
 
     hide doctor onlayer portraits with dissolve
 
     show mother sick with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/mother_pain.mp3"
 
     "A sudden gasp interrupts his notes."
 
     "His Mother presses a hand against her head."
+
+    #SOUND
+
+    play sound "audio/sfx/mother_breathe.mp3"
+
+    pause 0.6
+
+    play sound "audio/sfx/mother_breathe.mp3"
+
+    pause 0.4
+
+    play sound "audio/sfx/mother_breathe.mp3"
 
     "Her breathing becomes rapid."
 
@@ -47,10 +86,17 @@ label ch02_used_taeru_ending:
 
     show doctor panicked at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "No... that's impossible..."
 
     hide doctor onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/suspence.mp3"
 
     "She suddenly collapses back onto the pillow."
 
@@ -70,12 +116,19 @@ label ch02_used_taeru_ending:
 
     $ brain_hemorrhage_entry.locked = False
 
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
+
     "The stimulation from the experimental formula triggered a sudden rise in blood pressure, causing a massive {a=glossary:brain_hemorrhage_entry}brain hemorrhage{/a}."
 
     "The doctor slowly lowers his Mother's hand onto the bed."
 
     show doctor panicked at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
 
     doctor "\"...I did this.\""
 
@@ -87,6 +140,10 @@ label ch02_used_taeru_ending:
 
     show panicked default at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "\"That can't be...\""
 
     doctor "\"The reports mentioned changes in blood pressure, but they were supposed to be uncommon.\""
@@ -96,6 +153,10 @@ label ch02_used_taeru_ending:
     "He lowers his head."
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
 
     doctor "\"...I knew there was a risk.\""
 
@@ -108,6 +169,10 @@ label ch02_used_taeru_ending:
     scene bg ch01 lab_no_cat with fade
 
     show doctor panicked at left onlayer portraits with dissolve
+    
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "\"I made a mistake.\""
 
@@ -142,14 +207,12 @@ label ch02_used_taeru_ending:
         "The same weakness."
 
         show doctor worried at left onlayer portraits with dissolve
+        
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "\"If I can not save Mother...\""
-
-        hide doctor onlayer portraits with dissolve
-
-        "He swallows."
-
-        show doctor worried at left onlayer portraits with dissolve
 
         doctor "\"...perhaps I can still save you.\""
 
@@ -168,12 +231,6 @@ label ch02_used_taeru_ending:
     "Unable to bear the silence of the house any longer, he buries himself in books."
     
     "An attempt to escape the weight of what he has done."
-
-    show doctor panicked at left onlayer portraits with dissolve
-
-    doctor "\"Please...\""
-
-    hide doctor onlayer portraits with dissolve
 
     scene black with fade
 

@@ -10,6 +10,18 @@ label ch02_second_herb_without_instructions_ending:
 
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
     "He leaves the room and makes his way downstairs, heading first to the laboratory."
 
     scene bg ch01 lab_no_cat with fade
@@ -34,6 +46,10 @@ label ch02_second_herb_without_instructions_ending:
 
     "He gathers the last of the rice and a handful of vegetables, placing them into a small pot."
 
+    #SOUND
+
+    play sound "audio/sfx/water_boil.mp3"
+
     "As the meal cooks, his eyes repeatedly drift toward the laboratory."
 
     "Then toward the staircase."
@@ -56,16 +72,31 @@ label ch02_second_herb_without_instructions_ending:
 
     "He patiently supports her back, feeding her one small spoonful at a time."
 
+    #SOUND
+
+    play sound "audio/sfx/mother_pain.mp3"
+
     "Each swallow is slow and painful."
 
     show mother sick with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/mother_cough.mp3"
 
     "She coughs between bites, but eventually manages to finish the meal."
 
     "The doctor offers her water."
 
     "She drinks only a few small sips before exhaustion overtakes her."
+
+    #SOUND
+
+    play sound "audio/sfx/mother_breathe.mp3" volume 0.5
+
+    pause 1.0
+
+    play sound "audio/sfx/mother_breathe.mp3" volume 0.5
 
     "Her breathing seems calmer now."
 
@@ -87,11 +118,27 @@ label ch02_second_herb_without_instructions_ending:
 
     "The decoction has finally reached the proper consistency."
 
+    #SOUND
+
+    play sound "audio/sfx/filling_glass.mp3"
+
     "He filters the herbs, carefully pours the medicine into a glass bottle, and seals it."
 
     scene black with fade
 
     "Without wasting another moment, he rushes back upstairs."
+
+    #SOUND
+
+    play sound "audio/sfx/run.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
 
     show mother sick with dissolve
 
@@ -121,6 +168,9 @@ label ch02_second_herb_without_instructions_ending:
 
     show doctor worried at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "\"Mother?\""
 
@@ -132,7 +182,23 @@ label ch02_second_herb_without_instructions_ending:
 
     "Nothing."
 
+    #SOUND
+
+    play sound "audio/sfx/mother_breathe.mp3" volume 0.6
+
+    pause 1.4
+
+    play sound "audio/sfx/mother_breathe.mp3" volume 0.5
+
+    pause 1.6
+
+    play sound "audio/sfx/mother_breathe.mp3" volume 0.4
+
     "Her breathing grows slower."
+
+    #SOUND
+
+    play sound "audio/sfx/suspence.mp3"
 
     "She slips into an unnatural sleep."
 
@@ -146,12 +212,19 @@ label ch02_second_herb_without_instructions_ending:
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3" 
+
     doctor "This herb should not be used after eating."
 
     if ch02_second_herb_with_instructions:
 
         show doctor panicked at left onlayer portraits with dissolve 
          
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "But.."
 
@@ -173,6 +246,10 @@ label ch02_second_herb_without_instructions_ending:
 
     $ coma_entry.locked = False
 
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
+
     "The {a=glossary:coma_entry}coma{/a} deepens."
 
     "Minutes stretch into hours."
@@ -185,6 +262,9 @@ label ch02_second_herb_without_instructions_ending:
 
     show doctor worried at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "\"I wanted to ease your pain…\""
 
@@ -195,6 +275,10 @@ label ch02_second_herb_without_instructions_ending:
     show doctor panicked at left onlayer portraits with dissolve
 
     doctor "\"Instead...\""
+
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
 
     doctor "\"...I took away your chance to recover again.\""
 
@@ -219,7 +303,7 @@ label ch02_second_herb_without_instructions_ending:
     "The books remain open exactly where he had left them."
 
     "He sits heavily at the workbench."
-
+    
     "He turns another page."
 
     "He reads the instructions again."

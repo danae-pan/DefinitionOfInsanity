@@ -6,6 +6,10 @@ label ch02_first_herb_without_instructions_ending:
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "I don't have time to prepare a meal."
 
     doctor "Every minute I wait is another minute the poison spreads."
@@ -14,10 +18,26 @@ label ch02_first_herb_without_instructions_ending:
 
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/sfx/run.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
     "He hurries upstairs."
 
     show mother sick with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/open_door.mp3"
+    
     "His Mother looks up weakly as he enters."
 
     mother "\"My son...\""
@@ -52,10 +72,15 @@ label ch02_first_herb_without_instructions_ending:
 
     #SOUND
 
+    play sound "audio/sfx/mother_pain.mp3"
+
     "A painful groan escapes her lips."
 
     show doctor worried at left onlayer portraits with dissolve 
-     
+
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "\"Mother?\""
 
@@ -63,6 +88,13 @@ label ch02_first_herb_without_instructions_ending:
 
     show mother sick with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/vomit.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/vomit.mp3"
 
     "Without warning, she begins vomiting violently."
 
@@ -74,7 +106,15 @@ label ch02_first_herb_without_instructions_ending:
 
     hide doctor onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/mother_cough.mp3"
+
     "She tries to cough."
+
+    #SOUND
+
+    play sound "audio/sfx/mother_pain.mp3"
 
     "Instead, she chokes."
 
@@ -86,6 +126,9 @@ label ch02_first_herb_without_instructions_ending:
 
         show doctor worried at left onlayer portraits with dissolve 
          
+        #SOUND
+
+        play sound "audio/sfx/Gasp.mp3"
 
         doctor "Her swallowing..."
 
@@ -95,18 +138,35 @@ label ch02_first_herb_without_instructions_ending:
 
         doctor "{a=glossary:dysphagia_entry}Dysphagia{/a}."
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "How could I forget? It's a symptom of the disease."
 
         hide doctor onlayer portraits with dissolve
 
         $ knows_dysphagia = True
 
+    #SOUND
+
+    play sound "audio/sfx/mother_breathe.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/mother_breeathe.mp3"
+
+    pause 0.7
+
     "She gasps desperately for air."
 
     "The doctor quickly turns her onto her side, desperately trying to clear her airway."
 
     show doctor panicked at left onlayer portraits with dissolve 
-     
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "\"Come on...\""
 
@@ -120,6 +180,10 @@ label ch02_first_herb_without_instructions_ending:
 
     "They stop."
 
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
+
     "Silence fills the room."
 
     "The doctor slowly removes his trembling hands."
@@ -132,6 +196,9 @@ label ch02_first_herb_without_instructions_ending:
 
         show doctor panicked at left onlayer portraits with dissolve 
          
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "\"...but why?\""
 
@@ -147,6 +214,10 @@ label ch02_first_herb_without_instructions_ending:
 
     show doctor panicked at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
+
     doctor "\"...I should have listened.\""
 
     hide doctor onlayer portraits with dissolve
@@ -160,6 +231,10 @@ label ch02_first_herb_without_instructions_ending:
     "He gently pulls it over his Mother's face."
 
     show doctor panicked at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "\"...I'm sorry.\""
 

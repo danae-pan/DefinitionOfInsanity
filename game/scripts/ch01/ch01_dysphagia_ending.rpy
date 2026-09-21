@@ -271,8 +271,6 @@ label ch01_dysphagia_ending:
 
             doctor "{a=glossary:dysphagia_entry}Dysphagia{/a} was a symptom of this illness."
 
-        #doctor expression: neutral
-
         doctor "I have to try again."
 
         doctor "\"I have to save her.\""

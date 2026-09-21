@@ -10,6 +10,10 @@ label ch02_first_herb_with_instructions_ending:
 
         show doctor worried at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "..I lost mother again."
 
         doctor "The herbalist wasn’t sure about the risks…"
@@ -19,6 +23,10 @@ label ch02_first_herb_with_instructions_ending:
         show doctor default at left onlayer portraits with dissolve
 
         doctor "If I'm going to trust his herbs..."
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "Then I must trust his instructions as well."
 
@@ -31,6 +39,12 @@ label ch02_first_herb_with_instructions_ending:
     "The cupboards are almost empty."
 
     "He gathers what little rice and vegetables remain and places a pot over the fire."
+
+    #TODO: add kitchen sound and filling bottle 
+
+    #SOUND
+
+    play sound "audio/sfx/water_boil.mp3"
 
     "As the water slowly begins to boil, he glances toward the staircase."
 
@@ -56,6 +70,18 @@ label ch02_first_herb_with_instructions_ending:
 
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/sfx/run.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
     "He hurries upstairs."
 
     show doctor default at left onlayer portraits with dissolve
@@ -65,6 +91,22 @@ label ch02_first_herb_with_instructions_ending:
     hide doctor onlayer portraits with dissolve
 
     "No answer."
+
+    #SOUND
+
+    play sound "audio/sfx/run.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.6
+
+    play sound "audio/sfx/open_door.mp3"
 
     "He quickens his pace and pushes open the bedroom door."
 
@@ -76,14 +118,21 @@ label ch02_first_herb_with_instructions_ending:
 
     "The tray slips from his hands."
 
-    ## SOUND
+    #SOUND
 
+    play sound "audio/sfx/bottle_trash.mp3"
+
+    play sound "audio/sfx/noise.mp3"
+    
     "The bowl shatters across the wooden floor."
 
     "Rice scatters across the room."
 
     show doctor worried at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "\"No...\""
 
@@ -103,8 +152,15 @@ label ch02_first_herb_with_instructions_ending:
 
     show doctor panicked at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
 
     doctor "\"Mother...\""
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "\"Please...\""
 
@@ -113,6 +169,10 @@ label ch02_first_herb_with_instructions_ending:
     "No response."
 
     "The damage had progressed beyond recovery."
+
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
 
     "Her body had simply given out before he could begin the treatment."
 
@@ -129,6 +189,10 @@ label ch02_first_herb_with_instructions_ending:
     "His voice barely rises above a whisper."
 
     show doctor panicked at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3" volume 0.5
 
     doctor "\"...I was only trying to do it properly.\""
 
@@ -167,6 +231,10 @@ label ch02_first_herb_with_instructions_ending:
     "Searching for something he had overlooked."
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "Perhaps I should have studied the herb more thoroughly..."
 

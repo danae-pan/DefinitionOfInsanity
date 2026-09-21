@@ -4,6 +4,10 @@ label ch02_second_herb_with_instructions_ending:
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "\"I know you need to eat Mother\""
 
     doctor "\"But the herbalist was very clear.\""
@@ -11,6 +15,9 @@ label ch02_second_herb_with_instructions_ending:
     doctor "\"This medicine must not be taken after eating.\""
 
     if ch02_second_herb_without_instructions:
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "Not to mention I already risked it and gave her a meal before.."
 
@@ -42,6 +49,10 @@ label ch02_second_herb_with_instructions_ending:
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "\"...Forgive me.\""
 
     hide doctor onlayer portraits with dissolve
@@ -51,6 +62,10 @@ label ch02_second_herb_with_instructions_ending:
     "He quietly leaves the room and heads to the labatory."
 
     scene bg ch01 lab_no_cat with fade
+
+    #SOUND
+
+    play sound "audio/sfx/lab_noise.mp3"
 
     "He carefully stirs the mixture, watching the herbs release their final colour into the liquid."
 
@@ -62,6 +77,10 @@ label ch02_second_herb_with_instructions_ending:
 
     hide doctor onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/filling_glass.mp3"
+
     "He filters the herbs through a fine cloth before pouring the finished medicine into a bottle."
 
     "He seals it immediately."
@@ -69,6 +88,18 @@ label ch02_second_herb_with_instructions_ending:
     scene black with fade
 
     "Without wasting another second, he rushes upstairs."
+
+    #SOUND
+
+    play sound "audio/sfx/run.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
 
     show doctor worried at left onlayer portraits with dissolve
 
@@ -88,6 +119,17 @@ label ch02_second_herb_with_instructions_ending:
 
     show mother sick with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/mother_breathe.mp3" 
+
+    pause 0.8
+
+    play sound "audio/sfx/mother_breathe.mp3" volume 0.8
+
+    pause 1.3
+
+    play sound "audio/sfx/mother_breathe.mp3" volume 0.5
 
     "She struggles weakly to breathe."
 
@@ -96,7 +138,6 @@ label ch02_second_herb_with_instructions_ending:
     "He lifts her head."
     
     show doctor worried at left onlayer portraits with dissolve 
-     
 
     doctor "\"I've finished it.\""
 
@@ -106,20 +147,31 @@ label ch02_second_herb_with_instructions_ending:
 
     "He gently raises the bottle to her lips."
 
+    #SOUND
+
+    play sound "audio/sfx/suspence.mp3"
+
     "The medicine spills from the corner of her mouth."
 
     "She can no longer swallow."
 
     show doctor worried at left onlayer portraits with dissolve 
-     
 
     if knows_dysphagia:
 
         $ dysphagia_entry.locked = False
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "Her {a=glossary:dysphagia_entry}dysphagia{/a}..."
 
         doctor "It's gotten worse."
+
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "\"...No.\""
 
@@ -139,10 +191,17 @@ label ch02_second_herb_with_instructions_ending:
 
     show doctor panicked at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
 
     doctor "\"Mother!\""
 
     hide doctor onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
 
     "Her chest rises just once."
 
@@ -161,6 +220,10 @@ label ch02_second_herb_with_instructions_ending:
     doctor "I waited too long.."
 
     doctor "I followed the instructions..."
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "But none of that matters if I can't finish the treatment in time."
 

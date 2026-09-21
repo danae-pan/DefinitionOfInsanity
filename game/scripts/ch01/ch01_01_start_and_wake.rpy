@@ -35,10 +35,7 @@ label ch01_reset_attempt_state:
     $ ch01_formula_finished = False
     $ ch01_prepare_food = False
 
-    #TODO: check if thosr flags need reset
-    #met herbalist in door probably needs reset
     $ ch01_met_herb_in_door = False
-    # $ ch01_met_herb_in_hospital = False
     $ herbalist_visited = False
 
     $ ch01_cat_broke_formula = False
@@ -47,15 +44,11 @@ label ch01_reset_attempt_state:
 
     $ ch01_supplies_from_herbalist = False
 
-    #$ ch01_return_from_hospital = False
-
     return
 
 label ch01_wake_up:
 
     if ch01_loop_count == 0:
-
-        
 
         call ch01_first_wakeup from _call_ch01_first_wakeup
         
@@ -79,7 +72,7 @@ label ch01_wake_up:
 
 label ch01_first_wakeup:
 
-    "A new day begins... and Dr Yosuke wakes up."
+    "A new day begins... and Dr. Yosuke wakes up."
 
     "Once agan, reallity hits him."
 
@@ -207,7 +200,7 @@ label ch01_remember_previous_deaths:
         show doctor default at left onlayer portraits with dissolve
 
 
-    #TODO: check those two condirions
+    #TODO: change those to previous endings
         
     if ch01_brain_hemorrhage_happened and ch01_loop_count >=1 and not knows_dysphagia  and not ch01_knows_arrhythmia and not ch01_knows_coma:
 

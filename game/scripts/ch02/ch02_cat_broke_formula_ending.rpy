@@ -2,15 +2,21 @@ label ch02_cat_broke_formula_ending :
 
     "The doctor looks down at the hungry cat."
 
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
+
     "It meows again, rubbing itself against his leg."
 
     "He closes his eyes for a brief moment."
 
     show doctor worried at left onlayer portraits with dissolve
 
-    doctor "\"No...\""
+    #SOUND
 
-    #TODO: check on the formuula mentioned
+    play sound "audio/sfx/breathe_male.mp3"
+
+    doctor "\"No...\""
 
     doctor "Every minute I spend away from the formula is another minute Mother has to wait."
 
@@ -23,6 +29,10 @@ label ch02_cat_broke_formula_ending :
     doctor "\"You'll have to wait a little longer.\""
 
     hide doctor onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/cat_long.mp3"
 
     "The cat lets out another desperate cry."
 
@@ -37,6 +47,10 @@ label ch02_cat_broke_formula_ending :
     hide doctor onlayer portraits with dissolve
 
     "The proportions have to be perfect."
+
+    #SOUND
+
+    play sound "audio/sfx/cat_long.mp3" volume 1.2
 
     "The cat continues meowing behind him."
 
@@ -56,17 +70,28 @@ label ch02_cat_broke_formula_ending :
 
     hide doctor onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/noise.mp3" volume 0.3
+
     "A sudden thud echoes through the laboratory."
 
     scene bg ch01 lab with fade
+
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
 
     "Before he has time to react the cat leaps onto the workbench."
 
     "The doctor reaches out."
 
     show doctor worried at left onlayer portraits with dissolve 
-     
 
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
+     
     doctor "\"Wait!\""
 
     hide doctor onlayer portraits with dissolve
@@ -77,6 +102,10 @@ label ch02_cat_broke_formula_ending :
 
     "The bottle tumbles from the edge of the table."
 
+    #SOUND
+
+    play sound "audio/sfx/bottle_trash.mp3"
+
     "It shatters against the wooden floor."
 
     "Dark liquid spreads across the room."
@@ -84,7 +113,10 @@ label ch02_cat_broke_formula_ending :
     "The doctor freezes."
 
     show doctor panicked at left onlayer portraits with dissolve 
-     
+
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
 
     doctor "\"No...\""
 
@@ -94,11 +126,19 @@ label ch02_cat_broke_formula_ending :
 
         doctor "I knew this happened before."
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "So why I wasn't more careful?"
 
     hide doctor onlayer portraits with dissolve
 
     scene bg ch01 lab_no_cat with fade
+
+    #SOUND
+
+    play sound "audio/sfx/suspence.mp3"
 
     "He immediately drops to his knees."
 
@@ -120,6 +160,9 @@ label ch02_cat_broke_formula_ending :
 
     show doctor panicked at left onlayer portraits with dissolve 
      
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
 
     doctor "\"No...\""
 
@@ -137,7 +180,23 @@ label ch02_cat_broke_formula_ending :
 
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
     "He slowly stands and walks upstairs."
+
+    #SOUND
+
+    play sound "audio/sfx/open_door.mp3"
 
     "He enters his Mother's room."
 
@@ -165,6 +224,18 @@ label ch02_cat_broke_formula_ending :
 
     "Holding her hand as the hours pass."
 
+    #SOUND
+
+    play sound "audio/sfx/mother_breath.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/mother_breath.mp3" volume 0.6
+
+    pause 1.2
+
+    play sound "audio/sfx/mother_breath.mp3" volume 0.2
+
     "Eventually her breathing grows weaker."
 
     "Then slower."
@@ -177,6 +248,10 @@ label ch02_cat_broke_formula_ending :
 
     $ respiratory_failure_entry.locked = False
 
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
+    
     "She dies from {a=glossary:respiratory_failure_entry}respiratory failure{/a}."
 
     "The doctor remains seated beside her long after the room has fallen silent."
@@ -184,6 +259,10 @@ label ch02_cat_broke_formula_ending :
     "Still holding her hand."
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
 
     doctor "\"...I couldn't save you.\""
 

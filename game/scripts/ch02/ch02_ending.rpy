@@ -8,6 +8,10 @@ label ch02_ending:
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
+
     doctor "I've seen Mother die so many times now..."
 
     doctor "I don't know how many more chances I'll get."
@@ -54,6 +58,10 @@ label ch02_ending:
 
     doctor "So maybe..."
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "\"I just need to be faster.\""
 
     hide doctor onlayer portraits with dissolve
@@ -70,6 +78,10 @@ label ch02_final_card:
     scene bg game_main
     show prologue overlay
     with fade
+
+    #SOUND
+
+    play sound "audio/audio/Death.mp3"
 
     nvl clear
 

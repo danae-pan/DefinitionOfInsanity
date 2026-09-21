@@ -8,15 +8,35 @@ label ch02_cardiac_arrest_ending:
 
     scene bg ch01 kitchen with fade
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
     "He heads to the kitchen, fills a small bowl with food and kneels beside the cat."
 
     "She eagerly begins eating while he gently strokes her back."
 
     "For the first time in days, the room feels almost peaceful."
 
+    #SOUND
+
+    play sound "audio/sfx/noise.mp3"
+
     "A loud crash echoes from upstairs."
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/Gasp.mp3"
 
     doctor "\"...Mother?\""
 
@@ -24,12 +44,35 @@ label ch02_cardiac_arrest_ending:
 
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/sfx/run.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/run.mp3"
+
     "He sprints toward her room."
 
     show mother sick with dissolve 
-     
 
     "The bedroom door is half open."
+
+    #SOUND
+
+    play sound "audio/sfx/mother_breath.mp3"
+    
+    pause 0.7
+
+    play sound "audio/sfx/mother_breath.mp3"
+
+    pause 1.3
+
+    play sound "audio/sfx/mother_breath.mp3"
 
     "His Mother is in bed, her entire body shaking violently."
 
@@ -38,8 +81,11 @@ label ch02_cardiac_arrest_ending:
     "Foam gathers at the corner of her mouth."
 
     show doctor panicked at left onlayer portraits with dissolve 
-     
 
+    #SOUND
+
+    play sound "audio/sfx/Socked.mp3"
+     
     doctor "\"Mother! Stay with me!\""
 
     hide doctor onlayer portraits with dissolve
@@ -53,6 +99,10 @@ label ch02_cardiac_arrest_ending:
     "He believes it is over."
 
     "Then he reaches for her wrist."
+
+    #SOUND
+
+    play sound "audio/sfx/heavy_suspence.mp3"
 
     "No pulse."
 
@@ -82,9 +132,17 @@ label ch02_cardiac_arrest_ending:
 
     "The animal quietly watches him from the doorway."
 
+    #SOUND
+
+    play sound "audio/sfx/suspence.mp3"
+
     "Even its presence fills him with guilt."
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
 
     doctor "\"I should have been with her...\""
 
@@ -110,6 +168,10 @@ label ch02_cardiac_arrest_ending:
 
     scene bg ch01 hospital with fade
 
+    #SOUND
+
+    play sound "audio/music_hospital.mp3"
+
     "The hospital is as busy as ever."
 
     "Patients continue to arrive."
@@ -124,6 +186,10 @@ label ch02_cardiac_arrest_ending:
 
     show doctor default at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "I just hope tomorrow I will find her in bed alive again."
 
     hide doctor onlayer portraits with dissolve
@@ -135,6 +201,10 @@ label ch02_cardiac_arrest_ending:
     "The house is silent."
 
     show mother default with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/open_door.mp3"
 
     "He slowly opens the door to his Mother's room."
 
@@ -171,6 +241,10 @@ label ch02_cardiac_arrest_ending:
     show doctor default at left onlayer portraits with dissolve
 
     doctor "\"At least...\""
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "\"...I'm not completely alone.\""
 

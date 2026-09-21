@@ -6,6 +6,10 @@ label ch02_go_to_herbalist :
 
         "The doctors leaves the hospital in a rush and heads to the herbalist’s store."
 
+        #SOUND
+
+        play sound "audio/audio/town.mp3"
+
         "After 20 minutes walk, he reaches the central square."
 
     else :
@@ -24,6 +28,10 @@ label ch02_go_to_herbalist :
 
         hide doctor onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/audio/town.mp3"
+
         "He finally reaches the central square and heads to Mr. Kazuki's store."
 
     else :
@@ -37,6 +45,10 @@ label ch02_go_to_herbalist :
         doctor "If not... I can always ask someone."
 
         hide doctor onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/audio/town.mp3"
 
         "After 30 minutes of walking, he reaches the central square."
 
@@ -87,6 +99,10 @@ label ch02_go_to_herbalist :
 
     hide herbalist onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/audio/lab_noise.mp3"
+
     "He carefully places everything on the counter before smiling warmly."
 
     show herbalist smile at left onlayer portraits with dissolve
@@ -133,9 +149,17 @@ label ch02_go_to_herbalist :
 
     show herbalist sceptical at left onlayer portraits
 
+    #SOUND
+
+    play sound "audio/audio/Sigh.mp3"
+
     herbalist "\"Ever since all these people started getting sick, I barely have enough time to organize the store before another customer arrives.\""
 
     hide herbalist onlayer portraits
+
+    #SOUND
+
+    play sound "audio/audio/lab_noise.mp3"
 
     "He continues rummaging through jars and bundles of herbs."
 
@@ -150,6 +174,10 @@ label ch02_go_to_herbalist :
     "The doctor's expression darkens."
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/audio/Sigh.mp3"
 
     doctor "\"Not well.\""
 
@@ -197,9 +225,17 @@ label ch02_go_to_herbalist :
 
     doctor "\"Perhaps...\""
 
+    #SOUND
+
+    play sound "audio/audio/Sigh.mp3"
+
     doctor "\"But knowledge means very little when you cannot save your own family.\""
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/audio/breathe_male.mp3"
 
     doctor "\"My Mother is all I have.\""
 
@@ -243,8 +279,6 @@ label ch02_go_to_herbalist :
 
     hide doctor onlayer portraits with dissolve
 
-    #TODO: change the bottle's to pouches on ch1 herbalist's store
-
     "Mr. Kazuki lifts the first pouch."
 
     show herbalist default at left onlayer portraits with dissolve
@@ -277,6 +311,10 @@ label ch02_go_to_herbalist :
 
     if ch02_previous_death == "cat_broke_formula":
 
+        #SOUND
+
+        play sound "audio/audio/Sigh.mp3"
+
         doctor "The cat knocked over the formula last time..."
 
         doctor "I wasn't even able to try the formula with the herb I chose."
@@ -295,6 +333,10 @@ label ch02_go_to_herbalist :
 
         doctor "But..."
 
+        #SOUND
+
+        play sound "audio/audio/Sigh.mp3"
+
         doctor "I was too late and Mother died."
 
         doctor "Maybe eating first is not necessary after all..."
@@ -302,6 +344,10 @@ label ch02_go_to_herbalist :
     elif ch02_first_herb_without_instructions:
 
         doctor "And when I rushed it and gave the formula to Mother without eating..."
+
+        #SOUND
+
+        play sound "audio/audio/breathe_male.mp3"
 
         doctor "Maybe eating first is strictly necessary."
 
@@ -334,6 +380,10 @@ label ch02_go_to_herbalist :
         hide doctor onlayer portraits
 
         show herbalist sceptical at left onlayer portraits
+
+        #SOUND
+
+        play sound "audio/audio/breathe_male.mp3"
 
         herbalist "\"To be honest, I only know that eating is advised.\""
 
@@ -382,6 +432,10 @@ label ch02_go_to_herbalist :
 
         doctor "But..."
 
+        #SOUND
+
+        play sound "audio/audio/Sigh.mp3"
+
         doctor "I waited too long, and by the time the medicine was ready, she could no longer swallow."
 
         doctor "Maybe taking it on an empty stomach isn't absolutely necessary..."
@@ -391,6 +445,10 @@ label ch02_go_to_herbalist :
         doctor "And when I made dinner for Mother..."
 
         doctor "The medicine had no effect, and her condition continued to worsen."
+
+        #SOUND
+
+        play sound "audio/audio/breathe_male.mp3"
 
         doctor "Maybe taking it on an empty stomach is strictly necessary."
 
@@ -446,6 +504,10 @@ label ch02_go_to_herbalist :
     doctor "Whatever I decide, it will have a level of risk."
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/audio/suspence.mp3"
 
     doctor "But time won’t wait for me."
 

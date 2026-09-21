@@ -55,6 +55,10 @@ label ch01_answer_mothers_call:
 
         hide doctor onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/open_door.mp3"
+
     "He opens the door." 
 
     show mother sick with dissolve
@@ -223,7 +227,7 @@ label ch01_answer_mothers_call:
 
         #SOUND
 
-        play sound "audio/sfx/cutlery.mp3"
+        play sound "audio/sfx/lab_noise.mp3"
 
         "He begins preparing the formula again, repeating each step as carefully as before."
 

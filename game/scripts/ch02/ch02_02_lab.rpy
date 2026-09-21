@@ -43,7 +43,21 @@ label ch02_take_the_first :
 
     $ kampo_entry.locked = False
 
-    "The doctor returns home, walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
+    #SOUND
+
+    play sound "audio/sfx/footsteps_rock.mp3"
+    
+    pause 1.2
+
+    play sound "audio/sfx/footsteps_rock.mp3"
+
+    pause 1.2
+
+    play sound "audio/sfx/footsteps_rock.mp3"
+
+    "The doctor take his way home."
+    
+    "He walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
 
     show doctor worried at left onlayer portraits with dissolve
     
@@ -52,6 +66,10 @@ label ch02_take_the_first :
         $ nagomi_root_entry.locked = False
 
         doctor "Along with my research I know one more thing... {a=glossary:nagomi_root_entry}Nagomi Root{/a} is too dangerous. "
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "I will not make the same mistake again."
 
@@ -63,8 +81,6 @@ label ch02_take_the_first :
 
         $ taeru_root_entry.locked = False
 
-        #TODO: add the condition for the first herb tried on the take second label
-
         if ch02_second_herb_with_instructions or ch02_second_herb_without_instructions:
 
             $ tsuyomi_cap_entry.locked = False
@@ -72,12 +88,20 @@ label ch02_take_the_first :
             doctor "I've already tried three different herbs."
 
             doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a}, {a=glossary:taeru_root_entry}Taeru Root{/a}, and {a=glossary:tsuyomi_cap_entry}Tsuyomi Cap{/a}."
+                    
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
 
             doctor "None of them were able to save Mother."
 
             doctor "I won't make the same mistakes again."
 
         else:
+
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
 
             doctor "I've already tried two different herbs."
 
@@ -99,11 +123,19 @@ label ch02_take_the_first :
 
             doctor "Last time, I followed the instructions and made sure Mother ate first."
 
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
+
             doctor "But by the time the formula was ready, I was too late."
 
         if ch02_first_herb_without_instructions:
 
             doctor "When I ignored the instructions and gave it to Mother without eating first."
+
+            #SOUND
+
+            play sound "audio/sfx/breeathe_male.mp3"
 
             doctor "It made her violently sick, and she choked."
 
@@ -130,6 +162,10 @@ label ch02_take_the_first :
         show doctor default at left onlayer portraits with dissolve
 
         doctor "But his advice wasn't conclusive."
+
+        #SOUND
+
+        play sound "audio/sfx/suspence.mp3"
 
         doctor "\"Either way, there is a risk to be taken.\""
 
@@ -181,6 +217,10 @@ label ch02_take_the_first :
 
     "He places the Hogo Root into the mortar beside the Junka Root."
 
+    #SOUND
+
+    play sound "audio/sfx/lab_noise.mp3"
+
     "The pestle moves slowly in circles, reducing the dried herbs to a fine powder."
 
     "He transfers the mixture into a ceramic bowl and gradually pours hot water over it."
@@ -203,6 +243,10 @@ label ch02_take_the_first :
 
     scene bg ch01 lab with fade
 
+    #SOUND
+
+    play sound "audio/sfx/cat_long.mp3"
+
     "A loud meow echoes through the laboratory."
 
     "The cat rubs itself against his leg, meowing repeatedly."
@@ -220,6 +264,10 @@ label ch02_take_the_first :
         "He kneels beside her."
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "You've been showing the same symptoms... loss of balance... weakness..."
 
@@ -239,6 +287,10 @@ label ch02_take_the_first :
 
     hide doctor onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
+
     "He sighs."
 
     show doctor default at left onlayer portraits with dissolve
@@ -246,6 +298,10 @@ label ch02_take_the_first :
     doctor "\"Mother needs this medicine...\""
 
     hide doctor onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
 
     "The cat meows once more."
 
@@ -299,7 +355,21 @@ label ch02_take_the_second :
 
     $ kampo_entry.locked = False
 
-    "The doctor returns home, walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
+    #SOUND
+
+    play sound "audio/sfx/footsteps_rock.mp3"
+    
+    pause 1.2
+
+    play sound "audio/sfx/footsteps_rock.mp3"
+
+    pause 1.2
+
+    play sound "audio/sfx/footsteps_rock.mp3"
+
+    "The doctor take his way home."
+    
+    "He walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
 
     show doctor worried at left onlayer portraits with dissolve
 
@@ -327,6 +397,10 @@ label ch02_take_the_second :
 
                 doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a}, {a=glossary:taeru_root_entry}Taeru Root{/a}, and {a=glossary:junka_root_entry}Junka Root{/a}."
 
+                #SOUND
+
+                play sound "audio/sfx/Sigh.mp3"
+        
                 doctor "None of them were able to save Mother."
 
                 doctor "I won't make the same mistakes again."
@@ -336,6 +410,10 @@ label ch02_take_the_second :
             doctor "I've already tried two different herbs."
 
             doctor "{a=glossary:nagomi_root_entry}Nagomi Root{/a} and {a=glossary:taeru_root_entry}Taeru Root{/a}."
+
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
 
             doctor "I won't make the same mistakes again."
 
@@ -351,6 +429,10 @@ label ch02_take_the_second :
 
             doctor "But I waited too long."
 
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
+
             doctor "By the time the formula was ready, she could no longer swallow."
 
         if ch02_second_herb_without_instructions:
@@ -358,6 +440,10 @@ label ch02_take_the_second :
             doctor "When I ignored the instructions and fed Mother first..."
 
             doctor "The medicine had no effect."
+
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
 
             doctor "Her condition continued to worsen."
 
@@ -389,6 +475,10 @@ label ch02_take_the_second :
 
         doctor "But his advice wasn't conclusive."
 
+        #SOUND
+
+        play sound "audio/sfx/suspence.mp3"
+
         doctor "\"Either way, there is a risk to be taken.\""
 
     else:
@@ -416,6 +506,10 @@ label ch02_take_the_second :
     hide doctor onlayer portraits with dissolve
 
     "With his decision made, he places the Tsuyomi Cap and Ryoku Berry into the mortar."
+
+    #SOUND
+
+    play sound "audio/sfx/lab_noise.mp3"
 
     "He slowly mixes the dried herbs, reducing them to a fine powder."
 
@@ -453,6 +547,10 @@ label ch02_take_the_second :
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
+
     doctor "\"She's awake...\""
 
     hide doctor onlayer portraits with dissolve
@@ -480,6 +578,10 @@ label ch02_take_the_second :
     doctor "Just a few more minutes."
 
     show doctor worried at left onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
 
     doctor "\"If I stop now, all of this may have been for nothing...\""
 

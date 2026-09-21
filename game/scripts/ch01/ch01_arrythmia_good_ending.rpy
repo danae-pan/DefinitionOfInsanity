@@ -89,7 +89,7 @@ label ch01_arrythmia_good_ending :
 
     $ junka_root_entry.locked = False
 
-    "He reads the label on the bottle."
+    "He reads the label on the pouch."
 
     show doctor default at left onlayer portraits with dissolve
 

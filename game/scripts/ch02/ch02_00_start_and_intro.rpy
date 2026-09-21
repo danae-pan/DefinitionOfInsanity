@@ -51,11 +51,7 @@ label ch02_intro:
 
     scene bg ch01 lab_no_cat with fade
 
-    #TODO: Add chapter 2 label
-
     if ch02_loop_count == 0:
-
-        #First time entering chapter 2
 
         if chapter_1_with_one_try:
 
@@ -64,6 +60,11 @@ label ch02_intro:
             "He wakes up in a daze. He cannot believe his Mother is no more."
 
             show doctor worried at left onlayer portraits with dissolve
+
+
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
 
             doctor "How could I let this be? I don’t deserve to call myself a doctor."
 
@@ -74,10 +75,18 @@ label ch02_intro:
             doctor "But first, I should prepare my Mother for the {a=glossary:wake_entry}otsuya{/a}."
 
             "He heads to his Mother’s room and for his surprise, find her alive."
+            
+            #SOUND
+
+            play sound "audio/sfx/Gasp.mp3"
 
             doctor "Wait a second, what? Am I in a dream?"
 
             "He slaps himself, pinch his arm and he feels the pain."
+            
+            #SOUND
+
+            play sound "audio/sfx/suspence.mp3"
 
             doctor "Maybe yesterday was just a nightmare? Maybe Mother never died."
 
@@ -91,11 +100,13 @@ label ch02_intro:
         
         else:
 
-            #Remembers death from chapter 1
-
             "He wakes up in a daze. Slowly, everything comes back to him."
             
             show doctor default at left onlayer portraits with dissolve
+
+            #SOUND
+
+            play sound "audio/sfx/Gasp.mp3"
 
             call ch01_remember_previous_death_for_ch02
 
@@ -108,11 +119,13 @@ label ch02_intro:
 
     else:
 
-        #Remember death from chapter 2
-
         "He wakes up in a daze. Slowly, everything comes back to him."
         
         show doctor default at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/Gasp.mp3"
 
         call ch02_remember_previous_death
 
@@ -136,8 +149,6 @@ label ch02_intro:
     menu :
 
         "Check on your Mother":
-
-            #TODO:reset the chosen from menu choices to their default state
 
             $ ch02_route_choice = "check_mother"
 

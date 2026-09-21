@@ -42,11 +42,24 @@ label ch02_check_mother :
         or ch02_second_herb_without_instructions
         ):
 
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
+
             doctor "Last time I wasn’t able to test any herbs that the herbalist gave me."
             
             doctor "Maybe I will have time to do that today if I rush now to him."
 
-        elif not took_herbs:
+        elif not took_herbs and not (
+        ch02_first_herb_with_instructions
+        or ch02_first_herb_without_instructions
+        or ch02_second_herb_with_instructions
+        or ch02_second_herb_without_instructions
+        ):
+
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
 
             doctor "Maybe I should go over to Mr. Kazuki's store."
 
@@ -60,6 +73,10 @@ label ch02_check_mother :
         or ch02_second_herb_without_instructions
         ):
 
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
+
             doctor "Maybe I should go back to Mr. Kazuki's store."
 
             doctor "Perhaps there's another way I could use the herbs he gave me."
@@ -71,6 +88,10 @@ label ch02_check_mother :
                 show doctor worried at left onlayer portraits with dissolve
 
                 doctor "I already tried the formula before..."
+
+                #SOUND
+
+                play sound "audio/sfx/Sigh.mp3"
 
                 doctor "It didn't help."
 
@@ -90,6 +111,10 @@ label ch02_check_mother :
 
             doctor "If there was more time, I would check on some patients too..."
 
+            #SOUND
+
+            play sound "audio/sfx/breathe_male.mp3"
+
             doctor "The situation worsens everyday...a cure must be found...and quickly."   
 
             hide doctor onlayer portraits with dissolve
@@ -101,6 +126,10 @@ label ch02_check_mother :
             $ taeru_root_entry.locked = False
 
             show doctor worried at left onlayer portraits with dissolve
+
+            #SOUND
+
+            play sound "audio/sfx/Sigh.mp3"
 
             doctor "I already know what is in stock and using {a=glossary:taeru_root_entry}Taeru Root{/a} proved to be fatal at the end."
 
@@ -134,7 +163,6 @@ label ch02_go_to_mother :
 
 label ch02_mother_calls_for_food :
 
-    #TODO: check where decoction was mentioned on this route
     "The doctor takes another look at the decoction before setting the wooden spoon aside."
 
     show doctor default at left onlayer portraits with dissolve
@@ -146,6 +174,18 @@ label ch02_mother_calls_for_food :
     hide doctor onlayer portraits with dissolve
 
     scene black with fade
+
+    #SOUND
+
+    play sound "audio/sfx/footsteps_tile.mp3"
+    
+    pause 1.0
+
+    play sound "audio/sfx/footsteps_tile.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps_tile.mp3"
 
     "He leaves the laboratory and makes his way upstairs."
 
@@ -171,6 +211,18 @@ label ch02_mother_calls_for_food :
 
     show mother sick with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/mother_breath.mp3"
+    
+    pause 0.8
+
+    play sound "audio/sfx/mother_breath.mp3"
+
+    pause 1.2
+
+    play sound "audio/sfx/mother_breath.mp3"
+
     mother "\"I...\""
 
     "She pauses, struggling to swallow."
@@ -188,6 +240,10 @@ label ch02_mother_calls_for_food :
     "She closes her eyes tightly."
 
     show mother default with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/mother_cough.mp3"
 
     mother "\"My throat...\""
 
@@ -217,6 +273,10 @@ label ch02_mother_calls_for_food :
 
         show doctor worried at left onlayer portraits with dissolve
 
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
+
         doctor "However, last time I did follow the instructions and still.."
 
         doctor "..I failed."
@@ -228,6 +288,10 @@ label ch02_mother_calls_for_food :
     show doctor default at left onlayer portraits with dissolve
 
     doctor "If I feed her now, the medicine may not work."
+
+    #SOUND
+
+    play sound "audio/sfx/breathe_male.mp3"
 
     doctor "But if I don't…she'll only grow weaker."
 

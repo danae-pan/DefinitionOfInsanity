@@ -14,6 +14,18 @@ label ch02_go_to_hospital :
 
     scene black with fade
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps_rock.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/footsteps_rock.mp3"
+
+    pause 0.8
+
+    play sound "audio/sfx/footsteps_rock.mp3"
+
     "The doctor heads to the hospital. He walks in a fast pace, trying not to lose more time."
     
     scene bg ch01 hospital with fade
@@ -29,6 +41,10 @@ label ch02_go_to_hospital :
     else :
 
         doctor "I know that my chances are slight but I should check the stock anyway."
+
+        #SOUND
+
+        play sound "audio/sfx/breathe_male.mp3"
 
         doctor "Maybe there is a herb that I didn’t notice before."
 
@@ -107,6 +123,18 @@ label ch02_go_to_hospital :
 
     $ kampo_entry.locked = False
 
+    #SOUND
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
+    pause 1.0
+
+    play sound "audio/sfx/footsteps.mp3"
+
     "He walks into his laboratory and spreads several worn medical journals and {a=glossary:kampo_entry}Kampo{/a} manuscripts across the desk."
 
     $ nagomi_root_entry.locked = False
@@ -124,8 +152,6 @@ label ch02_go_to_hospital :
     show doctor default at left onlayer portraits with dissolve
 
     doctor "\"Right...\""
-
-    #TODO: explain phases
 
     doctor "Ryoku Berry can replace Nagomi Root for the first phase."
 
@@ -155,6 +181,10 @@ label ch02_go_to_hospital :
 
     show doctor worried at left onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/suspence.mp3"
+
     doctor "The reports mention changes in blood pressure... but they are uncommon."
 
     hide doctor onlayer portraits with dissolve
@@ -162,6 +192,10 @@ label ch02_go_to_hospital :
     "He closes the book."
 
     "He decides not to lose more precious time."
+
+    #SOUND
+
+    play sound "audio/sfx/lab_noise.mp3"
 
     "He begins grinding the dried roots with a mortar and pestle until they become a fine powder."
 
@@ -185,6 +219,10 @@ label ch02_go_to_hospital :
 
     hide doctor onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/cat_long.mp3"
+
     "A loud meow echoes through the laboratory."
 
     scene bg ch01 lab with fade
@@ -204,6 +242,10 @@ label ch02_go_to_hospital :
         "He kneels beside it."
 
         show doctor worried at left onlayer portraits with dissolve
+
+        #SOUND
+
+        play sound "audio/sfx/Sigh.mp3"
 
         doctor "You've been showing the same symptoms... loss of balance... weakness..."
 
@@ -225,6 +267,10 @@ label ch02_go_to_hospital :
 
     hide doctor onlayer portraits with dissolve
 
+    #SOUND
+
+    play sound "audio/sfx/Sigh.mp3"
+
     "He sighs."
 
     show doctor default at left onlayer portraits with dissolve
@@ -232,6 +278,10 @@ label ch02_go_to_hospital :
     doctor "\"Mother needs this medicine...\""
 
     hide doctor onlayer portraits with dissolve
+
+    #SOUND
+
+    play sound "audio/sfx/cat_short.mp3"
 
     "The cat meows once more."
 

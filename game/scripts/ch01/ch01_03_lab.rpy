@@ -366,7 +366,7 @@ label ch01_study_prepare_formula:
 
     #SOUND
 
-    play sound "audio/sfx/cutlery.mp3"
+    play sound "audio/sfx/lab_noise.mp3"
 
     "The herbs are ground into a fine powder before being slowly mixed into the solution."
 
@@ -374,10 +374,6 @@ label ch01_study_prepare_formula:
 
     "Finally, he pours the finished mixture into a small glass vial."
 
-    # we need another flag here to go inside the loop because the fact that he has repeated he day doesn't mean he prepared already the formula before.
-
-    #TODO: check this condition when the fitst condition is true
-    #didn;t work because it resets on each ending. replaced with check_apothecary flag
     if (ch01_loop_count >= 1 and ch01_check_apothecary == True) or (ch01_loop_count >= 1 and ch01_check_formula == True):
 
         "His hands stop for a moment."
@@ -387,8 +383,6 @@ label ch01_study_prepare_formula:
         doctor "I did everything exactly as the last time." 
 
         hide doctor onlayer portraits with dissolve
-
-    #TODO: check if this condition needs to be removed
 
     if ch01_cat_in_lab:
 
@@ -846,7 +840,7 @@ label ch01_check_mother_cat_in_lab :
         "Prepare food for her":
 
             $ ch01_prepare_food = True
-            #TODO: see if the following lines are needed in other routes that end up in the same menu choices
+            
             show doctor default at left onlayer portraits with dissolve
 
             doctor "\"I will prepare something for you Mother.\""
